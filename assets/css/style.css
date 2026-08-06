@@ -85,6 +85,10 @@ body {
     color: var(--text-dark);
 }
 
+.bg-primary{
+    background: var(--primary);
+}
+
 .bg-theme-gray {
     background: var(--light-gray);
 }
@@ -130,6 +134,49 @@ body {
 .btn-tertiary:hover {
     background: rgba(255, 255, 255, .15);
     border-color: #ffffff55;
+}
+
+.bg-primary {
+    background: var(--primary);
+}
+
+/* Modal */
+
+.modal-wrapper {
+    display: none;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    z-index: 100;
+}
+
+.modal-wrapper.is-visible {
+    display: flex;
+}
+
+.modal-wrapper.is-open {
+    opacity: 1;
+}
+
+.modal-container {
+    width: 100%;
+    max-width: 1100px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 280ms ease;
+}
+
+.modal-wrapper.is-open .modal-container {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .modal-wrapper,
+    .modal-container {
+        transition: none !important;
+    }
 }
 
 /* Header */
@@ -185,6 +232,98 @@ body {
     #stickyHeader {
         transition: opacity 1ms linear !important;
         transform: none !important;
+    }
+}
+
+/* Hamburger */
+.hm-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.hm-burger svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hm-burger:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+}
+
+/* Bars morph into an X, all in SVG, no icon-swapping needed */
+.hm-burger-bar {
+    transform-origin: 12px 12px;
+    transition: transform 320ms cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 200ms ease;
+}
+
+.hm-burger.is-open .hm-burger-bar-top {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.hm-burger.is-open .hm-burger-bar-mid {
+    opacity: 0;
+}
+
+.hm-burger.is-open .hm-burger-bar-bottom {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Collapsible panel: height animates via JS-measured max-height so it
+   works for any amount of content, fading in alongside the collapse */
+.hm-mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: var(--dark);
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: max-height 380ms cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 260ms ease;
+}
+
+.hm-mobile-menu.is-open {
+    opacity: 1;
+}
+
+.hm-mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1.75rem 2rem;
+}
+
+.hm-mobile-menu-inner a {
+    color: var(--bright);
+    font-size: 1rem;
+    font-weight: var(--fw-medium);
+    padding: 1rem 0.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 200ms ease;
+}
+
+.hm-mobile-menu-inner a:hover {
+    color: #F26C81;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hm-burger-bar,
+    .hm-mobile-menu {
+        transition: none !important;
     }
 }
 
