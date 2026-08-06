@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Dark theme */
+    --primary: #F04F34;
+    --text-light: #ffffff;
+
+    /* Light theme */
+    --text-dark: #1a1a1a;
+
+    /* Others */
+    --bright: #ffffff;
+    --dark: #000000;
+    --light-gray: #f8f8f8;
+    --polish-white: #e9e8e7;
+    /* Typography */
+    --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+
+    /* Weight scale */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Fluid type scale (clamp: min, preferred, max) */
+    --fs-display: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+    /* hero / .main-heading */
+    --fs-h2: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+    /* section subheads */
+    --fs-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+    --fs-body: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+    /* replaces .text */
+    --fs-small: 0.8125rem;
+
+    /* Line-height ratios (unitless — scale with font-size automatically) */
+    --lh-tight: 1.3;
+    /* display headings */
+    --lh-snug: 1.3;
+    /* subheadings */
+    --lh-relaxed: 1.6;
+    /* body copy */
+
+    /* Letter-spacing */
+    --ls-tight: -0.02em;
+    /* large headings */
+    --ls-normal: 0;
+    --ls-wide: 0.04em;
+    /* eyebrow / uppercase labels */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-regular);
+}
+
+.main-heading {
+    font-size: var(--fs-display);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    font-weight: var(--fw-bold);
+}
+
+.text-primary {
+    color: var(--primary)
+}
+
+.text-primary-hover:hover{
+    color: var(--primary)
+}
+
+.text {
+    font-size: var(--fs-body);
+    line-height: var(--lh-relaxed);
+    font-weight: var(--fw-regular);
+    color: var(--text-dark);
+}
+
+.bg-theme-gray {
+    background: var(--light-gray);
+}
+
+.btn {
+    padding: 10px 28px;
+    border-radius: 5rem;
+    border: 1px solid var(--dark);
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: var(--bright);
+}
+
+.btn-primary:hover {
+    background: #111827
+}
+
+.btn-secondary {
+    background: var(--bright);
+    color: var(--dark);
+    border-color: var(--bright);
+}
+
+.btn-secondary:hover {
+    background: #F3F4F6;
+}
+
+.btn-tertiary {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, .10);
+    border-color: #ffffff33;
+    color: var(--bright)
+}
+
+.btn-tertiary:hover {
+    background: rgba(255, 255, 255, .15);
+    border-color: #ffffff55;
+}
+
+/* Header */
+#stickyHeader {
+    z-index: 100;
+    padding: 0.85rem 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+
+    /* Hidden by default: shifted up + invisible */
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: opacity 320ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#stickyHeader.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Forced hidden while the Human/Machine toggle is showing the machine
+   view — takes priority over .is-visible regardless of scroll position */
+#stickyHeader.hm-header-hidden {
+    opacity: 0 !important;
+    transform: translateY(-100%) !important;
+    pointer-events: none !important;
+}
+
+#stickyHeader .sticky-logo img {
+    height: 2.25rem;
+    width: auto;
+}
+
+#stickyHeader .sticky-links {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+#stickyHeader .sticky-cta {
+    transition: transform 280ms ease, background-color 280ms ease;
+}
+
+#stickyHeader .sticky-cta:hover {
+    transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #stickyHeader {
+        transition: opacity 1ms linear !important;
+        transform: none !important;
+    }
+}
+
+.hero-overlay {
+    background: linear-gradient(90deg,
+            rgba(10, 16, 28, .92) 0%,
+            rgba(10, 16, 28, .88) 35%,
+            rgba(10, 16, 28, .55) 60%,
+            rgba(10, 16, 28, .15) 78%,
+            rgba(10, 16, 28, 0) 100%);
+}
+
+.glass {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, .10);
+}
+
+.flex-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    height: 100px;
+    margin: 2rem auto auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden
+}
+
+.slide,
+.slide-track,
+.tabs-content.active {
+    display: flex
+}
+
+.carousel-wrapper::after,
+.carousel-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    z-index: 1
+}
+
+.carousel-wrapper::before {
+    left: 0
+}
+
+.carousel-wrapper::after {
+    right: 0;
+    transform: rotateZ(180deg)
+}
+
+.slide-track {
+    width: calc(200px * 16);
+    animation: 20s linear infinite slide
+}
+
+.slide-track:hover {
+    animation-play-state: paused
+}
+
+.slide {
+    align-items: center;
+    padding: 0 10px
+}
+
+.carousel-wrapper .slide img {
+    height: 3rem;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: .3s
+}
+
+.carousel-wrapper .slide img:hover {
+    filter: grayscale(0)
+}
+
+.clients-carousel .slide-track {
+    width: calc(250px * 25)
+}
+
+.video-overlay {
+    background:
+        radial-gradient(circle at top left,
+            rgba(56, 189, 248, .45),
+            transparent 35%),
+
+        radial-gradient(circle at top right,
+            rgba(168, 85, 247, .40),
+            transparent 40%),
+
+        radial-gradient(circle at bottom right,
+            rgba(236, 72, 153, .35),
+            transparent 35%),
+
+        linear-gradient(180deg,
+            rgba(5, 10, 25, .15) 0%,
+            rgba(8, 15, 40, .45) 45%,
+            rgba(5, 10, 25, .75) 100%);
+}
+
+.video-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Makes the video behave like object-fit: cover */
+    width: 177.77777778vh;
+    height: 56.25vw;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Accordion */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease,
+        padding-top 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    opacity: 1;
+}
+
+.accordion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    color: #9CA3AF;
+    transition: color .3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+    color: #111827;
+}
+
+.accordion-btn {
+    transition: background-color .25s ease;
+}
+
+.accordion-btn:hover {
+    background: #fafafa;
+}
+
+.cards-wrapper {
+    width: max-content;
+}
+
+.card {
+    width: 380px;
+    height: 420px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(calc(-200px * 8))
+    }
+}
+
+@media (min-width:1024px) {
+    .carousel-wrapper .slide img {
+        height: 3rem;
+    }
+
+    .main-heading {
+        font-size: 2.6rem;
+    }
+
+    .text {
+        font-size: 17px;
+    }
+}
+
+@media (min-width:1280px) {
+
+    .slide {
+        min-width: 200px
+    }
+
+    .carousel-wrapper .slide img {
+        height: 4.4rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1280px !important;
+    }
+
+    .main-heading {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1540px !important;
+    }
+}
+
+/* ==========================================================================
+   Human / Machine Toggle
+   A tabbed panel that presents this page two ways: as a human reads it
+   (rendered content) and as a machine parses it (semantic HTML). Built with
+   the same tokens as the rest of the site (--primary, --dark, --light-gray,
+   Geist type scale) so it reads as a native section, not a bolt-on widget.
+   ========================================================================== */
+
+.hm-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 1.25rem;
+}
+
+.hm-eyebrow-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background: var(--primary);
+    flex-shrink: 0;
+}
+
+/* Floating toggle ----------------------------------------------------
+   Fixed to the bottom-left of the viewport at all times, independent of
+   scroll position, so switching between Human and Machine views works
+   from anywhere on the page. */
+
+.hm-floating-toggle {
+    position: fixed;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 200;
+    display: inline-flex;
+    gap: 0.25rem;
+    background: var(--bright);
+    border: 1px solid #e5e7eb;
+    border-radius: 9999px;
+    padding: 0.35rem;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+}
+
+.hm-float-tab {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.6rem 1.15rem;
+    border: 0;
+    border-radius: 9999px;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: var(--fw-medium);
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 240ms ease;
+}
+
+.hm-float-icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+.hm-float-tab.is-active {
+    color: var(--bright);
+}
+
+.hm-float-tab:focus-visible {
+    outline: 2px solid var(--dark);
+    outline-offset: 2px;
+}
+
+/* Sliding pill behind the active tab, positioned via JS (left/width) */
+.hm-float-indicator {
+    position: absolute;
+    z-index: 1;
+    top: 0.35rem;
+    left: 0.35rem;
+    height: calc(100% - 0.7rem);
+    width: 0;
+    border-radius: 9999px;
+    background: var(--dark);
+    transition: left 320ms cubic-bezier(0.65, 0, 0.35, 1),
+        width 320ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 640px) {
+    .hm-floating-toggle {
+        left: 0.75rem;
+        bottom: 0.75rem;
+    }
+
+    .hm-float-tab {
+        padding: 0.55rem 0.9rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Machine view ---------------------------------------------------------
+   A full-page takeover shown in place of <main> while Machine mode is
+   active. Display only: no links or buttons live inside this view. */
+
+.hm-machine-view {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    overflow-y: auto;
+    background: var(--light-gray);
+}
+
+.hm-machine-inner {
+    padding: 7.5rem 0 6rem;
+}
+
+/* Machine panel: dark code viewer ------------------------------------ */
+
+.hm-code {
+    border-radius: 24px;
+    overflow: hidden;
+    background: #111111;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+}
+
+.hm-code-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.25rem;
+    background: #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hm-code-filename {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: #d1d5db;
+}
+
+.hm-code-filename svg {
+    width: 1rem;
+    height: 1rem;
+    color: #6b7280;
+    flex-shrink: 0;
+}
+
+.hm-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #e5e7eb;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: var(--fw-medium);
+    border-radius: 9999px;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    transition: background-color 220ms ease, transform 220ms ease, border-color 220ms ease;
+}
+
+.hm-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hm-copy-btn:focus-visible {
+    outline: 2px solid var(--bright);
+    outline-offset: 2px;
+}
+
+.hm-copy-btn.is-copied {
+    background: rgba(58, 201, 110, 0.15);
+    border-color: rgba(58, 201, 110, 0.4);
+    color: #86efac;
+}
+
+.hm-copy-icon {
+    width: 0.95rem;
+    height: 0.95rem;
+    flex-shrink: 0;
+}
+
+.hm-code-scroll {
+    max-height: 65vh;
+    overflow: auto;
+}
+
+.hm-pre {
+    margin: 0;
+    padding: 1.25rem 0;
+}
+
+.hm-code-block {
+    display: block;
+    font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.8125rem;
+    line-height: 1.7;
+    color: #e5e7eb;
+    tab-size: 2;
+    white-space: pre;
+}
+
+/* Line-number gutter, generated via CSS counters against .hm-line spans
+   that the JS module wraps each generated code line in */
+.hm-code-block {
+    counter-reset: hm-line;
+}
+
+.hm-line {
+    display: block;
+    padding: 0 1.5rem 0 3.75rem;
+    position: relative;
+}
+
+.hm-line::before {
+    counter-increment: hm-line;
+    content: counter(hm-line);
+    position: absolute;
+    left: 0;
+    width: 2.75rem;
+    text-align: right;
+    color: #4b5563;
+    user-select: none;
+}
+
+/* Syntax token colors, tuned against the #111111 panel already used
+   elsewhere on this page (compare table, App Display) for consistency */
+.hm-tk-tag {
+    color: #ff8a70;
+}
+
+.hm-tk-attr {
+    color: #7dd3fc;
+}
+
+.hm-tk-string {
+    color: #86efac;
+}
+
+.hm-tk-comment {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.hm-tk-punct {
+    color: #9ca3af;
+}
+
+.hm-tk-text {
+    color: #d1d5db;
+}
+
+/* Custom scrollbars for the code viewer, matching the dark theme */
+.hm-code-scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.hm-code-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.hm-code-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 9999px;
+}
+
+.hm-code-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+@media (max-width: 640px) {
+    .hm-machine-inner {
+        padding: 6.5rem 0 5rem;
+    }
+
+    .hm-line {
+        padding-left: 3rem;
+    }
+
+    .hm-line::before {
+        width: 2.1rem;
+    }
+}

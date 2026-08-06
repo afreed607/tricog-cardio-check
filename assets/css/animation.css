@@ -1,0 +1,145 @@
+html {
+    opacity: 0;
+}
+
+html.page-loaded {
+    opacity: 1;
+    transition: opacity 600ms ease-out;
+}
+
+/* ---------------------------------- */
+/* HOVER EFFECTS - buttons, cards, images */
+/* ---------------------------------- */
+a.bg-white.text-black,
+a.glass.text-white,
+button.bg-black.text-white,
+button.bg-white,
+footer button.bg-black,
+nav a.bg-white {
+    transition: transform 350ms ease, background-color 350ms ease, color 350ms ease;
+    will-change: transform;
+}
+
+a.bg-white.text-black:hover,
+a.glass.text-white:hover,
+button.bg-black.text-white:hover,
+button.bg-white:hover,
+footer button.bg-black:hover,
+nav a.bg-white:hover {
+    transform: translateY(-2px);
+}
+
+/* Feature step cards (How it works) */
+.flex.flex-col.lg\:flex-row.justify-center.items-center.gap-6.mt-14>div {
+    transition: transform 350ms ease;
+    will-change: transform;
+}
+
+.flex.flex-col.lg\:flex-row.justify-center.items-center.gap-6.mt-14>div:hover {
+    transform: translateY(-6px);
+}
+
+/* Stat cards */
+.grid.grid-cols-2.gap-4>div {
+    transition: transform 350ms ease;
+    will-change: transform;
+}
+
+.grid.grid-cols-2.gap-4>div:hover {
+    transform: translateY(-6px);
+}
+
+/* Testimonial cards */
+.grid.md\:grid-cols-3>div {
+    transition: transform 350ms ease;
+    will-change: transform;
+}
+
+.grid.md\:grid-cols-3>div:hover {
+    transform: translateY(-6px);
+}
+
+/* Images */
+img {
+    transition: transform 400ms ease;
+}
+
+.rounded-2xl.overflow-hidden img,
+.rounded-b-2xl,
+.rounded\[32px\] img {
+    will-change: transform;
+}
+
+a.rounded-2xl.overflow-hidden:hover img,
+div.rounded-2xl.overflow-hidden:hover img,
+.w-full.rounded-2xl.overflow-hidden:hover img {
+    transform: scale(1.02);
+}
+
+.flex-1 img.rounded-b-2xl:hover {
+    transform: scale(1.02);
+}
+
+/* ---------------------------------- */
+/* HUMAN / MACHINE TOGGLE - view fade + tab press */
+/* ---------------------------------- */
+
+/* The machine view is shown/hidden with the native [hidden] attribute for
+   a11y, and fades + rises slightly on activation for a premium feel */
+.hm-machine-view:not([hidden]) {
+    animation: hmViewIn 420ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes hmViewIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hm-float-tab:active {
+    transform: scale(0.97);
+}
+
+.hm-float-tab {
+    transform: scale(1);
+    transition: color 280ms ease, transform 150ms ease;
+}
+
+/* ---------------------------------- */
+/* ACCESSIBILITY - reduced motion */
+/* ---------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    html {
+        opacity: 1 !important;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hm-machine-view {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .hm-float-indicator {
+        transition: none !important;
+    }
+}
