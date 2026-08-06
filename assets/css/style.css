@@ -181,7 +181,7 @@ body {
 
 /* Header */
 #stickyHeader {
-    z-index: 100;
+    z-index: 80;
     padding: 0.85rem 0;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(14px);
@@ -443,14 +443,10 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-
-    /* Makes the video behave like object-fit: cover */
     width: 177.77777778vh;
     height: 56.25vw;
-
     min-width: 100%;
     min-height: 100%;
-
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
