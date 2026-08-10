@@ -764,7 +764,7 @@
             </div>
 
             <!-- Walk Through -->
-            <!-- <div class="horizontal-section overflow-hidden">
+            <div class="horizontal-section overflow-hidden">
                 <div class="flex-1 pt-28">
                     <div class="container px-3 lg:px-0 xl:px-20" data-aos="fade-up">
                         <h2 class="main-heading mb-4">Built for where care actually happens.</h2>
@@ -817,7 +817,7 @@
                     </div>
 
                 </div>
-            </div> -->
+            </div>
 
             <!-- Care Pathway -->
             <div class="flex-1 py-20">
@@ -1607,53 +1607,53 @@
                 }, { passive: true });
             }
 
-            // gsap.registerPlugin(ScrollTrigger);
+            gsap.registerPlugin(ScrollTrigger);
 
-            // const wrapper = document.querySelector(".cards-wrapper");
+            const wrapper = document.querySelector(".cards-wrapper");
 
-            // function horizontalScroll() {
+            function horizontalScroll() {
 
-            //     const totalScroll =
-            //         wrapper.scrollWidth - window.innerWidth;
+                const totalScroll =
+                    wrapper.scrollWidth - window.innerWidth;
 
-            //     gsap.to(wrapper, {
+                gsap.to(wrapper, {
 
-            //         x: -totalScroll,
-            //         ease: "none",
+                    x: -totalScroll,
+                    ease: "none",
 
-            //         scrollTrigger: {
+                    scrollTrigger: {
 
-            //             trigger: ".horizontal-section",
+                        trigger: ".horizontal-section",
 
-            //             start: "top top",
+                        start: "top top",
 
-            //             end: () => "+=" + totalScroll,
+                        end: () => "+=" + totalScroll,
 
-            //             scrub: 1,
+                        scrub: 1,
 
-            //             pin: true,
+                        pin: true,
 
-            //             anticipatePin: 1,
+                        anticipatePin: 1,
 
-            //             invalidateOnRefresh: true
+                        invalidateOnRefresh: true
 
-            //         }
+                    }
 
-            //     });
+                });
 
-            // }
+            }
 
-            // horizontalScroll();
+            horizontalScroll();
 
-            // window.addEventListener("resize", () => {
+            window.addEventListener("resize", () => {
 
-            //     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-            //     gsap.set(wrapper, { x: 0 });
+                gsap.set(wrapper, { x: 0 });
 
-            //     horizontalScroll();
+                horizontalScroll();
 
-            // });
+            });
         })();
     </script>
 
