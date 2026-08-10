@@ -7,8 +7,56 @@
 }
 
 :root {
-    /* Dark theme */
-    --primary: #F04F34;
+    /* ===================================================================
+       TCC BRAND COLOUR SYSTEM
+       Single source of truth — sourced from the TCC brand colour guide.
+       Every component below consumes these tokens; nothing is hardcoded.
+       =================================================================== */
+
+    /* Primary Blue — main brand colour: CTAs, links, icons, active/focus states */
+    --primary: #053A5B;
+    --primary-50: #ECF0F2;
+    --primary-100: #B2C2CC;
+    --primary-200: #8CA4B4;
+    --primary-300: #587B91;
+    --primary-400: #37617C;
+    --primary-500: #053A5B;
+    --primary-600: #053553;
+    --primary-700: #042941;
+    --primary-800: #032032;
+    --primary-900: #021826;
+
+    /* Primary Red — accent only: badges, error states, secondary CTAs */
+    --accent: #B7232C;
+    --accent-50: #F5E0E2;
+    --accent-100: #E9BBBE;
+    --accent-200: #DE9A9E;
+    --accent-300: #CF6C72;
+    --accent-400: #C54F56;
+    --accent-500: #B7232C;
+    --accent-600: #A72028;
+    --accent-700: #82191F;
+    --accent-800: #651318;
+    --accent-900: #4D0F12;
+
+    /* Grey — muted backgrounds, secondary text, borders, disabled states */
+    --grey: #BDBDBD;
+    --grey-50: #F2F2F2;
+    --grey-100: #E8E8E8;
+    --grey-200: #DBDBDB;
+    --grey-300: #CECECE;
+    --grey-400: #BDBDBD;
+    --grey-600: #8E8E8E;
+    --grey-700: #686868;
+    --grey-800: #424242;
+    --grey-900: #262626;
+
+    /* Section background rhythm (White / Light Blue / Light Grey) */
+    --bg-light-blue: #DCE4E8;
+    --bg-light-blue-soft: #ECF0F2;
+
+    /* Dark theme (legacy token names kept for compatibility with existing
+       component classes below; --dark now maps to brand navy, not black) */
     --text-light: #ffffff;
 
     /* Light theme */
@@ -16,8 +64,8 @@
 
     /* Others */
     --bright: #ffffff;
-    --dark: #000000;
-    --light-gray: #f8f8f8;
+    --dark: #021826;
+    --light-gray: #F2F2F2;
     --polish-white: #e9e8e7;
     /* Typography */
     --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -61,6 +109,7 @@ html {
 body {
     font-family: var(--font-sans);
     font-weight: var(--fw-regular);
+    overflow-x: hidden;
 }
 
 .main-heading {
@@ -96,7 +145,7 @@ body {
 .btn {
     padding: 10px 28px;
     border-radius: 5rem;
-    border: 1px solid var(--dark);
+    border: 1px solid var(--primary);
     font-weight: 500;
     transition: all .3s ease;
 }
@@ -105,25 +154,35 @@ body {
     transform: translateY(-3px);
 }
 
+.btn:focus-visible {
+    outline: 2px solid var(--primary-700);
+    outline-offset: 2px;
+}
+
+/* Primary: Blue background, white text. Hover: darker blue. */
 .btn-primary {
-    background: var(--dark);
+    background: var(--primary);
     color: var(--bright);
+    border-color: var(--primary);
 }
 
 .btn-primary:hover {
-    background: #111827
+    background: var(--primary-700);
+    border-color: var(--primary-700);
 }
 
+/* Secondary: White background, blue border + text. Hover: light blue bg. */
 .btn-secondary {
     background: var(--bright);
-    color: var(--dark);
+    color: var(--primary);
     border-color: var(--bright);
 }
 
 .btn-secondary:hover {
-    background: #F3F4F6;
+    background: var(--bg-light-blue-soft);
 }
 
+/* Tertiary: glass / ghost button used over photography, tinted with brand blue */
 .btn-tertiary {
     backdrop-filter: blur(14px);
     background: rgba(255, 255, 255, .10);
@@ -136,8 +195,70 @@ body {
     border-color: #ffffff55;
 }
 
+/* Accent: Red background, white text — badges / secondary CTAs / error actions only */
+.btn-accent {
+    background: var(--accent);
+    color: var(--bright);
+    border-color: var(--accent);
+}
+
+.btn-accent:hover {
+    background: var(--accent-600);
+    border-color: var(--accent-600);
+}
+
 .bg-primary {
     background: var(--primary);
+}
+
+.bg-accent {
+    background: var(--accent);
+}
+
+.text-accent, .text-accent-hover:hover {
+    color: var(--accent);
+}
+
+.border-primary {
+    border-color: var(--primary);
+}
+
+/* Section background rhythm: White / Light Blue / Light Grey */
+.bg-theme-blue {
+    background: var(--bg-light-blue);
+}
+
+/* Minimal form tokens — blue focus ring, grey borders, red only for errors */
+input,
+select,
+textarea {
+    border: 1px solid var(--grey-300);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    background: var(--bright);
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-50);
+}
+
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+    border-color: var(--accent);
+}
+
+input.is-invalid:focus,
+select.is-invalid:focus,
+textarea.is-invalid:focus {
+    box-shadow: 0 0 0 3px var(--accent-50);
 }
 
 /* Modal */
@@ -316,7 +437,7 @@ body {
 }
 
 .hm-mobile-menu-inner a:hover {
-    color: #F26C81;
+    color: var(--primary-100);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -329,11 +450,11 @@ body {
 
 .hero-overlay {
     background: linear-gradient(90deg,
-            rgba(10, 16, 28, .92) 0%,
-            rgba(10, 16, 28, .88) 35%,
-            rgba(10, 16, 28, .55) 60%,
-            rgba(10, 16, 28, .15) 78%,
-            rgba(10, 16, 28, 0) 100%);
+            rgba(2, 24, 38, .92) 0%,
+            rgba(2, 24, 38, .88) 35%,
+            rgba(2, 24, 38, .55) 60%,
+            rgba(2, 24, 38, .15) 78%,
+            rgba(2, 24, 38, 0) 100%);
 }
 
 .glass {
@@ -413,24 +534,44 @@ body {
     width: calc(250px * 25)
 }
 
+/* Cards */
+.card-content{
+    border: 1px solid #DBDBDB;
+    border-radius: 20px 20px 0 0;
+}
+
+.card-image{
+    border-radius: 0 0 20px 20px;
+}
+
+.card-hover {
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-200);
+    box-shadow: 0 20px 40px rgba(5, 58, 91, 0.12);
+}
+
 .video-overlay {
     background:
         radial-gradient(circle at top left,
-            rgba(56, 189, 248, .45),
+            rgba(5, 58, 91, .45),
             transparent 35%),
 
         radial-gradient(circle at top right,
-            rgba(168, 85, 247, .40),
+            rgba(183, 35, 44, .22),
             transparent 40%),
 
         radial-gradient(circle at bottom right,
-            rgba(236, 72, 153, .35),
+            rgba(5, 58, 91, .40),
             transparent 35%),
 
         linear-gradient(180deg,
-            rgba(5, 10, 25, .15) 0%,
-            rgba(8, 15, 40, .45) 45%,
-            rgba(5, 10, 25, .75) 100%);
+            rgba(2, 24, 38, .15) 0%,
+            rgba(2, 24, 38, .45) 45%,
+            rgba(2, 24, 38, .75) 100%);
 }
 
 .video-container {
@@ -475,12 +616,12 @@ body {
     font-size: 32px;
     font-weight: 300;
     line-height: 1;
-    color: #9CA3AF;
+    color: var(--grey-600);
     transition: color .3s ease;
 }
 
 .accordion-item.active .accordion-icon {
-    color: #111827;
+    color: var(--primary);
 }
 
 .accordion-btn {
@@ -488,7 +629,7 @@ body {
 }
 
 .accordion-btn:hover {
-    background: #fafafa;
+    background: var(--bg-light-blue-soft);
 }
 
 .cards-wrapper {
@@ -498,6 +639,7 @@ body {
 .card {
     width: 380px;
     height: 420px;
+    border: 1px solid #DBDBDB;
 }
 
 @keyframes slide {
@@ -507,6 +649,16 @@ body {
 
     100% {
         transform: translateX(calc(-200px * 8))
+    }
+}
+
+@media (min-width: 768px){
+    .card-content{
+        border-radius: 20px 0 0 20px;
+    }
+
+    .card-image{
+        border-radius: 0 20px 20px 0;
     }
 }
 
@@ -532,6 +684,14 @@ body {
 
     .carousel-wrapper .slide img {
         height: 4.4rem;
+    }
+
+    .card-content{
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-image{
+        border-radius: 0 0 20px 20px;
     }
 }
 
@@ -564,14 +724,14 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--grey-200);
     border-radius: 9999px;
     padding: 0.4rem 1rem;
     font-size: 0.75rem;
     font-weight: var(--fw-medium);
     letter-spacing: var(--ls-wide);
     text-transform: uppercase;
-    color: #6b7280;
+    color: var(--grey-700);
     margin-bottom: 1.25rem;
 }
 
@@ -596,10 +756,10 @@ body {
     display: inline-flex;
     gap: 0.25rem;
     background: var(--bright);
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--grey-200);
     border-radius: 9999px;
     padding: 0.35rem;
-    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 16px 34px rgba(5, 58, 91, 0.14);
 }
 
 .hm-float-tab {
@@ -615,7 +775,7 @@ body {
     font-family: var(--font-sans);
     font-size: 0.8125rem;
     font-weight: var(--fw-medium);
-    color: #6b7280;
+    color: var(--grey-700);
     cursor: pointer;
     transition: color 240ms ease;
 }
@@ -631,7 +791,7 @@ body {
 }
 
 .hm-float-tab:focus-visible {
-    outline: 2px solid var(--dark);
+    outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
 
@@ -644,7 +804,7 @@ body {
     height: calc(100% - 0.7rem);
     width: 0;
     border-radius: 9999px;
-    background: var(--dark);
+    background: var(--primary);
     transition: left 320ms cubic-bezier(0.65, 0, 0.35, 1),
         width 320ms cubic-bezier(0.65, 0, 0.35, 1);
 }
