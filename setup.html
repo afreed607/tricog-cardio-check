@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup | Tricog Cardio Check</title>
+    <title>Setup | Tricog CardioCheck</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/animation.css">
@@ -26,45 +26,21 @@
 
     <main id="human-content" class="w-full h-full">
 
-        <!-- Payment Modal -->
-        <div class="hidden modal-wrapper fixed inset-0 items-center justify-center bg-[rgba(0,0,0,0.5)] p-4 sm:p-6"
-            id="PaymentModal" aria-hidden="true">
-
-            <div
-                class="modal-container relative w-full h-[90vh] max-h-[640px] sm:h-[80vh] sm:max-h-[700px] bg-white rounded-2xl">
-
-                <button type="button"
-                    class="modal-close absolute top-3 right-3 sm:-top-4 sm:-right-4 z-10 flex items-center justify-center h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-primary text-white shadow-lg transition hover:scale-105"
-                    aria-label="Close modal">
-                    <svg class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M18 6L6 18M6 6l12 12"></path>
-                    </svg>
-                </button>
-
-                <div class="relative w-full h-full overflow-x-hidden rounded-2xl">
-                    <iframe class="w-full h-full" src="https://pages.razorpay.com/pl_TMQQxCsGhcy9q3/view"
-                        title="Book a demo" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
             <div class="w-full container flex items-center justify-between px-6 xl:px-20">
 
                 <!-- Logo -->
                 <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
-                    <img class="h-14 lg:h-20 w-auto" src="./assets/images/tcc-logo.png" alt="">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
-                    <a class="hover:text-primary text-accent-hover transition" href="#HowItWorks">How it works</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="#FAQs">FAQ</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="#Blogs">Blogs</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="./setup.html"
-                        id="SetupNav">Setup</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">Solutions</a>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./setup.html">Setup</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./library.html">Library</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./blogs.html">Blogs</a>
                 </div>
 
                 <!-- CTA -->
@@ -91,30 +67,30 @@
             <!-- Mobile / tablet menu panel -->
             <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
                 <nav class="hm-mobile-menu-inner">
-                    <a href="#HowItWorks">How it works</a>
-                    <a href="#FAQs">FAQ</a>
-                    <a href="#Blogs">Blogs</a>
+                    <a href="./solutions.html">Solutions</a>
                     <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
                     <button class="btn btn-secondary" data-modal-target="PaymentModal">Order - ₹14,999</button>
                 </nav>
             </div>
         </header>
 
         <!-- Static Header -->
-        <nav class="w-full flex justify-center py-5 xl:pt-12">
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
             <div class="w-full container flex items-center justify-between px-6 xl:px-20">
 
                 <!-- Logo -->
                 <div class="flex items-center gap-3 font-semibold text-xl select-none">
-                    <img class="h-12 w-auto" src="./assets/images/tcc-logo.png" alt="">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp" alt=""></a>
                 </div>
 
                 <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
-                    <a class="hover:text-[#EF4762] transition" href="index.html#HowItWorks">How it works</a>
-                    <a class="hover:text-[#EF4762] transition" href="index.html#FAQs">FAQ</a>
-                    <a class="hover:text-[#EF4762] transition" href="index.html#Blogs">Blogs</a>
-                    <a class="hover:text-[#EF4762] transition" href="setup.html" id="SetupNav">Setup</a>
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">Solutions</a>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./setup.html">Setup</a>
+                    <a class="hover:text-[#EF4762] transition" href="./library.html">Library</a>
+                    <a class="hover:text-[#EF4762] transition" href="./blogs.html">Blogs</a>
                 </div>
 
                 <!-- CTA -->
@@ -140,10 +116,10 @@
             <!-- Mobile / tablet menu panel -->
             <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
                 <nav class="hm-mobile-menu-inner">
-                    <a href="#HowItWorks">How it works</a>
-                    <a href="#FAQs">FAQ</a>
-                    <a href="#Blogs">Blogs</a>
+                    <a href="./solutions.html">Solutions</a>
                     <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
                     <button class="btn btn-secondary" data-modal-target="PaymentModal">Order -
                         ₹14,999</button>
                 </nav>
@@ -163,7 +139,7 @@
                         <!-- <svg class="h-5" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"></path> </g></svg> -->
                         <span>Placeholder</span>
                     </button>
-                    <button class="btn btn-secondary">Open Placeholder</button>
+                    <button class="btn btn-secondary border-gray-300">Open Placeholder</button>
                 </div>
 
                 <div class="h-96 lg:h-[80vh] bg-[#021826] rounded-2xl mt-10" data-aos="fade-up" data-aos-delay="100">
@@ -764,189 +740,20 @@
 
                 </div>
 
-                <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-
-                        const accordionItems = document.querySelectorAll(".accordion-item");
-
-                        accordionItems.forEach(item => {
-
-                            const button = item.querySelector(".accordion-btn");
-                            const content = item.querySelector(".accordion-content");
-                            const icon = item.querySelector(".accordion-icon");
-
-                            button.addEventListener("click", () => {
-
-                                const isOpen = item.classList.contains("active");
-
-                                // Close all accordions
-                                accordionItems.forEach(otherItem => {
-
-                                    otherItem.classList.remove("active");
-
-                                    const otherContent = otherItem.querySelector(".accordion-content");
-                                    const otherIcon = otherItem.querySelector(".accordion-icon");
-
-                                    otherContent.style.maxHeight = null;
-                                    otherIcon.textContent = "+";
-
-                                });
-
-                                // Open clicked accordion
-                                if (!isOpen) {
-
-                                    item.classList.add("active");
-
-                                    content.style.maxHeight = content.scrollHeight + "px";
-                                    icon.textContent = "−"; // Unicode minus sign
-
-                                }
-
-                            });
-
-                        });
-
-                        // Keep open accordion height updated on resize
-                        window.addEventListener("resize", () => {
-
-                            document.querySelectorAll(".accordion-item.active").forEach(item => {
-
-                                const content = item.querySelector(".accordion-content");
-                                content.style.maxHeight = content.scrollHeight + "px";
-
-                            });
-
-                        });
-
-                    });
-                </script>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10">
-            <div class="container py-16 px-6 lg:px-10 xl:py-20 xl:px-20">
-
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-
-                    <!-- Brand -->
-                    <div class="lg:col-span-4" data-aos="fade-right">
-
-                        <div class="flex items-center gap-3 font-semibold text-2xl select-none">
-                            <img class="h-14 w-auto" src="./assets/images/tcc-logo-2.png" alt="Tricog CardioCheck">
-                        </div>
-
-                        <!-- Social -->
-                        <div class="flex items-center gap-3 mt-7">
-                            <a href="#" aria-label="Tricog on YouTube"
-                                class="flex items-center justify-center h-10 w-10 rounded-full border border-gray-300 text-white transition hover:bg-white hover:border-primary hover:text-primary">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.009 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.017 1.792-4.686 4.533-4.686 1.313 0 2.686.235 2.686.235v2.962h-1.514c-1.491 0-1.956.929-1.956 1.881v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.082 24 18.092 24 12.073z" />
-                                </svg>
-                            </a>
-                            <a href="#" aria-label="Tricog on LinkedIn"
-                                class="flex items-center justify-center h-10 w-10 rounded-full border border-gray-300 text-white transition hover:bg-white hover:border-primary hover:text-primary">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.9 8.65 23 10.98 23 14.28V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4V9Z" />
-                                </svg>
-                            </a>
-                            <a href="#" aria-label="Tricog on X (Twitter)"
-                                class="flex items-center justify-center h-10 w-10 rounded-full border border-gray-300 text-white transition hover:bg-white hover:border-primary hover:text-primary">
-                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M18.9 3H21l-6.6 7.55L22.2 21h-6.4l-5-6.53L4.9 21H2.8l7.06-8.07L2 3h6.55l4.53 5.97L18.9 3Zm-1.12 16.2h1.17L7.28 4.72H6.02l11.76 14.48Z" />
-                                </svg>
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <!-- Link columns -->
-                    <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-10">
-
-                        <!-- Explore -->
-                        <div data-aos="fade-up" data-aos-delay="0">
-                            <h4 class="text-white font-bold mb-5 text-md tracking-wide">Explore</h4>
-                            <ul class="space-y-3 text-sm text-white">
-                                <li><a href="#HowItWorks" class="text-primary-hover transition">How it works</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Risk categories</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Clinical evidence</a></li>
-                                <li><a href="#FAQs" class="text-primary-hover transition">FAQ</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Product -->
-                        <div data-aos="fade-up" data-aos-delay="100">
-                            <h4 class="text-white font-bold mb-5 text-md tracking-wide">Product</h4>
-                            <ul class="space-y-3 text-sm text-white">
-                                <li><a href="#" class="text-primary-hover transition">OMRON Complete</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Clinician app</a></li>
-                                <li><a href="#" class="text-primary-hover transition">For hospital networks</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Company -->
-                        <div data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="text-white font-bold mb-5 text-md tracking-wide">Company</h4>
-                            <ul class="space-y-3 text-sm text-white">
-                                <li><a href="#" class="text-primary-hover transition">About Tricog</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Partners</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Pilot programme</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Contact -->
-                        <div data-aos="fade-up" data-aos-delay="300">
-                            <h4 class="text-white font-bold mb-5 text-md tracking-wide">Contact</h4>
-                            <ul class="space-y-3 text-sm text-white">
-                                <li>
-                                    <a href="mailto:support@tricog.com" class="text-primary-hover transition">
-                                        support@tricog.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tel:+911234567890" class="text-primary-hover transition">
-                                        +91 12345 67890
-                                    </a>
-                                </li>
-                                <li><a href="#" class="text-primary-hover transition">Book a call</a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div
-                    class="border-t border-white/20 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-
-                    <p class="text-xs text-gray-400 order-2 md:order-1">
-                        © 2026 Tricog Health. All rights reserved.
-                    </p>
-
-                    <div class="flex items-center gap-8 text-xs text-white order-1 md:order-2">
-                        <a href="#" class="text-primary-hover transition">Privacy</a>
-                        <a href="#" class="text-primary-hover transition">Terms of use</a>
-                        <a href="#"
-                            class="flex items-center gap-1.5 font-medium text-white/70 text-primary-hover transition">
-                            Back to top
-                            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7 7-7 7 7" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from header-and-footer.js -->
         </footer>
     </main>
 
-    <div id="machine-content"></div>
+    <!-- <div id="machine-content"></div> -->
 
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header-and-footer.js"></script>
+
     <!-- AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>

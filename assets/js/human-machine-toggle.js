@@ -552,6 +552,34 @@
         var header = document.getElementById('stickyHeader');
         if (!toggle || !indicator || !buttons.length || !mainEl || !machineView) return;
 
+        // Reveal the toggle once the hero section has been scrolled past —
+        // same trigger point as #stickyHeader — so it doesn't compete with
+        // the hero's own CTAs. Pages with no hero (e.g. setup.html, though
+        // the widget isn't currently used there) just show it right away.
+        var heroSection = document.getElementById('heroSection');
+
+        if (heroSection && 'IntersectionObserver' in window) {
+            var toggleObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    toggle.classList.toggle('is-visible', !entry.isIntersecting);
+                });
+            }, {
+                root: null,
+                threshold: 0,
+                rootMargin: '-72px 0px 0px 0px'
+            });
+
+            toggleObserver.observe(heroSection);
+        } else if (heroSection) {
+            // Fallback for browsers without IntersectionObserver
+            window.addEventListener('scroll', function () {
+                var heroBottom = heroSection.getBoundingClientRect().bottom;
+                toggle.classList.toggle('is-visible', heroBottom <= 72);
+            }, { passive: true });
+        } else {
+            toggle.classList.add('is-visible');
+        }
+
         function moveIndicator(btn) {
             indicator.style.left = btn.offsetLeft + 'px';
             indicator.style.width = btn.offsetWidth + 'px';

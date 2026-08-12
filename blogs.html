@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .hm-burger {
+            color: #000000 !important;
+        }
+
+        .article-card:hover .card-image {
+            transform: scale(1.045);
+        }
+
+        .article-card .arrow {
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover .arrow {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">Solutions</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./setup.html">Setup</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./library.html">Library</a>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./blogs.html">Blogs</a>
+                </div>
+
+                <!-- CTA -->
+                <button class="sticky-cta hidden lg:inline-flex btn btn-primary py-2.5"
+                    data-modal-target="PaymentModal">
+                    Order - ₹14,999
+                </button>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a href="./solutions.html">Solutions</a>
+                    <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
+                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order - ₹14,999</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">Solutions</a>
+                    <a class="hover:text-[#EF4762] transition" href="./setup.html">Setup</a>
+                    <a class="hover:text-[#EF4762] transition" href="./library.html">Library</a>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./blogs.html">Blogs</a>
+                </div>
+
+                <!-- CTA -->
+                <a href="#" class="hidden lg:inline-flex btn btn-primary py-2.5" data-modal-target="PaymentModal">
+                    Order - ₹14,999
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a href="./solutions.html">Solutions</a>
+                    <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
+                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order -
+                        ₹14,999</button>
+                </nav>
+            </div>
+        </nav>
+
+        <section class="flex-1 py-20">
+            <div class="container px-4 xl:px-20"">
+
+                <div>
+                    <h2 class="main-heading mb-3" data-aos="fade-up">Field notes on cardiac risk.</h2>
+                    <p class="text" data-aos="fade-up" data-aos-delay="100">One long read and two launch videos so far — with more educational content on the way.</p>
+                </div>
+    
+                <div class="flex flex-col gap-10 mt-20">
+ 
+                    <!-- Post 1 (horizontal: image left, content right) -->
+                    <article class="flex flex-col md:flex-row gap-6 items-start">
+                      <a href="https://tricog.com/blogs/the-connected-pathway/" class="w-full md:w-1/2 flex-shrink-0 overflow-hidden rounded-lg">
+                        <img src="https://tricog.com/wp-content/uploads/2026/07/from-a-busy-opd-to-care-at-home-the-tricog-connected-pathway-768x391.webp"
+                             alt="From a Busy OPD to Care at Home: The Tricog Connected Pathway"
+                             class="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-300" />
+                      </a>
+                      <div class="w-full md:w-1/2 flex flex-col">
+                        <div class="flex items-center text-sm text-red-600 font-medium mb-2">
+                          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          Jul 21, 2026
+                        </div>
+                        <a href="https://tricog.com/blogs/the-connected-pathway/">
+                          <h3 class="text-2xl font-bold text-blue-900 hover:text-red-600 leading-snug mb-3">
+                            From a Busy OPD to Care at Home: The Tricog Connected Pathway
+                          </h3>
+                        </a>
+                        <p class="text-gray-600 mb-4">
+                          A crowded OPD has one queue that everyone can see and another that the clinical team has to work out. The visible queue runs by registration number and arrival time, while the clinical queue must run by risk, even when that risk …
+                        </p>
+                        <div class="flex items-center mt-auto">
+                          <img src="https://tricog.com/wp-content/uploads/2026/04/Prateek-1.webp" alt="Prateek Golecha" class="w-9 h-9 rounded-full object-cover mr-3" />
+                          <a href="https://in.linkedin.com/in/prateekgolecha" class="text-sm font-semibold text-blue-900 hover:text-red-600">
+                            Prateek Golecha
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                 
+                    <hr class="border-gray-200 md:hidden" />
+                 
+                    <!-- Posts 2 & 3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                 
+                      <!-- Post 2 -->
+                      <article class="flex flex-col">
+                        <a href="https://tricog.com/blogs/how-an-ordinary-ecg-caught-a-failing-heart-in-kenya/" class="w-full overflow-hidden rounded-lg mb-4">
+                          <img src="https://tricog.com/wp-content/uploads/2026/07/how-an-ordinary-ecg-caught-a-failing-heart-in-kenya-blog-thumbnail-768x358.jpeg"
+                               alt="How an Ordinary ECG Caught a Failing Heart in Kenya"
+                               class="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                        </a>
+                        <div class="flex items-center text-sm text-red-600 font-medium mb-2">
+                          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          Jul 14, 2026
+                        </div>
+                        <a href="https://tricog.com/blogs/how-an-ordinary-ecg-caught-a-failing-heart-in-kenya/">
+                          <h3 class="text-xl font-bold text-blue-900 hover:text-red-600 leading-snug mb-3">
+                            How an Ordinary ECG Caught a Failing Heart in Kenya
+                          </h3>
+                        </a>
+                        <p class="text-gray-600 mb-4">
+                          Mary had been tired for almost a year. She is sixty-eight, a grandmother, and she runs a small stall in Thika. She used to think nothing of a full day staying at her stall. Lately, even walking up the short distance to her house…
+                        </p>
+                        <div class="flex items-center mt-auto">
+                          <img src="https://tricog.com/wp-content/uploads/2026/04/Prateek-1.webp" alt="Prateek Golecha" class="w-9 h-9 rounded-full object-cover mr-3" />
+                          <a href="https://in.linkedin.com/in/prateekgolecha" class="text-sm font-semibold text-blue-900 hover:text-red-600">
+                            Prateek Golecha
+                          </a>
+                        </div>
+                      </article>
+                 
+                      <!-- Post 3 -->
+                      <article class="flex flex-col">
+                        <a href="https://tricog.com/blogs/six-minutes-that-saved-a-life/" class="w-full overflow-hidden rounded-lg mb-4">
+                          <img src="https://tricog.com/wp-content/uploads/2026/07/six-minutes-that-saved-a-life-blog-768x370.jpeg"
+                               alt="Six minutes that saved a life"
+                               class="w-full h-56 object-cover hover:scale-105 transition-transform duration-300" />
+                        </a>
+                        <div class="flex items-center text-sm text-red-600 font-medium mb-2">
+                          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          May 27, 2026
+                        </div>
+                        <a href="https://tricog.com/blogs/six-minutes-that-saved-a-life/">
+                          <h3 class="text-xl font-bold text-blue-900 hover:text-red-600 leading-snug mb-3">
+                            Six minutes that saved a life
+                          </h3>
+                        </a>
+                        <p class="text-gray-600 mb-4">
+                          It was a little past 1 AM when the man walked into Nanyuki Cottage Hospital. He had chest pain and palpitations, and he knew something was wrong. Nanyuki is a small town in Laikipia County, Kenya, in the …
+                        </p>
+                        <div class="flex items-center mt-auto">
+                          <img src="https://tricog.com/wp-content/uploads/2026/04/Prateek-1.webp" alt="Prateek Golecha" class="w-9 h-9 rounded-full object-cover mr-3" />
+                          <a href="https://in.linkedin.com/in/prateekgolecha" class="text-sm font-semibold text-blue-900 hover:text-red-600">
+                            Prateek Golecha
+                          </a>
+                        </div>
+                      </article>
+                 
+                    </div>
+                  </div>
+
+            </div>
+        </section>
+
+        <section></section>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from header-and-footer.js -->
+        </footer>
+    </main>
+
+    <!-- <div id="machine-content"></div> -->
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header-and-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>

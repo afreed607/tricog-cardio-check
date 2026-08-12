@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .hm-burger {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">Solutions</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./setup.html">Setup</a>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./library.html">Library</a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./blogs.html">Blogs</a>
+                </div>
+
+                <!-- CTA -->
+                <button class="sticky-cta hidden lg:inline-flex btn btn-primary py-2.5"
+                    data-modal-target="PaymentModal">
+                    Order - ₹14,999
+                </button>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a href="./solutions.html">Solutions</a>
+                    <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
+                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order - ₹14,999</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">Solutions</a>
+                    <a class="hover:text-[#EF4762] transition" href="./setup.html">Setup</a>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./library.html">Library</a>
+                    <a class="hover:text-[#EF4762] transition" href="./blogs.html">Blogs</a>
+                </div>
+
+                <!-- CTA -->
+                <a href="#" class="hidden lg:inline-flex btn btn-primary py-2.5" data-modal-target="PaymentModal">
+                    Order - ₹14,999
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a href="./solutions.html">Solutions</a>
+                    <a href="./setup.html">Setup</a>
+                    <a href="./library.html">Library</a>
+                    <a href="./blogs.html">Blogs</a>
+                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order -
+                        ₹14,999</button>
+                </nav>
+            </div>
+        </nav>
+
+        <section class="flex-1 py-20">
+            <div class="container px-4 xl:px-20">
+                <h2 class="main-heading mb-3" data-aos="fade-up">Inside the Tricog CardioCheck algorithm.</h2>
+
+                <div class="h-96 lg:h-[80vh] bg-[#021826] rounded-2xl my-10" data-aos="fade-up" data-aos-delay="100">
+                </div>
+
+                <div class="flex flex-col gap-8">
+                    <p class="text" data-aos="fade-up">Most single-lead algorithms do one thing: they look for rhythm.
+                        Heart rate, R-R interval variability, sometimes atrial fibrillation. That narrow scope is why
+                        single-lead ECG has historically been treated as a rhythm gadget rather than a screening
+                        instrument.</p>
+
+                    <p class="text" data-aos="fade-up">TCC takes a different position. It treats the 30-second trace as
+                        a signal dense enough to carry structural and ischaemic information — and reads that signal at
+                        three resolutions simultaneously.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">Two mechanisms in one model</h4>
+                    <p class="text">One model, two jobs.</p>
+
+                    <ol class="flex flex-col gap-4 mt-5 list-decimal list-inside">
+                        <li class="text" data-aos="fade-up">
+                            <strong>The microscope.</strong> At high resolution the model scrutinises sub-clinical waveform detail — QRS complex morphology, P-wave presence and shape, localised conduction anomalies. This is where the earliest silent indicators live, in patients who present as entirely stable.
+                        </li>
+                        <li class="text" data-aos="fade-up">
+                            <strong>The sieve.</strong> At low resolution it evaluates rhythm across the whole trace and sorts the queue. Nothing waits on a specialist read: the output is a category, at the point of capture, in about ten seconds.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">Three scales</h4>
+
+                    <ol class="flex flex-col gap-4 mt-5 list-decimal list-inside">
+                        <li class="text" data-aos="fade-up">
+                            <strong>Fine-grained scale.</strong> QRS morphology, P-wave detection, conduction
+                            anomalies.
+                        </li>
+                        <li class="text" data-aos="fade-up">
+                            <strong>Medium scale.</strong> Intermediate structural and ischaemic indicators — ST-segment
+                            deviation and T-wave abnormality — the band that bridges subtle waveform shifts and overt
+                            disease.
+                        </li>
+                        <li class="text" data-aos="fade-up">
+                            <strong>Coarse scale.</strong> The macroscopic view: rhythm consistency and long-range trend
+                            across the full 30 seconds, catching overarching irregularity that local windows miss.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-10">
+                    <div class="h-72 md:h-[400px] lg:h-full rounded-2xl overflow-hidden" data-aos="fade-up">
+                        <img src="./assets/images/doctor-presenting-tcc.png" alt="Cardiologist reviewing ECG trace with patient"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <p class="text mt-5" data-aos="fade-up">The three scales run in parallel, not
+                        in sequence. Features from every horizon are fused before classification, so ambiguity at one
+                        resolution can be resolved by context from another.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">Why multi-scale</h4>
+
+                    <div class="flex flex-col gap-8 mt-5">
+                        <p class="text" data-aos="fade-up">A single-resolution model forces a trade-off. Tune it for
+                            fine detail and it over-reads noise; tune it for rhythm and it goes blind to ST-segment and
+                            T-wave change. Reading all three horizons at once removes the trade-off instead of
+                            splitting the difference.</p>
+
+                        <p class="text" data-aos="fade-up">It also mirrors how a cardiologist reads a tracing: sweep
+                            for rhythm, interrogate morphology beat by beat, then step back and judge the whole. The
+                            architecture encodes that workflow rather than approximating its output.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#021826] text-white rounded-2xl p-8 mt-10 flex flex-col gap-4" data-aos="fade-up">
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1">✓</span>
+                        <p class="text text-white">Three parallel temporal scales — fine, medium and coarse — fused
+                            into a single classification.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1">✓</span>
+                        <p class="text text-white">AUROC 0.909 (95% CI 0.905–0.913) on held-out data.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1">✓</span>
+                        <p class="text text-white">Additive only: the model can escalate a patient's priority, never
+                            downgrade or override a clinical decision.</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="mt-1">✓</span>
+                        <p class="text text-white">Trained on millions of ECGs, class-imbalance corrected.</p>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">What it detects</h4>
+
+                    <p class="text mt-5" data-aos="fade-up">High risk covers time-critical findings — infarction,
+                        atrial fibrillation — where the Golden Hour is the limiting constraint. Moderate risk covers
+                        ventricular hypertrophy and ischaemic changes that aren't immediately life-threatening but
+                        require timely, focused evaluation. Low risk confirms normal sinus rhythm and benign
+                        variants.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">Validation</h4>
+
+                    <p class="text mt-5" data-aos="fade-up">Overall discrimination is AUROC 0.909 [95% CI 0.905–0.913] against held-out benchmarks. High-risk detection reaches 85.9% sensitivity [84.6–87.0] at 92.2% specificity [91.6–92.9]. Low-risk classification holds 90.2% sensitivity [89.2–91.2] — the figure that matters for safely routing stable patients out of critical pathways. Class imbalance was addressed explicitly in training, so rare life-threatening findings are detected with the same precision as common normal rhythms, which also mitigates algorithmic bias across demographics.</p>
+                </div>
+
+                <div class="mt-10">
+                    <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">The short version</h4>
+
+                    <p class="text mt-5" data-aos="fade-up">Thirty seconds of single-lead ECG, read at three resolutions at once, fused into Low, Moderate or High in about ten seconds. It escalates and never suppresses — so deploying it cannot produce worse triage than current practice, only the same or better.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from header-and-footer.js -->
+        </footer>
+    </main>
+
+    <!-- <div id="machine-content"></div> -->
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header-and-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>
