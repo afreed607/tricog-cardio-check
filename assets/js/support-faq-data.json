@@ -1,0 +1,209 @@
+{
+    "sections": [
+      {
+        "heading": "About TCC",
+        "items": [
+          {
+            "question": "What is Tricog CardioCheck?",
+            "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"currentColor\" stroke-width=\"1.3\" /><line x1=\"12\" y1=\"11\" x2=\"12\" y2=\"16.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><circle cx=\"12\" cy=\"7.6\" r=\"1.05\" fill=\"currentColor\" />",
+            "answer": "Tricog CardioCheck (TCC) is an AI-powered cardiovascular risk screening and triaging solution that analyses a 30-second single-lead ECG and categorises the result as Low, Moderate or High Risk.<br><br>TCC is designed to bring an additional layer of cardiac risk assessment to the point of care, helping healthcare teams identify people who may need closer clinical attention, including people who may not yet show obvious symptoms.<br><br>TCC is a CDSCO-certified Software as a Medical Device (SaMD) and is designed to work alongside clinical judgement, not replace it."
+          },
+          {
+            "question": "What does TCC do?",
+            "icon": "<path d=\"M12 19.2c-3.8-2.9-7.6-5.9-7.6-9.6C4.4 6.9 6.3 5 8.7 5c1.5 0 2.7.8 3.3 1.9C12.6 5.8 13.8 5 15.3 5c2.4 0 4.3 1.9 4.3 4.6 0 3.7-3.8 6.7-7.6 9.6Z\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linejoin=\"round\" /><path d=\"M6.5 12.5h2.3l1.3-2.6 1.8 4.4 1.3-1.8h3.3\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "TCC turns a short single-lead ECG into an actionable risk signal.<br><br>It analyses the ECG waveform at multiple levels from fine waveform features and conduction patterns to broader rhythm patterns and uses these signals to classify cardiovascular risk into three categories:<ul class=\"list-disc ml-6\"><li>Low Risk - suitable for routine care based on the TCC assessment</li><li>Moderate Risk - requires timely clinical review</li><li>High Risk - requires prompt clinical attention</li></ul><br>The purpose is not simply to generate another ECG report. TCC is designed to help healthcare teams prioritise who needs attention and how urgently."
+          },
+          {
+            "question": "What does a Low, Moderate or High Risk result mean?",
+            "icon": "<path d=\"M4.5 16.5a7.5 7.5 0 0 1 15 0\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><path d=\"M7 16.5a5 5 0 0 1 10 0\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"0.5 2.3\" stroke-linecap=\"round\" /><line x1=\"12\" y1=\"16.5\" x2=\"15.3\" y2=\"12.2\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><circle cx=\"12\" cy=\"16.5\" r=\"1.1\" fill=\"currentColor\" />",
+            "answer": "Low Risk: The ECG does not show the risk patterns that TCC is designed to flag. The patient can generally continue through the routine care pathway, subject to clinical judgement.<br><br>Moderate Risk: The ECG contains patterns associated with potential underlying cardiovascular conditions and warrants timely clinical review.<br><br>High Risk: The ECG contains patterns associated with potentially significant cardiovascular conditions and should be prioritised for prompt clinical evaluation.<br><br>For example, High Risk with conditions such as atrial fibrillation and infarction, while Moderate Risk is associated with conditions such as ischemia and ventricular hypertrophy."
+          },
+          {
+            "question": "Is TCC a diagnostic tool?",
+            "icon": "<path d=\"M7.5 3.5v4.3a2.9 2.9 0 0 0 5.8 0V3.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><path d=\"M10.4 10.6v2.6a4.3 4.3 0 0 0 8.6 0v-1.4\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"10.6\" r=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.2\" />",
+            "answer": "No. TCC is a risk-stratification and screening tool, not a replacement for clinical diagnosis.<br><br>It analyses a single-channel ECG to help determine whether a person falls into a Low, Moderate or High cardiovascular risk category. Its output should be considered alongside assessment by a qualified healthcare professional and is not intended to replace traditional diagnostic methods or treatment."
+          },
+          {
+            "question": "Can TCC replace a traditional 12-lead ECG?",
+            "icon": "<rect x=\"3.5\" y=\"4\" width=\"17\" height=\"14.5\" rx=\"1.4\" stroke=\"currentColor\" stroke-width=\"1.2\" /><line x1=\"3.5\" y1=\"9.6\" x2=\"20.5\" y2=\"9.6\" stroke=\"currentColor\" stroke-width=\"0.8\" opacity=\"0.55\" /><line x1=\"3.5\" y1=\"13.6\" x2=\"20.5\" y2=\"13.6\" stroke=\"currentColor\" stroke-width=\"0.8\" opacity=\"0.55\" /><line x1=\"9\" y1=\"4\" x2=\"9\" y2=\"18.5\" stroke=\"currentColor\" stroke-width=\"0.8\" opacity=\"0.55\" /><line x1=\"14.5\" y1=\"4\" x2=\"14.5\" y2=\"18.5\" stroke=\"currentColor\" stroke-width=\"0.8\" opacity=\"0.55\" /><path d=\"M5 12h2l1-2.4 1.6 4.8 1.2-2.4h2\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "No. TCC is designed to complement, not replace, the 12-lead ECG.<br><br>A 12-lead ECG remains an important diagnostic investigation when a clinician needs a comprehensive cardiac assessment. TCC addresses a different problem: making cardiac risk screening faster and more scalable using a short single-lead ECG, particularly at the first point of contact.<br><br>This makes TCC useful as an additional screening or triage layer before, alongside or as part of a broader clinical pathway."
+          }
+        ]
+      },
+      {
+        "heading": "The Technology",
+        "items": [
+          {
+            "question": "How is TCC different from a conventional single-lead ECG?",
+            "icon": "<path d=\"M3.5 8h3l1-2 1.6 4 1.2-2h3\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M3.5 16.5h2.4l0.9-1.7 1.3 3.4 1-1.7h2.4\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><path d=\"M15.5 15.5l2 2 3.5-4\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "A conventional single-lead ECG primarily provides a limited view of electrical cardiac activity and has traditionally been used for detecting a relatively narrow range of rhythm abnormalities.<br><br>TCC adds an AI-based analysis layer to the single-lead ECG.<br><br>Instead of looking only at basic heart rate or rhythm, TCC analyses the waveform at multiple temporal scales to identify subtle patterns across morphology, conduction, ST-segment and T-wave changes, and broader rhythm behaviour.<br><br>In simple terms: The ECG captures the signal. TCC extracts more information from that signal."
+          },
+          {
+            "question": "How does the TCC AI analyze a 30-second ECG?",
+            "icon": "<circle cx=\"12\" cy=\"12\" r=\"8.5\" stroke=\"currentColor\" stroke-width=\"1.3\" /><path d=\"M6.5 12h2l1.2-2.6 1.8 5.2 1.2-2.6h2.8\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" /><line x1=\"12\" y1=\"6\" x2=\"12\" y2=\"7.3\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" />",
+            "answer": "TCC uses a proprietary <strong>Multi-Scale AI Model</strong> that examines the ECG simultaneously at three levels:<br><br><strong>Fine scale:</strong> Looks closely at features such as QRS morphology, P-wave patterns and local conduction changes.<br><br><strong>Medium scale:</strong> Examines features such as ST-segment and T-wave changes that can provide structural or ischemic context.<br><br><strong>Coarse scale:</strong> Looks across the broader recording to identify rhythm-level patterns. The information from these different scales is then combined to generate the final risk category."
+          },
+          {
+            "question": "What types of cardiac risk can TCC identify?",
+            "icon": "<path d=\"M11 17.3c-3.2-2.4-6.4-5-6.4-8.1C4.6 6.9 6.1 5.4 8 5.4c1.3 0 2.3.7 2.8 1.6\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" /><path d=\"M13.5 6.7a3 3 0 0 1 2.4-1.3c1.9 0 3.4 1.5 3.4 3.5\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" /><path d=\"M17.3 13.8h2.6l1.4 2.6-1.4 2.6h-2.6l-1.4-2.6z\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\" /><line x1=\"18.6\" y1=\"14.9\" x2=\"18.6\" y2=\"16.3\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" /><circle cx=\"18.6\" cy=\"17.2\" r=\"0.55\" fill=\"currentColor\" />",
+            "answer": "TCC is designed to stratify cardiovascular risk into Low, Moderate and High Risk.<br><br>The whitepaper associates these categories with examples including:<br><br><ul class=\"list-disc ml-6\"><li>High Risk: Atrial fibrillation, infarction</li><li>Moderate Risk: Ischemia, ventricular hypertrophy</li><li>Low Risk: Normal sinus rhythm</li></ul><br>These are examples of conditions associated with the risk categories, not a claim that TCC independently diagnoses those conditions. Clinical evaluation remains necessary."
+          },
+          {
+            "question": "Which single-lead ECG devices are supported?",
+            "icon": "<rect x=\"7\" y=\"7\" width=\"10\" height=\"11\" rx=\"2.4\" stroke=\"currentColor\" stroke-width=\"1.3\" /><path d=\"M9 7V5.2a1.4 1.4 0 0 1 1.4-1.4h3.2A1.4 1.4 0 0 1 15 5.2V7\" stroke=\"currentColor\" stroke-width=\"1.2\" /><path d=\"M9.3 12.2h1.3l0.8-1.6 1.1 3 0.8-1.4h1.4\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "<strong>This is not specified in the supplied TCC whitepaper.</strong><br><br>This FAQ should be completed from TCC's validated device compatibility list rather than making a general compatibility claim.<br><br>Ideally, the final answer should state the <strong>specific supported device models</strong>, connectivity requirements and whether additional hardware/software is required."
+          }
+        ]
+      },
+      {
+        "heading": "Clinical Evidence",
+        "items": [
+          {
+            "question": "How was the TCC AI trained?",
+            "icon": "<circle cx=\"6\" cy=\"7\" r=\"1.7\" stroke=\"currentColor\" stroke-width=\"1.2\" /><circle cx=\"18\" cy=\"7\" r=\"1.7\" stroke=\"currentColor\" stroke-width=\"1.2\" /><circle cx=\"12\" cy=\"12.5\" r=\"1.9\" stroke=\"currentColor\" stroke-width=\"1.2\" /><circle cx=\"6\" cy=\"18\" r=\"1.7\" stroke=\"currentColor\" stroke-width=\"1.2\" /><circle cx=\"18\" cy=\"18\" r=\"1.7\" stroke=\"currentColor\" stroke-width=\"1.2\" /><line x1=\"7.3\" y1=\"8.1\" x2=\"10.5\" y2=\"11.3\" stroke=\"currentColor\" stroke-width=\"1\" /><line x1=\"16.7\" y1=\"8.1\" x2=\"13.5\" y2=\"11.3\" stroke=\"currentColor\" stroke-width=\"1\" /><line x1=\"10.5\" y1=\"13.7\" x2=\"7.3\" y2=\"16.9\" stroke=\"currentColor\" stroke-width=\"1\" /><line x1=\"13.5\" y1=\"13.7\" x2=\"16.7\" y2=\"16.9\" stroke=\"currentColor\" stroke-width=\"1\" />",
+            "answer": "The TCC model was developed using a foundational dataset containing millions of ECG recordings.<br><br>The training methodology specifically addressed class imbalance so that the model could learn from both common normal rhythms and rarer, potentially serious conditions. The stated objective was to improve detection of uncommon and early-stage abnormalities while supporting consistent performance across patient populations."
+          },
+          {
+            "question": "How has TCC been clinically validated?",
+            "icon": "<path d=\"M12 3.6l6.4 2.3v5.6c0 4.3-2.7 7.4-6.4 8.9-3.7-1.5-6.4-4.6-6.4-8.9V5.9z\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linejoin=\"round\" /><path d=\"M8.7 12.1l2.1 2.1 4.3-4.6\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "TCC was evaluated against held-out clinical benchmarks.<br><br>The validation reported in the whitepaper shows an overall AUROC of 0.909.<br><br>For High-Risk identification, the reported sensitivity was 85.9% and specificity was 92.2%.<br><br>For Low-Risk classification, the reported sensitivity was 90.2%."
+          },
+          {
+            "question": "How does TCC perform clinically?",
+            "icon": "<line x1=\"4\" y1=\"20\" x2=\"4\" y2=\"4\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" /><line x1=\"4\" y1=\"20\" x2=\"20.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" /><rect x=\"6.4\" y=\"14\" width=\"2.6\" height=\"6\" rx=\"0.5\" stroke=\"currentColor\" stroke-width=\"1.1\" /><rect x=\"10.9\" y=\"10.5\" width=\"2.6\" height=\"9.5\" rx=\"0.5\" stroke=\"currentColor\" stroke-width=\"1.1\" /><rect x=\"15.4\" y=\"6.5\" width=\"2.6\" height=\"13.5\" rx=\"0.5\" stroke=\"currentColor\" stroke-width=\"1.1\" /><path d=\"M15.4 4.2l1.7 1.7 2.7-3\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" />",
+            "answer": "In the reported validation:<br><br><ul class=\"list-disc ml-6\"><li>Overall AUROC: 0.909</li><li>High-Risk sensitivity: 85.9%</li><li>High-Risk specificity: 92.2%</li><li>Low-Risk sensitivity: 90.2%</li></ul><br>These numbers describe performance in the validation dataset and should not be interpreted as a guarantee of performance for every individual patient or every deployment environment."
+          },
+          {
+            "question": "Can TCC replace a cardiologist?",
+            "icon": "<circle cx=\"11\" cy=\"8\" r=\"3.1\" stroke=\"currentColor\" stroke-width=\"1.3\" /><path d=\"M4.8 19.5c0-3.4 2.8-6 6.2-6s6.2 2.6 6.2 6\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" /><circle cx=\"18.3\" cy=\"6.3\" r=\"3.1\" stroke=\"currentColor\" stroke-width=\"1.1\" /><line x1=\"16.7\" y1=\"4.7\" x2=\"19.9\" y2=\"7.9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" /><line x1=\"19.9\" y1=\"4.7\" x2=\"16.7\" y2=\"7.9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" />",
+            "answer": "No. TCC is designed to help clinicians—not replace them.<br><br>Its role is to analyse the ECG quickly, identify risk patterns and help prioritise patients. A qualified healthcare professional remains responsible for clinical assessment, diagnosis and treatment decisions."
+          }
+        ]
+      },
+      {
+        "heading": "Safety & Limitations",
+        "items": [
+          {
+            "question": "What happens after a High Risk result?",
+            "icon": "<path d=\"M12 3.7l9 15.6H3z\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/><line x1=\"12\" y1=\"9.4\" x2=\"12\" y2=\"14.2\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\"/><circle cx=\"12\" cy=\"16.6\" r=\"1\" fill=\"currentColor\"/>",
+            "answer": "A High Risk result should prioritise the patient for prompt clinical evaluation.<br/><br/>The result is an escalation signal. It does not by itself establish a diagnosis or dictate treatment.<br/><br/>The appropriate next step depends on the patient's symptoms, history, clinical examination and the healthcare professional's assessment."
+          },
+          {
+            "question": "What happens after a Moderate Risk result?",
+            "icon": "<path d=\"M12 4l8.5 14.7h-17z\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"14.5\" r=\"6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"none\"/><path d=\"M9.4 13.2h1.4l1-2 1.4 3.7 1-2h1.5\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\" transform=\"translate(0,-2)\"/><line x1=\"12\" y1=\"9.6\" x2=\"12\" y2=\"9.6\" stroke=\"currentColor\"/><circle cx=\"12\" cy=\"15.4\" r=\"3.4\" stroke=\"currentColor\" stroke-width=\"1.1\"/><path d=\"M10.6 15.4l1 1 1.8-2.1\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
+            "answer": "A Moderate Risk result indicates that the ECG contains patterns associated with potential underlying cardiovascular conditions.<br/><br/>The patient should receive timely clinical review so that the healthcare professional can determine whether further evaluation or investigation is appropriate."
+          },
+          {
+            "question": "What does a Low Risk result mean?",
+            "icon": "<path d=\"M12 3.6l6.4 2.3v5.6c0 4.3-2.7 7.4-6.4 8.9-3.7-1.5-6.4-4.6-6.4-8.9V5.9z\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/><path d=\"M8.9 12l1.9 1.9 4-4.3\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
+            "answer": "A Low Risk result means that TCC has not identified the risk patterns it is designed to flag in that ECG<br/><br/>It does not mean that the person has no cardiovascular disease or that no further medical assessment is ever required.<br/><br/>The whitepaper describes Low-Risk patients as suitable for routine, non-urgent workflows based on the TCC assessment. Clinical judgement remains important."
+          },
+          {
+            "question": "Who should not be screened with TCC?",
+            "icon": "<circle cx=\"12\" cy=\"8.3\" r=\"3.1\" stroke=\"currentColor\" stroke-width=\"1.3\"/><path d=\"M5.6 19.5c0-3.4 2.9-6 6.4-6s6.4 2.6 6.4 6\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><circle cx=\"12\" cy=\"13.5\" r=\"9.2\" stroke=\"currentColor\" stroke-width=\"1.1\"/><line x1=\"5.7\" y1=\"20.3\" x2=\"18.3\" y2=\"6.7\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/>",
+            "answer": "According to the current intended-use information, TCC has not been tested and is not intended for:<br/><br/><ul class=\"list-disc ml-6\"><li>People below 18 years of age</li><li>Pregnant women</li><li>Patients with pacemakers</li><li>Patients with Implantable Cardioverter Defibrillators (ICDs)</li></ul><br/>These restrictions should be clearly communicated wherever TCC is deployed."
+          },
+          {
+            "question": "Can clinicians override a TCC result?",
+            "icon": "<rect x=\"4.5\" y=\"4\" width=\"12\" height=\"16\" rx=\"1.5\" stroke=\"currentColor\" stroke-width=\"1.2\"/><line x1=\"7\" y1=\"8.4\" x2=\"14\" y2=\"8.4\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"/><line x1=\"7\" y1=\"11.6\" x2=\"12\" y2=\"11.6\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"/><path d=\"M14.5 14.5l4.6-4.6a1.2 1.2 0 0 1 1.7 1.7l-4.6 4.6-2.3.6z\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/>",
+            "answer": "Yes, in the sense that TCC does not replace clinical judgement.<br/><br/>TCC is designed to be additive. It can raise the priority of a patient when it detects a potential abnormality, but it does not override a clinician's decision to investigate.<br/><br/>In other words, TCC can add a signal to the clinical decision; it should not suppress a clinician's concern."
+          }
+        ]
+      },
+      {
+        "heading": "Trust & Deployment",
+        "items": [
+          {
+            "question": "Is TCC CDSCO-certified?",
+            "icon": "<circle cx=\"12\" cy=\"9.5\" r=\"5.3\" stroke=\"currentColor\" stroke-width=\"1.3\"/><path d=\"M9.3 9.6l1.7 1.7 3.2-3.6\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9.2 14.1l-1.6 6 4.4-2 4.4 2-1.6-6\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/>",
+            "answer": "Yes. The TCC whitepaper identifies Tricog CardioCheck as a CDSCO-certified Software as a Medical Device (SaMD)."
+          },
+          {
+            "question": "Is patient data secure?",
+            "icon": "<rect x=\"5.5\" y=\"10.5\" width=\"13\" height=\"9.5\" rx=\"1.6\" stroke=\"currentColor\" stroke-width=\"1.3\"/><path d=\"M8 10.5V7.6a4 4 0 0 1 8 0v2.9\" stroke=\"currentColor\" stroke-width=\"1.3\"/><circle cx=\"12\" cy=\"14.6\" r=\"1.15\" fill=\"currentColor\"/><line x1=\"12\" y1=\"15.7\" x2=\"12\" y2=\"17.3\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/>",
+            "answer": "Yes. Patient data is protected using healthcare-grade security and privacy controls, and Tricog CardioCheck is HIPAA compliant."
+          },
+          {
+            "question": "Where can TCC be used?",
+            "icon": "<path d=\"M12 21s6.5-6.4 6.5-11.3A6.5 6.5 0 0 0 5.5 9.7C5.5 14.6 12 21 12 21z\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"9.7\" r=\"2.4\" stroke=\"currentColor\" stroke-width=\"1.2\"/>",
+            "answer": "TCC is designed for use where cardiac risk needs to be assessed early in the patient journey.<br/><br/>The whitepaper specifically describes deployment at a nurse intake station as a first screening layer or alongside a clinician's evaluation as an additional source of information.<br/><br/>This makes the model relevant to settings such as:<br/><br/><ul class=\"list-disc ml-6\"><li>OPD screening</li><li>GP clinics</li><li>Primary healthcare settings</li><li>Health camps</li><li>Employer health programs</li><li>Large-scale screening initiatives</li><li>Hospital intake and triage</li></ul><br/>The suitability of each specific setting should be determined by the applicable clinical workflow and intended use."
+          },
+          {
+            "question": "Does TCC require a cardiologist on-site?",
+            "icon": "<rect x=\"4.5\" y=\"8\" width=\"15\" height=\"12\" rx=\"1.2\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M9.5 8V5.6A1.6 1.6 0 0 1 11.1 4h1.8a1.6 1.6 0 0 1 1.6 1.6V8\" stroke=\"currentColor\" stroke-width=\"1.1\"/><line x1=\"12\" y1=\"11.5\" x2=\"12\" y2=\"15.5\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"13.5\" x2=\"14\" y2=\"13.5\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"4.2\" y1=\"20.7\" x2=\"19.8\" y2=\"7.3\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/>",
+            "answer": "The whitepaper does not state that a cardiologist must be physically present.<br/><br/>TCC is specifically designed to provide an automated risk-stratification layer at the point of care and to help frontline staff prioritise patients for clinical attention.<br/><br/>However, TCC does not eliminate the need for qualified clinical evaluation when a result requires review."
+          },
+          {
+            "question": "Does TCC require changes to the existing workflow?",
+            "icon": "<rect x=\"3\" y=\"9.5\" width=\"5\" height=\"5\" rx=\"1\" stroke=\"currentColor\" stroke-width=\"1.2\"/><rect x=\"9.5\" y=\"9.5\" width=\"5\" height=\"5\" rx=\"1\" stroke=\"currentColor\" stroke-width=\"1.2\"/><rect x=\"16\" y=\"9.5\" width=\"5\" height=\"5\" rx=\"1\" stroke=\"currentColor\" stroke-width=\"1.2\"/><line x1=\"8\" y1=\"12\" x2=\"9.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><line x1=\"14.5\" y1=\"12\" x2=\"16\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/>",
+            "answer": "TCC is designed to fit into the existing patient journey as a screening and triage layer.<br/><br/>It can be used at intake before physician assessment or alongside a clinician's own evaluation.<br/><br/>The objective is to add a rapid risk signal without requiring every patient to go through a comprehensive 12-lead ECG as the first screening step."
+          },
+          {
+            "question": "Can TCC support large-scale screening programs?",
+            "icon": "<circle cx=\"8.3\" cy=\"8.3\" r=\"2.4\" stroke=\"currentColor\" stroke-width=\"1.2\"/><circle cx=\"15.7\" cy=\"8.3\" r=\"2.4\" stroke=\"currentColor\" stroke-width=\"1.2\"/><circle cx=\"12\" cy=\"9.6\" r=\"2.7\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M3.3 19.8c0-2.8 2.3-4.9 5-4.9s5 2.1 5 4.9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M10.7 19.8c0-2.8 2.3-4.9 5-4.9s5 2.1 5 4.9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/>",
+            "answer": "Yes, this is one of the core problems TCC is designed to address.<br/><br/>Because TCC uses a short single-lead ECG and automated AI-based risk stratification, it can help standardise the first layer of cardiac screening across high-volume settings.<br/><br/>The whitepaper describes the enterprise value as enabling risk stratification at the point of care, improving patient throughput, reducing delays for critical cases and supporting a consistent approach across locations."
+          }
+        ]
+      },
+      {
+        "heading": "Business & Technology",
+        "items": [
+          {
+            "question": "Why is TCC needed if 12-lead ECG already exists?",
+            "icon": "<circle cx=\"9.5\" cy=\"12\" r=\"6.3\" stroke=\"currentColor\" stroke-width=\"1.2\"/><circle cx=\"15.3\" cy=\"12\" r=\"6.3\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M11.1 9.5l1.3 1.3 2.1-2.4\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
+            "answer": "Because the question is not \"Can we perform a 12-lead ECG?\"<br/><br/>The question is \"Can we efficiently screen everyone who may be at risk?\"<br/><br/>A 12-lead ECG is valuable for comprehensive clinical evaluation, but performing it on every person entering a high-volume screening or primary-care workflow can create operational and specialist bottlenecks.<br/><br/>TCC provides an additional, faster screening layer using a 30-second single-lead ECG. Patients who require greater clinical attention can then be prioritised for the appropriate next step.<br/><br/>This creates a complementary pathway:<br/><br/>Screen more people → identify risk earlier → prioritise clinical resources → investigate where needed."
+          },
+          {
+            "question": "Why use AI on a single-lead ECG?",
+            "icon": "<rect x=\"7\" y=\"7\" width=\"10\" height=\"10\" rx=\"1.3\" stroke=\"currentColor\" stroke-width=\"1.3\"/><path d=\"M9.3 12.4h1l0.9-2 1.5 4 0.9-2h1.1\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"9\" y1=\"4\" x2=\"9\" y2=\"7\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"15\" y1=\"4\" x2=\"15\" y2=\"7\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"9\" y1=\"17\" x2=\"9\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"15\" y1=\"17\" x2=\"15\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"4\" y1=\"9\" x2=\"7\" y2=\"9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"17\" y1=\"9\" x2=\"20\" y2=\"9\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"4\" y1=\"15\" x2=\"7\" y2=\"15\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><line x1=\"17\" y1=\"15\" x2=\"20\" y2=\"15\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/>",
+            "answer": "Because the value is not only in the number of ECG leads, it is also in how much information can be extracted from the signal.<br/><br/>TCC's Multi-Scale AI analyses the single-lead waveform across fine, medium and broad temporal patterns, looking beyond basic rhythm detection.<br/><br/>This enables a short ECG recording to become a more useful risk-stratification signal than conventional single-lead algorithms alone."
+          },
+          {
+            "question": "What makes TCC different from conventional ECG algorithms?",
+            "icon": "<path d=\"M12 3.8l8 4v3l-8 4-8-4v-3z\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M4 12.3l8 4 8-4\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/><path d=\"M4 16.3l8 4 8-4\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/>",
+            "answer": "Traditional single-lead algorithms have generally focused on a relatively narrow set of rhythm abnormalities.<br/><br/>TCC uses a proprietary Multi-Scale AI architecture that simultaneously examines:<br/><br/>Fine waveform morphology → structural/ischemic patterns → broader rhythm behaviour.<br/><br/>The result is designed not merely to classify a rhythm, but to produce a cardiovascular risk category that can guide patient prioritisation."
+          },
+          {
+            "question": "What is TCC's role in the patient journey?",
+            "icon": "<circle cx=\"4.3\" cy=\"18.5\" r=\"1.6\" stroke=\"currentColor\" stroke-width=\"1.2\"/><circle cx=\"12\" cy=\"9.5\" r=\"1.9\" stroke=\"currentColor\" stroke-width=\"1.3\"/><circle cx=\"19.7\" cy=\"5.2\" r=\"1.6\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M5.7 17.4L10.3 11\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-dasharray=\"0.2 2.4\" stroke-linecap=\"round\"/><path d=\"M13.7 8.2L18.1 6.2\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-dasharray=\"0.2 2.4\" stroke-linecap=\"round\"/>",
+            "answer": "TCC sits early in the patient journey, where the healthcare system needs to decide who needs more attention.<br/><br/>A simplified pathway is:<br/><br/>Patient → 30-second single-lead ECG → TCC risk stratification → clinical prioritisation → appropriate evaluation/care<br/><br/>TCC therefore acts as a bridge between mass accessibility and specialist care.<br/><br/>It helps convert a large, undifferentiated patient population into a prioritised clinical workflow."
+          },
+          {
+            "question": "What makes TCC scalable?",
+            "icon": "<path d=\"M14.5 4.5H19.5V9.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"19.5\" y1=\"4.5\" x2=\"13\" y2=\"11\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><path d=\"M9.5 19.5H4.5V14.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"4.5\" y1=\"19.5\" x2=\"11\" y2=\"13\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\"/>",
+            "answer": "TCC addresses three scalability constraints at the same time:<br/><br/>Time: A 30-second ECG can be captured quickly.<br/><br/>Specialist capacity: Automated risk stratification helps frontline teams identify which patients need greater clinical attention.<br/><br/>Standardisation: The same AI-based analysis can provide a consistent first-layer risk assessment across high-volume workflows.<br/><br/>The whitepaper describes this as converting an unstructured patient influx into prioritised pathways while allowing specialist resources to focus on patients who need them most."
+          }
+        ]
+      },
+      {
+        "heading": "Integration & Scale",
+        "items": [
+          {
+            "question": "How does TCC fit into an existing clinical workflow?",
+            "icon": "<path d=\"M9.3 4.7h4a1.1 1.1 0 0 1 1.1 1.1v2a1 1 0 0 0 1 1h1.8a1.1 1.1 0 0 1 1.1 1.1v3.3a1.1 1.1 0 0 1-1.1 1.1H15a1 1 0 0 0-1 1v2a1.1 1.1 0 0 1-1.1 1.1h-4A1.1 1.1 0 0 1 7.8 18v-2a1 1 0 0 0-1-1H4.9A1.1 1.1 0 0 1 3.8 13.9v-3.3a1.1 1.1 0 0 1 1.1-1.1h1.9a1 1 0 0 0 1-1v-2a1.1 1.1 0 0 1 1.1-1.1z\" stroke=\"currentColor\" stroke-width=\"1.15\" stroke-linejoin=\"round\"/>",
+            "answer": "TCC can function as an additional screening or triage step.<br/><br/>For example:<br/><br/>Registration / intake → 30-second ECG → TCC risk category → prioritised clinical pathway<br/><br/>A clinician can also use TCC alongside their own assessment as an additional source of information.<br/><br/>This allows organisations to introduce risk stratification without making TCC the sole decision-maker in the care pathway."
+          },
+          {
+            "question": "Can TCC be deployed across multiple locations?",
+            "icon": "<path d=\"M3.5 19.5c3-9.3 5.6-14 8.5-14s5.5 4.7 8.5 14\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\"/><path d=\"M8 14.2s2-3.6 2-5.7a2 2 0 1 0-4 0c0 2.1 2 5.7 2 5.7z\" stroke=\"currentColor\" stroke-width=\"1.15\" stroke-linejoin=\"round\"/><path d=\"M16.6 17.6s1.6-2.9 1.6-4.5a1.6 1.6 0 1 0-3.2 0c0 1.6 1.6 4.5 1.6 4.5z\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linejoin=\"round\"/>",
+            "answer": "The TCC model is designed around scalable, point-of-care screening and the whitepaper specifically describes the enterprise benefit of consistent risk stratification across locations.<br/><br/>However, the supplied document does not provide the technical architecture or deployment specifications needed to describe the exact multi-site implementation."
+          },
+          {
+            "question": "Can TCC integrate with existing healthcare systems?",
+            "icon": "<path d=\"M9 8.2V5.6a1.3 1.3 0 0 1 2.6 0v1\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><path d=\"M6.4 8.2h11.2a1.3 1.3 0 0 1 1.3 1.3v3.4a4.3 4.3 0 0 1-4.3 4.3H9.4a4.3 4.3 0 0 1-4.3-4.3V9.5a1.3 1.3 0 0 1 1.3-1.3z\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><line x1=\"14.3\" y1=\"5.4\" x2=\"14.3\" y2=\"8.2\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/><line x1=\"12\" y1=\"17.2\" x2=\"12\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\"/>",
+            "answer": "This is not specified in the supplied whitepaper.<br/><br/>The final FAQ should state the actual integration capabilities—such as APIs, EMR/HIS integration, cloud connectivity, data exchange and reporting—only after confirmation from the product/engineering team."
+          },
+          {
+            "question": "What does a healthcare provider need to deploy TCC?",
+            "icon": "<rect x=\"5\" y=\"3.5\" width=\"14\" height=\"17\" rx=\"1.4\" stroke=\"currentColor\" stroke-width=\"1.2\"/><path d=\"M7.6 8.2l1.1 1.1 1.9-2.1\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"12.3\" y1=\"7.7\" x2=\"16.4\" y2=\"7.7\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"/><path d=\"M7.6 13l1.1 1.1 1.9-2.1\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"12.3\" y1=\"12.5\" x2=\"16.4\" y2=\"12.5\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"/><path d=\"M7.6 17.8l1.1 1.1 1.9-2.1\" stroke=\"currentColor\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"12.3\" y1=\"17.3\" x2=\"16.4\" y2=\"17.3\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"/>",
+            "answer": "At a high level, TCC requires access to a supported single-lead ECG signal and a workflow in which the resulting risk category can be reviewed and acted upon by the healthcare team.<br/><br/>The exact hardware, connectivity, account setup, software requirements and integration requirements are not specified in the supplied whitepaper and should be added from the deployment documentation."
+          },
+          {
+            "question": "What makes TCC scalable at an operational level?",
+            "icon": "<path d=\"M14.5 4.5H19.5V9.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"19.5\" y1=\"4.5\" x2=\"13\" y2=\"11\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><path d=\"M9.5 19.5H4.5V14.5\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"4.5\" y1=\"19.5\" x2=\"11\" y2=\"13\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\"/>",
+            "answer": "TCC is designed around a simple proposition:<br/><br/>A short ECG + automated AI analysis + clear risk stratification = a scalable first layer of cardiac screening.<br/><br/>Instead of requiring specialist interpretation for every screening ECG, TCC can help frontline teams identify which patients should move faster into clinical review.<br/><br/>That makes the model particularly relevant to environments where patient volumes are high and specialist availability is limited."
+          }
+        ]
+      }
+    ]
+  }

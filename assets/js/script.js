@@ -77,44 +77,54 @@
     });
 
     // # Accordion
-    const accordionItems = document.querySelectorAll(".accordion-item");
+    function initAccordions(root = document) {
 
-    accordionItems.forEach(item => {
+        const accordionItems = root.querySelectorAll(".accordion-item");
 
-        const button = item.querySelector(".accordion-btn");
-        const content = item.querySelector(".accordion-content");
-        const icon = item.querySelector(".accordion-icon");
+        accordionItems.forEach(item => {
 
-        button.addEventListener("click", () => {
+            const button = item.querySelector(".accordion-btn");
+            const content = item.querySelector(".accordion-content");
+            const icon = item.querySelector(".accordion-icon");
 
-            const isOpen = item.classList.contains("active");
+            button.addEventListener("click", () => {
 
-            // Close all accordions
-            accordionItems.forEach(otherItem => {
+                const isOpen = item.classList.contains("active");
 
-                otherItem.classList.remove("active");
+                // Close all accordions
+                accordionItems.forEach(otherItem => {
 
-                const otherContent = otherItem.querySelector(".accordion-content");
-                const otherIcon = otherItem.querySelector(".accordion-icon");
+                    otherItem.classList.remove("active");
 
-                otherContent.style.maxHeight = null;
-                otherIcon.textContent = "+";
+                    const otherContent = otherItem.querySelector(".accordion-content");
+                    const otherIcon = otherItem.querySelector(".accordion-icon");
+
+                    otherContent.style.maxHeight = null;
+                    otherIcon.textContent = "+";
+
+                });
+
+                // Open clicked accordion
+                if (!isOpen) {
+
+                    item.classList.add("active");
+
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.textContent = "−"; // Unicode minus sign
+
+                }
 
             });
 
-            // Open clicked accordion
-            if (!isOpen) {
-
-                item.classList.add("active");
-
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.textContent = "−"; // Unicode minus sign
-
-            }
-
         });
 
-    });
+    }
+
+    // Run on normal page load, for any accordions already in the HTML
+    document.addEventListener("DOMContentLoaded", () => initAccordions());
+
+    // Re-run whenever dynamically fetched accordion content (e.g. FAQ items) finishes loading
+    document.addEventListener("accordions:loaded", () => initAccordions());
 
     // Keep open accordion height updated on resize
     window.addEventListener("resize", () => {

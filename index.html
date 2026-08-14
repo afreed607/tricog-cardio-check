@@ -224,10 +224,11 @@
                 </div>
 
                 <div class="w-full flex-1 pt-28 pb-20">
-                    <h2 class="text-2xl xl:text-3xl font-bold text-center" data-aos="fade-up">Trusted by healthcare teams
+                    <h2 class="text-2xl xl:text-3xl font-bold text-center" data-aos="fade-up">Trusted by healthcare
+                        teams
                         delivering earlier cardiac intervention.
                     </h2>
-    
+
                     <div class="carousel-wrapper clients-carousel">
                         <div class="slide-track">
                             <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/1.png" alt="">
@@ -266,7 +267,7 @@
                             </div>
                             <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/20.png" alt="">
                             </div>
-    
+
                             <!-- Duplication -->
                             <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/1.png" alt="">
                             </div>
@@ -358,10 +359,9 @@
                                 <h4 class="text-xl lg:text-2xl font-semibold">Capture the ECG</h4>
                                 <p>A 30-second ECG can contain signals associated with cardiac abnormalities.</p>
                             </div>
-                            
+
                             <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/capture-ecg.jpeg"
-                                alt="">
+                                src="./assets/images/capture-ecg.jpeg" alt="">
                         </div>
                         <div class="w-full flex flex-col md:flex-row xl:flex-col overflow-hidden card-hover rounded-2xl"
                             data-aos="fade-up" data-aos-delay="0">
@@ -372,8 +372,7 @@
                                 <p>Evaluates ECG patterns across 140+ cardiac conditions.</p>
                             </div>
                             <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/assess-risk.jpeg"
-                                alt="">
+                                src="./assets/images/assess-risk.jpeg" alt="">
                         </div>
                         <div class="w-full flex flex-col md:flex-row xl:flex-col overflow-hidden card-hover rounded-2xl"
                             data-aos="fade-up" data-aos-delay="0">
@@ -384,9 +383,12 @@
                                 <p>Low, Moderate, or High risk. Know the next step instantly.</p>
                             </div>
                             <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/act-early.jpeg"
-                                alt="">
+                                src="./assets/images/act-early.jpeg" alt="">
                         </div>
+                    </div>
+
+                    <div class="flex-1 mt-10">
+                        <button class="btn btn-primary md:py-4 md:px-10">Bring cardiac risk screening into your workflow</button>
                     </div>
                 </div>
             </div>
@@ -427,61 +429,91 @@
                                 src="https://www.freeiconspng.com/uploads/black-iphone-7-png-13.png" alt="">
                         </div>
                     </div>
-                    <div class="w-full flex-1 bg-[#021826] rounded-[32px] mt-10 " data-hm-section="stats">
-                        <div class="container mx-auto px-5 lg:px-8 py-16 xl:py-28 xl:px-20">
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
 
-                                <!-- Left Heading -->
-                                <div data-aos="fade-right">
-                                    <h2 class="main-heading text-white mb-4">
-                                        Millions Remain Undiagnosed Until Preventable Disease Becomes Critical.
-                                    </h2>
-                                    <p class="text text-white/80">Primary care teams see hundreds of patients every
-                                        week, but identifying those at elevated cardiovascular risk remains difficult
-                                        without specialist review. As a result, high-risk patients are often referred
-                                        too late, while limited specialist resources are spread across large
-                                        populations.</p>
+                    <style>
+                        .stat-bg {
+                            background-image: url('./assets/images/stat-bg.jpeg');
+                            background-size: cover;
+                            background-position: center;
+                        }
+
+                        @media (min-width: 1024px) {
+                            .stat-bg {
+                                background-size: contain;
+                            }
+                        }
+
+                        .scrim {
+                            background: linear-gradient(90deg,
+                                    rgba(2, 24, 38, .92) 0%,
+                                    rgba(2, 24, 38, .88) 35%,
+                                    rgba(2, 24, 38, .55) 60%,
+                                    rgba(2, 24, 38, .15) 78%,
+                                    rgba(2, 24, 38, 0) 100%);
+                        }
+                    </style>
+                    <div
+                        class="relative w-full md:min-h-[440px] lg:min-h-[640px] min-[1440px]:min-h-[720px] flex-1 overflow-hidden shadow-2xl rounded-[32px] bg-grey-200 bg-cover bg-center stat-bg">
+
+                        <div class="absolute inset-0 scrim"></div>
+
+                        <div class="container relative z-10 flex items-center">
+                            <div class="max-w-[68%] sm:max-w-[800px] text-white px-6 py-7 md:py-14 sm:px-16 sm:py-10">
+
+                                <h1
+                                    class="main-heading">
+                                    Millions live with undetected cardiovascular risk.
+                                </h1>
+
+                                <p
+                                    class="mt-4 lg:mt-10 text text-white/80 max-w-[540px]">
+                                    Primary care teams need a scalable way to identify at-risk patients before symptoms
+                                    appear and intervention opportunities are lost.
+                                </p>
+
+                                <span
+                                    class="block mt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-grey-400">
+                                    The scale of the problem
+                                </span>
+
+                                <div class="mt-4 flex flex-col sm:flex-row gap-4 sm:gap-7 items-start sm:items-stretch">
+
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-white font-extrabold text-2xl sm:text-[32px] leading-none">272</span>
+                                        <span class="mt-2 text-white text-[15px] font-medium">CVD deaths</span>
+                                        <span class="text-[13px] text-grey-400">per 100,000 population</span>
+                                    </div>
+
+                                    <div class="hidden sm:block w-px bg-white/20"></div>
+
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-white font-extrabold text-2xl sm:text-[32px] leading-none">80%</span>
+                                        <span class="mt-2 text-white text-[15px] font-medium">preventable</span>
+                                        <span class="text-[13px] text-grey-400">premature heart disease</span>
+                                    </div>
+
+                                    <div class="hidden sm:block w-px bg-white/20"></div>
+
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-accent font-extrabold text-2xl sm:text-[32px] leading-none">50%</span>
+                                        <span class="mt-2 text-white text-[15px] font-medium">asymptomatic</span>
+                                        <span class="text-[13px] text-grey-400">before a major event</span>
+                                    </div>
+
                                 </div>
-
-                                <!-- Stats Cards -->
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                                    <!-- First card: full width from tablet -->
-                                    <div class="md:col-span-2 w-full rounded-2xl border border-white/10 bg-gradient-to-b from-[#053553] to-[#021826] p-7"
-                                        data-aos="fade-up" data-aos-delay="0">
-                                        <h3 class="text-white text-5xl font-semibold">272</h3>
-                                        <p class="text-white text-md mt-4">CVD deaths</p>
-                                        <p class="text-gray-400 text-sm">per 100,000 population</p>
-                                    </div>
-                                
-                                    <!-- Second card -->
-                                    <div class="w-full rounded-2xl border border-white/10 bg-gradient-to-b from-[#053553] to-[#021826] p-7"
-                                        data-aos="fade-up" data-aos-delay="300">
-                                        <h3 class="text-white text-5xl font-semibold">30</h3>
-                                        <p class="text-white text-md mt-4">seconds</p>
-                                        <p class="text-gray-400 text-sm">ECG Capture</p>
-                                    </div>
-                                
-                                    <!-- Third card -->
-                                    <div class="w-full rounded-2xl border border-white/10 bg-gradient-to-b from-[#053553] to-[#021826] p-7"
-                                        data-aos="fade-up" data-aos-delay="450">
-                                        <h3 class="text-white text-5xl font-semibold">
-                                            ~10 <span class="text-3xl">sec</span>
-                                        </h3>
-                                        <p class="text-white text-md mt-4">Risk Categorization</p>
-                                        <p class="text-gray-400 text-sm">returned in-app</p>
-                                    </div>
-                                
-                                </div>
-
                             </div>
                         </div>
+
                     </div>
+                
                 </div>
             </div>
 
             <!-- Compare Table -->
-            <div class="flex-1 py-20" data-hm-section="compare">
+            <div class="flex-1 py-10" data-hm-section="compare">
                 <div class="container px-3 xl:p-20">
                     <h2 class="main-heading mb-5" data-aos="fade-up">How CardioCheck
                         compares.</h2>
@@ -489,136 +521,159 @@
                         <table class="min-w-[900px] w-full border-collapse text-sm">
                             <thead>
                                 <tr class="border-b border-gray-200">
-                                    <th class="w-[280px] bg-theme-gray"></th>
-                        
-                                    <th class="bg-primary text-white text-left font-semibold px-6 py-5 border-l border-[#032032]">
-                                        Tricog CardioCheck (TCC)
+                                    <th class="w-[340px] bg-theme-gray xl:py-16"></th>
+
+                                    <th
+                                        class="bg-primary text-white text-center font-semibold px-6 py-8 border-l border-[#032032]">
+                                        Tricog CardioCheck
                                     </th>
-                        
-                                    <th class="text-left font-semibold bg-theme-gray px-6 py-5">
-                                        Single-lead ECG machines
+
+                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                        12-lead ECG
                                     </th>
-                        
-                                    <th class="text-left font-semibold bg-theme-gray px-6 py-5">
-                                        Traditional triage
+
+                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                        Manual triage
+                                    </th>
+
+                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                        Other pathways
                                     </th>
                                 </tr>
                             </thead>
-                        
+
                             <tbody>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Primary purpose</td>
-                                    <td class="bg-primary text-white px-6 py-5">AI-powered cardiac risk screening at the point of care</td>
-                                    <td class="text-left px-6 py-5">ECG recording and rhythm detection</td>
-                                    <td class="text-left px-6 py-5">Symptom- and history-based patient assessment</td>
+                                    <td class="px-6 py-5">
+                                        30-second single-lead ECG
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-lg font-semibold">✓</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">AI risk stratification</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — Low, Moderate or High, across 140+ cardiac conditions</td>
-                                    <td class="text-left px-6 py-5">No — raw waveform or basic rhythm classification only</td>
-                                    <td class="text-left px-6 py-5">No — based on clinician judgement</td>
+                                    <td class="px-6 py-5">
+                                        Result in about 10 seconds
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-lg font-semibold">✓</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Who operates it</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Nurse, technician or any clinical staff</td>
-                                    <td class="text-left px-6 py-5">Patients themselves, as these are usually consumer devices</td>
-                                    <td class="text-left px-6 py-5">Doctor or trained clinician</td>
+                                    <td class="px-6 py-5">
+                                        Works without a cardiologist on site
+                                        <span class="text-gray-400">ⓘ</span>
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Training required</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Minimal — no ECG reading skills needed</td>
-                                    <td class="text-left px-6 py-5">Moderate — staff need to interpret what the result means</td>
-                                    <td class="text-left px-6 py-5">Significant — clinical expertise required</td>
+                                    <td class="px-6 py-5">
+                                        Fits the routine vital-sign workflow
+                                        <span class="text-gray-400">ⓘ</span>
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-500 text-lg">〜</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Time to result</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Under a minute — including the 30-second ECG capture</td>
-                                    <td class="text-left px-6 py-5">1 minute</td>
-                                    <td class="text-left px-6 py-5">Varies — often longer, depending on queue and clinician availability</td>
+                                    <td class="px-6 py-5">
+                                        Three-level risk output
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Screens asymptomatic patients</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — every patient is screened, regardless of symptoms or history</td>
-                                    <td class="text-left px-6 py-5">No — typically used only once symptoms appear</td>
-                                    <td class="text-left px-6 py-5">No — relies on the patient reporting symptoms</td>
+                                    <td class="px-6 py-5">
+                                        Trained on cardiologist-annotated ECGs
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-500 text-lg">〜</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Workflow change required</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">None — integrates into the existing vitals check</td>
-                                    <td class="text-left px-6 py-5">None</td>
-                                    <td class="text-left px-6 py-5">None</td>
+                                    <td class="px-6 py-5">
+                                        Runs on OMRON Complete hardware
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Equipment required</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">OMRON Complete device and a smartphone</td>
-                                    <td class="text-left px-6 py-5">Dedicated ECG machine</td>
-                                    <td class="text-left px-6 py-5">None — relies on clinical judgement</td>
+                                    <td class="px-6 py-5">
+                                        Needs no dedicated ECG room
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-lg font-semibold">✓</td>
+                                    <td class="text-center text-gray-400 text-lg">✕</td>
+                                    <td class="text-center text-lg font-semibold">✓</td>
                                 </tr>
-                        
+
                                 <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Specialist required</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">No</td>
-                                    <td class="text-left px-6 py-5">No</td>
-                                    <td class="text-left px-6 py-5">Yes</td>
+                                    <td class="px-6 py-5 font-medium">
+                                        Capture
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center">
+                                        30 sec, single-lead
+                                    </td>
+
+                                    <td class="text-center text-gray-500">—</td>
+
+                                    <td class="text-center text-gray-500">—</td>
+
+                                    <td class="text-center">
+                                        Varies
+                                    </td>
                                 </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Clinical output</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Risk level — Low, Moderate or High</td>
-                                    <td class="text-left px-6 py-5">Raw waveform</td>
-                                    <td class="text-left px-6 py-5">Verbal or written clinical assessment</td>
-                                </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Actionable next step provided</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — a clear recommendation for each risk level</td>
-                                    <td class="text-left px-6 py-5">No</td>
-                                    <td class="text-left px-6 py-5">Depends on the clinician</td>
-                                </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Catches silent, missed risk</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — systematic screening of every patient</td>
-                                    <td class="text-left px-6 py-5">No — only used when a problem is already suspected</td>
-                                    <td class="text-left px-6 py-5">No — entirely dependent on symptoms being present</td>
-                                </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Point-of-care use</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — any clinical setting, no dedicated room needed</td>
-                                    <td class="text-left px-6 py-5">Limited — requires dedicated space and setup</td>
-                                    <td class="text-left px-6 py-5">Yes</td>
-                                </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Portability</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">High — handheld device and a smartphone</td>
-                                    <td class="text-left px-6 py-5">Low to moderate — dedicated machine required</td>
-                                    <td class="text-left px-6 py-5">Not applicable</td>
-                                </tr>
-                        
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">Cost</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">₹25,000 — device, AI and app usage</td>
-                                    <td class="text-left px-6 py-5">₹15,000–₹40,000 approximately — device only, with no AI risk stratification</td>
-                                    <td class="text-left px-6 py-5">Part of the doctor consultation</td>
-                                </tr>
-                        
+
                                 <tr>
-                                    <td class="px-6 py-5 font-medium">Regulatory status</td>
-                                    <td class="bg-primary text-white text-left px-6 py-5">Yes — CDSCO-approved medical device</td>
-                                    <td class="text-left px-6 py-5">Varies — by device and manufacturer</td>
-                                    <td class="text-left px-6 py-5">Not applicable</td>
+                                    <td class="px-6 py-5 font-medium">
+                                        Turnaround
+                                    </td>
+
+                                    <td class="bg-primary text-white text-center">
+                                        ~10 seconds
+                                    </td>
+
+                                    <td class="text-center">
+                                        Minutes to hours
+                                    </td>
+
+                                    <td class="text-center">
+                                        Clinician-dependent
+                                    </td>
+
+                                    <td class="text-center">
+                                        Hours to days
+                                    </td>
                                 </tr>
-                        
+
                             </tbody>
                         </table>
                     </div>
@@ -723,19 +778,19 @@
                     <div class="cards-wrapper flex gap-5 lg:gap-6 overflow-x-auto
                                px-[6vw] lg:px-[12vw] pb-10
                                snap-x snap-mandatory scrollbar-hide">
-    
+
                         <!-- Card 01 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -743,39 +798,39 @@
                                         01
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         High-volume OPD
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
                                         Screens every patient at intake without slowing the queue,
                                         so priority follows cardiac risk, not arrival order.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
-    
+
+
                         <!-- Card 02 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -783,39 +838,39 @@
                                         02
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Corporate screening
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
                                         Adds a cardiac risk category to routine check-ups — the asymptomatic group
                                         conventional screening misses.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
-    
+
+
                         <!-- Card 03 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -823,37 +878,38 @@
                                         03
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Rural PHC
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        With no cardiologist on site, frontline staff get an objective basis for referral.
+                                        With no cardiologist on site, frontline staff get an objective basis for
+                                        referral.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- Card 4 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -861,38 +917,39 @@
                                         04
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         GP clinic
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Single-doctor practices with no diagnostics get a structured way to decide who to
+                                        Single-doctor practices with no diagnostics get a structured way to decide who
+                                        to
                                         refer onward.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- Card 5 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -900,38 +957,38 @@
                                         05
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Health camps
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
                                         Portable and usable by non-specialist staff, with the risk category available
                                         immediately.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- Card 6 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -939,38 +996,38 @@
                                         06
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Employer health programmes
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
                                         Screen a whole workforce in one drive; only Moderate and High risk go on for a
                                         12-lead ECG.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- Card 7 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -978,38 +1035,39 @@
                                         07
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Pharma initiatives
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Run screening drives at scale with one consistent, auditable risk standard across
+                                        Run screening drives at scale with one consistent, auditable risk standard
+                                        across
                                         every site.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                         <!-- Card 8 -->
                         <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-    
+
                             <!-- Clipping layer -->
                             <div
                                 class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-    
+
                                 <!-- Decorative circle -->
                                 <div
                                     class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
                                 </div>
-    
+
                                 <!-- Top -->
                                 <div class="relative z-10 flex items-center justify-between">
                                     <span
@@ -1017,26 +1075,26 @@
                                         08
                                     </span>
                                 </div>
-    
+
                                 <!-- Content -->
                                 <div class="relative z-10 h-[140px]">
-    
+
                                     <h4
                                         class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
                                         Insurance
                                     </h4>
-    
+
                                     <p
                                         class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
                                         An objective cardiac risk category at onboarding or renewal, captured in under a
                                         minute.
                                     </p>
-    
+
                                 </div>
                             </div>
-    
+
                         </div>
-    
+
                     </div>
                 </div>
             </div>
@@ -1092,7 +1150,10 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC is a cardiac risk screening tool designed to flag patients at moderate or high cardiovascular risk, including those who may otherwise be missed through the traditional clinical pathway. It helps clinicians identify patients who may need further evaluation or appropriate follow-up.
+                                    TCC is a cardiac risk screening tool designed to flag patients at moderate or high
+                                    cardiovascular risk, including those who may otherwise be missed through the
+                                    traditional clinical pathway. It helps clinicians identify patients who may need
+                                    further evaluation or appropriate follow-up.
                                 </div>
                             </div>
 
@@ -1133,7 +1194,11 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    A single-lead ECG is a quick, 30-second recording of the heart’s electrical activity. It captures clinically relevant ECG signals that can help identify potential cardiac risk. TCC analyzes this ECG using its algorithm to assess the patient’s cardiovascular risk and classify it as <strong>Low, Moderate, or High</strong>.
+                                    A single-lead ECG is a quick, 30-second recording of the heart’s electrical
+                                    activity. It captures clinically relevant ECG signals that can help identify
+                                    potential cardiac risk. TCC analyzes this ECG using its algorithm to assess the
+                                    patient’s cardiovascular risk and classify it as <strong>Low, Moderate, or
+                                        High</strong>.
                                 </div>
                             </div>
 
@@ -1168,7 +1233,9 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC enables a single-lead ECG to be used not just to capture a signal but also as a screening tool to help flag patients who may otherwise be missed in the traditional clinical pathway.
+                                    TCC enables a single-lead ECG to be used not just to capture a signal but also as a
+                                    screening tool to help flag patients who may otherwise be missed in the traditional
+                                    clinical pathway.
                                 </div>
                             </div>
 
@@ -1240,10 +1307,15 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    A High Risk result indicates that the patient may require <strong>further cardiac evaluation</strong>. The patient should be referred to a doctor for clinical assessment and, where appropriate, a <strong>12-lead ECG and further evaluation</strong> as soon as possible.
+                                    A High Risk result indicates that the patient may require <strong>further cardiac
+                                        evaluation</strong>. The patient should be referred to a doctor for clinical
+                                    assessment and, where appropriate, a <strong>12-lead ECG and further
+                                        evaluation</strong> as soon as possible.
                                     <br><br>
-                                    TCC does not diagnose a cardiac condition. The final assessment and next steps are determined by the treating clinician based on the patient’s symptoms, history, examination, and other clinical findings.
-                                    
+                                    TCC does not diagnose a cardiac condition. The final assessment and next steps are
+                                    determined by the treating clinician based on the patient’s symptoms, history,
+                                    examination, and other clinical findings.
+
                                 </div>
                             </div>
 
@@ -1282,9 +1354,13 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC currently supports ECG data recorded using OMRON <strong>Healthcare’s Complete™ blood pressure monitors with integrated ECG monitoring.</strong>
+                                    TCC currently supports ECG data recorded using OMRON <strong>Healthcare’s Complete™
+                                        blood pressure monitors with integrated ECG monitoring.</strong>
                                     <br><br>
-                                    Through our partnership with OMRON Healthcare, ECG data captured by these devices is securely transmitted to the cloud and analyzed by the TCC algorithm to provide a <strong>Low, Moderate, or High cardiovascular risk assessment</strong> in approximately 10 seconds.                                    
+                                    Through our partnership with OMRON Healthcare, ECG data captured by these devices is
+                                    securely transmitted to the cloud and analyzed by the TCC algorithm to provide a
+                                    <strong>Low, Moderate, or High cardiovascular risk assessment</strong> in
+                                    approximately 10 seconds.
                                 </div>
                             </div>
 
@@ -1317,7 +1393,10 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    Yes. TCC is designed with healthcare data privacy and security in mind and complies with applicable <strong>HIPAA, GDPR, and CDSCO requirements.</strong> Access to patient information is restricted based on authorized roles, helping ensure that sensitive health data is only available to those who need it.
+                                    Yes. TCC is designed with healthcare data privacy and security in mind and complies
+                                    with applicable <strong>HIPAA, GDPR, and CDSCO requirements.</strong> Access to
+                                    patient information is restricted based on authorized roles, helping ensure that
+                                    sensitive health data is only available to those who need it.
                                 </div>
                             </div>
 
@@ -1350,9 +1429,13 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    No. <strong>TCC does not replace a traditional 12-lead ECG.</strong> TCC is a rapid cardiac risk screening tool designed to help identify patients who may need further cardiac evaluation.
+                                    No. <strong>TCC does not replace a traditional 12-lead ECG.</strong> TCC is a rapid
+                                    cardiac risk screening tool designed to help identify patients who may need further
+                                    cardiac evaluation.
                                     <br><br>
-                                    A 12-lead ECG provides a more comprehensive assessment of the heart’s electrical activity and may be recommended by a clinician following a TCC result, based on the patient’s symptoms, history, and clinical findings.                                    
+                                    A 12-lead ECG provides a more comprehensive assessment of the heart’s electrical
+                                    activity and may be recommended by a clinician following a TCC result, based on the
+                                    patient’s symptoms, history, and clinical findings.
                                 </div>
                             </div>
 
@@ -1388,9 +1471,12 @@
 
                             <div class="accordion-content">
                                 <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC was developed using a <strong>foundational dataset of millions of ECG recordings</strong>, with training designed to account for class imbalance so that less common, high-risk cardiac patterns were adequately represented.
+                                    TCC was developed using a <strong>foundational dataset of millions of ECG
+                                        recordings</strong>, with training designed to account for class imbalance so
+                                    that less common, high-risk cardiac patterns were adequately represented.
                                     <br><br>
-                                    TCC is also validated on separate ECG data to assess how reliably it identifies different levels of cardiac risk.                                    
+                                    TCC is also validated on separate ECG data to assess how reliably it identifies
+                                    different levels of cardiac risk.
                                 </div>
                             </div>
 
@@ -1663,97 +1749,97 @@
     <!-- AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        (function () {
-            // Page load fade-in
-            window.addEventListener('load', function () {
-                document.documentElement.classList.add('page-loaded');
-            });
+            (function () {
+                // Page load fade-in
+                window.addEventListener('load', function () {
+                    document.documentElement.classList.add('page-loaded');
+                });
 
-            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            AOS.init({
-                duration: 900,
-                easing: 'ease-out-cubic',
-                once: true,
-                offset: 80,
-                disable: prefersReducedMotion
-            });
+                AOS.init({
+                    duration: 900,
+                    easing: 'ease-out-cubic',
+                    once: true,
+                    offset: 80,
+                    disable: prefersReducedMotion
+                });
 
-            // Sticky Header
-            var heroSection = document.getElementById('heroSection');
-            var stickyHeader = document.getElementById('stickyHeader');
+                // Sticky Header
+                var heroSection = document.getElementById('heroSection');
+                var stickyHeader = document.getElementById('stickyHeader');
 
-            if (heroSection && stickyHeader && 'IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        // When hero is NOT intersecting (scrolled past), show sticky header
-                        stickyHeader.classList.toggle('is-visible', !entry.isIntersecting);
+                if (heroSection && stickyHeader && 'IntersectionObserver' in window) {
+                    var observer = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            // When hero is NOT intersecting (scrolled past), show sticky header
+                            stickyHeader.classList.toggle('is-visible', !entry.isIntersecting);
+                        });
+                    }, {
+                        root: null,
+                        threshold: 0,
+                        // Trigger slightly before the hero fully leaves, and
+                        // slightly after it starts, for a natural handoff
+                        rootMargin: '-72px 0px 0px 0px'
                     });
-                }, {
-                    root: null,
-                    threshold: 0,
-                    // Trigger slightly before the hero fully leaves, and
-                    // slightly after it starts, for a natural handoff
-                    rootMargin: '-72px 0px 0px 0px'
-                });
 
-                observer.observe(heroSection);
-            } else if (heroSection && stickyHeader) {
-                // Fallback for browsers without IntersectionObserver
-                window.addEventListener('scroll', function () {
-                    var heroBottom = heroSection.getBoundingClientRect().bottom;
-                    stickyHeader.classList.toggle('is-visible', heroBottom <= 72);
-                }, { passive: true });
-            }
+                    observer.observe(heroSection);
+                } else if (heroSection && stickyHeader) {
+                    // Fallback for browsers without IntersectionObserver
+                    window.addEventListener('scroll', function () {
+                        var heroBottom = heroSection.getBoundingClientRect().bottom;
+                        stickyHeader.classList.toggle('is-visible', heroBottom <= 72);
+                    }, { passive: true });
+                }
 
-            gsap.registerPlugin(ScrollTrigger);
+                gsap.registerPlugin(ScrollTrigger);
 
-            const wrapper = document.querySelector(".cards-wrapper");
+                const wrapper = document.querySelector(".cards-wrapper");
 
-            function horizontalScroll() {
+                function horizontalScroll() {
 
-                const totalScroll =
-                    wrapper.scrollWidth - window.innerWidth;
+                    const totalScroll =
+                        wrapper.scrollWidth - window.innerWidth;
 
-                gsap.to(wrapper, {
+                    gsap.to(wrapper, {
 
-                    x: -totalScroll,
-                    ease: "none",
+                        x: -totalScroll,
+                        ease: "none",
 
-                    scrollTrigger: {
+                        scrollTrigger: {
 
-                        trigger: ".horizontal-section",
+                            trigger: ".horizontal-section",
 
-                        start: "top top",
+                            start: "top top",
 
-                        end: () => "+=" + totalScroll,
+                            end: () => "+=" + totalScroll,
 
-                        scrub: 1,
+                            scrub: 1,
 
-                        pin: true,
+                            pin: true,
 
-                        anticipatePin: 1,
+                            anticipatePin: 1,
 
-                        invalidateOnRefresh: true
+                            invalidateOnRefresh: true
 
-                    }
+                        }
 
-                });
+                    });
 
-            }
-
-            horizontalScroll();
-
-            window.addEventListener("resize", () => {
-
-                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-                gsap.set(wrapper, { x: 0 });
+                }
 
                 horizontalScroll();
 
-            });
-        })();
+                window.addEventListener("resize", () => {
+
+                    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+                    gsap.set(wrapper, { x: 0 });
+
+                    horizontalScroll();
+
+                });
+            })();
     </script>
 
     <!-- Human / Machine Toggle -->
