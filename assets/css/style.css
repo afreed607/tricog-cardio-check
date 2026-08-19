@@ -162,6 +162,9 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bright);
 }
 
 .btn:focus-visible {
@@ -176,10 +179,10 @@ body {
     border-color: var(--primary);
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     background: var(--primary-700);
     border-color: var(--primary-700);
-}
+} */
 
 /* Secondary: White background, blue border + text. Hover: light blue bg. */
 .btn-secondary {
@@ -188,9 +191,9 @@ body {
     border-color: var(--bright);
 }
 
-.btn-secondary:hover {
+/* .btn-secondary:hover {
     background: var(--bg-light-blue-soft);
-}
+} */
 
 /* Tertiary: glass / ghost button used over photography, tinted with brand blue */
 .btn-tertiary {
@@ -324,8 +327,8 @@ textarea.is-invalid:focus {
     width: 100%;
     max-width: 100vw;
     padding: 0.85rem 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(14px);
+    /* background: rgba(255, 255, 255, 0.85); */
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);

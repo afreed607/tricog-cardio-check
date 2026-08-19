@@ -91,60 +91,34 @@
                 <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
                     <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
                         href="#HowItWorks">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
-                            <circle cx="5" cy="5" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="12" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="19" r="1.5" fill="currentColor" />
-                        </svg>
                         How it works
                     </a>
                     <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
                         href="./solutions.html">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
-                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                            <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor" stroke-width="1.6"
-                                stroke-linecap="round" />
-                        </svg>
                         Solutions
                     </a>
-                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
-                        href="./library.html">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
-                                d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
-                        </svg>
-                        Resources
-                    </a>
                     <a class="hover:text-primary text-accent-hover transition flex items-center gap-2" href="#FAQ">
-                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8"
-                                d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
-                            <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
-                        </svg>
                         FAQ
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
+                        href="#Resources">
+                        Resources
                     </a>
                 </div>
 
                 <!-- CTA -->
                 <button class="sticky-cta hidden lg:inline-flex btn btn-primary py-2.5"
                     data-modal-target="PaymentModal">
-                    Order - ₹14,999
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
                 </button>
 
                 <!-- Mobile / tablet menu toggle -->
@@ -165,11 +139,20 @@
             <!-- Mobile / tablet menu panel -->
             <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
                 <nav class="hm-mobile-menu-inner">
+                    <a href="#HowItWorks">How it works</a>
                     <a href="./solutions.html">Solutions</a>
-                    <a href="./setup.html">Setup</a>
-                    <a href="./library.html">Library</a>
-                    <a href="./blogs.html">Blogs</a>
-                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order - ₹14,999</button>
+                    <a href="#FAQ">FAQ</a>
+                    <a href="Resources">Resources</a>
+                    <button class="btn btn-secondary flex justify-center tems-center gap-2" data-modal-target="PaymentModal">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </button>
                 </nav>
             </div>
         </header>
@@ -199,55 +182,17 @@
                             <div class="hidden lg:flex items-center gap-8 glass rounded-full px-8 py-4 text-white">
 
                                 <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#HowItWorks">
-                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
-                                        <circle cx="5" cy="5" r="1.5" fill="currentColor" />
-                                        <circle cx="5" cy="12" r="1.5" fill="currentColor" />
-                                        <circle cx="5" cy="19" r="1.5" fill="currentColor" />
-                                    </svg>
                                     How it Works
                                 </a>
                                 <a class="hover:text-[#8CA4B4] transition flex items-center gap-2"
                                     href="./solutions.html">
-                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
-                                        <path
-                                            d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
-                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                                        <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                                        <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                                        <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                                        <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                                        <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor"
-                                            stroke-width="1.6" stroke-linecap="round" />
-                                    </svg>
                                     Solutoions
                                 </a>
-                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2"
-                                    href="./library.html">
-                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="1.8"
-                                            d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
-                                            d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
-                                    </svg>
-                                    Resources
-                                </a>
-                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#">
-                                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="1.8"
-                                            d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
-                                        <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
-                                    </svg>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#FAQ">
                                     FAQ
+                                </a>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#Resources">
+                                    Resources
                                 </a>
 
                             </div>
@@ -255,11 +200,9 @@
                             <!-- CTA -->
                             <button class="hidden lg:inline-flex btn btn-secondary" data-modal-target="PaymentModal">
                                 Order Now
-                                <span class="text-primary ml-2.5">
-                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path
-                                            d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                <span class="ml-2.5">
+                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
                                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                         <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
@@ -287,19 +230,18 @@
                         <!-- Mobile / tablet menu panel -->
                         <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
                             <nav class="hm-mobile-menu-inner">
+                                <a href="#HowItWorks">How it works</a>
                                 <a href="./solutions.html">Solutions</a>
-                                <a href="./setup.html">Setup</a>
-                                <a href="./library.html">Library</a>
-                                <a href="./blogs.html">Blogs</a>
-                                <button class="btn btn-secondary" data-modal-target="PaymentModal">
+                                <a href="#FAQ">FAQ</a>
+                                <a href="Resources">Resources</a>
+                                <button class="btn btn-secondary flex justify-center items-center gap-2" data-modal-target="PaymentModal">
                                     Order Now
-                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                        viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="1.8" d="M5 8h14l1 12H4L5 8Z" />
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
-                                            d="M9 8V6a3 3 0 0 1 6 0v2" />
+                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                        <circle cx="18" cy="20" r="1.2" fill="currentColor" />
                                     </svg>
                                 </button>
                             </nav>
@@ -321,11 +263,11 @@
 
                             </div> -->
 
-                            <h1 class="xl:w-[85%] text-white text-hero mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <h1 class="xl:w-[90%] text-white text-hero mb-4" data-aos="fade-up" data-aos-delay="200">
                                 Detect signs of cardiovascular risk from a 30-second single-lead ECG
                             </h1>
 
-                            <span class="text-white/50" data-aos="fade" data-aos-delay="500">
+                            <!-- <span class="text-white/50" data-aos="fade" data-aos-delay="500">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="52" viewBox="0 0 320 52"
                                     fill="none">
 
@@ -335,7 +277,7 @@
                                         stroke-linejoin="round" />
 
                                 </svg>
-                            </span>
+                            </span> -->
 
                             <p class="w-full lg:w-[70%] text-lg xl:text-xl leading-relaxed text-gray-100 my-10"
                                 data-aos="fade-up" data-aos-delay="350">
@@ -399,138 +341,189 @@
 
             <!-- Brief -->
             <div class="flex-1 py-14">
-                <div class="container px-4 xl:px-20">
-                    <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up">- Clinical Validation</h5>
-                    <h2 class="main-heading xl:w-[90%] mb-2" data-aos="fade-up" data-aos-delay="100">Validated on held-out data. Reported with confidence
-                        intervals.</h2>
-                    <span class="text-accent" data-aos="fade" data-aos-delay="500">
-                        <svg class="w-full md:w-auto h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 52"
-                            fill="none">
-                            <path
-                                d="M 0.00,33.15 L 46.00,33.16 L 48.00,31.98 L 50.00,29.29 L 51.00,29.33 L 54.00,33.70 L 58.00,34.65 L 61.00,40.32 L 63.00,30.86 L 66.00,5.70 L 67.00,7.82 L 68.00,15.27 L 70.00,39.58 L 71.00,46.38 L 72.00,47.16 L 76.00,34.44 L 78.00,33.75 L 88.00,33.69 L 92.00,22.06 L 93.00,31.12 L 95.00,34.85 L 96.00,40.65 L 98.00,35.27 L 100.00,33.46 L 319.00,33.15"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </span>
-                    <p class="text w-full max-w-2xl mt-3" data-aos="fade-up" data-aos-delay="100">
-                        Built on millions of single-lead ECGs and measured against recordings the model never saw in
-                        training.
-                    </p>
-
-                    <div class="flex-1 md:flex-row justify-start gap-10 mt-10" data-aos="fade-up" data-aos-delay="100">
-                        <div class="flex items-center gap-3">
-                            <span
-                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <ellipse cx="12" cy="5" rx="7" ry="2.5" />
-                                    <path d="M5 5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5" />
-                                    <path d="M5 11v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6" />
-                                </svg>
-                            </span>
-                            <span class="text-[15px] leading-tight font-semibold text-neutral-900">Millions of<br>ECG
-                                recordings</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span
-                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <circle cx="8.5" cy="7.5" r="2.5" />
-                                    <circle cx="15.5" cy="7.5" r="2.5" />
-                                    <path d="M2.5 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
-                                    <path d="M13.5 13.7c2.9 0.4 5 2.4 5 5.3" />
-                                </svg>
-                            </span>
-                            <span
-                                class="text-[15px] leading-tight font-semibold text-neutral-900">Diverse<br>populations</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span
-                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <circle cx="12" cy="12" r="9" />
-                                    <path d="M8 12.5l2.6 2.6L16.5 9" />
-                                </svg>
-                            </span>
-                            <span
-                                class="text-[15px] leading-tight font-semibold text-neutral-900">Held-out<br>benchmarks</span>
-                        </div>
+                <div class="container flex-1 md:flex-row items-start gap-5 px-4 xl:px-20">
+                    <div class="hidden lg:flex flex-col items-center gap-0 text-sm text-gray-600 leading-tight mt-3" data-aos="fade-up">
+                        <span>C</span>
+                        <span>L</span>
+                        <span>I</span>
+                        <span>N</span>
+                        <span>I</span>
+                        <span>C</span>
+                        <span>A</span>
+                        <span>L</span>
+                        <br>
+                        <span>V</span>
+                        <span>A</span>
+                        <span>L</span>
+                        <span>I</span>
+                        <span>D</span>
+                        <span>A</span>
+                        <span>T</span>
+                        <span>I</span>
+                        <span>O</span>
+                        <span>N</span>
+                        <br>
+                        <span>
+                            <svg class="h-28 w-6" viewBox="0 0 80 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M40 10V370"
+                                  stroke="currentColor"
+                                  stroke-width="3"
+                                  stroke-linecap="round"
+                                />
+                                <path
+                                  d="M18 348L40 370L62 348"
+                                  stroke="currentColor"
+                                  stroke-width="3"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svgc>
+                        </span>
                     </div>
-
-                    <div class="flex-1 lg:flex-row gap-10">
-                        <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
-                            <!-- AUROC -->
-                            <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-right" data-aos-delay="200">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <path d="M2 12h4l2 6 4-12 2 6h8" />
-                                </svg>
-                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">0.909</div>
-                                <div class="text-md leading-snug text-neutral-800">AUROC — overall discrimination</div>
-                                <div class="text-sm">95% CI 0.905–0.913<sup>1</sup></div>
+                    <div class="w-full">
+                        <h5 class="lg:hidden text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up">- Clinical
+                            Validation</h5>
+                        <h2 class="main-heading xl:w-[90%] mb-2" data-aos="fade-up" data-aos-delay="100">Validated on
+                            held-out data. Reported with confidence
+                            intervals.</h2>
+                        <!-- <span class="text-accent" data-aos="fade" data-aos-delay="500">
+                            <svg class="w-full md:w-auto h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 52"
+                                fill="none">
+                                <path
+                                    d="M 0.00,33.15 L 46.00,33.16 L 48.00,31.98 L 50.00,29.29 L 51.00,29.33 L 54.00,33.70 L 58.00,34.65 L 61.00,40.32 L 63.00,30.86 L 66.00,5.70 L 67.00,7.82 L 68.00,15.27 L 70.00,39.58 L 71.00,46.38 L 72.00,47.16 L 76.00,34.44 L 78.00,33.75 L 88.00,33.69 L 92.00,22.06 L 93.00,31.12 L 95.00,34.85 L 96.00,40.65 L 98.00,35.27 L 100.00,33.46 L 319.00,33.15"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> -->
+                        <p class="text w-full max-w-2xl mt-3" data-aos="fade-up" data-aos-delay="100">
+                            Built on millions of single-lead ECGs and measured against recordings the model never saw in
+                            training.
+                        </p>
+    
+                        <div class="flex-1 md:flex-row justify-start gap-10 mt-10" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <ellipse cx="12" cy="5" rx="7" ry="2.5" />
+                                        <path d="M5 5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5" />
+                                        <path d="M5 11v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6" />
+                                    </svg>
+                                </span>
+                                <span class="text-[15px] leading-tight font-semibold text-neutral-900">Millions of<br>ECG
+                                    recordings</span>
                             </div>
-
-                            <!-- Sensitivity high risk -->
-                            <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-right" data-aos-delay="400">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
-                                    <path d="M9.5 12l1.8 1.8L14.5 10" />
-                                </svg>
-                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">85.9%</div>
-                                <div class="text-md leading-snug text-neutral-800">Sensitivity, high risk — true
-                                    high-risk
-                                    captured</div>
-                                <div class="text-sm">95% CI 84.6–87.0%<sup>1</sup></div>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <circle cx="8.5" cy="7.5" r="2.5" />
+                                        <circle cx="15.5" cy="7.5" r="2.5" />
+                                        <path d="M2.5 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+                                        <path d="M13.5 13.7c2.9 0.4 5 2.4 5 5.3" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="text-[15px] leading-tight font-semibold text-neutral-900">Diverse<br>populations</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <circle cx="12" cy="12" r="9" />
+                                        <path d="M8 12.5l2.6 2.6L16.5 9" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="text-[15px] leading-tight font-semibold text-neutral-900">Held-out<br>benchmarks</span>
                             </div>
                         </div>
-                        <img class="h-full w-full lg:w-[60%] object-cover" src="./assets/images/clinical-validatoin.png"
-                            alt="" data-aos="fade" data-aos-delay="100">
-                        <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
-                            <!-- Specificity high risk -->
-                            <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-left" data-aos-delay="200">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <circle cx="12" cy="12" r="8" />
-                                    <circle cx="12" cy="12" r="3" />
-                                    <circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none" />
-                                </svg>
-                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">92.2%</div>
-                                <div class="text-md leading-snug text-neutral-800">Specificity, high risk — correctly
-                                    flagged</div>
-                                <div class="text-sm">95% CI 91.6–92.9%<sup>1</sup></div>
+    
+                        <div class="flex-1 lg:flex-row gap-10">
+                            <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
+                                <!-- AUROC -->
+                                <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3"
+                                    data-aos="fade-right" data-aos-delay="200">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <path d="M2 12h4l2 6 4-12 2 6h8" />
+                                    </svg>
+                                    <div class="text-3xl font-bold text-neutral-900 tabular-nums">0.909</div>
+                                    <div class="text-md leading-snug text-neutral-800">AUROC — overall discrimination</div>
+                                    <div class="text-sm">95% CI 0.905–0.913<sup>1</sup></div>
+                                </div>
+    
+                                <!-- Sensitivity high risk -->
+                                <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3"
+                                    data-aos="fade-right" data-aos-delay="400">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
+                                        <path d="M9.5 12l1.8 1.8L14.5 10" />
+                                    </svg>
+                                    <div class="text-3xl font-bold text-neutral-900 tabular-nums">85.9%</div>
+                                    <div class="text-md leading-snug text-neutral-800">Sensitivity, high risk — true
+                                        high-risk
+                                        captured</div>
+                                    <div class="text-sm">95% CI 84.6–87.0%<sup>1</sup></div>
+                                </div>
                             </div>
-
-                            <!-- Sensitivity low risk -->
-                            <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-left" data-aos-delay="400">
-                                <svg viewBox="0 0 24 24"
-                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
-                                    <path d="M2 12h4l2 6 4-12 2 6h8" />
-                                </svg>
-                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">90.2%</div>
-                                <div class="text-md leading-snug text-neutral-800">Sensitivity, low risk — true low-risk
-                                    identified</div>
-                                <div class="text-sm">95% CI 89.2–91.2%<sup>1</sup></div>
+                            <img class="h-full w-full lg:w-[60%] object-cover" src="./assets/images/clinical-validatoin.png"
+                                alt="" data-aos="fade" data-aos-delay="100">
+                            <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
+                                <!-- Specificity high risk -->
+                                <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3"
+                                    data-aos="fade-left" data-aos-delay="200">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <circle cx="12" cy="12" r="8" />
+                                        <circle cx="12" cy="12" r="3" />
+                                        <circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none" />
+                                    </svg>
+                                    <div class="text-3xl font-bold text-neutral-900 tabular-nums">92.2%</div>
+                                    <div class="text-md leading-snug text-neutral-800">Specificity, high risk — correctly
+                                        flagged</div>
+                                    <div class="text-sm">95% CI 91.6–92.9%<sup>1</sup></div>
+                                </div>
+    
+                                <!-- Sensitivity low risk -->
+                                <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3"
+                                    data-aos="fade-left" data-aos-delay="400">
+                                    <svg viewBox="0 0 24 24"
+                                        class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                        <path d="M2 12h4l2 6 4-12 2 6h8" />
+                                    </svg>
+                                    <div class="text-3xl font-bold text-neutral-900 tabular-nums">90.2%</div>
+                                    <div class="text-md leading-snug text-neutral-800">Sensitivity, low risk — true low-risk
+                                        identified</div>
+                                    <div class="text-sm">95% CI 89.2–91.2%<sup>1</sup></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="flex-1 items-start gap-3 mt-14">
-                        <span class="text-sm" data-aos="fade-up" data-aos-delay="100">INTENDED USE AND LIMITATIONS</span>
-                        <p class="text-lg" data-aos="fade-up" data-aos-delay="100">A result that is not flagged high risk does not exclude disease, and does not
-                            replace a 12-lead ECG or clinical assessment.</p>
-                        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 my-5" data-aos="fade-up" data-aos-delay="100">
-                            <p class="text-lg">Screening and risk stratification only — not a diagnosis.</p>
-                            <p class="text-lg">Additive only — cannot downgrade a clinical decision.</p>
-                            <p class="text-lg">Requires clinical consultation by a qualified professional.</p>
-                            <p class="text-lg">Not tested under 18 or in pregnancy.</p>
-                            <p class="text-lg">Not for patients with pacemakers or ICDs.</p>
-                            <p class="text-lg">Classifiable waveforms required.</p>
+    
+                        <div class="flex-1 items-start gap-3 mt-14">
+                            <span class="text-sm" data-aos="fade-up" data-aos-delay="100">INTENDED USE AND
+                                LIMITATIONS</span>
+                            <p class="text-lg" data-aos="fade-up" data-aos-delay="100">A result that is not flagged high
+                                risk does not exclude disease, and does not
+                                replace a 12-lead ECG or clinical assessment.</p>
+                            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 my-5" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <p class="text-lg">Screening and risk stratification only — not a diagnosis.</p>
+                                <p class="text-lg">Additive only — cannot downgrade a clinical decision.</p>
+                                <p class="text-lg">Requires clinical consultation by a qualified professional.</p>
+                                <p class="text-lg">Not tested under 18 or in pregnancy.</p>
+                                <p class="text-lg">Not for patients with pacemakers or ICDs.</p>
+                                <p class="text-lg">Classifiable waveforms required.</p>
+                            </div>
+                            <p class="text-md text-gray-600" data-aos="fade-up" data-aos-delay="100">Tricog CardioCheck is a
+                                CDSCO-certified, cloud-based Software
+                                as a Medical Device (SaMD), intended for use by healthcare professionals, patients with
+                                known or suspected cardiac conditions, and health-conscious individuals. </p>
                         </div>
-                        <p class="text-md text-gray-600" data-aos="fade-up" data-aos-delay="100">Tricog CardioCheck is a CDSCO-certified, cloud-based Software
-                            as a Medical Device (SaMD), intended for use by healthcare professionals, patients with
-                            known or suspected cardiac conditions, and health-conscious individuals. </p>
                     </div>
                 </div>
             </div>
@@ -544,9 +537,10 @@
             <div class="absolute inset-0 scrim"></div>
 
             <div class="container h-full relative z-10 flex-1 lg:flex-row items-start gap-10 lg:gap-0">
-                <div class="w-full pt-14 lg:pt-28 px-5 xl:px-10 min-[1440px]:px-4">
+                <div class="w-full pt-14 lg:pt-28 px-5 xl:px-20">
 
-                    <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up" data-aos-delay="100">- The Gap</h5>
+                    <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up"
+                        data-aos-delay="100">- The Gap</h5>
                     <h1 class="main-heading" data-aos="fade-up" data-aos-delay="200">
                         The gap is <span class="text-accent">detection,</span><br /> not treatment.
                     </h1>
@@ -557,7 +551,8 @@
                     </p>
 
                     <div class="flex-1 items-start gap-6 mt-10 xl:mt-28">
-                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3"
+                            data-aos="fade-up" data-aos-delay="100">
                             <span class="inline-flex items-center justify-center text-red-600">
                                 <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
@@ -568,13 +563,14 @@
                                     <path d="M15.5 12.2c1.9.4 3.5 2 3.5 4.8"></path>
                                 </svg>
                             </span>
-                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">110 million
+                            <h3 class="w-[34%] lg:w-[50%] text-accent text-2xl xl:text-3xl font-semibold">110 million
                             </h3>
                             <p class="w-full text-md text-gray-600">Indians live with cardiovascular disease today —
                                 a
                                 number set to more than double by 2050.¹</p>
                         </div>
-                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3"
+                            data-aos="fade-up" data-aos-delay="200">
                             <span class="inline-flex items-center justify-center text-red-600">
                                 <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
@@ -585,10 +581,11 @@
                                     <path d="M6 12h2.5l1.5-2.5 2 4 1.5-2.5H16"></path>
                                 </svg>
                             </span>
-                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">1 in 4</h3>
+                            <h3 class="w-[34%] lg:w-[50%] text-accent text-2xl xl:text-3xl font-semibold">1 in 4</h3>
                             <p class="w-full text-md text-gray-600">deaths in India is cardiac.²</p>
                         </div>
-                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3"
+                            data-aos="fade-up" data-aos-delay="300">
                             <span class="inline-flex items-center justify-center text-red-600">
                                 <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                     stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
@@ -600,7 +597,7 @@
                                     <path d="M4.5 16.5h15"></path>
                                 </svg>
                             </span>
-                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">About 1 in 5
+                            <h3 class="w-[34%] lg:w-[50%] text-accent text-2xl xl:text-3xl font-semibold">About 1 in 5
                             </h3>
                             <p class="w-full ext-md text-gray-600">of the world's cardiac deaths happen in India.³
                             </p>
@@ -623,11 +620,30 @@
                         <div class="h-px w-10 bg-red-400"></div>
                         <span class="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
                     </div>
+                    <style>
+                        @keyframes pop {
+
+                            0%,
+                            100% {
+                                transform: scale(1);
+                            }
+
+                            50% {
+                                transform: scale(1.18);
+                            }
+                        }
+
+                        .animate-pop {
+                            animation: pop 0.9s ease-in-out infinite;
+                        }
+                    </style>
                     <div
                         class="absolute bottom-[10%] left-2 lg:bottom-0 lg:left-0 xl:bottom-[16%] xl:left-[20%] min-[1440px]:bottom-[10%] min-[1440px]:left-[25%] flex items-center gap-3">
                         <div class="text-right">
-                            <p class="text-[11px] lg:text-[12px] font-semibold uppercase tracking-wide text-red-600">
-                                Undetected</p>
+                            <p
+                                class="text-[11px] lg:text-[12px] font-semibold uppercase tracking-wide text-red-600 animate-pop">
+                                Undetected
+                            </p>
                             <p class="text-[11px] lg:text-[12px] text-gray-500 whitespace-nowrap">TThe millions who
                                 don’t..</p>
                         </div>
@@ -643,25 +659,28 @@
             <div class="container px-4 xl:px-20 xl:pt-20">
                 <div class="w-full flex flex-col lg:flex-row items-end">
                     <div class="w-full">
-                        <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up" data-aos-delay="100">- HOW TCC IS DIFFERENT</h5>
-                        <h2 class="main-heading mb-3 lg:m-0" data-aos="fade-up" data-aos="fade-up" data-aos-delay="200">Built for clinical screening, <span
-                                class="text-accent">not consumer monitoring.</span></h2>
+                        <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up"
+                            data-aos-delay="100">- HOW TCC IS DIFFERENT</h5>
+                        <h2 class="main-heading mb-3 lg:m-0" data-aos="fade-up" data-aos="fade-up" data-aos-delay="200">
+                            Built for clinical screening, <span class="text-accent">not consumer monitoring.</span></h2>
                     </div>
-                    <p class="w-full text" data-aos="fade-up" data-aos-delay="300">Consumer gadgets watch one person who already suspects a problem.
+                    <p class="w-full text" data-aos="fade-up" data-aos-delay="300">Consumer gadgets watch one person who
+                        already suspects a problem.
                         Traditional triage only tests the patients a doctor already worries about. <span
                             class="text-accent">TCC screens everyone, inside a normal visit.</span></p>
 
                 </div>
-                <div class="mt-20 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up" data-aos-delay="400">
+                <div class="mt-20 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up"
+                    data-aos-delay="400">
                     <table class="min-w-[900px] w-full border-collapse text-sm">
                         <thead>
                             <tr class="border-b border-gray-200">
-                                <th class="w-[340px] bg-theme-gray xl:py-16"></th>
+                                <th class="w-[340px] bg-theme-gray xl:py-16 border-2 border-[#F2F2F2]"></th>
 
                                 <th
-                                    class="bg-primary text-white text-center font-semibold px-6 py-8 border-l border-[#032032]">
+                                    class="bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-l-4 border-r-4 border-[#b7232c]">
                                     <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M12 21s-7.5-4.7-10.2-9.4C.3 8.6 1.6 5 5 4.1c2-.5 4 .3 5 2 .1.2.3.2.4 0 1-1.7 3-2.5 5-2 3.4.9 4.7 4.5 3.2 7.5C19.5 16.3 12 21 12 21z"
@@ -674,33 +693,35 @@
                                     </div>
                                 </th>
 
-                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                <th
+                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                     <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
+                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
-                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        <span>Other 1-Lead ECGs</span>
-                                    </div>
-                                </th>
 
-                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
-                                    <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="6" y="2.5" width="12" height="19" rx="3.5" stroke="currentColor"
-                                                stroke-width="1.6" />
-                                            <path d="M9 12h1.5l1-2 1.5 4 1-2H16" stroke="currentColor"
-                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            <!-- Watch strap -->
+                                            <path d="M9 2.5h6l1 4H8l1-4Z" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linejoin="round" />
+
+                                            <path d="M8 17.5h8l-1 4H9l-1-4Z" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linejoin="round" />
+
+                                            <!-- Watch body -->
+                                            <circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.6" />
+
+                                            <!-- ECG waveform -->
+                                            <path d="M7.5 12h1.7l1.1-2.3 1.7 4.6 1.3-2.3h2.2" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
                                         </svg>
                                         <span>ECG in Watch</span>
                                     </div>
                                 </th>
 
-                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                <th
+                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                     <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
+                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 3v6.5a5 5 0 0 0 10 0V3" stroke="currentColor" stroke-width="1.6"
                                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -714,6 +735,18 @@
                                         <span>Traditional Triage</span>
                                     </div>
                                 </th>
+
+                                <th
+                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
+                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Other 1-Lead ECGs</span>
+                                    </div>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -723,13 +756,14 @@
                                     Who it's for
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
                                     Every patient at the clinic
                                 </td>
+                                <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch users</td>
+                                <td class="text-center text-gray-500 px-4 border-r">Only patients a doctor suspects</td>
                                 <td class="text-center text-gray-500 px-4">People who already know they have a
                                     condition</td>
-                                <td class="text-center text-gray-500 px-4">Consumer smartwatch users</td>
-                                <td class="text-center text-gray-500 px-4">Only patients a doctor suspects</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -737,12 +771,13 @@
                                     What it looks for
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
                                     Dozens of findings across Low / Moderate / High
                                 </td>
+                                <td class="text-center text-gray-500 px-4 border-r">AFib + irregular rhythm</td>
+                                <td class="text-center text-gray-500 px-4 border-r">Depends on symptoms</td>
                                 <td class="text-center text-gray-500 px-4">4 rhythms only</td>
-                                <td class="text-center text-gray-500 px-4">AFib + irregular rhythm</td>
-                                <td class="text-center text-gray-500 px-4">Depends on symptoms</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -750,12 +785,13 @@
                                     What you get back
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
                                     A clear risk level + the next step
                                 </td>
+                                <td class="text-center text-gray-500 px-4 border-r">A rhythm alert</td>
+                                <td class="text-center text-gray-500 px-4 border-r">A judgement call</td>
                                 <td class="text-center text-gray-500 px-4">A rhythm label</td>
-                                <td class="text-center text-gray-500 px-4">A rhythm alert</td>
-                                <td class="text-center text-gray-500 px-4">A judgement call</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -764,7 +800,7 @@
                                     <span class="text-gray-400">ⓘ</span>
                                 </td>
 
-                                <td class="bg-primary text-white text-center">
+                                <td class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
                                     <div class="flex items-center justify-center gap-2">
                                         <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -774,8 +810,8 @@
                                         <span class="font-semibold">Yes, adds ~30–50s</span>
                                     </div>
                                 </td>
-                                <td class="text-center text-gray-400">—</td>
-                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400 border-r">—</td>
+                                <td class="text-center text-gray-400 border-r">—</td>
                                 <td class="text-center text-gray-400">—</td>
                             </tr>
 
@@ -784,7 +820,7 @@
                                     Cardiologist on site
                                 </td>
 
-                                <td class="bg-primary text-white text-center">
+                                <td class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
                                     <div class="flex items-center justify-center gap-2">
                                         <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -794,9 +830,9 @@
                                         <span class="font-semibold">Not needed</span>
                                     </div>
                                 </td>
+                                <td class="text-center text-gray-400 border-r">—</td>
+                                <td class="text-center text-md font-semibold border-r">Required</td>
                                 <td class="text-center text-gray-400">—</td>
-                                <td class="text-center text-gray-400">—</td>
-                                <td class="text-center text-md font-semibold">Required</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -804,11 +840,12 @@
                                     Time to result
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
                                     ~10s (after a 30-sec ECG)
                                 </td>
-                                <td class="text-center text-gray-400">—</td>
-                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400 border-r">—</td>
+                                <td class="text-center text-gray-400 border-r">—</td>
                                 <td class="text-center text-gray-400">—</td>
                             </tr>
 
@@ -817,12 +854,13 @@
                                     Device
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
                                     OMRON Complete (only)
                                 </td>
-                                <td class="text-center text-gray-500 px-4">Own device</td>
-                                <td class="text-center text-gray-500 px-4">Consumer smartwatch</td>
-                                <td class="text-center text-gray-500 px-4">12-lead machine</td>
+                                <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch</td>
+                                <td class="text-center text-gray-500 px-4 border-r">12-lead machine</td>
+                                <td class="text-center text-gray-500 px-4 ">Own device</td>
                             </tr>
 
                             <tr>
@@ -830,12 +868,13 @@
                                     Regulatory
                                 </td>
 
-                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                <td
+                                    class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-b-4 border-[#b7232c]">
                                     CDSCO-certified, Class B SaMD
                                 </td>
+                                <td class="text-center text-gray-500 px-4 border-r">Consumer</td>
+                                <td class="text-center text-gray-400 border-r">—</td>
                                 <td class="text-center text-gray-500 px-4">Consumer</td>
-                                <td class="text-center text-gray-500 px-4">Consumer</td>
-                                <td class="text-center text-gray-400">—</td>
                             </tr>
 
                         </tbody>
@@ -847,14 +886,16 @@
         <!-- How It Works -->
         <section class="flex-1 py-14 pb-20" id="HowItWorks">
             <div class="container px-5 xl:p-20">
-                <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up" data-aos-delay="100">- IN THE FLOW OF A NORMAL VISIT</h5>
+                <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up" data-aos-delay="100">-
+                    IN THE FLOW OF A NORMAL VISIT</h5>
                 <h1 class="main-heading" data-aos="fade-up" data-aos-delay="200">
                     Fits the existing outpatient workflow.
                 </h1>
 
                 <div class="mt-14 grid grid-cols-1 gap-y-8 md:gap-0">
                     <!-- Step 1 -->
-                    <div class="group grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="100">
+                    <div class="group grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center" data-step="1"
+                        data-aos="fade-up" data-aos-delay="100">
                         <div class="md:order-1">
                             <div class="img-frame overflow-hidden rounded-xl">
                                 <img src="./assets/images/capture-ecg.jpeg"
@@ -884,7 +925,8 @@
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="200">
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1"
+                        data-aos="fade-up" data-aos-delay="200">
                         <div class="md:order-2">
                             <div class="img-frame overflow-hidden rounded-xl">
                                 <img src="./assets/images/assess-risk.jpeg"
@@ -915,7 +957,8 @@
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="300">
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1"
+                        data-aos="fade-up" data-aos-delay="300">
                         <div class="md:order-1">
                             <div class="img-frame overflow-hidden rounded-xl">
                                 <img src="./assets/images/act-early.jpeg"
@@ -945,7 +988,8 @@
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="400">
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1"
+                        data-aos="fade-up" data-aos-delay="400">
                         <div class="md:order-2">
                             <div class="img-frame overflow-hidden rounded-xl">
                                 <img src="./assets/images/capture-ecg.jpeg"
@@ -979,13 +1023,13 @@
         </section>
 
         <!-- Story CTA -->
-        <section class="flex-1 justify-end h-[340px] lg:h-[540px] xl:h-[640px]
+        <section class="flex-1 h-[340px] md:h-[440px] lg:h-[540px] xl:h-[640px]
                bg-[url('./assets/images/story-bg.png')]
                bg-cover
-               bg-[center]
-               bg-fixed">
-            <div class="container px-4 xl:px-20">
-                <div class="md:w-[70%] xl:w-[60%] p-8 rounded-xl bg-white shadow-md -mb-20 z-10" data-aos="fade-up">
+               bg-[center_80%] lg:bg-[center_60%]">
+            <div class="container flex-1 items-end justify-end lg:justify-start xl:justify-center px-4 xl:px-20">
+                <div class="lg:w-[45%] p-8 rounded-md border-t-4 border-[#b7232c] bg-white -mb-44 md:-mb-16 lg:mt-10 xl:m-0"
+                    data-aos="fade-up">
                     <h5 class="text-sm text-accent font-semibold uppercase mb-2">June 2025 — a village clinic outside
                         Bengaluru.</h5>
                     <h2 class="text-lg lg:text-2xl font-semibold leading-tight mb-6">400+ people screened in a single
@@ -993,10 +1037,10 @@
                     <a class="flex items-center gap-2 text-accent " href="#">
                         Read the story
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 12h14m-6-6l6 6-6 6" />
-                    </svg>
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14m-6-6l6 6-6 6" />
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -1006,7 +1050,7 @@
         <section class="bg-theme-gray overflow-hidden">
             <div class="flex-1">
                 <div
-                    class="h-full container flex-1 lg:flex-row gap-8 py-14 pt-36 px-5 lg:py-10 lg:pt-28 lg:px-10 xl:px-20">
+                    class="h-full container flex-1 lg:flex-row gap-8 py-14 pt-64 md:pt-36 lg:py-10 px-5 lg:px-10 xl:px-20">
                     <div class="lg:h-[500px] w-full flex flex-col justify-between" data-aos="fade-right">
                         <div>
                             <h2 class="main-heading xl:w-[75%] mb-3">Everything the clinician needs at the point of care
@@ -1056,32 +1100,37 @@
 
         <!-- Walk Through -->
         <div class="horizontal-section overflow-hidden">
-            <div class="flex-1 pt-28">
-                <div class="container px-3 lg:px-0 xl:px-20" data-aos="fade-up">
+            <div class="flex-1 pt-24">
+                <div class="container px-5 lg:px-10 xl:px-20" data-aos="fade-up">
                     <h2 class="main-heading mb-4">Built for where care actually happens.</h2>
                     <p class="text xl:w-[40%]">The same 30-second capture, adapted to your setting — from high-volume
                         OPDs
                         to rural health centres.</p>
                 </div>
             </div>
-        
+
             <div class="relative overflow-hidden mt-16" data-aos="fade-up">
-        
+
                 <div class="cards-wrapper flex gap-5 lg:gap-6 overflow-x-auto
-                           px-[6vw] lg:px-[12vw] pb-10
+                           px-[6vw] xl:px-[14vw] pb-6
                            snap-x snap-mandatory scrollbar-hide">
-        
+
                     <!-- Card 01 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] min-[1600px]:w-[380px] snap-start">
+                        <div
+                            class="relative h-[380px] min-[1600px]:h-[440px] lg:h-[350px] w-full overflow-hidden rounded-[24px]">
                             <img src="./assets/images/solution-1.webp" alt="High-volume OPD"
                                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
                                     High-volume OPD
                                 </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
                                     High volume
                                 </span>
                             </div>
@@ -1091,18 +1140,23 @@
                             cardiac risk, not arrival order.
                         </p>
                     </div>
-        
+
                     <!-- Card 02 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] min-[1600px]:w-[380px] snap-start">
+                        <div
+                            class="relative h-[380px] min-[1600px]:h-[440px] lg:h-[350px]  w-full overflow-hidden rounded-[24px]">
                             <img src="./assets/images/solution-2.webp" alt="Corporate screening"
                                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
                                     Corporate screening
                                 </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
                                     Large cohorts
                                 </span>
                             </div>
@@ -1112,18 +1166,23 @@
                             conventional screening misses.
                         </p>
                     </div>
-        
+
                     <!-- Card 03 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] min-[1600px]:w-[380px] snap-start">
+                        <div
+                            class="relative h-[380px] min-[1600px]:h-[440px] lg:h-[350px]  w-full overflow-hidden rounded-[24px]">
                             <img src="./assets/images/solution-3.webp" alt="Rural PHC"
                                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
                                     Rural PHC
                                 </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
                                     No cardiologist on site
                                 </span>
                             </div>
@@ -1132,18 +1191,23 @@
                             With no cardiologist on site, frontline staff get an objective basis for referral.
                         </p>
                     </div>
-        
+
                     <!-- Card 04 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] min-[1600px]:w-[380px] snap-start">
+                        <div
+                            class="relative h-[380px] min-[1600px]:h-[440px] lg:h-[350px]  w-full overflow-hidden rounded-[24px]">
                             <img src="./assets/images/solution-4.webp" alt="GP clinic"
                                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
                                     GP clinic
                                 </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
                                     No diagnostics onsite
                                 </span>
                             </div>
@@ -1153,18 +1217,23 @@
                             refer onward.
                         </p>
                     </div>
-        
+
                     <!-- Card 05 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] min-[1600px]:w-[380px] snap-start">
+                        <div
+                            class="relative h-[380px] min-[1600px]:h-[440px] lg:h-[350px]  w-full overflow-hidden rounded-[24px]">
                             <img src="./assets/images/solution-5.webp" alt="Health camps"
                                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div
+                                class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                            </div>
                             <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
                                     Health camps
                                 </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                <span
+                                    class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
                                     Portable & fast
                                 </span>
                             </div>
@@ -1174,76 +1243,31 @@
                             immediately.
                         </p>
                     </div>
-        
+
                     <!-- Card 06 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
-                            <img src="./assets/images/solution-6.webp" alt="Employer health programmes"
-                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
-                                    Employer programmes
-                                </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
-                                    Workforce screening
-                                </span>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-[15px] leading-5">
-                            Screen a whole workforce in one drive; only Moderate and High risk go on for a
-                            12-lead ECG.
-                        </p>
-                    </div>
-        
-                    <!-- Card 07 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
-                            <img src="./assets/images/solution-7.webp" alt="Pharma initiatives"
-                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
-                                    Pharma initiatives
-                                </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
-                                    Multi-site scale
-                                </span>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-[15px] leading-5">
-                            Run screening drives at scale with one consistent, auditable risk standard across
-                            every site.
-                        </p>
-                    </div>
-        
-                    <!-- Card 08 -->
-                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
-                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
-                            <img src="./assets/images/solution-6.webp" alt="Insurance"
-                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
-                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
-                                    Insurance
-                                </span>
-                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
-                                    Onboarding & renewal
-                                </span>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-[15px] leading-5">
-                            An objective cardiac risk category at onboarding or renewal, captured in under a
-                            minute.
-                        </p>
-                    </div>
-        
+                    <a href="./solutions.html"
+                        class="group shrink-0 w-[160px] snap-start block h-[380px] lg:h-[440px] rounded-[24px] bg-white flex flex-col items-center justify-center gap-4 transition-all duration-300">
+
+                        <span
+                            class="flex h-16 w-16 items-center justify-center rounded-full bg-[#b7232c] shadow-[0_8px_24px_rgba(229,57,53,0.35)] transition-transform duration-300 group-hover:scale-110">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+
+                        <span class="text-[17px] font-semibold text-[#053A5B]">
+                            Know more
+                        </span>
+                    </a>
+
                 </div>
             </div>
         </div>
 
         <!-- FAQs -->
-        <section class="flex-1 py-20" id="FAQs">
+        <section class="flex-1 py-20" id="FAQ">
             <div class="container px-5 xl:px-20">
 
                 <h2 class="main-heading mb-12" data-aos="fade-up">
@@ -1654,11 +1678,11 @@
         </section>
 
         <!-- Blogs -->
-        <section class="flex-1 bg-theme-gray py-20" id="Blogs">
+        <section class="flex-1 bg-theme-gray py-20" id="Resources">
             <div class="container py-6 px-5 lg:py-10 lg:px-10 xl:px-20">
                 <div class="w-full flex justify-center items-end lg:flex-row" data-aos="fade-up">
                     <div class="w-full">
-                        <h2 class="main-heading mb-4">Clinical Resources</h2>
+                        <h2 class="main-heading mb-4">Resources</h2>
                         <p class="text">Short reads on why cardiac risk goes undetected — and what changes when it
                             doesn’t.</p>
                     </div>
@@ -1675,7 +1699,8 @@
                 <div class="flex-1 lg:flex-row gap-12 lg:gap-10 mt-16">
 
                     <!-- Featured card -->
-                    <a href="#" class="w-full lg:w-[55%] xl:w-[65%] block group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="w-full lg:w-[55%] xl:w-[65%] block group" data-aos="fade-up"
+                        data-aos-delay="100">
                         <div class="img-frame relative rounded-none">
                             <img src="https://picsum.photos/seed/cardiocheck-feature/900/650"
                                 alt="A doctor reviewing a CardioCheck result with a patient"
@@ -1695,7 +1720,8 @@
                     <!-- Article list -->
                     <div class="w-full lg:w-[45%] xl:w-[35%]">
 
-                        <a href="#" class="row row-link flex items-center gap-5 py-6 first:pt-0 group" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 first:pt-0 group"
+                            data-aos="fade-up" data-aos-delay="200">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
                                 <img src="https://picsum.photos/seed/hidden-cardiac-risk/300/240"
                                     alt="A patient having vitals checked with a handheld device"
@@ -1708,7 +1734,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up"
+                            data-aos-delay="300">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
                                 <img src="https://picsum.photos/seed/single-lead-ecg-device/300/240"
                                     alt="A handheld single-lead ECG device"
@@ -1721,7 +1748,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up"
+                            data-aos-delay="400">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
                                 <img src="https://picsum.photos/seed/risk-categories-office/300/240"
                                     alt="A clinician working at a desk"
@@ -1734,7 +1762,8 @@
                             </div>
                         </a>
 
-                        <a href="#" class="row row-link flex items-center gap-5 py-6 last:pb-0 group" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 last:pb-0 group" data-aos="fade-up"
+                            data-aos-delay="500">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
                                 <img src="https://picsum.photos/seed/early-identification/300/240"
                                     alt="A clinician reviewing notes"
@@ -1753,38 +1782,7 @@
             </div>
         </section>
 
-        <!-- CTA -->
-        <div class="flex-1 py-28">
-            <div class="h-full w-full max-w-[1200px] flex-1 md:flex-row gap-6 px-3 lg:px-10">
-                <div class="md:h-[500px] lg:h-[600px] w-full flex flex-col justify-between gap-6 bg-theme-blue rounded-2xl py-10 px-6 lg:px-8 xl:px-10"
-                    data-aos="fade-right">
-                    <div>
-                        <h2 class="main-heading xl:w-[95%] mb-5">Add cardiac risk screening to routine visits</h2>
-                        <p class="text">
-                            Most cardiac abnormalities remain invisible until symptoms appear. The patients at risk may
-                            be the ones who don't appear sick. CardioCheck helps uncover hidden cardiac risk during
-                            routine screening, creating an opportunity for earlier intervention.
-                        </p>
-                    </div>
 
-                    <a href="#" class="mt-5 inline-flex justify-center items-center gap-2 btn btn-primary py-3.5">
-
-                        Request a Live Demo
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 12h14m-6-6l6 6-6 6" />
-                        </svg>
-
-                    </a>
-                </div>
-                <div class="w-full rounded-2xl overflow-hidden" data-aos="fade-left">
-                    <img class="h-[450px] md:h-[500px] lg:h-[600px] w-auto object-cover"
-                        src="./assets/images/holding-tcc.png" alt="">
-                </div>
-            </div>
-        </div>
     </main>
 
     <!-- Floating Human / Machine toggle -->
@@ -1906,8 +1904,7 @@
             } else if (heroSection && stickyHeader) {
                 // Fallback for browsers without IntersectionObserver
                 window.addEventListener('scroll', function () {
-                    var heroBottom = heroSection.getBoundingClientRect().bottom;
-                    stickyHeader.classList.toggle('is-visible', heroBottom <= 72);
+                    stickyHeader.classList.toggle('is-visible');
                 }, { passive: true });
             }
 
