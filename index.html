@@ -15,9 +15,32 @@
 
     <style>
         .hero-bg {
-            background-image: url("./assets/images/hero-bg-2.png");
+            background-image: url("./assets/images/hero-bg-3.png");
             background-size: cover;
             background-position: center;
+        }
+
+        @media (min-width: 1024px) {
+            .gap-detection-bg {
+                background-image: url('./assets/images/stat-bg.jpeg');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .gap-detection-bg {
+                background-image: url('./assets/images/stat-bg.png');
+            }
+        }
+
+        .scrim {
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, .92) 0%,
+                    rgba(255, 255, 255, .88) 35%,
+                    rgba(255, 255, 255, .55) 60%,
+                    rgba(255, 255, 255, .15) 78%,
+                    rgba(255, 255, 255, 0) 100%);
         }
     </style>
 
@@ -66,10 +89,56 @@
 
                 <!-- Desktop Nav -->
                 <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
-                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">Solutions</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="./setup.html">Setup</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="./library.html">Library</a>
-                    <a class="hover:text-primary text-accent-hover transition" href="./blogs.html">Blogs</a>
+                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
+                        href="#HowItWorks">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
+                            <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+                            <circle cx="5" cy="12" r="1.5" fill="currentColor" />
+                            <circle cx="5" cy="19" r="1.5" fill="currentColor" />
+                        </svg>
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
+                        href="./solutions.html">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                            <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                            <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor" stroke-width="1.6"
+                                stroke-linecap="round" />
+                        </svg>
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
+                        href="./library.html">
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8" d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
+                                d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
+                        </svg>
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2" href="#FAQ">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" fill="none" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1.8"
+                                d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
+                            <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
+                        </svg>
+                        FAQ
+                    </a>
                 </div>
 
                 <!-- CTA -->
@@ -105,7 +174,7 @@
             </div>
         </header>
 
-        <section class="px-2 py-2 xl:py-4 xl:px-8 xl:pt-6">
+        <section class="p-2 lg:p-3 xl:p-4 ">
 
             <!-- Hero Banner & Customers -->
             <div class="bg-theme-blue rounded-[32px]">
@@ -129,16 +198,74 @@
                             <!-- Desktop Nav -->
                             <div class="hidden lg:flex items-center gap-8 glass rounded-full px-8 py-4 text-white">
 
-                                <a class="hover:text-[#8CA4B4] transition" href="./solutions.html">Solutions</a>
-                                <a class="hover:text-[#8CA4B4] transition" href="./setup.html">Setup</a>
-                                <a class="hover:text-[#8CA4B4] transition" href="./library.html">Library</a>
-                                <a class="hover:text-[#8CA4B4] transition" href="./blogs.html">Blogs</a>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#HowItWorks">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
+                                        <circle cx="5" cy="5" r="1.5" fill="currentColor" />
+                                        <circle cx="5" cy="12" r="1.5" fill="currentColor" />
+                                        <circle cx="5" cy="19" r="1.5" fill="currentColor" />
+                                    </svg>
+                                    How it Works
+                                </a>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2"
+                                    href="./solutions.html">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
+                                        <path
+                                            d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                                        <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                                        <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                                        <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                                        <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
+                                        <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor"
+                                            stroke-width="1.6" stroke-linecap="round" />
+                                    </svg>
+                                    Solutoions
+                                </a>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2"
+                                    href="./library.html">
+                                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                            d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
+                                            d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
+                                    </svg>
+                                    Resources
+                                </a>
+                                <a class="hover:text-[#8CA4B4] transition flex items-center gap-2" href="#">
+                                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                            d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
+                                        <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
+                                    </svg>
+                                    FAQ
+                                </a>
 
                             </div>
 
                             <!-- CTA -->
                             <button class="hidden lg:inline-flex btn btn-secondary" data-modal-target="PaymentModal">
-                                Order - ₹14,999
+                                Order Now
+                                <span class="text-primary ml-2.5">
+                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <path
+                                            d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                        <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                                    </svg>
+                                </span>
                             </button>
 
                             <!-- Mobile / tablet menu toggle -->
@@ -164,8 +291,17 @@
                                 <a href="./setup.html">Setup</a>
                                 <a href="./library.html">Library</a>
                                 <a href="./blogs.html">Blogs</a>
-                                <button class="btn btn-secondary" data-modal-target="PaymentModal">Order -
-                                    ₹14,999</button>
+                                <button class="btn btn-secondary" data-modal-target="PaymentModal">
+                                    Order Now
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.8" d="M5 8h14l1 12H4L5 8Z" />
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
+                                            d="M9 8V6a3 3 0 0 1 6 0v2" />
+                                    </svg>
+                                </button>
                             </nav>
                         </div>
 
@@ -176,45 +312,58 @@
 
                         <div
                             class="w-full md:w-[90%] lg:w-[80%] xl:w-[55%] flex flex-col justify-center items-start lg:pb-20 xl:pb-0">
-                            <div class="inline-flex glass rounded-full px-5 py-3 text-white text-sm mb-8"
+                            <!-- <div class="inline-flex glass rounded-full px-5 py-3 text-white text-sm mb-8"
                                 data-aos="fade-up" data-aos-delay="100">
 
                                 Free Shipping on 2+ units
                                 <span class="mx-3 opacity-50">•</span>
                                 Ships in 3-5 days
 
-                            </div>
+                            </div> -->
 
-                            <h1 class="text-white text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-bold mb-4"
-                                data-aos="fade-up" data-aos-delay="200">
-
-                                <span class="block leading-tight">Detect signs of cardiovascular risk from a 30-second
-                                    single-lead ECG</span>
-
+                            <h1 class="xl:w-[85%] text-white text-hero mb-4" data-aos="fade-up" data-aos-delay="200">
+                                Detect signs of cardiovascular risk from a 30-second single-lead ECG
                             </h1>
 
-                            <p class="text-lg xl:text-xl leading-relaxed text-gray-100 mb-10" data-aos="fade-up"
-                                data-aos-delay="350">
+                            <span class="text-white/50" data-aos="fade" data-aos-delay="500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="320" height="52" viewBox="0 0 320 52"
+                                    fill="none">
 
-                                Three clear risk levels from 140+ cardiac
-                                conditions in under a minute, using a quick ECG
-                                captured where care begins.
+                                    <path
+                                        d="M 0.00,33.15 L 46.00,33.16 L 48.00,31.98 L 50.00,29.29 L 51.00,29.33 L 54.00,33.70 L 58.00,34.65 L 61.00,40.32 L 63.00,30.86 L 66.00,5.70 L 67.00,7.82 L 68.00,15.27 L 70.00,39.58 L 71.00,46.38 L 72.00,47.16 L 76.00,34.44 L 78.00,33.75 L 88.00,33.69 L 92.00,22.06 L 93.00,31.12 L 95.00,34.85 L 96.00,40.65 L 98.00,35.27 L 100.00,33.46 L 319.00,33.15"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+
+                                </svg>
+                            </span>
+
+                            <p class="w-full lg:w-[70%] text-lg xl:text-xl leading-relaxed text-gray-100 my-10"
+                                data-aos="fade-up" data-aos-delay="350">
+
+                                TCC reads a quick single-lead ECG and gives you a Low, Moderate or High risk category in
+                                seconds. Makes it easy to decide what to do next with each patient.
 
                             </p>
 
                             <div class="flex flex-wrap items-start gap-4" data-aos="fade-up" data-aos-delay="500">
 
-                                <button class="btn btn-secondary py-3.5" data-modal-target="PaymentModal">
+                                <a href="#HowItWorks" class="flex items-center gap-3 btn btn-secondary py-3.5">
 
-                                    Quick Buy
+                                    See how it works
 
-                                </button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 12h14m-6-6l6 6-6 6"></path>
+                                    </svg>
 
-                                <a href="#HowItWorks" class="btn btn-tertiary py-3.5">
+                                </a>
+
+                                <!-- <a href="#HowItWorks" class="btn btn-tertiary py-3.5">
 
                                     Know how it works
 
-                                </a>
+                                </a> -->
 
                             </div>
                         </div>
@@ -229,1443 +378,1413 @@
                         delivering earlier cardiac intervention.
                     </h2>
 
-                    <div class="carousel-wrapper clients-carousel">
-                        <div class="slide-track">
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/1.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/2.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/3.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/4.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/5.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/6.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/7.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/10.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/11.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/12.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/13.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/14.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/15.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/16.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/17.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/18.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/19.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/20.png" alt="">
-                            </div>
-
-                            <!-- Duplication -->
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/1.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/2.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/3.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/4.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/5.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/6.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/7.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/8.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/9.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/10.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/11.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/12.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/13.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/14.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/15.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/16.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/17.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/18.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/19.png" alt="">
-                            </div>
-                            <div class="slide"><img src="https://tricog.com/wp-content/uploads/2023/03/20.png" alt="">
-                            </div>
-                        </div>
+                    <div class="w-full flex-1 flex-row flex-wrap gap-8 xl:gap-14 mt-14">
+                        <img class="h-[60px] w-auto object-cover" data-aos="fade-up" data-aos-delay="100"
+                            src="./assets/images/paras-healthcare.webp" alt="">
+                        <img class="h-[60px] w-auto object-cover" data-aos="fade-up" data-aos-delay="200"
+                            src="./assets/images/healing-hospital.webp" alt="">
+                        <img class="h-[60px] w-auto object-cover" data-aos="fade-up" data-aos-delay="300"
+                            src="./assets/images/santosh.webp" alt="">
+                        <img class="h-[60px] w-auto object-cover" data-aos="fade-up" data-aos-delay="500"
+                            src="./assets/images/emc-hospitals.webp" alt="">
+                        <img class="h-[60px] w-auto object-cover" data-aos="fade-up" data-aos-delay="700"
+                            src="./assets/images/cityheart-superspeciality-hospital.webp" alt="">
+                        <img class="h-[80px] w-auto object-cover" data-aos="fade-up" data-aos-delay="400"
+                            src="./assets/images/medicity.webp" alt="">
+                        <img class="h-[80px] w-auto object-cover" data-aos="fade-up" data-aos-delay="600"
+                            src="./assets/images/aditya.webp" alt="">
                     </div>
                 </div>
             </div>
-
 
             <!-- Brief -->
-            <div class="flex-1 py-28" data-hm-section="cta">
-                <div class="h-full w-full max-w-[1200px] flex-1 md:flex-row gap-6 px-3 lg:px-10">
-                    <div class="md:h-[500px] lg:h-[600px] w-full flex flex-col justify-between gap-6 bg-theme-blue rounded-2xl py-10 px-6 lg:px-8 xl:px-10"
-                        data-aos="fade-right">
-                        <div>
-                            <h2 class="main-heading xl:w-[95%] mb-5">Turn Every Screening Into an
-                                Opportunity to
-                                Save a Life.</h2>
-                            <p class="text">
-                                Most cardiac abnormalities remain invisible until symptoms appear. The patient most at
-                                risk is often not the one who appears sick. CardioCheck helps uncover hidden cardiac
-                                risk during routine screening, creating an opportunity for earlier intervention.
-                            </p>
-                        </div>
-
-                        <button class="btn btn-primary w-full py-3.5" data-modal-target="PaymentModal">Order Now -
-                            ₹14,999</button>
-                    </div>
-                    <div class="w-full rounded-2xl overflow-hidden" data-aos="fade-left">
-                        <img class="h-[450px] md:h-[500px] lg:h-[600px] w-auto object-cover"
-                            src="./assets/images/holding-tcc.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <!-- How It Works -->
-            <div class="flex-1 py-20" id="HowItWorks">
-                <div class="container px-3 lg:px-0 xl:px-20">
-                    <h2 class="main-heading xl:w-[75%] mb-3" data-aos="fade-up">From 30 Seconds of ECG to Actionable
-                        Risk.</h2>
-                    <p class="text" data-aos="fade-up" data-aos-delay="100">
-                        One capture, one clear risk category, and a decision the clinician can act on.
+            <div class="flex-1 py-14">
+                <div class="container px-4 xl:px-20">
+                    <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up">- Clinical Validation</h5>
+                    <h2 class="main-heading xl:w-[90%] mb-2" data-aos="fade-up" data-aos-delay="100">Validated on held-out data. Reported with confidence
+                        intervals.</h2>
+                    <span class="text-accent" data-aos="fade" data-aos-delay="500">
+                        <svg class="w-full md:w-auto h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 52"
+                            fill="none">
+                            <path
+                                d="M 0.00,33.15 L 46.00,33.16 L 48.00,31.98 L 50.00,29.29 L 51.00,29.33 L 54.00,33.70 L 58.00,34.65 L 61.00,40.32 L 63.00,30.86 L 66.00,5.70 L 67.00,7.82 L 68.00,15.27 L 70.00,39.58 L 71.00,46.38 L 72.00,47.16 L 76.00,34.44 L 78.00,33.75 L 88.00,33.69 L 92.00,22.06 L 93.00,31.12 L 95.00,34.85 L 96.00,40.65 L 98.00,35.27 L 100.00,33.46 L 319.00,33.15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <p class="text w-full max-w-2xl mt-3" data-aos="fade-up" data-aos-delay="100">
+                        Built on millions of single-lead ECGs and measured against recordings the model never saw in
+                        training.
                     </p>
 
-                    <div class="flex flex-col xl:flex-row justify-center items-start gap-6 mt-14">
-                        <div class="w-full flex flex-col md:flex-row xl:flex-col overflow-hidden card-hover rounded-2xl"
-                            data-aos="fade-up" data-aos-delay="0">
-                            <div class="card-content w-full flex-1 items-start gap-4 p-6 lg:p-8">
-                                <span
-                                    class="rounded-full border border-primary/50 bg-primary text-white py-1 px-3.5">1</span>
-                                <h4 class="text-xl lg:text-2xl font-semibold">Capture the ECG</h4>
-                                <p>A 30-second ECG can contain signals associated with cardiac abnormalities.</p>
-                            </div>
-
-                            <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/capture-ecg.jpeg" alt="">
+                    <div class="flex-1 md:flex-row justify-start gap-10 mt-10" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <ellipse cx="12" cy="5" rx="7" ry="2.5" />
+                                    <path d="M5 5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5" />
+                                    <path d="M5 11v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-6" />
+                                </svg>
+                            </span>
+                            <span class="text-[15px] leading-tight font-semibold text-neutral-900">Millions of<br>ECG
+                                recordings</span>
                         </div>
-                        <div class="w-full flex flex-col md:flex-row xl:flex-col overflow-hidden card-hover rounded-2xl"
-                            data-aos="fade-up" data-aos-delay="0">
-                            <div class="card-content w-full flex-1 items-start gap-4 p-6 lg:p-8">
-                                <span
-                                    class="rounded-full border border-primary/50 bg-primary text-white py-1 px-3.5">2</span>
-                                <h4 class="text-xl lg:text-2xl font-semibold">Identify the Risk</h4>
-                                <p>Evaluates ECG patterns across 140+ cardiac conditions.</p>
-                            </div>
-                            <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/assess-risk.jpeg" alt="">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <circle cx="8.5" cy="7.5" r="2.5" />
+                                    <circle cx="15.5" cy="7.5" r="2.5" />
+                                    <path d="M2.5 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+                                    <path d="M13.5 13.7c2.9 0.4 5 2.4 5 5.3" />
+                                </svg>
+                            </span>
+                            <span
+                                class="text-[15px] leading-tight font-semibold text-neutral-900">Diverse<br>populations</span>
                         </div>
-                        <div class="w-full flex flex-col md:flex-row xl:flex-col overflow-hidden card-hover rounded-2xl"
-                            data-aos="fade-up" data-aos-delay="0">
-                            <div class="card-content w-full flex-1 items-start gap-4 p-6 lg:p-8">
-                                <span
-                                    class="rounded-full border border-primary/50 bg-primary text-white py-1 px-3.5">3</span>
-                                <h4 class="text-xl lg:text-2xl font-semibold ">Prioritise Care</h4>
-                                <p>Low, Moderate, or High risk. Know the next step instantly.</p>
-                            </div>
-                            <img class="card-image h-[300px] w-full md:w-auto object-cover"
-                                src="./assets/images/act-early.jpeg" alt="">
+                        <div class="flex items-center gap-3">
+                            <span
+                                class="flex-none w-11 h-11 rounded-full border-[1.5px] border-neutral-300 bg-white flex items-center justify-center">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-[22px] h-[22px] stroke-neutral-900 fill-none stroke-[1.6] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M8 12.5l2.6 2.6L16.5 9" />
+                                </svg>
+                            </span>
+                            <span
+                                class="text-[15px] leading-tight font-semibold text-neutral-900">Held-out<br>benchmarks</span>
                         </div>
                     </div>
 
-                    <div class="flex-1 mt-10">
-                        <button class="btn btn-primary md:py-4 md:px-10">Bring cardiac risk screening into your workflow</button>
+                    <div class="flex-1 lg:flex-row gap-10">
+                        <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
+                            <!-- AUROC -->
+                            <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-right" data-aos-delay="200">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <path d="M2 12h4l2 6 4-12 2 6h8" />
+                                </svg>
+                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">0.909</div>
+                                <div class="text-md leading-snug text-neutral-800">AUROC — overall discrimination</div>
+                                <div class="text-sm">95% CI 0.905–0.913<sup>1</sup></div>
+                            </div>
+
+                            <!-- Sensitivity high risk -->
+                            <div class="w-full border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-right" data-aos-delay="400">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
+                                    <path d="M9.5 12l1.8 1.8L14.5 10" />
+                                </svg>
+                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">85.9%</div>
+                                <div class="text-md leading-snug text-neutral-800">Sensitivity, high risk — true
+                                    high-risk
+                                    captured</div>
+                                <div class="text-sm">95% CI 84.6–87.0%<sup>1</sup></div>
+                            </div>
+                        </div>
+                        <img class="h-full w-full lg:w-[60%] object-cover" src="./assets/images/clinical-validatoin.png"
+                            alt="" data-aos="fade" data-aos-delay="100">
+                        <div class="w-full lg:w-[20%] grid grid-cols-2 lg:grid-cols-1 gap-4">
+                            <!-- Specificity high risk -->
+                            <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-left" data-aos-delay="200">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <circle cx="12" cy="12" r="8" />
+                                    <circle cx="12" cy="12" r="3" />
+                                    <circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none" />
+                                </svg>
+                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">92.2%</div>
+                                <div class="text-md leading-snug text-neutral-800">Specificity, high risk — correctly
+                                    flagged</div>
+                                <div class="text-sm">95% CI 91.6–92.9%<sup>1</sup></div>
+                            </div>
+
+                            <!-- Sensitivity low risk -->
+                            <div class="bg-white border border-neutral-200 rounded-xl p-5 flex flex-col gap-3" data-aos="fade-left" data-aos-delay="400">
+                                <svg viewBox="0 0 24 24"
+                                    class="w-6 h-6 stroke-red-500 fill-none stroke-[1.8] [stroke-linecap:round] [stroke-linejoin:round]">
+                                    <path d="M2 12h4l2 6 4-12 2 6h8" />
+                                </svg>
+                                <div class="text-3xl font-bold text-neutral-900 tabular-nums">90.2%</div>
+                                <div class="text-md leading-snug text-neutral-800">Sensitivity, low risk — true low-risk
+                                    identified</div>
+                                <div class="text-sm">95% CI 89.2–91.2%<sup>1</sup></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 items-start gap-3 mt-14">
+                        <span class="text-sm" data-aos="fade-up" data-aos-delay="100">INTENDED USE AND LIMITATIONS</span>
+                        <p class="text-lg" data-aos="fade-up" data-aos-delay="100">A result that is not flagged high risk does not exclude disease, and does not
+                            replace a 12-lead ECG or clinical assessment.</p>
+                        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 my-5" data-aos="fade-up" data-aos-delay="100">
+                            <p class="text-lg">Screening and risk stratification only — not a diagnosis.</p>
+                            <p class="text-lg">Additive only — cannot downgrade a clinical decision.</p>
+                            <p class="text-lg">Requires clinical consultation by a qualified professional.</p>
+                            <p class="text-lg">Not tested under 18 or in pregnancy.</p>
+                            <p class="text-lg">Not for patients with pacemakers or ICDs.</p>
+                            <p class="text-lg">Classifiable waveforms required.</p>
+                        </div>
+                        <p class="text-md text-gray-600" data-aos="fade-up" data-aos-delay="100">Tricog CardioCheck is a CDSCO-certified, cloud-based Software
+                            as a Medical Device (SaMD), intended for use by healthcare professionals, patients with
+                            known or suspected cardiac conditions, and health-conscious individuals. </p>
                     </div>
                 </div>
             </div>
 
-            <!-- App Display -->
-            <div class="bg-theme-gray rounded-[32px] overflow-hidden">
-                <div class="flex-1">
+        </section>
+
+        <!-- Gap Detection -->
+        <section
+            class="lg:flex relative w-full md:min-h-[440px] lg:min-h-[740px] min-[1440px]:min-h-[820px] flex-1 overflow-hidden gap-detection-bg">
+
+            <div class="absolute inset-0 scrim"></div>
+
+            <div class="container h-full relative z-10 flex-1 lg:flex-row items-start gap-10 lg:gap-0">
+                <div class="w-full pt-14 lg:pt-28 px-5 xl:px-10 min-[1440px]:px-4">
+
+                    <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up" data-aos-delay="100">- The Gap</h5>
+                    <h1 class="main-heading" data-aos="fade-up" data-aos-delay="200">
+                        The gap is <span class="text-accent">detection,</span><br /> not treatment.
+                    </h1>
+
+                    <p class="mt-4 text text-gray-600 max-w-[540px]" data-aos="fade-up" data-aos-delay="400">
+                        Once a cardiac condition is spotted, the care already exists. The gap is discovery — most
+                        people never know they’re at risk, so they never reach a doctor at all.
+                    </p>
+
+                    <div class="flex-1 items-start gap-6 mt-10 xl:mt-28">
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="100">
+                            <span class="inline-flex items-center justify-center text-red-600">
+                                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="9" cy="7" r="3"></circle>
+                                    <path d="M4 20c0-3 2.5-5 5-5s5 2 5 5"></path>
+                                    <circle cx="17" cy="8" r="2.5"></circle>
+                                    <path d="M15.5 12.2c1.9.4 3.5 2 3.5 4.8"></path>
+                                </svg>
+                            </span>
+                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">110 million
+                            </h3>
+                            <p class="w-full text-md text-gray-600">Indians live with cardiovascular disease today —
+                                a
+                                number set to more than double by 2050.¹</p>
+                        </div>
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="200">
+                            <span class="inline-flex items-center justify-center text-red-600">
+                                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M20.5 8.3c0-2.4-2-4.3-4.4-4.3-1.7 0-3.1.9-3.9 2.3-.8-1.4-2.2-2.3-3.9-2.3-2.4 0-4.4 1.9-4.4 4.3 0 5 8.3 10.7 8.3 10.7s8.3-5.7 8.3-10.7Z">
+                                    </path>
+                                    <path d="M6 12h2.5l1.5-2.5 2 4 1.5-2.5H16"></path>
+                                </svg>
+                            </span>
+                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">1 in 4</h3>
+                            <p class="w-full text-md text-gray-600">deaths in India is cardiac.²</p>
+                        </div>
+                        <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3" data-aos="fade-up" data-aos-delay="300">
+                            <span class="inline-flex items-center justify-center text-red-600">
+                                <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+                                    <path d="M3 12h18"></path>
+                                    <path d="M4.5 7.5h15"></path>
+                                    <path d="M4.5 16.5h15"></path>
+                                </svg>
+                            </span>
+                            <h3 class="w-[34%] lg:w-[45%] text-accent text-2xl lg:text-4xl font-semibold">About 1 in 5
+                            </h3>
+                            <p class="w-full ext-md text-gray-600">of the world's cardiac deaths happen in India.³
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    class="relative h-full min-h-[440px] lg:min-h-[640px] w-full flex flex-col justify-between items-center second-col">
+                    <img class="lg:hidden absolute top-0 left-0 h-full w-full object-cover"
+                        src="./assets/images/gap-detection-1.webp" alt="">
                     <div
-                        class="h-full container flex-1 lg:flex-row gap-8 py-6 px-6 lg:py-10 lg:px-10 xl:py-28 xl:px-20">
-                        <div class="lg:h-[500px] xl:h-[600px] w-full flex flex-col justify-between"
-                            data-aos="fade-right">
-                            <div>
-                                <h2 class="main-heading xl:w-[75%] mb-5">Everything needed to identify risk at the point
-                                    of care.</h2>
-                                <a href="#" class="mt-5 inline-flex items-center gap-2 btn btn-primary">
-
-                                    Request a Live Demo
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M5 12h14m-6-6l6 6-6 6" />
-                                    </svg>
-
-                                </a>
-                            </div>
-                            <div class="w-full mt-6">
-                                <h4 class="text-xl lg:text-3xl font-semibold mb-3">Low, Moderate or High — with the
-                                    clinical detail behind it.</h4>
-                                <p class="text xl:w-[75%]">
-                                    Risk Category: Low, Moderate or High. Clinical Insights: what contributed to the
-                                    risk. Reports: a structured summary. Referral Guidance: suggested next steps.
-                                </p>
-                            </div>
+                        class="absolute top-[20%] left-2 lg:top-[28%] lg:left-[10%] xl:top-[30%] xl:left-[15%] min-[1440px]:top-[20%] min-[1440px]:left-[35%] flex items-center gap-3">
+                        <div class="text-right">
+                            <p class="text-[11px] lg:text-[12px] font-semibold uppercase tracking-wide text-red-600">
+                                Detected</p>
+                            <p class="text-[11px] lg:text-[12px] text-gray-500 whitespace-nowrap">The few who get
+                                diagnosed.</p>
                         </div>
-                        <div data-aos="fade-left">
-                            <img class="h-[460px] md:h-[500px] xl:h-[600px] w-auto object-cover"
-                                src="https://www.freeiconspng.com/uploads/black-iphone-7-png-13.png" alt="">
-                        </div>
+                        <div class="h-px w-10 bg-red-400"></div>
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
                     </div>
-
-                    <style>
-                        .stat-bg {
-                            background-image: url('./assets/images/stat-bg.jpeg');
-                            background-size: cover;
-                            background-position: center;
-                        }
-
-                        @media (min-width: 1024px) {
-                            .stat-bg {
-                                background-size: contain;
-                            }
-                        }
-
-                        .scrim {
-                            background: linear-gradient(90deg,
-                                    rgba(2, 24, 38, .92) 0%,
-                                    rgba(2, 24, 38, .88) 35%,
-                                    rgba(2, 24, 38, .55) 60%,
-                                    rgba(2, 24, 38, .15) 78%,
-                                    rgba(2, 24, 38, 0) 100%);
-                        }
-                    </style>
                     <div
-                        class="relative w-full md:min-h-[440px] lg:min-h-[640px] min-[1440px]:min-h-[720px] flex-1 overflow-hidden shadow-2xl rounded-[32px] bg-grey-200 bg-cover bg-center stat-bg">
-
-                        <div class="absolute inset-0 scrim"></div>
-
-                        <div class="container relative z-10 flex items-center">
-                            <div class="max-w-[68%] sm:max-w-[800px] text-white px-6 py-7 md:py-14 sm:px-16 sm:py-10">
-
-                                <h1
-                                    class="main-heading">
-                                    Millions live with undetected cardiovascular risk.
-                                </h1>
-
-                                <p
-                                    class="mt-4 lg:mt-10 text text-white/80 max-w-[540px]">
-                                    Primary care teams need a scalable way to identify at-risk patients before symptoms
-                                    appear and intervention opportunities are lost.
-                                </p>
-
-                                <span
-                                    class="block mt-8 text-[11px] font-semibold uppercase tracking-[0.14em] text-grey-400">
-                                    The scale of the problem
-                                </span>
-
-                                <div class="mt-4 flex flex-col sm:flex-row gap-4 sm:gap-7 items-start sm:items-stretch">
-
-                                    <div class="flex flex-col">
-                                        <span
-                                            class="text-white font-extrabold text-2xl sm:text-[32px] leading-none">272</span>
-                                        <span class="mt-2 text-white text-[15px] font-medium">CVD deaths</span>
-                                        <span class="text-[13px] text-grey-400">per 100,000 population</span>
-                                    </div>
-
-                                    <div class="hidden sm:block w-px bg-white/20"></div>
-
-                                    <div class="flex flex-col">
-                                        <span
-                                            class="text-white font-extrabold text-2xl sm:text-[32px] leading-none">80%</span>
-                                        <span class="mt-2 text-white text-[15px] font-medium">preventable</span>
-                                        <span class="text-[13px] text-grey-400">premature heart disease</span>
-                                    </div>
-
-                                    <div class="hidden sm:block w-px bg-white/20"></div>
-
-                                    <div class="flex flex-col">
-                                        <span
-                                            class="text-accent font-extrabold text-2xl sm:text-[32px] leading-none">50%</span>
-                                        <span class="mt-2 text-white text-[15px] font-medium">asymptomatic</span>
-                                        <span class="text-[13px] text-grey-400">before a major event</span>
-                                    </div>
-
-                                </div>
-                            </div>
+                        class="absolute bottom-[10%] left-2 lg:bottom-0 lg:left-0 xl:bottom-[16%] xl:left-[20%] min-[1440px]:bottom-[10%] min-[1440px]:left-[25%] flex items-center gap-3">
+                        <div class="text-right">
+                            <p class="text-[11px] lg:text-[12px] font-semibold uppercase tracking-wide text-red-600">
+                                Undetected</p>
+                            <p class="text-[11px] lg:text-[12px] text-gray-500 whitespace-nowrap">TThe millions who
+                                don’t..</p>
                         </div>
-
-                    </div>
-                
-                </div>
-            </div>
-
-            <!-- Compare Table -->
-            <div class="flex-1 py-10" data-hm-section="compare">
-                <div class="container px-3 xl:p-20">
-                    <h2 class="main-heading mb-5" data-aos="fade-up">How CardioCheck
-                        compares.</h2>
-                    <div class="mt-10 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up">
-                        <table class="min-w-[900px] w-full border-collapse text-sm">
-                            <thead>
-                                <tr class="border-b border-gray-200">
-                                    <th class="w-[340px] bg-theme-gray xl:py-16"></th>
-
-                                    <th
-                                        class="bg-primary text-white text-center font-semibold px-6 py-8 border-l border-[#032032]">
-                                        Tricog CardioCheck
-                                    </th>
-
-                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
-                                        12-lead ECG
-                                    </th>
-
-                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
-                                        Manual triage
-                                    </th>
-
-                                    <th class="text-center font-semibold bg-theme-gray px-6 py-8">
-                                        Other pathways
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        30-second single-lead ECG
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-lg font-semibold">✓</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Result in about 10 seconds
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-lg font-semibold">✓</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Works without a cardiologist on site
-                                        <span class="text-gray-400">ⓘ</span>
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Fits the routine vital-sign workflow
-                                        <span class="text-gray-400">ⓘ</span>
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-500 text-lg">〜</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Three-level risk output
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Trained on cardiologist-annotated ECGs
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-500 text-lg">〜</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Runs on OMRON Complete hardware
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5">
-                                        Needs no dedicated ECG room
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-lg font-semibold">✓</td>
-                                    <td class="text-center text-gray-400 text-lg">✕</td>
-                                    <td class="text-center text-lg font-semibold">✓</td>
-                                </tr>
-
-                                <tr class="border-b border-gray-200">
-                                    <td class="px-6 py-5 font-medium">
-                                        Capture
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center">
-                                        30 sec, single-lead
-                                    </td>
-
-                                    <td class="text-center text-gray-500">—</td>
-
-                                    <td class="text-center text-gray-500">—</td>
-
-                                    <td class="text-center">
-                                        Varies
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td class="px-6 py-5 font-medium">
-                                        Turnaround
-                                    </td>
-
-                                    <td class="bg-primary text-white text-center">
-                                        ~10 seconds
-                                    </td>
-
-                                    <td class="text-center">
-                                        Minutes to hours
-                                    </td>
-
-                                    <td class="text-center">
-                                        Clinician-dependent
-                                    </td>
-
-                                    <td class="text-center">
-                                        Hours to days
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
+                        <div class="h-px w-10 bg-red-400"></div>
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="flex-1 py-20">
-                <div class="container bg-theme-blue rounded-[32px] py-6 px-6 lg:py-10 lg:px-10 xl:py-20 xl:px-20">
-                    <div class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-10">
-
-                        <!-- Left Content -->
-                        <div class="xl:max-w-md" data-aos="fade-right">
-
-                            <div class="flex items-center gap-3 text-sm mb-8">
-                                <span class="font-semibold">0.909</span>
-                                <span class="text-gray-500">AUROC</span>
-                            </div>
-
-                            <h2 class="main-heading">
-                                Clinically <br> Validated to Surface <br> Cardiac Risk Earlier.
-                            </h2>
-
-                            <!-- <button
-                            class="mt-8 inline-flex items-center btn btn-primary">
-                            See the clinical evidence
-                        </button> -->
-
-                        </div>
-
-                        <!-- Review Cards -->
-                        <div class="flex-1 bg-white rounded-[28px] shadow-[0_25px_60px_rgba(0,0,0,0.08)] overflow-hidden"
-                            data-aos="fade-left">
-
-                            <div class="grid md:grid-cols-3">
-
-                                <!-- Card -->
-                                <div class="flex flex-col justify-between p-8 border-b md:border-b-0 md:border-r border-gray-200 transition-colors"
-                                    data-aos="fade-up" data-aos-delay="0">
-                                    <div>
-
-                                        <p class="text-gray-800 leading-8">
-                                            Sensitivity 85.9% [84.6–87.0] for high-risk detection.
-                                        </p>
-                                    </div>
-
-                                    <div class="mt-16 text-sm text-gray-400">
-                                        Sensitivity
-                                    </div>
-                                </div>
-
-                                <!-- Card -->
-                                <div class="flex flex-col justify-between p-8 border-b md:border-b-0 md:border-r border-gray-200 transition-colors"
-                                    data-aos="fade-up" data-aos-delay="150">
-
-                                    <p class="text-gray-800 leading-8">
-                                        Specificity 92.2% [91.6–92.9] for high-risk detection.
-                                    </p>
-
-                                    <div class="mt-16 text-sm text-gray-400">
-                                        Specificity
-                                    </div>
-                                </div>
-
-                                <!-- Card -->
-                                <div class="flex flex-col justify-between p-8 flex flex-col transition-colors"
-                                    data-aos="fade-up" data-aos-delay="300">
-
-                                    <p class="text-gray-800 leading-8 flex-grow">
-                                        Validated using paired single-lead and 12-lead ECG datasets across diverse
-                                        patient populations.
-                                    </p>
-
-                                    <div class="mt-16 flex items-center justify-between">
-                                        <span class="text-sm text-gray-400">
-                                            Method
-                                        </span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+        <!-- Compare Table -->
+        <section class="flex-1 py-14 pt-20">
+            <div class="container px-4 xl:px-20 xl:pt-20">
+                <div class="w-full flex flex-col lg:flex-row items-end">
+                    <div class="w-full">
+                        <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up" data-aos-delay="100">- HOW TCC IS DIFFERENT</h5>
+                        <h2 class="main-heading mb-3 lg:m-0" data-aos="fade-up" data-aos="fade-up" data-aos-delay="200">Built for clinical screening, <span
+                                class="text-accent">not consumer monitoring.</span></h2>
                     </div>
+                    <p class="w-full text" data-aos="fade-up" data-aos-delay="300">Consumer gadgets watch one person who already suspects a problem.
+                        Traditional triage only tests the patients a doctor already worries about. <span
+                            class="text-accent">TCC screens everyone, inside a normal visit.</span></p>
+
                 </div>
-            </div>
-
-            <!-- Walk Through -->
-            <div class="horizontal-section overflow-hidden">
-                <div class="flex-1 pt-28">
-                    <div class="container px-3 lg:px-0 xl:px-20" data-aos="fade-up">
-                        <h2 class="main-heading mb-4">Built for where care actually happens.</h2>
-                        <p class="text xl:w-[40%]">The same 30-second capture, adapted to your setting — from
-                            high-volume
-                            OPDs
-                            to rural health centres.</p>
-                    </div>
-                </div>
-
-                <div class="relative overflow-hidden mt-16" data-aos="fade-up">
-
-                    <div class="cards-wrapper flex gap-5 lg:gap-6 overflow-x-auto
-                               px-[6vw] lg:px-[12vw] pb-10
-                               snap-x snap-mandatory scrollbar-hide">
-
-                        <!-- Card 01 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        01
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        High-volume OPD
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Screens every patient at intake without slowing the queue,
-                                        so priority follows cardiac risk, not arrival order.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Card 02 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        02
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Corporate screening
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Adds a cardiac risk category to routine check-ups — the asymptomatic group
-                                        conventional screening misses.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Card 03 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        03
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Rural PHC
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        With no cardiologist on site, frontline staff get an objective basis for
-                                        referral.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        04
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        GP clinic
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Single-doctor practices with no diagnostics get a structured way to decide who
-                                        to
-                                        refer onward.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        05
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Health camps
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Portable and usable by non-specialist staff, with the risk category available
-                                        immediately.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card 6 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        06
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Employer health programmes
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Screen a whole workforce in one drive; only Moderate and High risk go on for a
-                                        12-lead ECG.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card 7 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        07
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Pharma initiatives
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        Run screening drives at scale with one consistent, auditable risk standard
-                                        across
-                                        every site.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Card 8 -->
-                        <div class="group relative h-[340px] w-[310px] shrink-0 lg:w-[390px] snap-start rounded-[28px]">
-
-                            <!-- Clipping layer -->
-                            <div
-                                class="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[28px] border border-[#B2C2CC]/60 bg-[#ECF0F2] p-6 lg:p-8 transition-all duration-500 group-hover:bg-[#053A5B] group-hover:shadow-[0_24px_60px_rgba(5,58,91,0.18)]">
-
-                                <!-- Decorative circle -->
-                                <div
-                                    class="absolute -left-24 -top-24 h-56 w-56 rounded-full bg-[#053A5B]/[0.05] transition-all duration-700 group-hover:scale-125 group-hover:bg-white/[0.05]">
-                                </div>
-
-                                <!-- Top -->
-                                <div class="relative z-10 flex items-center justify-between">
-                                    <span
-                                        class="rounded-full px-3 py-1.5 text-[14px] font-medium uppercase tracking-wider text-[#053A5B]/70 transition-colors group-hover:text-white/70">
-                                        08
-                                    </span>
-                                </div>
-
-                                <!-- Content -->
-                                <div class="relative z-10 h-[140px]">
-
-                                    <h4
-                                        class="max-w-[300px] text-[22px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#053A5B] transition-colors group-hover:text-white">
-                                        Insurance
-                                    </h4>
-
-                                    <p
-                                        class="mt-5 max-w-[320px] text-[15px] leading-6 text-[#053A5B]/60 transition-colors group-hover:text-white/65">
-                                        An objective cardiac risk category at onboarding or renewal, captured in under a
-                                        minute.
-                                    </p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Care Pathway -->
-            <div class="flex-1 py-20">
-                <div class="container px-3 lg:px-0 xl:px-20">
-                    <h2 class="main-heading mb-4">One capture. The whole pathway.</h2>
-                    <p class="text">The same 30-second ECG that flags risk at the front line hands cardiology a clear,
-                        prioritised starting point.</p>
-                    <div class="h-96 lg:h-[80vh] bg-[#021826] rounded-2xl mt-10"></div>
-                </div>
-            </div>
-
-            <!-- FAQs -->
-            <div class="flex-1 py-20" id="FAQs">
-                <div class="container xl:px-20">
-
-                    <h2 class="main-heading mb-12" data-aos="fade-up">
-                        Questions, answered.
-                    </h2>
-
-                    <!-- Accordion -->
-                    <div class="bg-white border border-gray-200 rounded-3xl overflow-hidden" data-aos="fade-up">
-
-                        <!-- Item 1 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="11" cy="13" r="8" stroke="currentColor" stroke-width="1.3" />
-                                            <circle cx="11" cy="13" r="4.6" stroke="currentColor" stroke-width="1.3" />
-                                            <circle cx="11" cy="13" r="1.2" fill="currentColor" stroke="none" />
-                                            <path d="M13.5 10.5 20 4" stroke="currentColor" stroke-width="1.3"
-                                                stroke-linecap="round" />
-                                            <path d="M16.2 4 20 4l0 3.8" stroke="currentColor" stroke-width="1.3"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        What is Tricog CardioCheck?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC is a cardiac risk screening tool designed to flag patients at moderate or high
-                                    cardiovascular risk, including those who may otherwise be missed through the
-                                    traditional clinical pathway. It helps clinicians identify patients who may need
-                                    further evaluation or appropriate follow-up.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 2 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-7" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.5 11v4.5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M17.5 11v4.5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M7 11a5 5 0 0 1 10 0v4H7z" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linejoin="round" />
-                                            <path d="M8.3 6.8 6.8 5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M15.7 6.8 17.2 5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <circle cx="9.7" cy="10.3" r="0.8" fill="currentColor" stroke="none" />
-                                            <circle cx="14.3" cy="10.3" r="0.8" fill="currentColor" stroke="none" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        What is a single-lead ECG?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    A single-lead ECG is a quick, 30-second recording of the heart’s electrical
-                                    activity. It captures clinically relevant ECG signals that can help identify
-                                    potential cardiac risk. TCC analyzes this ECG using its algorithm to assess the
-                                    patient’s cardiovascular risk and classify it as <strong>Low, Moderate, or
-                                        High</strong>.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="3" y="7" width="16" height="10" rx="2.2" stroke="currentColor"
-                                                stroke-width="1.5" />
-                                            <path d="M21 10.2v3.6" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M12.3 9.5 9.3 13h2.6l-1.1 3.2 3.9-4.2h-2.6z" stroke="currentColor"
-                                                stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        How is it different from any 1-L ECG?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC enables a single-lead ECG to be used not just to capture a signal but also as a
-                                    screening tool to help flag patients who may otherwise be missed in the traditional
-                                    clinical pathway.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
-                                            <path d="M9 9a4.2 4.2 0 0 0 0 6" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M15 9a4.2 4.2 0 0 1 0 6" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M6 6a8.4 8.4 0 0 0 0 12" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M18 6a8.4 8.4 0 0 1 0 12" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        Is TCC a diagnostic tool?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    No. TCC is a cardiac risk screening and triage tool, not a diagnostic tool.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 5 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 15.5a8 8 0 1 1 16 0" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M12 15.5 15.5 10" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        What happens after a High-Risk result?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    A High Risk result indicates that the patient may require <strong>further cardiac
-                                        evaluation</strong>. The patient should be referred to a doctor for clinical
-                                    assessment and, where appropriate, a <strong>12-lead ECG and further
-                                        evaluation</strong> as soon as possible.
-                                    <br><br>
-                                    TCC does not diagnose a cardiac condition. The final assessment and next steps are
-                                    determined by the treating clinician based on the patient’s symptoms, history,
-                                    examination, and other clinical findings.
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 6 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 19V13M5 9V5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M12 19v-3M12 12V5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <path d="M19 19v-6M19 9V5" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                            <circle cx="5" cy="11" r="1.6" stroke="currentColor" stroke-width="1.5" />
-                                            <circle cx="12" cy="14.5" r="1.6" stroke="currentColor"
-                                                stroke-width="1.5" />
-                                            <circle cx="19" cy="11" r="1.6" stroke="currentColor" stroke-width="1.5" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        Can I actually deploy this with the equipment I already have?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC currently supports ECG data recorded using OMRON <strong>Healthcare’s Complete™
-                                        blood pressure monitors with integrated ECG monitoring.</strong>
-                                    <br><br>
-                                    Through our partnership with OMRON Healthcare, ECG data captured by these devices is
-                                    securely transmitted to the cloud and analyzed by the TCC algorithm to provide a
-                                    <strong>Low, Moderate, or High cardiovascular risk assessment</strong> in
-                                    approximately 10 seconds.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 7 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5" />
-                                            <ellipse cx="12" cy="12" rx="3.4" ry="8.5" stroke="currentColor"
-                                                stroke-width="1.5" />
-                                            <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.5" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        Is patient data secure?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    Yes. TCC is designed with healthcare data privacy and security in mind and complies
-                                    with applicable <strong>HIPAA, GDPR, and CDSCO requirements.</strong> Access to
-                                    patient information is restricted based on authorized roles, helping ensure that
-                                    sensitive health data is only available to those who need it.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 8 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5" />
-                                            <circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.5" />
-                                            <path d="M6.5 18.2a6 6 0 0 1 11 0" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        Can TCC replace a traditional 12-lead ECG?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    No. <strong>TCC does not replace a traditional 12-lead ECG.</strong> TCC is a rapid
-                                    cardiac risk screening tool designed to help identify patients who may need further
-                                    cardiac evaluation.
-                                    <br><br>
-                                    A 12-lead ECG provides a more comprehensive assessment of the heart’s electrical
-                                    activity and may be recommended by a clinician following a TCC result, based on the
-                                    patient’s symptoms, history, and clinical findings.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 9 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 7h10v9H3z" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linejoin="round" />
-                                            <path d="M13 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linejoin="round" />
-                                            <circle cx="7" cy="17.5" r="1.6" stroke="currentColor" stroke-width="1.5" />
-                                            <circle cx="17" cy="17.5" r="1.6" stroke="currentColor"
-                                                stroke-width="1.5" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        How was the AI trained?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    TCC was developed using a <strong>foundational dataset of millions of ECG
-                                        recordings</strong>, with training designed to account for class imbalance so
-                                    that less common, high-risk cardiac patterns were adequately represented.
-                                    <br><br>
-                                    TCC is also validated on separate ECG data to assess how reliably it identifies
-                                    different levels of cardiac risk.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 10 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                <div class="mt-20 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up" data-aos-delay="400">
+                    <table class="min-w-[900px] w-full border-collapse text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="w-[340px] bg-theme-gray xl:py-16"></th>
+
+                                <th
+                                    class="bg-primary text-white text-center font-semibold px-6 py-8 border-l border-[#032032]">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
-                                                d="M5 4h14v15.5l-1.8-1.3-1.7 1.3-1.7-1.3-1.8 1.3-1.7-1.3-1.8 1.3-1.7-1.3L5 19.5z"
-                                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                                            <path d="M8 9h8M8 12.5h8" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linecap="round" />
+                                                d="M12 21s-7.5-4.7-10.2-9.4C.3 8.6 1.6 5 5 4.1c2-.5 4 .3 5 2 .1.2.3.2.4 0 1-1.7 3-2.5 5-2 3.4.9 4.7 4.5 3.2 7.5C19.5 16.3 12 21 12 21z"
+                                                stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M4 12h2.5l1.2-2.4 2 4.8 1.3-2.4H15" stroke="currentColor"
+                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
-                                    </span>
+                                        <span>Tricog CardioCheck</span>
+                                    </div>
+                                </th>
 
-                                    <span class="font-medium text-gray-900">
-                                        Can it replace a cardiologist?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt magna sit
-                                    amet
-                                    posuere malesuada.
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- Item 11 -->
-                        <div class="accordion-item border-b border-gray-200">
-
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 8 3 11l3 3" stroke="currentColor" stroke-width="1.5"
+                                            <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
+                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>Other 1-Lead ECGs</span>
+                                    </div>
+                                </th>
+
+                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="6" y="2.5" width="12" height="19" rx="3.5" stroke="currentColor"
+                                                stroke-width="1.6" />
+                                            <path d="M9 12h1.5l1-2 1.5 4 1-2H16" stroke="currentColor"
+                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span>ECG in Watch</span>
+                                    </div>
+                                </th>
+
+                                <th class="text-center font-semibold bg-theme-gray px-6 py-8">
+                                    <div class="flex flex-col items-center gap-2">
+                                        <svg class="w-6 h-6 text-gray-500" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 3v6.5a5 5 0 0 0 10 0V3" stroke="currentColor" stroke-width="1.6"
                                                 stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M3 11h11a5.5 5.5 0 0 1 0 11H8" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 3H3M13 3h4" stroke="currentColor" stroke-width="1.6"
+                                                stroke-linecap="round" />
+                                            <path d="M10 14.5V17" stroke="currentColor" stroke-width="1.6"
+                                                stroke-linecap="round" />
+                                            <circle cx="18.5" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6" />
+                                            <circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.6" />
                                         </svg>
-                                    </span>
+                                        <span>Traditional Triage</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                                    <span class="font-medium text-gray-900">
-                                        Who should not be screened?
-                                    </span>
-                                </div>
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    Who it's for
+                                </td>
 
-                                <span class="accordion-icon">+</span>
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    Every patient at the clinic
+                                </td>
+                                <td class="text-center text-gray-500 px-4">People who already know they have a
+                                    condition</td>
+                                <td class="text-center text-gray-500 px-4">Consumer smartwatch users</td>
+                                <td class="text-center text-gray-500 px-4">Only patients a doctor suspects</td>
+                            </tr>
 
-                            </button>
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    What it looks for
+                                </td>
 
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros aliquet
-                                    convallis ultricies. Mauris augue massa, ultricies non ligula sed, tincidunt feugiat
-                                    justo.
-                                </div>
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    Dozens of findings across Low / Moderate / High
+                                </td>
+                                <td class="text-center text-gray-500 px-4">4 rhythms only</td>
+                                <td class="text-center text-gray-500 px-4">AFib + irregular rhythm</td>
+                                <td class="text-center text-gray-500 px-4">Depends on symptoms</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    What you get back
+                                </td>
+
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    A clear risk level + the next step
+                                </td>
+                                <td class="text-center text-gray-500 px-4">A rhythm label</td>
+                                <td class="text-center text-gray-500 px-4">A rhythm alert</td>
+                                <td class="text-center text-gray-500 px-4">A judgement call</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    Fits the vitals workflow
+                                    <span class="text-gray-400">ⓘ</span>
+                                </td>
+
+                                <td class="bg-primary text-white text-center">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="font-semibold">Yes, adds ~30–50s</span>
+                                    </div>
+                                </td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">—</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    Cardiologist on site
+                                </td>
+
+                                <td class="bg-primary text-white text-center">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="font-semibold">Not needed</span>
+                                    </div>
+                                </td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-md font-semibold">Required</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    Time to result
+                                </td>
+
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    ~10s (after a 30-sec ECG)
+                                </td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">—</td>
+                            </tr>
+
+                            <tr class="border-b border-gray-200">
+                                <td class="px-6 py-5 font-medium">
+                                    Device
+                                </td>
+
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    OMRON Complete (only)
+                                </td>
+                                <td class="text-center text-gray-500 px-4">Own device</td>
+                                <td class="text-center text-gray-500 px-4">Consumer smartwatch</td>
+                                <td class="text-center text-gray-500 px-4">12-lead machine</td>
+                            </tr>
+
+                            <tr>
+                                <td class="px-6 py-5 font-medium">
+                                    Regulatory
+                                </td>
+
+                                <td class="bg-primary text-white text-center font-semibold px-4">
+                                    CDSCO-certified, Class B SaMD
+                                </td>
+                                <td class="text-center text-gray-500 px-4">Consumer</td>
+                                <td class="text-center text-gray-500 px-4">Consumer</td>
+                                <td class="text-center text-gray-400">—</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="flex-1 py-14 pb-20" id="HowItWorks">
+            <div class="container px-5 xl:p-20">
+                <h5 class="text-sm text-accent font-semibold uppercase mb-1" data-aos="fade-up" data-aos-delay="100">- IN THE FLOW OF A NORMAL VISIT</h5>
+                <h1 class="main-heading" data-aos="fade-up" data-aos-delay="200">
+                    Fits the existing outpatient workflow.
+                </h1>
+
+                <div class="mt-14 grid grid-cols-1 gap-y-8 md:gap-0">
+                    <!-- Step 1 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-2 md:gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="100">
+                        <div class="md:order-1">
+                            <div class="img-frame overflow-hidden rounded-xl">
+                                <img src="./assets/images/capture-ecg.jpeg"
+                                    alt="A patient checking in with a clinician at a front desk"
+                                    class="w-full h-72 md:h-72 lg:h-96 object-cover transition-transform duration-500 ease-out group-hover:scale-105">
                             </div>
-
                         </div>
 
-                        <!-- Item 12 -->
-                        <div class="accordion-item border-b border-gray-200">
+                        <div class="md:order-2 p-6 lg:p-10">
+                            <span class="display block text-3xl font-extrabold mb-3">01</span>
 
-                            <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
-
-                                <div class="flex items-center gap-4">
-                                    <span class="text-[#37617C]">
-                                        <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor"
-                                                stroke-width="1.5" />
-                                            <path d="M8 11V7.5a4 4 0 0 1 8 0V11" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" />
-                                            <circle cx="12" cy="15.2" r="1.3" fill="currentColor" stroke="none" />
-                                        </svg>
-                                    </span>
-
-                                    <span class="font-medium text-gray-900">
-                                        Is Tricog CardioCheck regulatory-certified?
-                                    </span>
-                                </div>
-
-                                <span class="accordion-icon">+</span>
-
-                            </button>
-
-                            <div class="accordion-content">
-                                <div class="px-14 pb-6 text-gray-600 leading-7">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt magna sit
-                                    amet
-                                    posuere malesuada.
-                                </div>
+                            <div class="flex gap-1.5 mb-5" aria-hidden="true">
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
                             </div>
 
+                            <h2 class="display text-xl sm:text-2xl font-bold mb-3">
+                                Check in as usual.
+                            </h2>
+
+                            <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+                                The patient arrives for whatever brought them in.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="200">
+                        <div class="md:order-2">
+                            <div class="img-frame overflow-hidden rounded-xl">
+                                <img src="./assets/images/assess-risk.jpeg"
+                                    alt="A patient checking in with a clinician at a front desk"
+                                    class="w-full h-72 md:h-72 lg:h-96 object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                            </div>
+                        </div>
+
+                        <div class="md:order-1 p-6 lg:p-10">
+                            <span class="display block text-3xl font-extrabold mb-3">02</span>
+
+                            <div class="flex gap-1.5 mb-5" aria-hidden="true">
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
+                            </div>
+
+                            <h2 class="display text-xl sm:text-2xl font-bold mb-3">
+                                During routine vitals.
+                            </h2>
+
+                            <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+                                Fingers and thumbs on the OMRON pads, sit still for 30 seconds — alongside BP, SpO2,
+                                height and weight. No wires, no gel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="300">
+                        <div class="md:order-1">
+                            <div class="img-frame overflow-hidden rounded-xl">
+                                <img src="./assets/images/act-early.jpeg"
+                                    alt="A patient checking in with a clinician at a front desk"
+                                    class="w-full h-72 md:h-72 lg:h-96 object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                            </div>
+                        </div>
+
+                        <div class="md:order-2 p-6 lg:p-10">
+                            <span class="display block text-3xl font-extrabold mb-3">03</span>
+
+                            <div class="flex gap-1.5 mb-5" aria-hidden="true">
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-neutral-200"></span>
+                            </div>
+
+                            <h2 class="display text-xl sm:text-2xl font-bold mb-3">
+                                A result in seconds.
+                            </h2>
+
+                            <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+                                A risk level — Low, Moderate or High — appears on the staff member’s phone.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-2 gap-4 items-center" data-step="1" data-aos="fade-up" data-aos-delay="400">
+                        <div class="md:order-2">
+                            <div class="img-frame overflow-hidden rounded-xl">
+                                <img src="./assets/images/capture-ecg.jpeg"
+                                    alt="A patient checking in with a clinician at a front desk"
+                                    class="w-full h-72 md:h-72 lg:h-96 object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                            </div>
+                        </div>
+
+                        <div class="md:order-1 p-6 lg:p-10">
+                            <span class="display block text-3xl font-extrabold mb-3">04</span>
+
+                            <div class="flex gap-1.5 mb-5" aria-hidden="true">
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                                <span class="h-[3px] w-8 rounded-full bg-accent"></span>
+                            </div>
+
+                            <h2 class="display text-xl sm:text-2xl font-bold mb-3">
+                                A clear next step.
+                            </h2>
+
+                            <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
+                                Low: carry on.  Moderate or High: sent for a 12-lead ECG and the doctor, soon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Story CTA -->
+        <section class="flex-1 justify-end h-[340px] lg:h-[540px] xl:h-[640px]
+               bg-[url('./assets/images/story-bg.png')]
+               bg-cover
+               bg-[center]
+               bg-fixed">
+            <div class="container px-4 xl:px-20">
+                <div class="md:w-[70%] xl:w-[60%] p-8 rounded-xl bg-white shadow-md -mb-20 z-10" data-aos="fade-up">
+                    <h5 class="text-sm text-accent font-semibold uppercase mb-2">June 2025 — a village clinic outside
+                        Bengaluru.</h5>
+                    <h2 class="text-lg lg:text-2xl font-semibold leading-tight mb-6">400+ people screened in a single
+                        day. TCC, then a 12-lead ECG, then the doctor — a complete care journey, in the field.</h2>
+                    <a class="flex items-center gap-2 text-accent " href="#">
+                        Read the story
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 12h14m-6-6l6 6-6 6" />
+                    </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Display -->
+        <section class="bg-theme-gray overflow-hidden">
+            <div class="flex-1">
+                <div
+                    class="h-full container flex-1 lg:flex-row gap-8 py-14 pt-36 px-5 lg:py-10 lg:pt-28 lg:px-10 xl:px-20">
+                    <div class="lg:h-[500px] w-full flex flex-col justify-between" data-aos="fade-right">
+                        <div>
+                            <h2 class="main-heading xl:w-[75%] mb-3">Everything the clinician needs at the point of care
+                            </h2>
+                            <a href="#" class="mt-5 inline-flex items-center gap-2 btn btn-primary">
+
+                                Request a Live Demo
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14m-6-6l6 6-6 6" />
+                                </svg>
+
+                            </a>
+                        </div>
+                        <div class="w-full mt-6">
+                            <h4 class="xl:w-[80%] text-xl lg:text-3xl font-semibold mb-5">The output is a structured
+                                triage signal that arrives while the patient is still in front of you.</h4>
+                            <p class="text xl:w-[75%]">
+                                Risk Category: Low, Moderate or High.
+                                <br>
+                                Clinical Insights: the waveform patterns that drove the classification.
+                                Referral Guidance: the recommended next action (12-lead ECG and clinical review when
+                                indicated)
+
+                            </p>
+                            <div class="flex gap-4 mt-4">
+                                <span class="rounded-full font-semibold bg-[#15803D] text-sm text-white py-2 px-5">Low
+                                    Risk</span>
+                                <span
+                                    class="rounded-full font-semibold bg-[#B45309] text-sm text-white py-2 px-5">Moderate
+                                    Risk</span>
+                                <span class="rounded-full font-semibold bg-[#DC2626] text-sm text-white py-2 px-5">High
+                                    Risk</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <video class="h-[70vh] lg:h-[80vh] w-auto" src="./assets/images/Risk Card Pop-Out.mp4"
+                            autoplay="true" loop="true"></video>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Walk Through -->
+        <div class="horizontal-section overflow-hidden">
+            <div class="flex-1 pt-28">
+                <div class="container px-3 lg:px-0 xl:px-20" data-aos="fade-up">
+                    <h2 class="main-heading mb-4">Built for where care actually happens.</h2>
+                    <p class="text xl:w-[40%]">The same 30-second capture, adapted to your setting — from high-volume
+                        OPDs
+                        to rural health centres.</p>
+                </div>
+            </div>
+        
+            <div class="relative overflow-hidden mt-16" data-aos="fade-up">
+        
+                <div class="cards-wrapper flex gap-5 lg:gap-6 overflow-x-auto
+                           px-[6vw] lg:px-[12vw] pb-10
+                           snap-x snap-mandatory scrollbar-hide">
+        
+                    <!-- Card 01 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-1.webp" alt="High-volume OPD"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    High-volume OPD
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    High volume
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Screens every patient at intake without slowing the queue, so priority follows
+                            cardiac risk, not arrival order.
+                        </p>
+                    </div>
+        
+                    <!-- Card 02 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-2.webp" alt="Corporate screening"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Corporate screening
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    Large cohorts
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Adds a cardiac risk category to routine check-ups — the asymptomatic group
+                            conventional screening misses.
+                        </p>
+                    </div>
+        
+                    <!-- Card 03 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-3.webp" alt="Rural PHC"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Rural PHC
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    No cardiologist on site
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            With no cardiologist on site, frontline staff get an objective basis for referral.
+                        </p>
+                    </div>
+        
+                    <!-- Card 04 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-4.webp" alt="GP clinic"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    GP clinic
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    No diagnostics onsite
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Single-doctor practices with no diagnostics get a structured way to decide who to
+                            refer onward.
+                        </p>
+                    </div>
+        
+                    <!-- Card 05 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-5.webp" alt="Health camps"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Health camps
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    Portable & fast
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Portable and usable by non-specialist staff, with the risk category available
+                            immediately.
+                        </p>
+                    </div>
+        
+                    <!-- Card 06 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-6.webp" alt="Employer health programmes"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Employer programmes
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    Workforce screening
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Screen a whole workforce in one drive; only Moderate and High risk go on for a
+                            12-lead ECG.
+                        </p>
+                    </div>
+        
+                    <!-- Card 07 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-7.webp" alt="Pharma initiatives"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Pharma initiatives
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    Multi-site scale
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            Run screening drives at scale with one consistent, auditable risk standard across
+                            every site.
+                        </p>
+                    </div>
+        
+                    <!-- Card 08 -->
+                    <div class="group shrink-0 w-[260px] lg:w-[310px] snap-start">
+                        <div class="relative h-[380px] w-full overflow-hidden rounded-[24px]">
+                            <img src="./assets/images/solution-6.webp" alt="Insurance"
+                                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-2">
+                                <span class="rounded-full bg-black/70 px-3 py-1.5 text-[13px] font-medium text-white backdrop-blur-sm">
+                                    Insurance
+                                </span>
+                                <span class="rounded-full bg-white/15 px-3 py-1.5 text-[13px] font-medium text-white/90 backdrop-blur-sm">
+                                    Onboarding & renewal
+                                </span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-[15px] leading-5">
+                            An objective cardiac risk category at onboarding or renewal, captured in under a
+                            minute.
+                        </p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs -->
+        <section class="flex-1 py-20" id="FAQs">
+            <div class="container px-5 xl:px-20">
+
+                <h2 class="main-heading mb-12" data-aos="fade-up">
+                    Questions, answered.
+                </h2>
+
+                <!-- Accordion -->
+                <div class="bg-white border border-gray-200 rounded-3xl overflow-hidden" data-aos="fade-up">
+
+                    <!-- Item 1 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="11" cy="13" r="8" stroke="currentColor" stroke-width="1.3" />
+                                        <circle cx="11" cy="13" r="4.6" stroke="currentColor" stroke-width="1.3" />
+                                        <circle cx="11" cy="13" r="1.2" fill="currentColor" stroke="none" />
+                                        <path d="M13.5 10.5 20 4" stroke="currentColor" stroke-width="1.3"
+                                            stroke-linecap="round" />
+                                        <path d="M16.2 4 20 4l0 3.8" stroke="currentColor" stroke-width="1.3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    What is Tricog CardioCheck?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                TCC is a cardiac risk screening tool designed to flag patients at moderate or high
+                                cardiovascular risk, including those who may otherwise be missed through the
+                                traditional clinical pathway. It helps clinicians identify patients who may need
+                                further evaluation or appropriate follow-up.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.5 11v4.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M17.5 11v4.5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M7 11a5 5 0 0 1 10 0v4H7z" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linejoin="round" />
+                                        <path d="M8.3 6.8 6.8 5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M15.7 6.8 17.2 5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <circle cx="9.7" cy="10.3" r="0.8" fill="currentColor" stroke="none" />
+                                        <circle cx="14.3" cy="10.3" r="0.8" fill="currentColor" stroke="none" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    What is a single-lead ECG?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                A single-lead ECG is a quick, 30-second recording of the heart’s electrical
+                                activity. It captures clinically relevant ECG signals that can help identify
+                                potential cardiac risk. TCC analyzes this ECG using its algorithm to assess the
+                                patient’s cardiovascular risk and classify it as <strong>Low, Moderate, or
+                                    High</strong>.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="7" width="16" height="10" rx="2.2" stroke="currentColor"
+                                            stroke-width="1.5" />
+                                        <path d="M21 10.2v3.6" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M12.3 9.5 9.3 13h2.6l-1.1 3.2 3.9-4.2h-2.6z" stroke="currentColor"
+                                            stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    How is it different from any 1-L ECG?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                TCC enables a single-lead ECG to be used not just to capture a signal but also as a
+                                screening tool to help flag patients who may otherwise be missed in the traditional
+                                clinical pathway.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+                                        <path d="M9 9a4.2 4.2 0 0 0 0 6" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M15 9a4.2 4.2 0 0 1 0 6" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M6 6a8.4 8.4 0 0 0 0 12" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M18 6a8.4 8.4 0 0 1 0 12" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    Is TCC a diagnostic tool?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                No. TCC is a cardiac risk screening and triage tool, not a diagnostic tool.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 15.5a8 8 0 1 1 16 0" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M12 15.5 15.5 10" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <circle cx="12" cy="15.5" r="1.1" fill="currentColor" stroke="none" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    What happens after a High-Risk result?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                A High Risk result indicates that the patient may require <strong>further cardiac
+                                    evaluation</strong>. The patient should be referred to a doctor for clinical
+                                assessment and, where appropriate, a <strong>12-lead ECG and further
+                                    evaluation</strong> as soon as possible.
+                                <br><br>
+                                TCC does not diagnose a cardiac condition. The final assessment and next steps are
+                                determined by the treating clinician based on the patient’s symptoms, history,
+                                examination, and other clinical findings.
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 19V13M5 9V5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M12 19v-3M12 12V5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <path d="M19 19v-6M19 9V5" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                        <circle cx="5" cy="11" r="1.6" stroke="currentColor" stroke-width="1.5" />
+                                        <circle cx="12" cy="14.5" r="1.6" stroke="currentColor" stroke-width="1.5" />
+                                        <circle cx="19" cy="11" r="1.6" stroke="currentColor" stroke-width="1.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    Can I actually deploy this with the equipment I already have?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                TCC currently supports ECG data recorded using OMRON <strong>Healthcare’s Complete™
+                                    blood pressure monitors with integrated ECG monitoring.</strong>
+                                <br><br>
+                                Through our partnership with OMRON Healthcare, ECG data captured by these devices is
+                                securely transmitted to the cloud and analyzed by the TCC algorithm to provide a
+                                <strong>Low, Moderate, or High cardiovascular risk assessment</strong> in
+                                approximately 10 seconds.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5" />
+                                        <ellipse cx="12" cy="12" rx="3.4" ry="8.5" stroke="currentColor"
+                                            stroke-width="1.5" />
+                                        <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    Is patient data secure?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                Yes. TCC is designed with healthcare data privacy and security in mind and complies
+                                with applicable <strong>HIPAA, GDPR, and CDSCO requirements.</strong> Access to
+                                patient information is restricted based on authorized roles, helping ensure that
+                                sensitive health data is only available to those who need it.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.5" />
+                                        <circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.5" />
+                                        <path d="M6.5 18.2a6 6 0 0 1 11 0" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    Can TCC replace a traditional 12-lead ECG?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                No. <strong>TCC does not replace a traditional 12-lead ECG.</strong> TCC is a rapid
+                                cardiac risk screening tool designed to help identify patients who may need further
+                                cardiac evaluation.
+                                <br><br>
+                                A 12-lead ECG provides a more comprehensive assessment of the heart’s electrical
+                                activity and may be recommended by a clinician following a TCC result, based on the
+                                patient’s symptoms, history, and clinical findings.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 7h10v9H3z" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linejoin="round" />
+                                        <path d="M13 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linejoin="round" />
+                                        <circle cx="7" cy="17.5" r="1.6" stroke="currentColor" stroke-width="1.5" />
+                                        <circle cx="17" cy="17.5" r="1.6" stroke="currentColor" stroke-width="1.5" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    How was the AI trained?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                TCC was developed using a <strong>foundational dataset of millions of ECG
+                                    recordings</strong>, with training designed to account for class imbalance so
+                                that less common, high-risk cardiac patterns were adequately represented.
+                                <br><br>
+                                TCC is also validated on separate ECG data to assess how reliably it identifies
+                                different levels of cardiac risk.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="accordion-item border-b border-gray-200">
+
+                        <button class="accordion-btn w-full flex items-center justify-between px-6 py-6 text-left">
+
+                            <div class="flex items-center gap-4">
+                                <span class="text-[#37617C]">
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5 4h14v15.5l-1.8-1.3-1.7 1.3-1.7-1.3-1.8 1.3-1.7-1.3-1.8 1.3-1.7-1.3L5 19.5z"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                        <path d="M8 9h8M8 12.5h8" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </span>
+
+                                <span class="font-medium text-gray-900">
+                                    Can it replace a cardiologist?
+                                </span>
+                            </div>
+
+                            <span class="accordion-icon">+</span>
+
+                        </button>
+
+                        <div class="accordion-content">
+                            <div class="px-14 pb-6 text-gray-600 leading-7">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt magna sit
+                                amet
+                                posuere malesuada.
+                            </div>
                         </div>
 
                     </div>
 
                 </div>
-            </div>
 
+            </div>
         </section>
 
         <!-- Blogs -->
         <section class="flex-1 bg-theme-gray py-20" id="Blogs">
-            <div class="container py-6 px-6 lg:py-10 lg:px-10 xl:px-20">
+            <div class="container py-6 px-5 lg:py-10 lg:px-10 xl:px-20">
                 <div class="w-full flex justify-center items-end lg:flex-row" data-aos="fade-up">
                     <div class="w-full">
-                        <h2 class="main-heading mb-4">Blogs</h2>
-                        <p class="text">Short, practical reads on cardiac triage, ECG screening and frontline
-                            decision-making.</p>
+                        <h2 class="main-heading mb-4">Clinical Resources</h2>
+                        <p class="text">Short reads on why cardiac risk goes undetected — and what changes when it
+                            doesn’t.</p>
                     </div>
-                    <!-- <a href="#" class="w-[80px] font-semibold text-black hover:underline">
-                    See all
-                </a> -->
+                    <a href="./blogs.html" class="w-[100px] flex items-center gap-3 font-semibold text-black">
+                        See all
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14m-6-6l6 6-6 6" />
+                        </svg>
+                    </a>
                 </div>
+                <!-- Content grid -->
+                <div class="flex-1 lg:flex-row gap-12 lg:gap-10 mt-16">
 
-                <ul class="w-full flex-1 gap-12 mt-16">
+                    <!-- Featured card -->
+                    <a href="#" class="w-full lg:w-[55%] xl:w-[65%] block group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="img-frame relative rounded-none">
+                            <img src="https://picsum.photos/seed/cardiocheck-feature/900/650"
+                                alt="A doctor reviewing a CardioCheck result with a patient"
+                                class="feature-img w-full h-72 sm:h-96 object-cover rounded-xl">
+                        </div>
+                        <h2 class="card-title display text-xl sm:text-2xl font-bold mt-6 mb-3 transition-colors">What is
+                            Tricog CardioCheck?</h2>
+                        <p class="text-neutral-500 text-sm sm:text-base leading-relaxed mb-4 max-w-md">
+                            An AI triage tool that turns a 30-second single-lead ECG into a Low / Moderate / High risk
+                            category in about 10 seconds.
+                        </p>
+                        <span class="text-sm font-medium text-neutral-800 flex items-center gap-1.5">
+                            Read <span class="arrow">→</span>
+                        </span>
+                    </a>
 
-                    <li class="w-full flex-1 lg:flex-row justify-start gap-10 border-b border-black/20 py-8"
-                        data-aos="fade-up">
-                        <div class="w-full">
-                            <div class="flex gap-5 text-sm text-accent mb-1.5">
-                                <span>Jul 21, 2026</span>
-                                <span>8 min Read</span>
+                    <!-- Article list -->
+                    <div class="w-full lg:w-[45%] xl:w-[35%]">
+
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 first:pt-0 group" data-aos="fade-up" data-aos-delay="200">
+                            <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
+                                <img src="https://picsum.photos/seed/hidden-cardiac-risk/300/240"
+                                    alt="A patient having vitals checked with a handheld device"
+                                    class="thumb-img w-full h-full object-cover rounded-xl">
                             </div>
                             <div>
-                                <h4 class="text-lg lg:text-xl xl:text-2xl font-semibold leading-tight mb-3">From a Busy
-                                    OPD
-                                    to Care at Home: The Tricog Connected Pathway</h4>
-                                <p class="text-md">A crowded OPD has one queue that everyone can see and
-                                    another
-                                    that the clinical team has to work out…</p>
-                                <div class="flex items-center gap-3 mt-4">
-                                    <img class="h-10 w-auto rounded-full"
-                                        src="https://tricog.com/wp-content/uploads/2026/04/Prateek-1.webp" alt="">
-                                    <a class="text-md underline" href="#">Prateek Golecha</a>
-                                </div>
+                                <span class="text-xs text-neutral-400 mb-2">Jun 18, 2026</span>
+                                <h3 class="row-title display text-base sm:text-lg font-bold transition-colors">Why
+                                    cardiac risk goes undetected</h3>
                             </div>
-                        </div>
-                        <img class="h-auto w-full lg:w-[300px] xl:w-[350px] object-cover rounded-xl"
-                            src="https://tricog.com/wp-content/uploads/2026/07/from-a-busy-opd-to-care-at-home-the-tricog-connected-pathway.webp"
-                            alt="">
-                    </li>
+                        </a>
 
-                    <li class="w-full flex-1 lg:flex-row justify-start gap-10 border-b border-black/20 py-8"
-                        data-aos="fade-up">
-                        <div class="w-full">
-                            <div class="flex gap-5 text-sm text-accent mb-1.5">
-                                <span>Apr 17, 2026</span>
-                                <span>5 min Read</span>
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up" data-aos-delay="300">
+                            <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
+                                <img src="https://picsum.photos/seed/single-lead-ecg-device/300/240"
+                                    alt="A handheld single-lead ECG device"
+                                    class="thumb-img w-full h-full object-cover rounded-xl">
                             </div>
                             <div>
-                                <h4 class="text-lg lg:text-xl xl:text-2xl font-semibold leading-tight mb-3">The TCC:
-                                    Making
-                                    Early Cardiac Risk Visible
-                                </h4>
-                                <p class="text-md">A man goes to the hospital with chest discomfort, unusual
-                                    fatigue and a feeling that something is not right...</p>
-                                <div class="flex items-center gap-3 mt-4">
-                                    <img class="h-10 w-auto rounded-full"
-                                        src="https://tricog.com/wp-content/uploads/2026/04/Prateek-1.webp" alt="">
-                                    <a class="text-md underline" href="#">Prateek Golecha</a>
-                                </div>
+                                <span class="text-xs text-neutral-400 mb-2">Jun 18, 2026</span>
+                                <h3 class="row-title display text-base sm:text-lg font-bold transition-colors">What a
+                                    single-lead ECG can reveal</h3>
                             </div>
-                        </div>
-                        <img class="h-auto w-full lg:w-[300px] xl:w-[350px] object-cover rounded-xl"
-                            src="https://tricog.com/wp-content/uploads/2026/04/making-early-cardiac-risk-visible-1.png"
-                            alt="">
-                    </li>
-                </ul>
+                        </a>
+
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up" data-aos-delay="400">
+                            <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
+                                <img src="https://picsum.photos/seed/risk-categories-office/300/240"
+                                    alt="A clinician working at a desk"
+                                    class="thumb-img w-full h-full object-cover rounded-xl">
+                            </div>
+                            <div>
+                                <span class="text-xs text-neutral-400 mb-2">Jun 18, 2026</span>
+                                <h3 class="row-title display text-base sm:text-lg font-bold transition-colors">
+                                    Understanding risk categories</h3>
+                            </div>
+                        </a>
+
+                        <a href="#" class="row row-link flex items-center gap-5 py-6 last:pb-0 group" data-aos="fade-up" data-aos-delay="500">
+                            <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
+                                <img src="https://picsum.photos/seed/early-identification/300/240"
+                                    alt="A clinician reviewing notes"
+                                    class="thumb-img w-full h-full object-cover rounded-xl">
+                            </div>
+                            <div>
+                                <span class="text-xs text-neutral-400 mb-2">Jun 18, 2026</span>
+                                <h3 class="row-title display text-base sm:text-lg font-bold transition-colors">Why early
+                                    identification matters</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
+
+        <!-- CTA -->
+        <div class="flex-1 py-28">
+            <div class="h-full w-full max-w-[1200px] flex-1 md:flex-row gap-6 px-3 lg:px-10">
+                <div class="md:h-[500px] lg:h-[600px] w-full flex flex-col justify-between gap-6 bg-theme-blue rounded-2xl py-10 px-6 lg:px-8 xl:px-10"
+                    data-aos="fade-right">
+                    <div>
+                        <h2 class="main-heading xl:w-[95%] mb-5">Add cardiac risk screening to routine visits</h2>
+                        <p class="text">
+                            Most cardiac abnormalities remain invisible until symptoms appear. The patients at risk may
+                            be the ones who don't appear sick. CardioCheck helps uncover hidden cardiac risk during
+                            routine screening, creating an opportunity for earlier intervention.
+                        </p>
+                    </div>
+
+                    <a href="#" class="mt-5 inline-flex justify-center items-center gap-2 btn btn-primary py-3.5">
+
+                        Request a Live Demo
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 12h14m-6-6l6 6-6 6" />
+                        </svg>
+
+                    </a>
+                </div>
+                <div class="w-full rounded-2xl overflow-hidden" data-aos="fade-left">
+                    <img class="h-[450px] md:h-[500px] lg:h-[600px] w-auto object-cover"
+                        src="./assets/images/holding-tcc.png" alt="">
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Floating Human / Machine toggle -->
@@ -1749,97 +1868,97 @@
     <!-- AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-            (function () {
-                // Page load fade-in
-                window.addEventListener('load', function () {
-                    document.documentElement.classList.add('page-loaded');
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header
+            var heroSection = document.getElementById('heroSection');
+            var stickyHeader = document.getElementById('stickyHeader');
+
+            if (heroSection && stickyHeader && 'IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        // When hero is NOT intersecting (scrolled past), show sticky header
+                        stickyHeader.classList.toggle('is-visible', !entry.isIntersecting);
+                    });
+                }, {
+                    root: null,
+                    threshold: 0,
+                    // Trigger slightly before the hero fully leaves, and
+                    // slightly after it starts, for a natural handoff
+                    rootMargin: '-72px 0px 0px 0px'
                 });
 
-                var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                observer.observe(heroSection);
+            } else if (heroSection && stickyHeader) {
+                // Fallback for browsers without IntersectionObserver
+                window.addEventListener('scroll', function () {
+                    var heroBottom = heroSection.getBoundingClientRect().bottom;
+                    stickyHeader.classList.toggle('is-visible', heroBottom <= 72);
+                }, { passive: true });
+            }
 
-                AOS.init({
-                    duration: 900,
-                    easing: 'ease-out-cubic',
-                    once: true,
-                    offset: 80,
-                    disable: prefersReducedMotion
+            gsap.registerPlugin(ScrollTrigger);
+
+            const wrapper = document.querySelector(".cards-wrapper");
+
+            function horizontalScroll() {
+
+                const totalScroll =
+                    wrapper.scrollWidth - window.innerWidth;
+
+                gsap.to(wrapper, {
+
+                    x: -totalScroll,
+                    ease: "none",
+
+                    scrollTrigger: {
+
+                        trigger: ".horizontal-section",
+
+                        start: "top top",
+
+                        end: () => "+=" + totalScroll,
+
+                        scrub: 1,
+
+                        pin: true,
+
+                        anticipatePin: 1,
+
+                        invalidateOnRefresh: true
+
+                    }
+
                 });
 
-                // Sticky Header
-                var heroSection = document.getElementById('heroSection');
-                var stickyHeader = document.getElementById('stickyHeader');
+            }
 
-                if (heroSection && stickyHeader && 'IntersectionObserver' in window) {
-                    var observer = new IntersectionObserver(function (entries) {
-                        entries.forEach(function (entry) {
-                            // When hero is NOT intersecting (scrolled past), show sticky header
-                            stickyHeader.classList.toggle('is-visible', !entry.isIntersecting);
-                        });
-                    }, {
-                        root: null,
-                        threshold: 0,
-                        // Trigger slightly before the hero fully leaves, and
-                        // slightly after it starts, for a natural handoff
-                        rootMargin: '-72px 0px 0px 0px'
-                    });
+            horizontalScroll();
 
-                    observer.observe(heroSection);
-                } else if (heroSection && stickyHeader) {
-                    // Fallback for browsers without IntersectionObserver
-                    window.addEventListener('scroll', function () {
-                        var heroBottom = heroSection.getBoundingClientRect().bottom;
-                        stickyHeader.classList.toggle('is-visible', heroBottom <= 72);
-                    }, { passive: true });
-                }
+            window.addEventListener("resize", () => {
 
-                gsap.registerPlugin(ScrollTrigger);
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
-                const wrapper = document.querySelector(".cards-wrapper");
-
-                function horizontalScroll() {
-
-                    const totalScroll =
-                        wrapper.scrollWidth - window.innerWidth;
-
-                    gsap.to(wrapper, {
-
-                        x: -totalScroll,
-                        ease: "none",
-
-                        scrollTrigger: {
-
-                            trigger: ".horizontal-section",
-
-                            start: "top top",
-
-                            end: () => "+=" + totalScroll,
-
-                            scrub: 1,
-
-                            pin: true,
-
-                            anticipatePin: 1,
-
-                            invalidateOnRefresh: true
-
-                        }
-
-                    });
-
-                }
+                gsap.set(wrapper, { x: 0 });
 
                 horizontalScroll();
 
-                window.addEventListener("resize", () => {
-
-                    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-                    gsap.set(wrapper, { x: 0 });
-
-                    horizontalScroll();
-
-                });
-            })();
+            });
+        })();
     </script>
 
     <!-- Human / Machine Toggle -->

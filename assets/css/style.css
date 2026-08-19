@@ -104,23 +104,29 @@
 
 html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
-    /* overscroll-behavior-x: none; */
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
 }
 
 body {
     font-family: var(--font-sans);
     font-weight: var(--fw-regular);
-    /* overflow-x: hidden; */
-    /* overscroll-behavior-x: none; */
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
     width: 100%;
 }
 
 .main-heading {
-    font-size: var(--fs-display);
-    line-height: var(--lh-tight);
+    font-size: 1.9rem;
+    line-height: 2.1rem;
     letter-spacing: var(--ls-tight);
     font-weight: var(--fw-bold);
+}
+
+@media (min-width: 768px){
+    .main-heading{
+        line-height: 2.8rem;
+    }
 }
 
 .text-primary {
@@ -263,6 +269,14 @@ input.is-invalid:focus,
 select.is-invalid:focus,
 textarea.is-invalid:focus {
     box-shadow: 0 0 0 3px var(--accent-50);
+}
+
+.flex-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Modal */
@@ -463,12 +477,17 @@ textarea.is-invalid:focus {
     background: rgba(255, 255, 255, .10);
 }
 
-.flex-1 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.text-hero{
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+}
+
+@media (min-width: 1280px){
+    .text-hero{
+        font-size: 2.6rem;
+        line-height: 3rem;
+    }
 }
 
 .carousel-wrapper {
@@ -678,7 +697,7 @@ textarea.is-invalid:focus {
     }
 
     .main-heading {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
 
     .text {
@@ -711,10 +730,10 @@ textarea.is-invalid:focus {
         max-width: 1280px !important;
     }
 
-    .main-heading {
+    /* .main-heading {
         font-size: 2.8rem;
         line-height: 3.2rem;
-    }
+    } */
 }
 
 @media (min-width: 1600px) {
