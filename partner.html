@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner wiht Us | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <main>
+            <section class="flex-1 py-14 lg:py-20">
+                <div class="container px-5 xl:px-20">
+            
+                    <!-- Section Intro -->
+                    <div class="w-full flex flex-col lg:flex-row items-end gap-6 lg:gap-12">
+                        <div class="w-full lg:w-1/2">
+                            <h5 class="text-sm text-accent font-semibold uppercase mb-2"
+                                data-aos="fade-up"
+                                data-aos-delay="100">
+                                - Let’s Partner
+                            </h5>
+            
+                            <h2 class="main-heading mb-3 lg:m-0"
+                                data-aos="fade-up"
+                                data-aos-delay="200">
+                                Build Impact Together
+                            </h2>
+                        </div>
+            
+                        <p class="w-full lg:w-1/2 text"
+                            data-aos="fade-up"
+                            data-aos-delay="300">
+                            Partner with us to create
+                            <span class="text-accent font-medium">
+                                meaningful solutions that make a difference.
+                            </span>
+                            Together, we can combine expertise, resources, and ideas to
+                            deliver greater value and drive lasting impact.
+                        </p>
+                    </div>
+            
+                    <!-- Partner Form Area -->
+                    <div class="w-full flex flex-col md:flex-row items-stretch gap-8 lg:gap-12 mt-12 lg:mt-16">
+            
+                        <!-- Image -->
+                        <div class="w-full md:w-5/12 lg:w-1/2"
+                            data-aos="fade-up"
+                            data-aos-delay="100">
+            
+                            <div class="relative h-full min-h-[320px] md:min-h-[520px] overflow-hidden rounded-2xl bg-primary-50">
+            
+                                <img
+                                    src="./assets/images/partner-collaboration.png"
+                                    alt="Partners collaborating together"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                >
+            
+                                <!-- Subtle overlay -->
+                                <div class="absolute inset-0 bg-primary/10"></div>
+            
+                                <!-- Optional image message -->
+                                <div class="absolute bottom-5 left-5 right-5 md:bottom-7 md:left-7 md:right-7">
+                                    <div class="inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-medium text-primary shadow-sm">
+                                        <span class="h-2 w-2 rounded-full bg-accent"></span>
+                                        Let’s create an impact together
+                                    </div>
+                                </div>
+            
+                            </div>
+                        </div>
+            
+                        <!-- Form -->
+                        <div class="w-full md:w-7/12 lg:w-1/2"
+                            data-aos="fade-up"
+                            data-aos-delay="200">
+            
+                            <div class="h-full rounded-2xl border border-primary-100 bg-primary-50/50 p-6 sm:p-8 lg:p-10">
+            
+                                <div class="mb-8">
+                                    <h3 class="text-2xl sm:text-3xl font-semibold text-primary-700 mb-2">
+                                        Tell us about your partnership
+                                    </h3>
+            
+                                    <p class="text-sm sm:text-base text-grey-700">
+                                        Share a few details about your organization and how
+                                        you would like to work with us.
+                                    </p>
+                                </div>
+            
+                                <form class="space-y-5">
+            
+                                    <!-- Name + Organization -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+                                        <div>
+                                            <label for="partner-name"
+                                                class="block text-sm font-medium text-primary-700 mb-2">
+                                                Full Name
+                                                <span class="text-accent">*</span>
+                                            </label>
+            
+                                            <input
+                                                type="text"
+                                                id="partner-name"
+                                                name="name"
+                                                placeholder="Your name"
+                                                required
+                                                class="w-full rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 placeholder:text-grey-600 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                            >
+                                        </div>
+            
+                                        <div>
+                                            <label for="organization"
+                                                class="block text-sm font-medium text-primary-700 mb-2">
+                                                Organization
+                                                <span class="text-accent">*</span>
+                                            </label>
+            
+                                            <input
+                                                type="text"
+                                                id="organization"
+                                                name="organization"
+                                                placeholder="Organization name"
+                                                required
+                                                class="w-full rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 placeholder:text-grey-600 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                            >
+                                        </div>
+            
+                                    </div>
+            
+                                    <!-- Email + Phone -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            
+                                        <div>
+                                            <label for="partner-email"
+                                                class="block text-sm font-medium text-primary-700 mb-2">
+                                                Email Address
+                                                <span class="text-accent">*</span>
+                                            </label>
+            
+                                            <input
+                                                type="email"
+                                                id="partner-email"
+                                                name="email"
+                                                placeholder="you@example.com"
+                                                required
+                                                class="w-full rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 placeholder:text-grey-600 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                            >
+                                        </div>
+            
+                                        <div>
+                                            <label for="partner-phone"
+                                                class="block text-sm font-medium text-primary-700 mb-2">
+                                                Phone Number
+                                            </label>
+            
+                                            <input
+                                                type="tel"
+                                                id="partner-phone"
+                                                name="phone"
+                                                placeholder="+91 00000 00000"
+                                                class="w-full rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 placeholder:text-grey-600 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                            >
+                                        </div>
+            
+                                    </div>
+            
+                                    <!-- Partnership Type -->
+                                    <div>
+                                        <label for="partnership-type"
+                                            class="block text-sm font-medium text-primary-700 mb-2">
+                                            Partnership Type
+                                            <span class="text-accent">*</span>
+                                        </label>
+            
+                                        <select
+                                            id="partnership-type"
+                                            name="partnership_type"
+                                            required
+                                            class="w-full rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                        >
+                                            <option value="" disabled selected>
+                                                Select partnership type
+                                            </option>
+                                            <option value="strategic">
+                                                Strategic Partnership
+                                            </option>
+                                            <option value="research">
+                                                Research &amp; Collaboration
+                                            </option>
+                                            <option value="healthcare">
+                                                Healthcare Partnership
+                                            </option>
+                                            <option value="technology">
+                                                Technology Partnership
+                                            </option>
+                                            <option value="other">
+                                                Other
+                                            </option>
+                                        </select>
+                                    </div>
+            
+                                    <!-- Message -->
+                                    <div>
+                                        <label for="partner-message"
+                                            class="block text-sm font-medium text-primary-700 mb-2">
+                                            Tell us more
+                                            <span class="text-accent">*</span>
+                                        </label>
+            
+                                        <textarea
+                                            id="partner-message"
+                                            name="message"
+                                            rows="5"
+                                            placeholder="Tell us about your organization, goals, or partnership idea..."
+                                            required
+                                            class="w-full resize-none rounded-lg border border-grey-200 bg-white px-4 py-3 text-sm text-grey-900 placeholder:text-grey-600 outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
+                                        ></textarea>
+                                    </div>
+            
+                                    <!-- Consent -->
+                                    <div class="flex items-start gap-3 pt-1">
+                                        <input
+                                            type="checkbox"
+                                            id="partner-consent"
+                                            name="consent"
+                                            required
+                                            class="mt-1 h-4 w-4 shrink-0 accent-[#B7232C]"
+                                        >
+            
+                                        <label for="partner-consent"
+                                            class="text-xs sm:text-sm leading-5 text-grey-700">
+                                            I agree to be contacted regarding this partnership
+                                            enquiry.
+                                        </label>
+                                    </div>
+            
+                                    <!-- Submit -->
+                                    <div class="pt-2">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-primary transition flex items-center gap-2 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2"
+                                        >
+                                            Submit Partnership Request
+            
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+            
+                                </form>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from header-and-footer.js -->
+        </footer>
+    </main>
+
+    <!-- <div id="machine-content"></div> -->
+
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header-and-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>

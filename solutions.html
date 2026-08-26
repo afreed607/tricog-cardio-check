@@ -19,6 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
         .hm-burger {
             color: #000000 !important;
@@ -28,6 +30,189 @@
             background-image: url("./assets/images/banner-bg-1.jpeg");
             background-size: cover;
             background-position: center;
+        }
+
+        /* ---- TCC team slider ---- */
+        .tcc-team-swiper {
+            overflow: hidden;
+        }
+
+        .tcc-team-swiper .swiper-slide {
+            height: auto;
+        }
+
+        .tcc-card {
+            background: #fff;
+            border: 1px solid #ECECEC;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, .04);
+            transition: box-shadow .25s ease, transform .25s ease;
+        }
+
+        .tcc-card:hover {
+            box-shadow: 0 12px 28px rgba(16, 24, 40, .10);
+            transform: translateY(-2px);
+        }
+
+        .tcc-card-media {
+            position: relative;
+            aspect-ratio: 3/4;
+            background: #0a0a0a;
+            overflow: hidden;
+        }
+
+        .tcc-card-media img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .tcc-video-frame-wrap {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .tcc-video-frame-wrap iframe {
+            /* Shorts are natively 9:16 — this is taller than the 3:4 card, so we
+       scale to full width and crop top/bottom evenly instead of pillarboxing. */
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 177.78%;
+            transform: translateY(-50%);
+            border: 0;
+        }
+
+        .tcc-play-btn {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            z-index: 2;
+            width: 52px;
+            height: 52px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, .92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+            border: 0;
+            cursor: pointer;
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .tcc-play-btn:hover {
+            transform: scale(1.08);
+            background: #fff;
+        }
+
+        .tcc-play-btn svg {
+            margin-left: 3px;
+        }
+
+        .tcc-card-body {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        .tcc-card-name {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: .98rem;
+        }
+
+        .tcc-card-role {
+            color: #6B7280;
+            font-size: .83rem;
+            margin-top: .1rem;
+        }
+
+        .tcc-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: .83rem;
+            margin-top: .6rem;
+        }
+
+        .tcc-card-link svg {
+            transition: transform .2s ease;
+        }
+
+        .tcc-card:hover .tcc-card-link svg {
+            transform: translateX(3px);
+        }
+
+        /* Nav arrows: laid out as flex siblings of the swiper track so they can never
+     sit on top of a card/video — they occupy their own space in the row. */
+        .tcc-slider-row {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .tcc-nav-btn {
+            flex: 0 0 auto;
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            border: 1px solid #E5E7EB;
+            background: #e6e9ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink);
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+            transition: background .2s ease, color .2s ease, border-color .2s ease, opacity .2s ease;
+        }
+
+        .tcc-nav-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .tcc-nav-btn.swiper-button-disabled {
+            opacity: .35;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media (max-width: 767px) {
+            .tcc-nav-btn {
+                display: none;
+            }
+        }
+
+        .tcc-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .4rem;
+            margin-top: 2rem;
+        }
+
+        .tcc-pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: #D9D9D9;
+            opacity: 1;
+            margin: 0 !important;
+            transition: width .2s ease, background .2s ease;
+        }
+
+        .tcc-pagination .swiper-pagination-bullet-active {
+            width: 22px;
+            background: var(--accent);
         }
     </style>
 </head>
@@ -47,64 +232,33 @@
 
                 <!-- Desktop Nav -->
                 <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
-                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-3"
-                        href="./index.html/#HowItWorks">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
-                            <circle cx="5" cy="5" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="12" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="19" r="1.5" fill="currentColor" />
-                        </svg>
+                    <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
                         How it works
                     </a>
-                    <a class="text-accent hover:text-primary text-accent-hover transition flex items-center gap-3"
-                        href="./solutions.html">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
-                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                            <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor" stroke-width="1.6"
-                                stroke-linecap="round" />
-                        </svg>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./solutions.html">
                         Solutions
                     </a>
-                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
-                        href="./library.html">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
-                                d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
-                        </svg>
+                    <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
                         Resources
                     </a>
-                    <a class="hover:text-primary text-accent-hover transition flex items-center gap-2"
-                        href="./blogs.html">
-                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8"
-                                d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
-                            <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
-                        </svg>
-                        FAQ
+                    <a class="hover:text-primary text-accent-hover transition" href="./support.html">
+                        FAQs
                     </a>
                 </div>
 
                 <!-- CTA -->
-                <button class="sticky-cta hidden lg:inline-flex btn btn-primary py-2.5"
-                    data-modal-target="PaymentModal">
-                    Order - ₹14,999
-                </button>
+                <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
 
                 <!-- Mobile / tablet menu toggle -->
                 <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
@@ -124,11 +278,21 @@
             <!-- Mobile / tablet menu panel -->
             <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
                 <nav class="hm-mobile-menu-inner">
-                    <a href="./solutions.html">Solutions</a>
-                    <a href="./setup.html">Setup</a>
-                    <a href="./library.html">Library</a>
-                    <a href="./blogs.html">Blogs</a>
-                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order - ₹14,999</button>
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2"
+                        data-modal-target="PaymentModal">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
                 </nav>
             </div>
         </header>
@@ -145,59 +309,32 @@
 
                 <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
-                    <a class="hover:text-[#EF4762] transition flex items-center gap-2" href="./index.html/#HowItWorks">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5h14M5 12h14M5 19h14" />
-                            <circle cx="5" cy="5" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="12" r="1.5" fill="currentColor" />
-                            <circle cx="5" cy="19" r="1.5" fill="currentColor" />
-                        </svg>
+                    <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
                         How it works
                     </a>
-                    <a class="text-accent hover:text-[#EF4762] transition flex items-center gap-2"
-                        href="./solutions.html">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M9.5 10.5 6.8 7.8M14.5 10.5l2.7-2.7M9.5 13.5l-2.7 2.7M14.5 13.5l2.7 2.7"
-                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-                            <circle cx="5.8" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="6.8" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="5.8" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <circle cx="18.2" cy="17.2" r="1.7" stroke="currentColor" stroke-width="1.8" />
-                            <path d="M12 3v1.5M12 19.5V21M3 12h1.5M19.5 12H21" stroke="currentColor" stroke-width="1.6"
-                                stroke-linecap="round" />
-                        </svg>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./solutions.html">
                         Solutions
                     </a>
-                    <a class="hover:text-[#EF4762] transition flex items-center gap-2" href="./library.html">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8" d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21V5.5Z" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1.8"
-                                d="M5 18.5A2.5 2.5 0 0 1 7.5 16H19M9 7h6M9 10h6" />
-                        </svg>
-                        Library
+                    <a class="hover:text-[#EF4762] transition" href="./resources.html">
+                        Resources
                     </a>
-                    <a class="hover:text-[#EF4762] transition flex items-center gap-2" href="./blogs.html">
-                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" fill="none" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8" />
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="1.8"
-                                d="M9.5 9.25a2.6 2.6 0 1 1 4.7 1.55c-.65.8-1.7 1.15-2.2 1.9-.2.3-.3.65-.3 1.05" />
-                            <circle cx="12" cy="16.9" r=".8" fill="currentColor" />
-                        </svg>
-                        FAQ
+                    <a class="hover:text-[#EF4762] transition" href="./support.html">
+                        FAQs
                     </a>
                 </div>
 
                 <!-- CTA -->
-                <a href="#" class="hidden lg:inline-flex btn btn-primary py-2.5" data-modal-target="PaymentModal">
-                    Order - ₹14,999
+                <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
                 </a>
 
                 <!-- Mobile / tablet menu toggle -->
@@ -218,12 +355,22 @@
             <!-- Mobile / tablet menu panel -->
             <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
                 <nav class="hm-mobile-menu-inner">
-                    <a href="./solutions.html">Solutions</a>
-                    <a href="./setup.html">Setup</a>
-                    <a href="./library.html">Library</a>
-                    <a href="./blogs.html">Blogs</a>
-                    <button class="btn btn-secondary" data-modal-target="PaymentModal">Order -
-                        ₹14,999</button>
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
                 </nav>
             </div>
         </nav>
@@ -526,6 +673,198 @@
                 </div>
         </section>
 
+        <section class="flex-1 py-14">
+            <div class="container px-5 xl:px-20 xl:py-16">
+                <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up" data-aos-delay="100">-
+                    from the team</h5>
+                <h1 class="main-heading mb-3" data-aos="fade-up" data-aos-delay="200">
+                    Why the people building TCC believe this is different
+                </h1>
+                <p class="text" data-aos="fade-up" data-aos-delay="200">Short insights from leadership and product on
+                    the thinking behind TCC</p>
+
+
+                <!-- Slider -->
+                <div class="mt-14">
+                    <div class="tcc-slider-row">
+                        <button class="tcc-nav-btn tcc-team-prev" aria-label="Previous">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <div class="swiper tcc-team-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide template: repeat per team member -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="k7uGczsNFd8">
+                                            <img src="https://img.youtube.com/vi/k7uGczsNFd8/hqdefault.jpg"
+                                                alt="Dr Charit Bhograj interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Dr Charit Bhograj</div>
+                                            <div class="tcc-card-role">CEO &amp; Founder</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="VYk4Cb0VTl4">
+                                            <img src="https://img.youtube.com/vi/VYk4Cb0VTl4/hqdefault.jpg"
+                                                alt="Dr Zainul Charbiwala interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Dr Zainul Charbiwala</div>
+                                            <div class="tcc-card-role">CTO &amp; Co-Founder</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="k7uGczsNFd8">
+                                            <img src="https://img.youtube.com/vi/k7uGczsNFd8/hqdefault.jpg"
+                                                alt="Prateek Golecha interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Prateek Golecha</div>
+                                            <div class="tcc-card-role">CGO</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="VYk4Cb0VTl4">
+                                            <img src="https://img.youtube.com/vi/VYk4Cb0VTl4/hqdefault.jpg"
+                                                alt="Sameer Nair interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Sameer Nair</div>
+                                            <div class="tcc-card-role">Product Lead</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="k7uGczsNFd8">
+                                            <img src="https://img.youtube.com/vi/k7uGczsNFd8/hqdefault.jpg"
+                                                alt="Anjali Menon interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Anjali Menon</div>
+                                            <div class="tcc-card-role">Head of Clinical</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media" data-video-id="VYk4Cb0VTl4">
+                                            <img src="https://img.youtube.com/vi/VYk4Cb0VTl4/hqdefault.jpg"
+                                                alt="Rohan Iyer interview thumbnail" loading="lazy" />
+                                            <button class="tcc-play-btn" aria-label="Play video">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent)">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Rohan Iyer</div>
+                                            <div class="tcc-card-role">Head of Engineering</div>
+                                            <a href="#" class="tcc-card-link" onclick="return false">Watch the interview
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor"
+                                                        stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="tcc-nav-btn tcc-team-next" aria-label="Next">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="tcc-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="flex-1 py-20">
             <div class="container px-4 xl:px-20" data-aos="fade-up">
                 <div class="relative overflow-hidden rounded-[32px] form-bg py-20">
@@ -533,10 +872,10 @@
                     <div class="absolute inset-0 blue-bg-overlay"></div>
 
                     <div
-                        class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6 md:px-12 lg:px-16">
+                        class="relative z-10 h-full flex flex-col lg:flex-row justify-between items-start px-6 md:px-12 lg:px-16">
 
                         <!-- Content Column -->
-                        <div class="flex flex-col justify-between  h-full text-white">
+                        <div class="h-full flex flex-col justify-between h-full text-white">
                             <div>
                                 <h2 class="text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight mb-5"
                                     data-aos="fade-up" data-aos-delay="100">
@@ -593,19 +932,19 @@
                         </div>
 
                         <!-- Form Column -->
-                        <div class="bg-[#1a1a1a]/70 backdrop-blur-md rounded-2xl p-8 md:p-9 border border-white/10">
+                        <div class="bg-[#032032] backdrop-blur-md rounded-2xl p-8 md:p-9 border border-[#042941]">
                             <form class="space-y-5">
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
                                         <label class="block text-white text-sm font-medium mb-2">Name</label>
                                         <input type="text" placeholder="Your name"
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                     <div>
                                         <label class="block text-white text-sm font-medium mb-2">Work email</label>
                                         <input type="email" placeholder="you@company.com"
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                 </div>
 
@@ -613,12 +952,12 @@
                                     <div>
                                         <label class="block text-white text-sm font-medium mb-2">Organisation</label>
                                         <input type="text" placeholder="Hospital or clinic"
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                     <div>
                                         <label class="block text-white text-sm font-medium mb-2">Setting</label>
                                         <input type="text" placeholder=""
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                 </div>
 
@@ -627,12 +966,12 @@
                                         <label class="block text-white text-sm font-medium mb-2">Patients screened /
                                             month</label>
                                         <input type="text" placeholder="e.g. 400"
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                     <div>
                                         <label class="block text-white text-sm font-medium mb-2">Sites</label>
                                         <input type="text" placeholder=""
-                                            class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
                                     </div>
                                 </div>
 
@@ -642,7 +981,7 @@
                                             class="text-white/50 font-normal">(optional)</span>
                                     </label>
                                     <textarea rows="3" placeholder="Timeline, locations, current workflow..."
-                                        class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40 resize-none"></textarea>
+                                        class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40 resize-none"></textarea>
                                 </div>
 
                                 <div class="pt-2">
@@ -667,6 +1006,57 @@
     </main>
 
     <!-- <div id="machine-content"></div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const tccTeamSwiper = new Swiper('.tcc-team-swiper', {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+            watchOverflow: true,
+            pagination: {
+                el: '.tcc-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.tcc-team-next',
+                prevEl: '.tcc-team-prev',
+            },
+            breakpoints: {
+                480: { slidesPerView: 1.6, spaceBetween: 18 },
+                640: { slidesPerView: 2.2, spaceBetween: 20 },
+                1024: { slidesPerView: 3.3, spaceBetween: 24 },
+                1280: { slidesPerView: 4, spaceBetween: 24 },
+            },
+        });
+
+        // Click-to-play: swap thumbnail for a YouTube embed on demand
+        document.querySelectorAll('.tcc-card-media').forEach((media) => {
+            const playBtn = media.querySelector('.tcc-play-btn');
+            playBtn.addEventListener('click', () => {
+                const videoId = media.dataset.videoId;
+                if (!videoId) return;
+
+                const frameWrap = document.createElement('div');
+                frameWrap.className = 'tcc-video-frame-wrap';
+                frameWrap.innerHTML = `
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+          title="Team interview video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+
+                media.querySelector('img').remove();
+                playBtn.remove();
+                media.querySelector('.tcc-badge-duration')?.remove();
+                media.appendChild(frameWrap);
+
+                // keep the swiper measurements correct after DOM changes
+                tccTeamSwiper.update();
+            });
+        });
+    </script>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/header-and-footer.js"></script>

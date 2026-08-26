@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Payment Modal -->
+        <div class="hidden modal-wrapper fixed inset-0 items-center justify-center bg-[rgba(0,0,0,0.5)] p-4 sm:p-6"
+            id="PaymentModal" aria-hidden="true">
+
+            <div
+                class="modal-container relative w-full h-[90vh] max-h-[640px] sm:h-[80vh] sm:max-h-[700px] bg-white rounded-2xl">
+
+                <button type="button"
+                    class="modal-close absolute top-3 right-3 sm:-top-4 sm:-right-4 z-10 flex items-center justify-center h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-primary text-white shadow-lg transition hover:scale-105"
+                    aria-label="Close modal">
+                    <svg class="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6l12 12"></path>
+                    </svg>
+                </button>
+
+                <div class="relative w-full h-full overflow-x-hidden rounded-2xl">
+                    <iframe class="w-full h-full" src="https://pages.razorpay.com/pl_TMQQxCsGhcy9q3/view"
+                        title="Book a demo" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <main>
+            <section class="flex-1 py-14">
+                <div class="container px-5 xl:px-20">
+
+                    <div class="flex flex-col lg:flex-row items-start gap-10">
+                        <div class="w-full lg:w-[40%]">
+                            <div class="w-full flex flex-col-reverse lg:flex-row gap-4 mb-8 lg:mb-0">
+                                <!-- Thumbnail tabs -->
+                                <div class="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible" id="thumb-list">
+                                    <button type="button"
+                                        class="thumb-btn shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-md border-2 border-accent overflow-hidden p-1 transition"
+                                        data-type="image" data-full="./assets/images/tcc-1.jpeg">
+                                        <img src="./assets/images/tcc-1.jpeg" alt="VCardia Complete view 1"
+                                            class="w-full h-full object-contain">
+                                    </button>
+                                    <button type="button"
+                                        class="thumb-btn shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-md border-2 border-transparent overflow-hidden p-1 transition"
+                                        data-type="image" data-full="./assets/images/tcc-2.jpeg">
+                                        <img src="./assets/images/tcc-2.jpeg" alt="VCardia Complete kit"
+                                            class="w-full h-full object-contain">
+                                    </button>
+                                    <button type="button"
+                                        class="thumb-btn shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-md border-2 border-transparent overflow-hidden p-1 transition"
+                                        data-type="image" data-full="./assets/images/tcc-3.jpeg">
+                                        <img src="./assets/images/tcc-3.jpeg" alt="Mobile and web application"
+                                            class="w-full h-full object-contain">
+                                    </button>
+                                    <button type="button"
+                                        class="thumb-btn shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-md border-2 border-transparent overflow-hidden p-1 transition relative"
+                                        data-type="video"
+                                        data-full="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                                        <img src="./assets/images/tcc-1.jpeg" alt="Product video"
+                                            class="w-full h-full object-contain">
+                                        <span class="absolute inset-0 flex items-center justify-center bg-black/30">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
+                                                class="w-6 h-6">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <!-- Main media with hover zoom (images only) -->
+                                <div class="h-96 lg:h-[450px] relative flex-1 aspect-square rounded-lg border border-gray-200 overflow-hidden bg-white cursor-zoom-in"
+                                    id="main-image-wrap">
+                                    <img id="main-image" src="./assets/images/tcc-1.jpeg" alt="VCardia Complete"
+                                        class="w-full h-full object-contain transition-transform duration-150 ease-out will-change-transform">
+                                    <video id="main-video" controls class="w-full h-full object-contain hidden">
+                                        <source src="" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-[60%]">
+                            <h2 class="main-heading mb-3">Order CardioCheck</h2>
+                            <p class="text mb-4">A one-time device purchase — OMRON Complete (HEM-7530T) with Tricog
+                                CardioCheck app access. The screening takes under a minute and any trained nurse,
+                                technician
+                                or clinical staff member can run it. Free shipping on 2+ units.</p>
+
+                            <div class="flex items-end gap-3">
+                                <strong class="text-3xl text-accent">₹14,999</strong>
+                                <span class="text-sm">inclusive of all taxes</span>
+                            </div>
+                            <div class="relative rounded-2xl border p-8 my-8">
+                                <span
+                                    class="absolute -top-3 right-6 md:right-8 bg-primary text-xs text-white rounded-full py-1 px-4">Best
+                                    Value</span>
+                                <h5 class="text-lg mb-3">Tricog CardioCheck (Device + AI)</h5>
+                                <span class="bg-gray-200 text-sm rounded-full py-1 px-4">
+                                    + Free shipping on the clinic kit or 2+ units
+                                </span>
+                            </div>
+                            <button class="group btn btn-primary lg:py-4 lg:px-10
+                                   inline-flex items-center justify-center gap-2
+                                   transition-all duration-200
+                                   hover:-translate-y-0.5 hover:shadow-lg
+                                   active:translate-y-0" data-modal-target="PaymentModal">
+                                <span>Proceed to Payment</span>
+
+                                <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m13 6 6 6-6 6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Card -->
+                    <div class="w-full overflow-hidden rounded-[20px] border border-[#e3e3e3] bg-white mt-14">
+
+                        <!-- Top Information Bar -->
+                        <div class="flex gap-7 border-b border-[#e8e8e8]">
+
+                            <!-- Shipping Country -->
+                            <div class="flex items-center gap-3 px-6 py-5">
+
+                                <!-- Globe Icon -->
+                                <svg class="h-[17px] w-[17px] shrink-0 text-[#9b9b9b]" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M3 12h18"></path>
+                                    <path d="M12 3c2.2 2.4 3.4 5.4 3.4 9s-1.2 6.6-3.4 9"></path>
+                                    <path d="M12 3c-2.2 2.4-3.4 5.4-3.4 9s1.2 6.6 3.4 9"></path>
+                                </svg>
+
+                                <p class="text-[14px] leading-5 text-[#666]">
+                                    We ship to
+                                    <span class="ml-1">🇮🇳</span>
+                                    <span class="font-semibold text-[#111]">India</span>
+                                </p>
+                            </div>
+
+
+                            <!-- Delivery Date -->
+                            <div class="flex items-center gap-3 px-6 py-5">
+
+                                <!-- Truck Icon -->
+                                <svg class="h-[17px] w-[17px] shrink-0 text-[#9b9b9b]" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M3 6h11v10H3z"></path>
+                                    <path d="M14 9h4l3 3v4h-7z"></path>
+                                    <circle cx="7" cy="18" r="2"></circle>
+                                    <circle cx="18" cy="18" r="2"></circle>
+                                    <path d="M9 18h7"></path>
+                                </svg>
+
+                                <p class="text-[14px] leading-5 text-[#666]">
+                                    Order now, get it by
+                                    <span class="font-semibold text-[#111]">
+                                        Mon, Aug 24
+                                    </span>
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Delivery Details -->
+                        <div class="px-6 py-[18px] sm:px-6 sm:py-[18px]">
+
+                            <!-- Section Header -->
+                            <div type="button" class="flex w-full items-center justify-between text-left">
+                                <span class="text-[14px] font-semibold text-[#111]">
+                                    Delivery
+                                </span>
+                            </div>
+
+
+                            <!-- Content -->
+                            <div id="deliveryContent" class="mt-[18px]">
+
+                                <!-- Delivery Times -->
+                                <div class="grid grid-cols-[165px_1fr] gap-x-4 gap-y-[14px] text-[14px]">
+
+                                    <div class="text-[#666]">
+                                        Metros
+                                    </div>
+
+                                    <div class="text-[#666]">
+                                        24–48 working hours
+                                    </div>
+
+
+                                    <div class="text-[#666]">
+                                        Tier-2 cities
+                                    </div>
+
+                                    <div class="text-[#666]">
+                                        2–5 working days
+                                    </div>
+
+
+                                    <div class="flex items-center gap-2 font-medium text-[#111]">
+                                        <span>Rest of India</span>
+                                        <span class="text-[13px]">🇮🇳</span>
+                                    </div>
+
+                                    <div class="text-[#666]">
+                                        4–10 working days
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Dispatch Information -->
+                                <p class="mt-[27px] text-[14px] leading-[22px] text-[#666]">
+                                    We usually dispatch within 24 hours on business days.
+                                    Delivery times start once you receive your dispatch
+                                    confirmation.
+                                </p>
+
+
+                                <!-- Product Information -->
+                                <p class="mt-[12px] text-[14px] leading-[22px] text-[#666]">
+                                    Every order includes the OMRON Complete (HEM-7530T)
+                                    device and access to the Tricog CardioCheck web app.
+                                    Login credentials are issued on activation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-theme-blue rounded-[32px] py-6 px-6 lg:py-10 lg:px-10 xl:py-20 xl:px-20 mt-20">
+                        <div class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-10">
+
+                            <!-- Left Content -->
+                            <div class="xl:max-w-md" data-aos="fade-right">
+
+                                <div class="flex items-center gap-3 text-sm text-accent uppercase mb-8">
+                                    <span class="font-semibold">what to expect</span>
+                                </div>
+
+                                <h2 class="main-heading">
+                                    Here from <br> Practitioners.
+                                </h2>
+
+                                <button class="mt-8 inline-flex items-center btn btn-primary">
+                                    See the clinical evidence
+                                </button>
+
+                            </div>
+
+                            <!-- Review Cards -->
+                            <div class="flex-1 bg-white rounded-[28px] shadow-[0_25px_60px_rgba(0,0,0,0.08)] overflow-hidden"
+                                data-aos="fade-left">
+
+                                <div class="grid md:grid-cols-3">
+
+                                    <!-- Card -->
+                                    <div class="flex flex-col justify-between p-8 border-b md:border-b-0 md:border-r border-gray-200 transition-colors"
+                                        data-aos="fade-up" data-aos-delay="0">
+                                        <div>
+
+                                            <p class="text-gray-800 leading-8">
+                                                Cardiologist and physician time goes to the highest-risk patients first.
+                                            </p>
+                                        </div>
+
+                                        <div class="mt-16 text-sm text-gray-400">
+                                            Maximised resource use
+                                        </div>
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="flex flex-col justify-between p-8 border-b md:border-b-0 md:border-r border-gray-200 transition-colors"
+                                        data-aos="fade-up" data-aos-delay="150">
+
+                                        <p class="text-gray-800 leading-8">
+                                            Complex waveforms become a Low, Moderate or High category any trained staff
+                                            member can act on.
+                                        </p>
+
+                                        <div class="mt-16 text-sm text-gray-400">
+                                            Runs during vitals
+                                        </div>
+                                    </div>
+
+                                    <!-- Card -->
+                                    <div class="flex flex-col justify-between p-8 flex flex-col transition-colors"
+                                        data-aos="fade-up" data-aos-delay="300">
+
+                                        <p class="text-gray-800 leading-8 flex-grow">
+                                            Only Moderate and High risk go on for a 12-lead ECG, so the diagnostic queue
+                                            moves faster.
+                                        </p>
+
+                                        <div class="mt-16 flex items-center justify-between">
+                                            <span class="text-sm text-gray-400">
+                                                Improved patient care
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section class="p-2 lg:p-3 xl:p-4">
+                <div class="flex-1 bg-[#021826] rounded-[32px] py-14">
+                    <div class="container px-4 xl:px-20">
+                        <p class="w-full max-w-[50%] text text-white mb-3">Around 50% of at-risk patients are
+                            asymptomatic
+                            before a major event, and 80% of premature heart disease is preventable. The full picture —
+                            CVD mortality, prevention and detection rates — is on the home page.</p>
+                        <a class="hyperlink text-accent font-semibold underline flex items-center gap-2" href="#">
+                            See the scale of the problem
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 12h14m-6-6l6 6-6 6" />
+                            </svg>
+                        </a>
+
+                        <div class="bg-[#032032] rounded-[24px] p-8 md:p-10 border border-[#042941] text-white mt-14">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-start">
+
+                                <!-- Left Section: Intended use and safety -->
+                                <div class="lg:col-span-6 lg:pr-10 lg:border-r border-[#042941]">
+                                    <h2 class="text-2xl md:text-3xl font-serif mb-8 text-white">Intended use and safety.
+                                    </h2>
+
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <!-- Intended users column -->
+                                        <div>
+                                            <span class="block text-xs font-medium text-[#8CA4B4] mb-2">Intended
+                                                users</span>
+                                            <div
+                                                class="inline-flex items-center justify-center w-full bg-[#052940] border border-[#37617C]/40 rounded-full py-2.5 px-6">
+                                                <span class="font-bold text-white text-sm">HCPs</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Output column -->
+                                        <div>
+                                            <span class="block text-xs font-medium text-[#8CA4B4] mb-2">Output</span>
+                                            <div
+                                                class="flex items-center justify-between w-full bg-[#052940] border border-[#37617C]/40 rounded-full py-2.5 px-5">
+                                                <span class="font-bold text-white text-sm">Risk</span>
+                                                <span class="text-xs text-[#8CA4B4]">only</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Section: Not for & Info -->
+                                <div class="lg:col-span-6 lg:pl-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <!-- Not for -->
+                                    <div>
+                                        <h3 class="text-2xl md:text-3xl font-serif mb-3 text-white">Not for</h3>
+                                        <p class="text-xs text-[#B2C2CC] leading-relaxed">
+                                            under-18s, pregnancy, or patients with pacemakers or ICDs
+                                        </p>
+                                    </div>
+
+                                    <!-- Info -->
+                                    <div>
+                                        <h3 class="text-2xl md:text-3xl font-serif mb-3 text-white">Info</h3>
+                                        <p class="text-xs text-[#B2C2CC] leading-relaxed">
+                                            Informational use only, alongside a qualified healthcare professional
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compare Table -->
+            <section class="flex-1 py-14 pt-20">
+                <div class="container px-4 xl:px-20">
+                    <div class="w-full flex flex-col lg:flex-row items-end">
+                        <div class="w-full">
+                            <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up"
+                                data-aos-delay="100">- HOW TCC IS DIFFERENT</h5>
+                            <h2 class="main-heading mb-3 lg:m-0" data-aos="fade-up" data-aos="fade-up"
+                                data-aos-delay="200">
+                                How TCC compares.
+                            </h2>
+                        </div>
+                        <p class="w-full text" data-aos="fade-up" data-aos-delay="300">
+                            A 30-second single-lead capture, a three-level risk output in about ten seconds, and no
+                            cardiologist required on site. See the full side-by-side against consumer ECG wearables,
+                            standalone single-lead devices and manual triage.
+                        </p>
+
+                    </div>
+                    <div class="mt-20 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <table class="min-w-[900px] w-full border-collapse text-sm">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="w-[340px] xl:py-16"></th>
+
+                                    <th
+                                        class="bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12 21s-7.5-4.7-10.2-9.4C.3 8.6 1.6 5 5 4.1c2-.5 4 .3 5 2 .1.2.3.2.4 0 1-1.7 3-2.5 5-2 3.4.9 4.7 4.5 3.2 7.5C19.5 16.3 12 21 12 21z"
+                                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M4 12h2.5l1.2-2.4 2 4.8 1.3-2.4H15" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span>Tricog CardioCheck</span>
+                                        </div>
+                                    </th>
+
+                                    <th
+                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+
+                                                <!-- Watch strap -->
+                                                <path d="M9 2.5h6l1 4H8l1-4Z" stroke="currentColor" stroke-width="1.5"
+                                                    stroke-linejoin="round" />
+
+                                                <path d="M8 17.5h8l-1 4H9l-1-4Z" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linejoin="round" />
+
+                                                <!-- Watch body -->
+                                                <circle cx="12" cy="12" r="6.5" stroke="currentColor"
+                                                    stroke-width="1.6" />
+
+                                                <!-- ECG waveform -->
+                                                <path d="M7.5 12h1.7l1.1-2.3 1.7 4.6 1.3-2.3h2.2" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                                            </svg>
+                                            <span>ECG in Watch</span>
+                                        </div>
+                                    </th>
+
+                                    <th
+                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 3v6.5a5 5 0 0 0 10 0V3" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7 3H3M13 3h4" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <path d="M10 14.5V17" stroke="currentColor" stroke-width="1.6"
+                                                    stroke-linecap="round" />
+                                                <circle cx="18.5" cy="9" r="2.5" stroke="currentColor"
+                                                    stroke-width="1.6" />
+                                                <circle cx="10" cy="20" r="1.5" stroke="currentColor"
+                                                    stroke-width="1.6" />
+                                            </svg>
+                                            <span>Traditional Triage</span>
+                                        </div>
+                                    </th>
+
+                                    <th
+                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
+                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span>Other 1-Lead ECGs</span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        Who it's for
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        Every patient at the clinic
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch users</td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Only patients a doctor suspects
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4">People who already know they have a
+                                        condition</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        What it looks for
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        Dozens of findings across Low / Moderate / High
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">AFib + irregular rhythm</td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Depends on symptoms</td>
+                                    <td class="text-center text-gray-500 px-4">4 rhythms only</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        What you get back
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        A clear risk level + the next step
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">A rhythm alert</td>
+                                    <td class="text-center text-gray-500 px-4 border-r">A judgement call</td>
+                                    <td class="text-center text-gray-500 px-4">A rhythm label</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        Fits the vitals workflow
+                                        <span class="text-gray-400">ⓘ</span>
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
+                                        <div class="flex items-center justify-center gap-2">
+                                            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="font-semibold">Yes, adds ~30–50s</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400">—</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        Cardiologist on site
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
+                                        <div class="flex items-center justify-center gap-2">
+                                            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <span class="font-semibold">Not needed</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-md font-semibold border-r">Required</td>
+                                    <td class="text-center text-gray-400">—</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        Time to result
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        ~10s (after a 30-sec ECG)
+                                    </td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400">—</td>
+                                </tr>
+
+                                <tr class="border-b border-gray-200">
+                                    <td class="px-6 py-5 font-medium">
+                                        Device
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        OMRON Complete (only)
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch</td>
+                                    <td class="text-center text-gray-500 px-4 border-r">12-lead machine</td>
+                                    <td class="text-center text-gray-500 px-4 ">Own device</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="px-6 py-5 font-medium">
+                                        Regulatory
+                                    </td>
+
+                                    <td
+                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-b-4 border-[#b7232c]">
+                                        CDSCO-certified, Class B SaMD
+                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Consumer</td>
+                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-500 px-4">Consumer</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from header-and-footer.js -->
+        </footer>
+    </main>
+
+    <!-- <div id="machine-content"></div> -->
+
+    <script>
+        (function () {
+            const wrap = document.getElementById('main-image-wrap');
+            const mainImg = document.getElementById('main-image');
+            const mainVideo = document.getElementById('main-video');
+            const thumbs = document.querySelectorAll('.thumb-btn');
+            const ZOOM = 2.2;
+            let isVideoActive = false;
+
+            thumbs.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    thumbs.forEach(b => b.classList.remove('border-accent'));
+                    thumbs.forEach(b => b.classList.add('border-transparent'));
+                    btn.classList.remove('border-transparent');
+                    btn.classList.add('border-accent');
+
+                    if (btn.dataset.type === 'video') {
+                        isVideoActive = true;
+                        mainImg.style.transform = 'scale(1)';
+                        mainImg.classList.add('hidden');
+                        mainVideo.querySelector('source').src = btn.dataset.full;
+                        mainVideo.load();
+                        mainVideo.classList.remove('hidden');
+                        wrap.classList.remove('cursor-zoom-in');
+                    } else {
+                        isVideoActive = false;
+                        mainVideo.pause();
+                        mainVideo.classList.add('hidden');
+                        mainImg.classList.remove('hidden');
+                        mainImg.src = btn.dataset.full;
+                        wrap.classList.add('cursor-zoom-in');
+                    }
+                });
+            });
+
+            wrap.addEventListener('mousemove', (e) => {
+                if (isVideoActive) return;
+                const rect = wrap.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                const y = ((e.clientY - rect.top) / rect.height) * 100;
+                mainImg.style.transformOrigin = `${x}% ${y}%`;
+                mainImg.style.transform = `scale(${ZOOM})`;
+            });
+
+            wrap.addEventListener('mouseleave', () => {
+                if (isVideoActive) return;
+                mainImg.style.transform = 'scale(1)';
+                mainImg.style.transformOrigin = 'center';
+            });
+        })();
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header-and-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>

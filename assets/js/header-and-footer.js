@@ -49,20 +49,9 @@
                         <div data-aos="fade-up" data-aos-delay="0">
                             <h4 class="text-white font-bold mb-5 text-md tracking-wide">Explore</h4>
                             <ul class="space-y-3 text-sm text-white">
-                                <li><a href="#HowItWorks" class="text-primary-hover transition">How it works</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Risk categories</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Clinical evidence</a></li>
+                                <li><a href="./solutions" class="text-primary-hover transition">Solutions</a></li>
+                                <li><a href="./blogs.html" class="text-primary-hover transition">Blogs</a></li>
                                 <li><a href="./support.html" class="text-primary-hover transition">Support</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Product -->
-                        <div data-aos="fade-up" data-aos-delay="100">
-                            <h4 class="text-white font-bold mb-5 text-md tracking-wide">Product</h4>
-                            <ul class="space-y-3 text-sm text-white">
-                                <li><a href="#" class="text-primary-hover transition">OMRON Complete</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Clinician app</a></li>
-                                <li><a href="#" class="text-primary-hover transition">For hospital networks</a></li>
                             </ul>
                         </div>
 
@@ -71,7 +60,7 @@
                             <h4 class="text-white font-bold mb-5 text-md tracking-wide">Company</h4>
                             <ul class="space-y-3 text-sm text-white">
                                 <li><a href="#" class="text-primary-hover transition">About Tricog</a></li>
-                                <li><a href="#" class="text-primary-hover transition">Partners</a></li>
+                                <li><a href="./partner.html" class="text-primary-hover transition">Partners</a></li>
                                 <li><a href="#" class="text-primary-hover transition">Pilot programme</a></li>
                             </ul>
                         </div>
@@ -106,16 +95,8 @@
                     </p>
 
                     <div class="flex items-center gap-8 text-xs text-white order-1 md:order-2">
-                        <a href="#" class="text-primary-hover transition">Privacy</a>
-                        <a href="#" class="text-primary-hover transition">Terms of use</a>
-                        <a href="#"
-                            class="flex items-center gap-1.5 font-medium text-white/70 text-primary-hover transition">
-                            Back to top
-                            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-7 7 7-7 7 7" />
-                            </svg>
-                        </a>
+                        <a href="https://tricog.com/privacy-policy/" class="text-primary-hover transition">Privacy</a>
+                        <a href="https://tricog.com/terms-of-use-india-tcc/" class="text-primary-hover transition">Terms of use</a>
                     </div>
 
                 </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="h-full p-4">
+        <div class="flex justify-between items-center py-5">
+            <div class="hm-code-filename">
+                Structured for AI
+            </div>
+            <button type="button" class="flex items-center gap-2" id="hmCopyBtn"
+                aria-label="Copy generated semantic HTML to clipboard">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <rect x="8.5" y="8.5" width="10" height="12" rx="1.6" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M5.5 15.5v-10a1.6 1.6 0 0 1 1.6-1.6h8" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" />
+                </svg>
+                <span class="hm-copy-label">Copy code</span>
+            </button>
+        </div>
+        <div class="hm-code-scroll" role="region" aria-label="Generated semantic HTML, scrollable code block">
+           <!-- Machine Content -->
+        </div>
+    </main>
+</body>
+
+</html>
