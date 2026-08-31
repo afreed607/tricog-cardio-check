@@ -4,46 +4,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            position: relative;
-            height: 100%;
-            width: 100%;
+        body::-webkit-scrollbar {
+            width: 0;
         }
     </style>
 </head>
 
 <body>
-    <main class="h-full p-4">
-        <div class="flex justify-between items-center py-5">
-            <div class="hm-code-filename">
-                Structured for AI
+    <main class="h-full flex flex-col justify-center items-center">
+        <div class="container py-10 px-4 sm:px-8 xl:px-20">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 pb-5 border-b">
+                <div>
+                    <h2 class="text-lg text-accent font-semibold flex items-center gap-2">
+                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5" />
+                            <path d="M5 9.5V21h14V9.5" />
+                            <path d="M9 21v-6h6v6" />
+                        </svg>
+                        Home
+                    </h2>
+                    <h2 class="text-2xl font-semibold">
+                        Machine Readable View
+                    </h2>
+                    <p class="text">
+                        Simplified representation of the information available on this page.
+                    </p>
+                </div>
+                <button class="btn btn-primary flex items-center gap-2" id="hmCopyBtn">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="8.5" y="8.5" width="10" height="12" rx="1.6" stroke="currentColor"
+                            stroke-width="1.5" />
+                        <path d="M5.5 15.5v-10a1.6 1.6 0 0 1 1.6-1.6h8" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span class="hm-copy-label">Copy Machine Content</span>
+                </button>
             </div>
-            <button type="button" class="flex items-center gap-2" id="hmCopyBtn"
-                aria-label="Copy generated semantic HTML to clipboard">
-                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <rect x="8.5" y="8.5" width="10" height="12" rx="1.6" stroke="currentColor" stroke-width="1.5" />
-                    <path d="M5.5 15.5v-10a1.6 1.6 0 0 1 1.6-1.6h8" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" />
-                </svg>
-                <span class="hm-copy-label">Copy code</span>
-            </button>
-        </div>
-        <div class="hm-code-scroll" role="region" aria-label="Generated semantic HTML, scrollable code block">
-           <!-- Machine Content -->
+            <div id="machine-content" class="grid grid-cols-1 gap-10 mt-10">
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">About</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">Detect signs of cardiovascular risk in seconds</h2>
+                    <p class="text">TCC reads a quick single-lead ECG and gives you a Low, Moderate or High risk
+                        category in seconds. Makes it easy to decide what to do next with each patient.</p>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">Clinical Validation</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">Validated on held-out data. Reported with confidence
+                        intervals.</h2>
+                    <p class="text">Built on millions of single-lead ECGs and measured against recordings the model
+                        never saw in training.</p>
+                    <h5 class="text-md font-semibold mt-6 mb-3">Trained and tested on:</h5>
+                    <ul class="list-disc text-sm pl-8">
+                        <li>Millions of ECG recordings</li>
+                        <li>Diverse populations</li>
+                        <li>Held-out benchmarks</li>
+                    </ul>
+                    <h5 class="text-md font-semibold mt-6 mb-3">Measured performance:</h5>
+                    <ul class="list-disc text-sm pl-8">
+                        <li>0.909 AUROC - overall discrimination. 95% CI 0.905–0.9131</li>
+                        <li>85.9% Sensitivity, high risk - true high-risk captured. 95% CI 84.6–87.0%1</li>
+                        <li>92.2% Specificity, high risk - correctly flagged. 95% CI 91.6–92.9%1</li>
+                        <li>90.2% Sensitivity, low risk - true low-risk identified. 95% CI 89.2–91.2%1</li>
+                    </ul>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">Gap</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">The gap is detection, not treatment</h2>
+                    <p class="text">Once a cardiac condition is spotted, the care already exists. The gap is discovery —
+                        most people never know they’re at risk, so they never reach a doctor at all.</p>
+                    <ul class="list-disc text-sm pl-8 mt-6">
+                        <li>110 million: Indians live with cardiovascular disease today — a number set to more than
+                            double by 2050.¹</li>
+                        <li>1 in 4: deaths in India is cardiac.²</li>
+                        <li>About 1 in 5: of the world's cardiac deaths happen in India.³</li>
+                    </ul>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">How it works</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">Fits the existing outpatient workflow.</h2>
+                    <ul class="list-decimal text-sm pl-8 mt-6">
+                        <li><strong>Check in as usual:</strong> The patient arrives for whatever brought them in.</li>
+                        <li><strong>During routine vitals.</strong> Fingers and thumbs on the OMRON pads, sit still for
+                            30 seconds — alongside BP, SpO2, height and weight. No wires, no gel.</li>
+                        <li><strong>A result in seconds.</strong> A risk level — Low, Moderate or High — appears on the
+                            staff member’s phone.</li>
+                        <li><strong>A clear next step.</strong> Low: carry on. Moderate or High: sent for a 12-lead ECG
+                            and the doctor, soon.</li>
+                    </ul>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">Frequently asked questions</span>
+
+                    <div class="block mt-3 space-y-8">
+
+                        <div>
+                            <strong>
+                                Q: What is Tricog CardioCheck?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: TCC is a cardiac risk screening tool designed to flag patients at moderate or high
+                                cardiovascular risk, including those who may otherwise be missed through the traditional
+                                clinical pathway. It helps clinicians identify patients who may need further evaluation
+                                or appropriate follow-up.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: What is a single-lead ECG?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: A single-lead ECG is a quick, 30-second recording of the heart’s electrical activity.
+                                It captures clinically relevant ECG signals that can help identify potential cardiac
+                                risk. TCC analyzes this ECG using its algorithm to assess the patient’s cardiovascular
+                                risk and classify it as Low, Moderate, or High.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: How is it different from any 1-L ECG?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: TCC enables a single-lead ECG to be used not just to capture a signal but also as a
+                                screening tool to help flag patients who may otherwise be missed in the traditional
+                                clinical pathway.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Is TCC a diagnostic tool?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: No. TCC is a cardiac risk screening and triage tool, not a diagnostic tool.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: What happens after High-Risk result?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: A High Risk result indicates that the patient may require further cardiac evaluation.
+                                The patient should be referred to a doctor for clinical assessment and, where
+                                appropriate, a 12-lead ECG and further evaluation as soon as possible.
+                                TCC does not diagnose a cardiac condition. The final assessment and next steps are
+                                determined by the treating clinician based on the patient’s symptoms, history,
+                                examination, and other clinical findings.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Can I actually deploy this with the equipment I already have?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: TCC currently supports ECG data recorded using OMRON Healthcare’s Complete™ blood
+                                pressure monitors with integrated ECG monitoring.
+                                Through our partnership with OMRON Healthcare, ECG data captured by these devices is
+                                securely transmitted to the cloud and analyzed by the TCC algorithm to provide a Low,
+                                Moderate, or High cardiovascular risk assessment in approximately 10 seconds.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Is patient data secure?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: Yes. TCC is designed with healthcare data privacy and security in mind and complies
+                                with applicable HIPAA, GDPR, and CDSCO requirements. Access to patient information is
+                                restricted based on authorized roles, helping ensure that sensitive health data is only
+                                available to those who need it.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Can TCC replace a traditional 12-Lead ECG?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: No. TCC does not replace a traditional 12-lead ECG. TCC is a rapid cardiac risk
+                                screening tool designed to help identify patients who may need further cardiac
+                                evaluation.
+                                A 12-lead ECG provides a more comprehensive assessment of the heart’s electrical
+                                activity and may be recommended by a clinician following a TCC result, based on the
+                                patient’s symptoms, history, and clinical findings.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: How was the AI trained?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: TCC was developed using a foundational dataset of millions of ECG recordings, with
+                                training designed to account for class imbalance so that less common, high-risk cardiac
+                                patterns were adequately represented.
+                                TCC is also validated on separate ECG data to assess how reliably it identifies
+                                different levels of cardiac risk.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Can it replace a cardiologist?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: No. TCC does not replace a cardiologist or traditional clinical diagnosis. It is
+                                designed to work alongside clinical judgment by analysing single-lead ECGs and providing
+                                risk stratification into low, moderate and high risk.
+                                The output should be considered in consultation with a qualified healthcare
+                                professional.
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Who should not be screened?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: TCC has specific restrictions. It has not been tested and is not intended for people
+                                under 18 years of age or pregnant women.
+                                It should also not be used for patients with pacemakers or implantable
+                                cardioverter-defibrillators (ICDs).
+                            </p>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Q: Is Tricog CardioCheck regulatory-certified?
+                            </strong>
+
+                            <p class="mt-1 text text-sm">
+                                A: Yes. Tricog CardioCheck is CDSCO-certified as Software as a Medical Device (SaMD),
+                                Class B.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">links</span>
+                    <div>
+                        <h2 class="text-lg font-bold mt-2 mb-1">Explore</h2>
+                        <span class="text-sm">[Solutions](https://tricogcardiocheck.com/solutions)</span>
+                        <br>
+                        <span class="text-sm">[Resources](https://tricogcardiocheck.com/resources)</span>
+                        <br>
+                        <span class="text-sm">[Support](https://tricogcardiocheck.com/support)</span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h2 class="text-lg font-bold mt-2 mb-1">Company</h2>
+                        <span class="text-sm">[About Tricog](https://tricog.com/about-us)</span>
+                        <br>
+                        <span class="text-sm">[Partners](https://tricogcardiocheck.com/partner)</span>
+                        <br>
+                        <span class="text-sm">[Pilot Programmes](https://tricogcardiocheck.com/#)</span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h2 class="text-lg font-bold mt-2 mb-1">Articles</h2>
+                        <span class="text-sm">[What is Tricog CardioCheck](https://tricogcardiocheck.com/#)</span>
+                        <br>
+                        <span class="text-sm">[Meet Tricog CardioCheck](https://tricogcardiocheck.com/#)</span>
+                        <br>
+                        <span class="text-sm">[Beyond “normal” or “abnormal”: every ECG as a clear call to
+                            action.](https://tricogcardiocheck.com/#)</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const copyBtn = document.getElementById('hmCopyBtn');
+            const machineContent = document.getElementById('machine-content');
+            const labelSpan = copyBtn.querySelector('.hm-copy-label');
+
+            function getMachineContentAsText(root) {
+                const lines = [];
+
+                function pushLine(text, extraLineBefore = false) {
+                    const trimmed = text.replace(/\s+/g, ' ').trim();
+                    if (!trimmed) return;
+                    if (extraLineBefore && lines.length > 0) {
+                        lines.push(''); // blank line = new topic separator
+                    }
+                    lines.push(trimmed);
+                }
+
+                function walk(node) {
+                    node.childNodes.forEach((child) => {
+                        if (child.nodeType !== Node.ELEMENT_NODE) return;
+
+                        const el = child;
+                        const isUppercaseLabel = el.classList.contains('uppercase');
+
+                        // Elements we treat as their own line
+                        if (['H2', 'H5', 'STRONG', 'P', 'LI', 'SPAN', 'DIV'].includes(el.tagName)) {
+
+                            // Leaf-ish elements: just grab their text directly
+                            const hasElementChildren = [...el.children].some(
+                                c => c.nodeType === Node.ELEMENT_NODE
+                            );
+
+                            if (!hasElementChildren || isUppercaseLabel) {
+                                pushLine(el.innerText || el.textContent, isUppercaseLabel);
+                                return; // don't descend further into this node
+                            }
+                        }
+
+                        // Otherwise keep walking into children (containers like the wrapper divs, uls)
+                        walk(el);
+                    });
+                }
+
+                walk(root);
+                return lines.join('\n');
+            }
+
+            copyBtn.addEventListener('click', async function () {
+                const plainText = getMachineContentAsText(machineContent);
+
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(plainText);
+                    } else {
+                        const textarea = document.createElement('textarea');
+                        textarea.value = plainText;
+                        textarea.style.position = 'fixed';
+                        textarea.style.opacity = '0';
+                        document.body.appendChild(textarea);
+                        textarea.focus();
+                        textarea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textarea);
+                    }
+
+                    const originalLabel = labelSpan.textContent;
+                    labelSpan.textContent = 'Copied!';
+                    copyBtn.disabled = true;
+
+                    setTimeout(() => {
+                        labelSpan.textContent = originalLabel;
+                        copyBtn.disabled = false;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy content: ', err);
+                    labelSpan.textContent = 'Copy failed';
+                    setTimeout(() => {
+                        labelSpan.textContent = 'Copy Machine Content';
+                    }, 2000);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

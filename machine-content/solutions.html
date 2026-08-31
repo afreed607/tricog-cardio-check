@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="h-full flex flex-col justify-center items-center">
+        <div class="container py-10 px-4 sm:px-8 xl:px-20">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-5 pb-5 border-b">
+                <div>
+                    <h2 class="text-lg text-accent font-semibold">/Solutions</h2>
+                    <h2 class="text-2xl font-semibold">
+                        Machine Readable View
+                    </h2>
+                    <p class="text">
+                        Simplified representation of the information available on this page.
+                    </p>
+                </div>
+                <button class="btn btn-primary flex items-center gap-2" id="hmCopyBtn">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="8.5" y="8.5" width="10" height="12" rx="1.6" stroke="currentColor"
+                            stroke-width="1.5" />
+                        <path d="M5.5 15.5v-10a1.6 1.6 0 0 1 1.6-1.6h8" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span class="hm-copy-label">Copy Machine Content</span>
+                </button>
+            </div>
+            <div id="machine-content" class="grid grid-cols-1 gap-10 mt-10">
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">Info</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">TCC, wherever care begins.</h2>
+                    <p class="text">TCC needs no dedicated room, no separate appointment and no ECG interpretation on
+                        site. The same 30-second screening runs in a busy OPD, a rural health centre, a corporate
+                        check-up or a screening camp.</p>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">Solutions</span>
+                    <h2 class="text-lg font-bold mt-2 mb-1">Eight settings, one standard.</h2>
+                    <p class="text">A nurse or technician runs TCC during the routine vitals check. The patient holds
+                        the OMRON electrodes for 30 seconds, the AI reads the recording in the cloud, and a Low,
+                        Moderate or High risk category returns on the app — the same way in every setting.</p>
+                    <ul class="list-decimal grid grid-cols-1 gap-3 pl-8 mt-6">
+                        <li>
+                            <strong>High-volume OPD:</strong>
+                            <br>
+                            <p class="text">Screens every patient at intake without slowing the queue, so priority follows cardiac risk,
+                                not arrival order.</p>
+                        </li>
+                        <li>
+                            <strong>Corporate screening:</strong>
+                            <br>
+                            <p class="text">
+                                Adds a cardiac risk category to routine check-ups — the asymptomatic group conventional screening misses.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Rural PHC:</strong>
+                            <br>
+                            <p class="text">
+                                With no cardiologist on site, frontline staff get an objective basis for referral.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>GP clinic:</strong>
+                            <br>
+                            <p class="text">
+                                Single-doctor practices with no diagnostics get a structured way to decide who to refer onward.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Health camps:</strong>
+                            <br>
+                            <p class="text">
+                                Portable and usable by non-specialist staff, with the risk category available immediately.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Employer health programmes:</strong>
+                            <br>
+                            <p class="text">
+                                Screen a whole workforce in one drive; only Moderate and High risk go on for a 12-lead ECG.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Pharma initiatives:</strong>
+                            <br>
+                            <p class="text">
+                                Run screening drives at scale with one consistent, auditable risk standard across every site.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Insurance:</strong>
+                            <br>
+                            <p class="text">
+                                An objective cardiac risk category at onboarding or renewal, captured in under a minute.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pb-5 border-b">
+                    <span class="text-sm font-semibold uppercase text-gray-400">links</span>
+                    <div>
+                        <h2 class="text-lg font-bold mt-2 mb-1">Explore</h2>
+                        <span class="text-sm">[Solutions](https://tricogcardiocheck.com/solutions)</span>
+                        <br>
+                        <span class="text-sm">[Resources](https://tricogcardiocheck.com/resources)</span>
+                        <br>
+                        <span class="text-sm">[Support](https://tricogcardiocheck.com/support)</span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h2 class="text-lg font-bold mt-2 mb-1">Company</h2>
+                        <span class="text-sm">[About Tricog](https://tricog.com/about-us)</span>
+                        <br>
+                        <span class="text-sm">[Partners](https://tricogcardiocheck.com/partner)</span>
+                        <br>
+                        <span class="text-sm">[Pilot Programmes](https://tricogcardiocheck.com/#)</span>
+                    </div>
+
+                    <div class="mt-6">
+                        <h2 class="text-lg font-bold mt-2 mb-1">Articles</h2>
+                        <span class="text-sm">[What is Tricog CardioCheck](https://tricogcardiocheck.com/#)</span>
+                        <br>
+                        <span class="text-sm">[Meet Tricog CardioCheck](https://tricogcardiocheck.com/#)</span>
+                        <br>
+                        <span class="text-sm">[Beyond “normal” or “abnormal”: every ECG as a clear call to
+                            action.](https://tricogcardiocheck.com/#)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const copyBtn = document.getElementById('hmCopyBtn');
+            const machineContent = document.getElementById('machine-content');
+            const labelSpan = copyBtn.querySelector('.hm-copy-label');
+
+            function getMachineContentAsText(root) {
+                const lines = [];
+
+                function pushLine(text, extraLineBefore = false) {
+                    const trimmed = text.replace(/\s+/g, ' ').trim();
+                    if (!trimmed) return;
+                    if (extraLineBefore && lines.length > 0) {
+                        lines.push(''); // blank line = new topic separator
+                    }
+                    lines.push(trimmed);
+                }
+
+                function walk(node) {
+                    node.childNodes.forEach((child) => {
+                        if (child.nodeType !== Node.ELEMENT_NODE) return;
+
+                        const el = child;
+                        const isUppercaseLabel = el.classList.contains('uppercase');
+
+                        // Elements we treat as their own line
+                        if (['H2', 'H5', 'STRONG', 'P', 'LI', 'SPAN', 'DIV'].includes(el.tagName)) {
+
+                            // Leaf-ish elements: just grab their text directly
+                            const hasElementChildren = [...el.children].some(
+                                c => c.nodeType === Node.ELEMENT_NODE
+                            );
+
+                            if (!hasElementChildren || isUppercaseLabel) {
+                                pushLine(el.innerText || el.textContent, isUppercaseLabel);
+                                return; // don't descend further into this node
+                            }
+                        }
+
+                        // Otherwise keep walking into children (containers like the wrapper divs, uls)
+                        walk(el);
+                    });
+                }
+
+                walk(root);
+                return lines.join('\n');
+            }
+
+            copyBtn.addEventListener('click', async function () {
+                const plainText = getMachineContentAsText(machineContent);
+
+                try {
+                    if (navigator.clipboard && window.isSecureContext) {
+                        await navigator.clipboard.writeText(plainText);
+                    } else {
+                        const textarea = document.createElement('textarea');
+                        textarea.value = plainText;
+                        textarea.style.position = 'fixed';
+                        textarea.style.opacity = '0';
+                        document.body.appendChild(textarea);
+                        textarea.focus();
+                        textarea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textarea);
+                    }
+
+                    const originalLabel = labelSpan.textContent;
+                    labelSpan.textContent = 'Copied!';
+                    copyBtn.disabled = true;
+
+                    setTimeout(() => {
+                        labelSpan.textContent = originalLabel;
+                        copyBtn.disabled = false;
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy content: ', err);
+                    labelSpan.textContent = 'Copy failed';
+                    setTimeout(() => {
+                        labelSpan.textContent = 'Copy Machine Content';
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
