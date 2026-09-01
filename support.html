@@ -28,7 +28,7 @@
 
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
-          <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+          <div class="sec-container flex items-center justify-between px-6 lg:px-10">
 
               <!-- Logo -->
               <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
@@ -103,7 +103,7 @@
 
       <!-- Static Header -->
       <nav class="relative w-full flex justify-center py-5 xl:pt-12">
-          <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+          <div class="sec-container flex items-center justify-between px-6 lg:px-10">
 
               <!-- Logo -->
               <div class="flex items-center gap-3 font-semibold text-xl select-none">
@@ -179,18 +179,158 @@
           </div>
       </nav>
 
-        <section class="flex-1 py-20">
-            <div class="container px-4 xl:px-20">
-                <h2 class="main-heading mb-3" data-aos="fade-up">How can we help?</h2>
-                <p class="text" data-aos="fade-up" data-aos-delay="100">Questions about the device, the app, or a
-                    screening result - find your answer below,
-                    or reach the clinical team directly.</p>
+      <section class="flex-1 py-20">
+        <div class="sec-container px-4 lg:px-10">
+            <h2 class="main-heading mb-3" data-aos="fade-up">How can we help?</h2>
+            <p class="text" data-aos="fade-up" data-aos-delay="100">Questions about the device, the app, or a
+                screening result - find your answer below,
+                or reach the clinical team directly.</p>
 
-                <div data-faq-root>
-                    <!-- Fetching from support-accordion.js -->
-                </div>
+            <div data-faq-root>
+                <!-- Fetching from support-accordion.js -->
             </div>
-        </section>
+        </div>
+    </section>
+
+      <section class="flex-1 py-14">
+        <div class="sec-container bg-theme-blue rounded-[32px] py-14 px-4 lg:px-14">
+            <h2 class="main-heading mb-3">Still need a hand?</h2>
+            <p class="text">Pick what's closest we'll tailor the rest so you only fill in what's needed.</p>
+
+            <div class="mt-8">
+                <!-- Content -->
+
+                <!-- Featured Card -->
+                <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 mb-4 hover:opacity-90 transition-opacity">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-10 shrink-0 rounded-lg bg-black flex items-center justify-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                                <line x1="7" y1="12" x2="17" y2="12"></line>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3 class="font-semibold text-base">Screening not completing?</h3>
+                            <p class=" text-sm mt-0.5">Run a quick check — most issues are fixed on the first reply</p>
+                        </div>
+                    </div>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/60 shrink-0">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+
+                <!-- Grid of options -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">App & setup</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Login, credentials, or no result showing</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">The device</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">OMRON Complete, electrodes, or signal quality</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Order & shipping</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Tracking, delivery, or an address change</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Returns & refund</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Send it back or check a refund</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Damaged or wrong item</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Arrived broken or not what you ordered</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Billing & payment</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Charges, invoices, GST, failed payments</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Account & data</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Access, patient data, or privacy</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Feedback / feature request</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">An idea to make TCC better</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Hospitals, networks & partnerships</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Multi-site rollouts, bulk orders, or media</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
+                        <div>
+                            <h3 class="font-semibold text-base text-gray-900">Something else</h3>
+                            <p class="text-gray-500 text-sm mt-0.5">Anything not listed above</p>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+
+                </div>
+
+                <a href="#" class="inline-block text-md text-gray-500 mt-6">Or email the support team directly.</a>
+            </div>
+        </div>
+    </section>
 
 
         <!-- Footer -->

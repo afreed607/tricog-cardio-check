@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap);
 
 * {
     padding: 0;
@@ -68,7 +68,7 @@
     --light-gray: #F2F2F2;
     --polish-white: #e9e8e7;
     /* Typography */
-    --font-sans: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 
     /* Weight scale */
     --fw-regular: 400;
@@ -123,9 +123,9 @@ body {
     font-weight: var(--fw-bold);
 }
 
-@media (min-width: 768px){
-    .main-heading{
-        line-height: 2.8rem;
+@media (min-width: 768px) {
+    .main-heading {
+        line-height: 2.4rem;
     }
 }
 
@@ -133,7 +133,7 @@ body {
     color: var(--primary)
 }
 
-.text-primary-hover:hover{
+.text-primary-hover:hover {
     color: var(--accent)
 }
 
@@ -144,8 +144,8 @@ body {
     color: var(--grey-800);
 }
 
-@media (min-width: 1280){
-    .text{
+@media (min-width: 1280px) {
+    .text {
         font-size: 1.1rem;
     }
 }
@@ -158,11 +158,11 @@ body {
     transition: all .3s ease;
 }
 
-.btn .arrow-icon{
+.btn .arrow-icon {
     transition: transform .25s ease;
 }
 
-.btn:hover .arrow-icon{
+.btn:hover .arrow-icon {
     transform: translateX(3px);
 }
 
@@ -224,21 +224,22 @@ body {
     background: var(--accent);
 }
 
-.text-accent, .text-accent-hover:hover {
+.text-accent,
+.text-accent-hover:hover {
     color: var(--accent);
 }
 
-.hyperlink{
+.hyperlink {
     font-size: 1rem;
     line-height: 1.6rem;
     text-underline-offset: 5px;
 }
 
-.hyperlink svg{
+.hyperlink svg {
     transition: transform .25s ease;
 }
 
-.hyperlink:hover svg{
+.hyperlink:hover svg {
     transform: translateX(3px);
 }
 
@@ -253,6 +254,22 @@ body {
 
 .bg-theme-gray {
     background: var(--light-gray);
+}
+
+.sec-container{
+    width: 100%;
+}
+
+@media (min-width: 1600px){
+    .sec-container{
+        max-width: 1500px;
+    }
+}
+
+@media (min-width: 1800px){
+    .sec-container{
+        max-width: 1700px;
+    }
 }
 
 /* Minimal form tokens — blue focus ring, grey borders, red only for errors */
@@ -340,6 +357,7 @@ textarea.is-invalid:focus {
         transform: scale(1);
         opacity: 0.7;
     }
+
     100% {
         transform: scale(3);
         opacity: 0;
@@ -474,7 +492,7 @@ textarea.is-invalid:focus {
     padding: 0.5rem 1.75rem 2rem;
 }
 
-.hm-mobile-menu-inner .nav-link{
+.hm-mobile-menu-inner .nav-link {
     color: var(--bright);
     font-size: 1rem;
     font-weight: var(--fw-medium);
@@ -513,18 +531,14 @@ textarea.is-invalid:focus {
 
 .blue-bg-overlay {
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             rgba(55, 97, 124, 0.35) 0%,
             rgba(5, 58, 91, 0.18) 40%,
-            rgba(2, 24, 38, 0.55) 100%
-        ),
-        linear-gradient(
-            135deg,
+            rgba(2, 24, 38, 0.55) 100%),
+        linear-gradient(135deg,
             rgba(5, 58, 91, 0.65) 0%,
             rgba(4, 41, 65, 0.55) 45%,
-            rgba(2, 24, 38, 0.68) 100%
-        );
+            rgba(2, 24, 38, 0.68) 100%);
 
     pointer-events: none;
 }
@@ -625,12 +639,12 @@ textarea.is-invalid:focus {
     }
 }
 
-@media (min-width: 768px){
-    .card-content{
+@media (min-width: 768px) {
+    .card-content {
         border-radius: 20px 0 0 20px;
     }
 
-    .card-image{
+    .card-image {
         border-radius: 0 20px 20px 0;
     }
 }
@@ -641,7 +655,7 @@ textarea.is-invalid:focus {
     }
 
     .main-heading {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 }
 
@@ -655,11 +669,11 @@ textarea.is-invalid:focus {
         height: 4.4rem;
     }
 
-    .card-content{
+    .card-content {
         border-radius: 20px 20px 0 0;
     }
 
-    .card-image{
+    .card-image {
         border-radius: 0 0 20px 20px;
     }
 }
@@ -684,7 +698,7 @@ textarea.is-invalid:focus {
 
 /* Floating toggle */
 
-   .hm-floating-toggle {
+.hm-floating-toggle {
     position: fixed;
     left: 1.25rem;
     bottom: 1.25rem;

@@ -126,7 +126,7 @@
 
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
-            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
 
                 <!-- Logo -->
                 <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
@@ -222,7 +222,7 @@
                     <!-- Navigation (in-hero, scrolls away with the hero) -->
                     <nav class="relative z-20 flex justify-center pt-6" data-aos="fade-down">
 
-                        <div class="w-full container flex items-center justify-between px-6">
+                        <div class="sec-container flex items-center justify-between px-6 lg:px-10">
 
                             <!-- Logo -->
                             <div class="flex items-center gap-5 text-white font-semibold text-2xl select-none">
@@ -312,8 +312,9 @@
                     </nav>
 
                     <!-- Hero Content -->
-                    <div
-                        class="relative z-10 container mx-auto px-6 md:px-8 lg:px-10 h-[670px] md:h-[600px] flex items-center">
+                    <div class="flex-1">
+                        <div
+                        class="relative z-10 sec-container px-6 md:px-8 lg:px-10 h-[670px] md:h-[600px] flex justify-start items-center">
 
                         <div
                             class="w-full h-full md:w-[90%] lg:w-[80%] xl:w-[55%] flex flex-col justify-end lg:justify-center items-start pb-10 lg:pb-20 xl:pb-0">
@@ -348,6 +349,7 @@
                         </div>
 
                     </div>
+                    </div>
 
                 </div>
 
@@ -377,7 +379,7 @@
 
             <!-- Clinica Validation -->
             <div class="flex-1 py-14 pt-20">
-                <div class="container gap-5 px-4 xl:px-20">
+                <div class="sec-container px-4 lg:px-10">
                     <div class="w-full">
                         <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase"
                             data-aos="fade-up">
@@ -399,7 +401,7 @@
                             </p>
                         </div>
 
-                        <div class=" border-t pt-7 mt-10" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pt-7 mt-10" data-aos="fade-up" data-aos-delay="100">
                             <h6 class="text-xs font-medium uppercase text-neutral-400">Trained and tested on</h6>
                             <div
                                 class="flex-1 md:flex-row justify-start items-start gap-4 md:gap-8 lg:gap-10 xl:gap-24 mt-5">
@@ -491,9 +493,9 @@
                             </style>
 
                             <!-- Measured performance -->
-                            <div class="mt-[clamp(2rem,3vw,2.75rem)] pt-5 border-t">
-                                <span class="block text-xs font-medium tracking-[.1em] uppercase text-neutral-400
-                                    data-aos=" fade-up">Measured performance</span>
+                            <div class="mt-[clamp(2rem,3vw,2.75rem)] pt-5">
+                                <span class="block text-xs font-medium tracking-[.1em] uppercase text-neutral-400"
+                                    data-aos="fade-up">Measured performance</span>
 
                                 <div
                                     class="relative grid grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_minmax(0,1fr)] gap-x-8 lg:gap-x-10 items-center mt-4
@@ -513,7 +515,7 @@
                                                 class="mt-2 text-[0.9375rem] leading-[1.35] font-medium text-[#1a1a1a]">
                                                 AUROC - overall discrimination</div>
                                             <div class="mt-[.35rem] text-[0.8125rem] tabular-nums text-[#686868]">95% CI
-                                                0.905–0.913<sup>1</sup></div>
+                                                0.905–0.913</div>
                                         </div>
                                         <div class="relative py-[1.1rem] border-t border-[#DBDBDB] lg:text-right lg:pr-9
                         lg:before:content-[''] lg:before:absolute lg:before:top-8 lg:before:right-[.35rem] lg:before:w-6 lg:before:h-px lg:before:bg-[#CECECE]
@@ -526,7 +528,7 @@
                                                 class="mt-2 text-[0.9375rem] leading-[1.35] font-medium text-[#1a1a1a]">
                                                 Sensitivity, high risk - true high-risk captured</div>
                                             <div class="mt-[.35rem] text-[0.8125rem] tabular-nums text-[#686868]">95% CI
-                                                84.6–87.0%<sup>1</sup></div>
+                                                84.6–87.0%</div>
                                         </div>
                                     </div>
 
@@ -550,7 +552,7 @@
                                                 class="mt-2 text-[0.9375rem] leading-[1.35] font-medium text-[#1a1a1a]">
                                                 Specificity, high risk - correctly flagged</div>
                                             <div class="mt-[.35rem] text-[0.8125rem] tabular-nums text-[#686868]">95% CI
-                                                91.6–92.9%<sup>1</sup></div>
+                                                91.6–92.9%</div>
                                         </div>
                                         <div class="relative py-[1.1rem] border-t border-[#DBDBDB] lg:pl-9
                         lg:before:content-[''] lg:before:absolute lg:before:top-8 lg:before:left-[.35rem] lg:before:w-6 lg:before:h-px lg:before:bg-[#CECECE]
@@ -563,7 +565,7 @@
                                                 class="mt-2 text-[0.9375rem] leading-[1.35] font-medium text-[#1a1a1a]">
                                                 Sensitivity, low risk - true low-risk identified</div>
                                             <div class="mt-[.35rem] text-[0.8125rem] tabular-nums text-[#686868]">95% CI
-                                                89.2–91.2%<sup>1</sup></div>
+                                                89.2–91.2%</div>
                                         </div>
                                     </div>
 
@@ -597,8 +599,8 @@
 
             <div class="absolute inset-0 scrim"></div>
 
-            <div class="container h-full relative z-10 flex-1 lg:flex-row items-start gap-10 lg:gap-0">
-                <div class="w-full pt-14 lg:pt-28 px-5 xl:px-20">
+            <div class="sec-container relative z-10 flex-1 lg:flex-row items-start gap-10 lg:gap-0">
+                <div class="w-full pt-14 lg:pt-28 px-5 lg:px-10">
                     <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
                         <span class="relative flex h-1.5 w-1.5">
                             <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
@@ -634,7 +636,7 @@
                                 </h3>
                                 <p class="w-full text-[15px] text-gray-600">
                                     Indians live with cardiovascular disease today a number set to more than double by
-                                    2050.¹
+                                    2050.
                                 </p>
                             </div>
                         </div>
@@ -652,7 +654,7 @@
                             </span>
                             <div class="w-full flex flex-col xl:flex-row gap-2">
                                 <h3 class="w-full xl:w-[60%] text-accent text-2xl xl:text-3xl font-semibold">1 in 4</h3>
-                                <p class="w-full text-[15px] text-gray-600">deaths in India is cardiac.²</p>
+                                <p class="w-full text-[15px] text-gray-600">deaths in India is cardiac.</p>
                             </div>
                         </div>
                         <div class="w-full flex md:flex-row justify-start items-start gap-6 border-b pb-3"
@@ -673,7 +675,7 @@
                                     5
                                 </h3>
                                 <p class="w-full text-[15px] text-gray-600">of the world's cardiac deaths happen in
-                                    India.³
+                                    India.
                                 </p>
                             </div>
                         </div>
@@ -687,26 +689,27 @@
                     <div
                         class="absolute top-[20%] -left-2 md:left-[10%] lg:top-[28%] lg:-left-2 xl:top-[35%] xl:left-[10%] min-[1440px]:top-[35%] min-[1440px]:left-[15%] w-[200px] md:w-auto flex items-center gap-3">
                         <div class="text-right">
-                            <p class="text-[12px] lg:text-[12px] font-semibold uppercase tracking-wide text-red-600">
+                            <p class="text-[12px] lg:text-[12px] font-bold uppercase tracking-wide text-accent">
                                 Detected</p>
                             <p class="md:w-full text-[12px] lg:text-[14px] text-gray-500 pl-4">
                                 The few who get diagnosed.
                             </p>
                         </div>
-                        <div class="h-px w-10 bg-red-400"></div>
-                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+                        <div class="h-px w-10 bg-[#b7232c]"></div>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#b7232c] shrink-0"></span>
                     </div>
                     <div
-                        class="absolute bottom-[10%] -left-2 md:bottom-[20%] md:left-[12%] lg:bottom-0 lg:left-0 xl:bottom-[20%] xl:left-[10%] min-[1440px]:bottom-[20%] min-[1440px]:left-[20%] w-[200px] md:w-auto flex items-center gap-3">
+                        class="absolute bottom-[10%] -left-2 md:bottom-[20%] md:left-[12%] lg:bottom-0 lg:left-0 xl:bottom-[20%] xl:left-[5%] min-[1440px]:bottom-[20%] min-[1440px]:left-[10%] min-[1600px]:left-[20%] w-[200px] md:w-auto flex items-center gap-3">
                         <div class="text-right">
-                            <p class="text-[14px] lg:text-[18px] font-semibold uppercase tracking-wide text-red-600">
+                            <p
+                                class="text-[14px] lg:text-[18px] xl:text-[22px] font-bold uppercase tracking-wide text-accent">
                                 Undetected
                             </p>
                             <p class="text-[12px] lg:text-[14px] text-gray-500">TThe millions who
                                 don’t..</p>
                         </div>
-                        <div class="h-px w-10 bg-red-400"></div>
-                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0"></span>
+                        <div class="h-px w-10 bg-[#b7232c]"></div>
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#b7232c] shrink-0"></span>
                     </div>
                 </div>
             </div>
@@ -714,7 +717,7 @@
 
         <!-- Compare Table -->
         <section class="flex-1 py-14 pt-20">
-            <div class="container px-4 xl:px-20">
+            <div class="sec-container px-4 lg:px-10">
                 <div class="w-full flex flex-col lg:flex-row items-end">
                     <div class="w-full">
                         <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase"
@@ -740,43 +743,53 @@
                     <table class="min-w-[900px] w-full border-collapse text-sm">
                         <thead>
                             <tr class="border-b border-gray-200">
-                                <th class="w-[340px] xl:py-16"></th>
+                                <th class="w-[240px] lg:w-[340px] xl:py-16"></th>
 
                                 <th
-                                    class="bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-[#b7232c]">
+                                    class="w-[240px] bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-[#b7232c]">
                                     <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                        <svg class="w-7 h-7" viewBox="0 0 24 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12 21s-7.5-4.7-10.2-9.4C.3 8.6 1.6 5 5 4.1c2-.5 4 .3 5 2 .1.2.3.2.4 0 1-1.7 3-2.5 5-2 3.4.9 4.7 4.5 3.2 7.5C19.5 16.3 12 21 12 21z"
-                                                stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+
+                                            <!-- Heart -->
+                                            <path d="M12 16
+        C10.2 14.7 4 11.2 3 7.2
+        C2.3 4.5 4.5 2.5 7.5 2.3
+        C9.5 2.1 11.1 3 12 4.4
+        C12.9 3 14.5 2.1 16.5 2.3
+        C19.5 2.5 21.7 4.5 21 7.2
+        C20 11.2 13.8 14.7 12 16Z" stroke="#b7232c" stroke-width="1.6" stroke-linecap="round"
                                                 stroke-linejoin="round" />
-                                            <path d="M4 12h2.5l1.2-2.4 2 4.8 1.3-2.4H15" stroke="currentColor"
-                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+
+                                            <!-- Check -->
+                                            <path d="M7.2 9.2L10.1 11.5L16.8 6" stroke="#b7232c" stroke-width="1.8"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+
                                         </svg>
                                         <span>Tricog CardioCheck</span>
                                     </div>
                                 </th>
 
                                 <th
-                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                    class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                     <div class="flex flex-col items-center gap-2">
                                         <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
 
                                             <!-- Watch strap -->
-                                            <path d="M9 2.5h6l1 4H8l1-4Z" stroke="currentColor" stroke-width="1.5"
+                                            <path d="M9 2.5H15L16 5.5H8L9 2.5Z" stroke="currentColor" stroke-width="1.5"
                                                 stroke-linejoin="round" />
 
-                                            <path d="M8 17.5h8l-1 4H9l-1-4Z" stroke="currentColor" stroke-width="1.5"
-                                                stroke-linejoin="round" />
+                                            <path d="M8 18.5H16L15 21.5H9L8 18.5Z" stroke="currentColor"
+                                                stroke-width="1.5" stroke-linejoin="round" />
 
                                             <!-- Watch body -->
-                                            <circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.6" />
+                                            <rect x="6.5" y="5.5" width="11" height="13" rx="3" stroke="currentColor"
+                                                stroke-width="1.6" />
 
-                                            <!-- ECG waveform -->
-                                            <path d="M7.5 12h1.7l1.1-2.3 1.7 4.6 1.3-2.3h2.2" stroke="currentColor"
-                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <!-- ECG -->
+                                            <path d="M8.2 12H10L11.1 9.7L12.8 14.6L14 11.7H15.8" stroke="currentColor"
+                                                stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" />
 
                                         </svg>
                                         <span>ECG in Watch</span>
@@ -784,30 +797,46 @@
                                 </th>
 
                                 <th
-                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                    class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                     <div class="flex flex-col items-center gap-2">
-                                        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 3v6.5a5 5 0 0 0 10 0V3" stroke="currentColor" stroke-width="1.6"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M7 3H3M13 3h4" stroke="currentColor" stroke-width="1.6"
-                                                stroke-linecap="round" />
-                                            <path d="M10 14.5V17" stroke="currentColor" stroke-width="1.6"
-                                                stroke-linecap="round" />
-                                            <circle cx="18.5" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6" />
-                                            <circle cx="10" cy="20" r="1.5" stroke="currentColor" stroke-width="1.6" />
+                                        <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <!-- Earpieces -->
+                                            <path d="M8 3h1.5M16 3h-1.5" />
+
+                                            <!-- Metallic Binaural Tubes -->
+                                            <path
+                                                d="M8.75 3v3.5a3.25 3.25 0 0 0 3.25 3.25h0a3.25 3.25 0 0 0 3.25-3.25V3" />
+
+                                            <!-- Shortened U-Shaped Tubing -->
+                                            <path d="M12 9.75v3.25a4.5 4.5 0 0 0 9 0V11" />
+
+                                            <!-- Chestpiece Positioned Next to Binaural Section -->
+                                            <circle cx="21" cy="9.5" r="2.25" />
                                         </svg>
                                         <span>Traditional Triage</span>
                                     </div>
                                 </th>
 
                                 <th
-                                    class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                    class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                     <div class="flex flex-col items-center gap-2">
                                         <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
-                                                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+
+                                            <!-- ECG device -->
+                                            <rect x="3" y="4" width="18" height="15" rx="2.5" stroke="currentColor"
+                                                stroke-width="1.6" />
+
+                                            <!-- Single lead waveform -->
+                                            <path d="M5.5 12H8L9.3 9.2L11.2 15.2L13.1 7.5L14.7 12H18.5"
+                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+
+                                            <!-- Single lead indicator -->
+                                            <circle cx="6" cy="7" r="0.9" fill="currentColor" />
+
                                         </svg>
                                         <span>Other 1-Lead ECGs</span>
                                     </div>
@@ -821,8 +850,7 @@
                                     Who it's for
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     Every patient at the clinic
                                 </td>
                                 <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch users</td>
@@ -836,8 +864,7 @@
                                     What it looks for
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     Dozens of findings across Low / Moderate / High
                                 </td>
                                 <td class="text-center text-gray-500 px-4 border-r">AFib + irregular rhythm</td>
@@ -850,8 +877,7 @@
                                     What you get back
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     A clear risk level + the next step
                                 </td>
                                 <td class="text-center text-gray-500 px-4 border-r">A rhythm alert</td>
@@ -866,7 +892,7 @@
                                 </td>
 
                                 <td class="bg-primary text-white text-center">
-                                    <div class="flex items-center justify-center gap-2">
+                                    <div class="flex flex-col items-center justify-center">
                                         <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
@@ -875,9 +901,9 @@
                                         <span class="font-semibold">Yes, adds ~30–50s</span>
                                     </div>
                                 </td>
-                                <td class="text-center text-gray-400 border-r">—</td>
-                                <td class="text-center text-gray-400 border-r">—</td>
-                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
+                                <td class="text-center text-gray-400">X</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -886,7 +912,7 @@
                                 </td>
 
                                 <td class="bg-primary text-white text-center">
-                                    <div class="flex items-center justify-center gap-2">
+                                    <div class="flex flex-col items-center justify-center">
                                         <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
@@ -895,9 +921,9 @@
                                         <span class="font-semibold">Not needed</span>
                                     </div>
                                 </td>
-                                <td class="text-center text-gray-400 border-r">—</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
                                 <td class="text-center text-md font-semibold border-r">Required</td>
-                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400">X</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -905,13 +931,12 @@
                                     Time to result
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     ~10s (after a 30-sec ECG)
                                 </td>
-                                <td class="text-center text-gray-400 border-r">—</td>
-                                <td class="text-center text-gray-400 border-r">—</td>
-                                <td class="text-center text-gray-400">—</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
+                                <td class="text-center text-gray-400">X</td>
                             </tr>
 
                             <tr class="border-b border-gray-200">
@@ -919,8 +944,7 @@
                                     Device
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     OMRON Complete (only)
                                 </td>
                                 <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch</td>
@@ -933,12 +957,11 @@
                                     Regulatory
                                 </td>
 
-                                <td
-                                    class="bg-primary text-white text-center font-semibold px-4">
+                                <td class="bg-primary text-white text-center font-semibold px-4">
                                     CDSCO-certified, Class B SaMD
                                 </td>
                                 <td class="text-center text-gray-500 px-4 border-r">Consumer</td>
-                                <td class="text-center text-gray-400 border-r">—</td>
+                                <td class="text-center text-gray-400 border-r">X</td>
                                 <td class="text-center text-gray-500 px-4">Consumer</td>
                             </tr>
 
@@ -950,7 +973,7 @@
 
         <!-- How It Works -->
         <section class="flex-1 py-14">
-            <div class="container px-4 sm:px-8 lg:py-16 xl:px-20">
+            <div class="sec-container px-4 sm:px-8 lg:py-16 lg:px-10">
                 <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
                     <span class="relative flex h-1.5 w-1.5">
                         <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
@@ -964,11 +987,11 @@
 
                 <ul class="mt-14">
                     <!-- Step 1 -->
-                    <li class="group flex flex-col md:flex-row justify-between items-center hover:bg-gray-100 transition border-t px-2 py-4 lg:p-6"
+                    <li class="group flex flex-col md:flex-row justify-between items-center gap-5 hover:bg-gray-100 transition border-t px-2 py-6 lg:p-6"
                         data-aos="fade-up">
-                        <div class="w-full flex-1 md:flex-row justify-start items-start gap-4 lg:gap-14">
+                        <div class="w-full flex-1 md:flex-row justify-start items-start gap-6 lg:gap-14">
                             <strong
-                                class="tnum serif text-[44px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] sm:text-[96px] transition">01</strong>
+                                class="tnum serif text-[56px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] lg:text-[96px] transition">01</strong>
                             <div>
                                 <div class="flex gap-1.5 mb-5" aria-hidden="true">
                                     <span class="h-[3px] w-8 rounded-full bg-accent"></span>
@@ -994,11 +1017,11 @@
                     </li>
 
                     <!-- Step 2 -->
-                    <li class="group flex flex-col lg:flex-row justify-between items-center hover:bg-gray-100 transition border-t px-2 py-4 lg:p-6"
-                        data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-full flex-1 md:flex-row justify-start gap-4 lg:gap-14">
+                    <li class="group flex flex-col md:flex-row justify-between items-center gap-5 hover:bg-gray-100 transition border-t px-2 py-6 lg:p-6"
+                        data-aos="fade-up">
+                        <div class="w-full flex-1 md:flex-row justify-start items-start gap-6 lg:gap-14">
                             <strong
-                                class="tnum serif text-[54px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] sm:text-[96px] transition">02</strong>
+                                class="tnum serif text-[56px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] lg:text-[96px] transition">02</strong>
                             <div>
                                 <div class="flex gap-1.5 mb-5" aria-hidden="true">
                                     <span class="h-[3px] w-8 rounded-full bg-accent"></span>
@@ -1012,7 +1035,7 @@
                                 </h2>
 
                                 <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
-                                    Fingers and thumbs on the OMRON pads, sit still for 30 seconds — alongside BP, SpO2,
+                                    Fingers and thumbs on the OMRON pads, sit still for 30 seconds alongside BP, SpO2,
                                     height and weight. No wires, no gel.
                                 </p>
                             </div>
@@ -1020,16 +1043,16 @@
                         <div class=" overflow-hidden rounded-xl">
                             <img src="./assets/images/young-female-patient-blood-pressure-1200-628-facebook-2-1200x628.webp"
                                 alt="A patient checking in with a clinician at a front desk"
-                                class="w-[400px] h-[300px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                                class="w-[400px] h-[300px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
                         </div>
                     </li>
 
                     <!-- Step 3 -->
-                    <li class="group flex flex-col lg:flex-row justify-between items-center hover:bg-gray-100 transition border-t px-2 py-4 lg:p-6"
-                        data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-full flex-1 md:flex-row justify-start gap-4 lg:gap-14">
+                    <li class="group flex flex-col md:flex-row justify-between items-center gap-5 hover:bg-gray-100 transition border-t px-2 py-6 lg:p-6"
+                        data-aos="fade-up">
+                        <div class="w-full flex-1 md:flex-row justify-start items-start gap-6 lg:gap-14">
                             <strong
-                                class="tnum serif text-[54px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] sm:text-[96px] transition">03</strong>
+                                class="tnum serif text-[56px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] lg:text-[96px] transition">03</strong>
                             <div>
                                 <div class="flex gap-1.5 mb-5" aria-hidden="true">
                                     <span class="h-[3px] w-8 rounded-full bg-accent"></span>
@@ -1043,23 +1066,23 @@
                                 </h2>
 
                                 <p class="text-neutral-500 text-sm sm:text-base leading-relaxed">
-                                    A risk level — Low, Moderate or High — appears on the staff member’s phone.
+                                    A risk level Low, Moderate or High appears on the staff member’s phone.
                                 </p>
                             </div>
                         </div>
                         <div class=" overflow-hidden rounded-xl">
                             <img src="./assets/images/act-early.jpeg"
                                 alt="A patient checking in with a clinician at a front desk"
-                                class="w-[400px] h-[300px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                                class="w-[400px] h-[300px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
                         </div>
                     </li>
 
                     <!-- Step 4 -->
-                    <li class="group flex flex-col lg:flex-row justify-between items-center hover:bg-gray-100 transition border-t px-2 py-4 lg:p-6"
-                        data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-full flex-1 md:flex-row justify-start gap-4 lg:gap-14">
+                    <li class="group flex flex-col md:flex-row justify-between items-center gap-5 hover:bg-gray-100 transition border-t px-2 py-6 lg:p-6"
+                        data-aos="fade-up">
+                        <div class="w-full flex-1 md:flex-row justify-start items-start gap-6 lg:gap-14">
                             <strong
-                                class="tnum serif text-[54px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] sm:text-[96px] transition">04</strong>
+                                class="tnum serif text-[56px] leading-[0.8] text-gray-200 group-hover:text-[#b7232d2c] lg:text-[96px] transition">04</strong>
                             <div>
                                 <div class="flex gap-1.5 mb-5" aria-hidden="true">
                                     <span class="h-[3px] w-8 rounded-full bg-accent"></span>
@@ -1080,7 +1103,7 @@
                         <div class=" overflow-hidden rounded-xl">
                             <img src="./assets/images/clear-next-step.png"
                                 alt="A patient checking in with a clinician at a front desk"
-                                class="w-[400px] h-[300px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
+                                class="w-[400px] h-[300px] md:h-[250px] md:w-[250px] lg:h-[300px] lg:w-[400px] object-cover transition-transform duration-500 ease-out group-hover:scale-105">
                         </div>
                     </li>
                 </ul>
@@ -1088,17 +1111,17 @@
         </section>
 
         <!-- Story CTA -->
-        <section class="flex-1 h-[340px] md:h-[440px] lg:h-[540px] xl:h-[640px]
+        <section class="flex-1 h-[340px] md:h-[520px] lg:h-[540px] xl:h-[640px]
                bg-[url('./assets/images/story-bg.png')]
                bg-cover
                bg-[center_80%] lg:bg-[center_60%]">
             <div class="w-full flex-1 items-end justify-end border px-4 lg:px-10">
                 <div class="lg:w-[45%] xl:w-[30%] p-8 rounded-md border-t-4 border-[#b7232c] bg-white -mb-44 md:-mb-16 lg:mb-14"
                     data-aos="fade-up">
-                    <h5 class="text-sm text-accent font-semibold uppercase mb-2">June 2025 — a village clinic outside
+                    <h5 class="text-sm text-accent font-semibold uppercase mb-2">June 2025 a village clinic outside
                         Bengaluru.</h5>
                     <h2 class="text-lg lg:text-2xl font-semibold leading-tight mb-6">400+ people screened in a single
-                        day. TCC, then a 12-lead ECG, then the doctor — a complete care journey, in the field.</h2>
+                        day. TCC, then a 12-lead ECG, then the doctor a complete care journey, in the field.</h2>
                     <a class="hyperlink flex items-center gap-2 text-accent font-semibold" href="#">
                         Read the story
                         <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
@@ -1115,7 +1138,7 @@
         <section class="bg-theme-gray overflow-hidden">
             <div class="flex-1">
                 <div
-                    class="h-full container flex-1 lg:flex-row gap-8 py-14 pt-64 md:pt-36 lg:py-10 px-5 lg:px-10 xl:px-20">
+                    class="h-full sec-container flex-1 lg:flex-row gap-8 py-14 pt-64 md:pt-36 lg:py-10 px-5 lg:px-10">
                     <div class="lg:h-[500px] w-full flex flex-col justify-between" data-aos="fade-right">
                         <div>
                             <h2 class="main-heading xl:w-[75%] mb-3">Everything the clinician needs at the point of care
@@ -1155,8 +1178,9 @@
                         </div>
                     </div>
                     <div data-aos="fade-left">
-                        <video class="h-[70vh] lg:h-[80vh] w-auto" src="./assets/images/Risk_Card_PopOut_Transparent_ProRes4444.mp4"
-                            autoplay="true" loop="true"></video>
+                        <video class="h-[70vh] lg:h-[80vh] w-auto"
+                            src="./assets/images/Risk_Card_PopOut_Transparent_ProRes4444.mp4" autoplay="true"
+                            loop="true"></video>
                     </div>
                 </div>
 
@@ -1166,9 +1190,9 @@
         <!-- Walk Through -->
         <section class="horizontal-section overflow-hidden">
             <div class="flex-1 pt-24">
-                <div class="container px-5 lg:px-10 xl:px-20" data-aos="fade-up">
+                <div class="sec-container px-5 lg:px-10" data-aos="fade-up">
                     <h2 class="main-heading mb-4">Where CardioCheck is used</h2>
-                    <p class="text xl:w-[40%]">The same 30-second capture, adapted to your setting — from high-volume
+                    <p class="text xl:w-[40%]">The same 30-second capture, adapted to your setting from high-volume
                         OPDs
                         to rural health centres.</p>
                 </div>
@@ -1177,7 +1201,7 @@
             <div class="relative overflow-hidden mt-16" data-aos="fade-up">
 
                 <div class="cards-wrapper flex gap-5 lg:gap-6 overflow-x-auto
-                           px-[6vw] xl:px-[14vw] pb-6
+                           px-[6vw] pb-6
                            snap-x snap-mandatory scrollbar-hide">
 
                     <!-- Card 01 -->
@@ -1227,7 +1251,7 @@
                             </div>
                         </div>
                         <p class="mt-4 text-[15px] leading-5">
-                            Adds a cardiac risk category to routine check-ups — the asymptomatic group
+                            Adds a cardiac risk category to routine check-ups the asymptomatic group
                             conventional screening misses.
                         </p>
                     </div>
@@ -1333,7 +1357,7 @@
 
         <!-- FAQs -->
         <section class="flex-1 py-20" id="FAQ">
-            <div class="container px-5 xl:px-20">
+            <div class="sec-container px-5 lg:px-10">
 
                 <h2 class="main-heading mb-12" data-aos="fade-up">
                     Questions, answered.
@@ -1748,10 +1772,14 @@
 
                             <div class="flex items-center gap-4">
                                 <span class="text-[#37617C]">
-                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="10" cy="8" r="3.4" stroke="currentColor" stroke-width="1.5"></circle>
-                                        <path d="M3.6 19.5a6.6 6.6 0 0 1 10.1-5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                                        <path d="M16 15.5l4.5 4.5M20.5 15.5L16 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="8" r="3.4" stroke="currentColor" stroke-width="1.5">
+                                        </circle>
+                                        <path d="M3.6 19.5a6.6 6.6 0 0 1 10.1-5.6" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round"></path>
+                                        <path d="M16 15.5l4.5 4.5M20.5 15.5L16 20" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round"></path>
                                     </svg>
                                 </span>
 
@@ -1784,10 +1812,14 @@
 
                             <div class="flex items-center gap-4">
                                 <span class="text-[#37617C]">
-                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="9.5" r="5.5" stroke="currentColor" stroke-width="1.5"></circle>
-                                        <path d="M9.8 9.6l1.6 1.6 3-3.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path d="M8.4 14.3L7 21l5-2.2L17 21l-1.4-6.7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                                    <svg class="h-6 w-auto" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="9.5" r="5.5" stroke="currentColor" stroke-width="1.5">
+                                        </circle>
+                                        <path d="M9.8 9.6l1.6 1.6 3-3.2" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M8.4 14.3L7 21l5-2.2L17 21l-1.4-6.7" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linejoin="round"></path>
                                     </svg>
                                 </span>
 
@@ -1815,14 +1847,14 @@
 
         <!-- Resources -->
         <section class="flex-1 bg-theme-gray py-20">
-            <div class="container py-6 px-5 lg:py-10 lg:px-10 xl:px-20">
+            <div class="sec-container py-6 px-5 lg:py-10 lg:px-10">
                 <div class="w-full flex justify-center items-end lg:flex-row" data-aos="fade-up">
                     <div class="w-full">
                         <h2 class="main-heading mb-4">Resources</h2>
-                        <p class="text">Short reads on why cardiac risk goes undetected — and what changes when it
+                        <p class="text">Short reads on why cardiac risk goes undetected and what changes when it
                             doesn’t.</p>
                     </div>
-                    <a href="./blogs.html" class="w-[100px] flex items-center gap-3 font-semibold text-black">
+                    <a href="./resources.html" class="w-[100px] flex items-center gap-3 font-semibold text-black">
                         See all
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -1887,8 +1919,7 @@
                         <a href="#" class="row row-link flex items-center gap-5 py-6 group" data-aos="fade-up"
                             data-aos-delay="400">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
-                                <img src="./assets/images/doctor-presenting-tcc.png"
-                                    alt="A clinician working at a desk"
+                                <img src="./assets/images/doctor-presenting-tcc.png" alt="A clinician working at a desk"
                                     class="thumb-img w-full h-full object-cover rounded-xl">
                             </div>
                             <div>
@@ -1901,8 +1932,7 @@
                         <a href="#" class="row row-link flex items-center gap-5 py-6 last:pb-0 group" data-aos="fade-up"
                             data-aos-delay="500">
                             <div class="img-frame shrink-0 w-24 h-20 sm:w-44 sm:h-24">
-                                <img src="./assets/images/doctor-presenting-tcc.png"
-                                    alt="A clinician reviewing notes"
+                                <img src="./assets/images/doctor-presenting-tcc.png" alt="A clinician reviewing notes"
                                     class="thumb-img w-full h-full object-cover rounded-xl">
                             </div>
                             <div>
@@ -1918,6 +1948,7 @@
             </div>
         </section>
 
+        <!-- Video -->
         <section class="flex-1 py-14 lg:py-20">
             <div class="container px-4 sm:px-8 xl:px-20">
                 <div class="w-full h-[500px] lg:h-[700px] bg-[#021826] rounded-[32px] flex-1 justify-end items-start p-8 xl:p-10"
@@ -1971,8 +2002,7 @@
         <div class="container">
 
             <div class="h-[100vh] relative">
-                <iframe class="w-full h-full overflow-hidden" src="./machine-content/home.html"
-                    loading="lazy"></iframe>
+                <iframe class="w-full h-full overflow-hidden" src="./machine-content/home.html" loading="lazy"></iframe>
             </div>
 
         </div>
@@ -1980,289 +2010,13 @@
 
     <!-- Footer -->
     <footer id="Footer" class="w-full">
-        <div class="w-full flex-1 rounded-t-[32px] bg-[#021826] text-white overflow-hidden pb-10">
-
-            <div class="w-full max-w-[1700px] py-14 px-5 md:px-10">
-
-                <!-- Main Footer -->
-                <div class="w-full flex flex-col lg:flex-row justify-center gap-14 ">
-                    <div class="w-full" data-aos="fade-right">
-
-                        <!-- Brand -->
-                        <div>
-                            <a href="./index.html" class="inline-flex">
-                                <img src="./assets/images/tcc-logo-2.webp" alt="Tricog CardioCheck"
-                                    class="h-14 sm:h-16 w-auto object-contain">
-                            </a>
-
-                            <p class="mt-5 max-w-md text-sm leading-6 text-white/60">
-                                Smarter cardiac care through accessible, reliable,
-                                and technology-enabled diagnostics.
-                            </p>
-                        </div>
-
-
-                        <!-- Social -->
-                        <div class="mt-7 flex items-center gap-3">
-
-                            <a href="#" aria-label="Tricog on Facebook"
-                                class="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 hover:border-white hover:bg-white">
-                                <svg class="h-4 w-4 text-white transition-colors duration-300 group-hover:text-[#021826]"
-                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.009 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.017 1.792-4.686 4.533-4.686 1.313 0 2.686.235 2.686.235v2.962h-1.514c-1.491 0-1.956.929-1.956 1.881v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.082 24 18.092 24 12.073z" />
-                                </svg>
-                            </a>
-
-                            <a href="#" aria-label="Tricog on LinkedIn"
-                                class="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 hover:border-white hover:bg-white">
-                                <svg class="h-4 w-4 text-white transition-colors duration-300 group-hover:text-[#021826]"
-                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.9 8.65 23 10.98 23 14.28V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4V9Z" />
-                                </svg>
-                            </a>
-
-                            <a href="#" aria-label="Tricog on X"
-                                class="group flex h-10 w-10 items-center justify-center rounded-full border border-white/20 transition-all duration-300 hover:border-white hover:bg-white">
-                                <svg class="h-4 w-4 text-white transition-colors duration-300 group-hover:text-[#021826]"
-                                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path
-                                        d="M18.9 3H21l-6.6 7.55L22.2 21h-6.4l-5-6.53L4.9 21H2.8l7.06-8.07L2 3h6.55l4.53 5.97L18.9 3Zm-1.12 16.2h1.17L7.28 4.72H6.02l11.76 14.48Z" />
-                                </svg>
-                            </a>
-
-                        </div>
-
-
-                        <!-- Divider -->
-                        <div class="my-10 h-px w-full bg-white/10"></div>
-
-
-                        <!-- Links + Contact -->
-                        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3">
-
-                            <!-- Explore -->
-                            <div>
-                                <h3 class="mb-5 text-sm font-semibold uppercase tracking-wider text-white">
-                                    Explore
-                                </h3>
-
-                                <ul class="space-y-3.5 text-sm text-white/65">
-                                    <li>
-                                        <a href="./solutions" class="transition-colors duration-200 hover:text-white">
-                                            Solutions
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="./resources.html"
-                                            class="transition-colors duration-200 hover:text-white">
-                                            Resources
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="./support.html"
-                                            class="transition-colors duration-200 hover:text-white">
-                                            FAQs
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                            <!-- Company -->
-                            <div>
-                                <h3 class="mb-5 text-sm font-semibold uppercase tracking-wider text-white">
-                                    Company
-                                </h3>
-
-                                <ul class="space-y-3.5 text-sm text-white/65">
-                                    <li>
-                                        <a href="https://tricog.com/about-us"
-                                            class="transition-colors duration-200 hover:text-white">
-                                            About Tricog
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#"
-                                            class="transition-colors duration-200 hover:text-white">
-                                            About TCC
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="https://tricog.com/regulatory-compliance/" class="transition-colors duration-200 hover:text-white">
-                                            Regulatory Compliance
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                            <!-- Contact -->
-                            <div class="col-span-2 sm:col-span-1">
-                                <h3 class="mb-5 text-sm font-semibold uppercase tracking-wider text-white">
-                                    Contact
-                                </h3>
-
-                                <ul class="space-y-3.5 text-sm text-white/65">
-                                    <li>
-                                        <a href="mailto:support@tricog.com" class="transition-colors hover:text-white">
-                                            <span>support@tricog.com</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="tel:+918040753333" class="transition-colors hover:text-white">
-                                            <span>080 4075 3333</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="transition-colors hover:text-white">
-                                            <span>Book a demo</span>
-                                        </a>
-                                    </li>
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="w-full relative rounded-[24px] border border-[#042941] bg-[#032032] p-6 sm:p-8 lg:p-9 xl:p-10"
-                        data-aos="fade-left">
-
-                        <!-- Decorative glow -->
-                        <div
-                            class="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#B7232C]/10 blur-3xl">
-                        </div>
-
-
-                        <div class="relative">
-
-                            <span
-                                class="mb-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#E05A61]">
-                                <span class="h-1.5 w-1.5 rounded-full bg-[#B7232C]"></span>
-                                Get in touch
-                            </span>
-
-                            <h2 class="max-w-lg text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                                Let’s start a conversation.
-                            </h2>
-
-                            <p class="mt-3 max-w-lg text-sm leading-6 text-white/55">
-                                Have a question, partnership idea, or need help with
-                                CardioCheck? Send us a message and our team will get
-                                back to you.
-                            </p>
-
-
-                            <!-- Form -->
-                            <form action="#" method="POST" class="mt-8 space-y-5">
-
-                                <!-- Name + Email -->
-                                <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
-
-                                    <div>
-                                        <label for="footer-name" class="mb-2 block text-xs font-medium text-white/75">
-                                            Name
-                                        </label>
-
-                                        <input id="footer-name" name="name" type="text" placeholder="Your name" required
-                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                    </div>
-
-
-                                    <div>
-                                        <label for="footer-email" class="mb-2 block text-xs font-medium text-white/75">
-                                            Email
-                                        </label>
-
-                                        <input id="footer-email" name="email" type="email" placeholder="you@example.com"
-                                            required
-                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                    </div>
-
-                                    <!-- Phone -->
-                                    <div>
-                                        <label for="footer-phone" class="mb-2 block text-xs font-medium text-white/75">
-                                            Phone
-                                            <span class="font-normal text-white/35">(Optional)</span>
-                                        </label>
-
-                                        <input id="footer-phone" name="phone" type="tel" placeholder="Your phone number"
-                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                    </div>
-                                </div>
-
-
-
-
-                                <!-- Message -->
-                                <div>
-                                    <label for="footer-message" class="mb-2 block text-xs font-medium text-white/75">
-                                        Message
-                                    </label>
-
-                                    <textarea id="footer-message" name="message" rows="4" placeholder="How can we help?"
-                                        required
-                                        class="w-full resize-none rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10"></textarea>
-                                </div>
-
-
-                                <!-- Submit -->
-                                <button type="submit"
-                                    class="group inline-flex h-12 w-full items-center justify-center gap-3 rounded-xl bg-[#B7232C] px-6 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#cf2933] hover:shadow-lg hover:shadow-[#B7232C]/20">
-                                    Send message
-
-                                    <svg class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M5 12h14" />
-                                        <path d="m13 6 6 6-6 6" />
-                                    </svg>
-                                </button>
-
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div
-                    class="mt-14 flex flex-col gap-5 border-t border-white/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
-
-                    <p class="text-xs text-white/40">
-                        © 2026 Tricog Health. All rights reserved.
-                    </p>
-
-                    <div class="flex items-center gap-6 text-xs">
-                        <a href="https://tricog.com/privacy-policy/"
-                            class="text-white/50 transition-colors hover:text-white">
-                            Privacy
-                        </a>
-
-                        <a href="https://tricog.com/terms-of-use-india-tcc/"
-                            class="text-white/50 transition-colors hover:text-white">
-                            Terms of use
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+        <!-- Fetching from footer.js -->
     </footer>
 
     <script src="./assets/js/script.js" defer></script>
-        <!-- Human / Machine Toggle -->
-        <script src="./assets/js/human-machine-toggle.js" defer></script>
-    <!-- <script src="./assets/js/header-and-footer.js"></script> -->
+    <!-- Human / Machine Toggle -->
+    <script src="./assets/js/human-machine-toggle.js" defer></script>
+    <script src="./assets/js/footer.js"></script>
 
     <!-- AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

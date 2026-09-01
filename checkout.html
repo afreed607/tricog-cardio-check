@@ -45,7 +45,7 @@
 
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
-            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+            <div class="sec-container flex items-center justify-between px-6">
 
                 <!-- Logo -->
                 <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
@@ -120,7 +120,7 @@
 
         <!-- Static Header -->
         <nav class="relative w-full flex justify-center py-5 xl:pt-12">
-            <div class="w-full container flex items-center justify-between px-6 xl:px-20">
+            <div class="sec-container flex items-center justify-between px-6">
 
                 <!-- Logo -->
                 <div class="flex items-center gap-3 font-semibold text-xl select-none">
@@ -199,7 +199,7 @@
 
         <main>
             <section class="flex-1 py-14">
-                <div class="container px-5 xl:px-20">
+                <div class="sec-container px-5 lg:px-10">
 
                     <div class="flex flex-col lg:flex-row items-start gap-10">
                         <div class="w-full lg:w-[40%]">
@@ -494,7 +494,7 @@
 
             <section class="p-2 lg:p-3 xl:p-4">
                 <div class="flex-1 bg-[#021826] rounded-[32px] py-14">
-                    <div class="container px-4 xl:px-20">
+                    <div class="sec-container px-4 lg:px-10">
                         <p class="w-full max-w-[50%] text text-white mb-3">Around 50% of at-risk patients are
                             asymptomatic
                             before a major event, and 80% of premature heart disease is preventable. The full picture —
@@ -566,7 +566,7 @@
 
             <!-- Compare Table -->
             <section class="flex-1 py-14 pt-20">
-                <div class="container px-4 xl:px-20">
+                <div class="sec-container px-4 lg:px-10">
                     <div class="w-full flex flex-col lg:flex-row items-end">
                         <div class="w-full">
                             <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up"
@@ -588,77 +588,100 @@
                         <table class="min-w-[900px] w-full border-collapse text-sm">
                             <thead>
                                 <tr class="border-b border-gray-200">
-                                    <th class="w-[340px] xl:py-16"></th>
-
+                                    <th class="w-[240px] lg:w-[340px] xl:py-16"></th>
+    
                                     <th
-                                        class="bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-l-4 border-r-4 border-[#b7232c]">
+                                        class="w-[240px] bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-[#b7232c]">
                                         <div class="flex flex-col items-center gap-2">
-                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
+                                            <svg class="w-7 h-7" viewBox="0 0 24 18" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12 21s-7.5-4.7-10.2-9.4C.3 8.6 1.6 5 5 4.1c2-.5 4 .3 5 2 .1.2.3.2.4 0 1-1.7 3-2.5 5-2 3.4.9 4.7 4.5 3.2 7.5C19.5 16.3 12 21 12 21z"
-                                                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+    
+                                                <!-- Heart -->
+                                                <path d="M12 16
+            C10.2 14.7 4 11.2 3 7.2
+            C2.3 4.5 4.5 2.5 7.5 2.3
+            C9.5 2.1 11.1 3 12 4.4
+            C12.9 3 14.5 2.1 16.5 2.3
+            C19.5 2.5 21.7 4.5 21 7.2
+            C20 11.2 13.8 14.7 12 16Z" stroke="#b7232c" stroke-width="1.6" stroke-linecap="round"
                                                     stroke-linejoin="round" />
-                                                <path d="M4 12h2.5l1.2-2.4 2 4.8 1.3-2.4H15" stroke="currentColor"
-                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    
+                                                <!-- Check -->
+                                                <path d="M7.2 9.2L10.1 11.5L16.8 6" stroke="#b7232c" stroke-width="1.8"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+    
                                             </svg>
                                             <span>Tricog CardioCheck</span>
                                         </div>
                                     </th>
-
+    
                                     <th
-                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                         <div class="flex flex-col items-center gap-2">
                                             <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-
+    
                                                 <!-- Watch strap -->
-                                                <path d="M9 2.5h6l1 4H8l1-4Z" stroke="currentColor" stroke-width="1.5"
+                                                <path d="M9 2.5H15L16 5.5H8L9 2.5Z" stroke="currentColor" stroke-width="1.5"
                                                     stroke-linejoin="round" />
-
-                                                <path d="M8 17.5h8l-1 4H9l-1-4Z" stroke="currentColor"
+    
+                                                <path d="M8 18.5H16L15 21.5H9L8 18.5Z" stroke="currentColor"
                                                     stroke-width="1.5" stroke-linejoin="round" />
-
+    
                                                 <!-- Watch body -->
-                                                <circle cx="12" cy="12" r="6.5" stroke="currentColor"
+                                                <rect x="6.5" y="5.5" width="11" height="13" rx="3" stroke="currentColor"
                                                     stroke-width="1.6" />
-
-                                                <!-- ECG waveform -->
-                                                <path d="M7.5 12h1.7l1.1-2.3 1.7 4.6 1.3-2.3h2.2" stroke="currentColor"
-                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
+    
+                                                <!-- ECG -->
+                                                <path d="M8.2 12H10L11.1 9.7L12.8 14.6L14 11.7H15.8" stroke="currentColor"
+                                                    stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" />
+    
                                             </svg>
                                             <span>ECG in Watch</span>
                                         </div>
                                     </th>
-
+    
                                     <th
-                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                         <div class="flex flex-col items-center gap-2">
-                                            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 3v6.5a5 5 0 0 0 10 0V3" stroke="currentColor"
-                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M7 3H3M13 3h4" stroke="currentColor" stroke-width="1.6"
-                                                    stroke-linecap="round" />
-                                                <path d="M10 14.5V17" stroke="currentColor" stroke-width="1.6"
-                                                    stroke-linecap="round" />
-                                                <circle cx="18.5" cy="9" r="2.5" stroke="currentColor"
-                                                    stroke-width="1.6" />
-                                                <circle cx="10" cy="20" r="1.5" stroke="currentColor"
-                                                    stroke-width="1.6" />
+                                            <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                                                stroke-linejoin="round">
+                                                <!-- Earpieces -->
+                                                <path d="M8 3h1.5M16 3h-1.5" />
+    
+                                                <!-- Metallic Binaural Tubes -->
+                                                <path
+                                                    d="M8.75 3v3.5a3.25 3.25 0 0 0 3.25 3.25h0a3.25 3.25 0 0 0 3.25-3.25V3" />
+    
+                                                <!-- Shortened U-Shaped Tubing -->
+                                                <path d="M12 9.75v3.25a4.5 4.5 0 0 0 9 0V11" />
+    
+                                                <!-- Chestpiece Positioned Next to Binaural Section -->
+                                                <circle cx="21" cy="9.5" r="2.25" />
                                             </svg>
                                             <span>Traditional Triage</span>
                                         </div>
                                     </th>
-
+    
                                     <th
-                                        class="text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
+                                        class="w-[240px] text-center font-semibold bg-theme-gray px-6 py-8 border-t-4 border-[#F2F2F2]">
                                         <div class="flex flex-col items-center gap-2">
                                             <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3 12h3l2-6 4 12 2-9 1.5 3H21" stroke="currentColor"
-                                                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+    
+                                                <!-- ECG device -->
+                                                <rect x="3" y="4" width="18" height="15" rx="2.5" stroke="currentColor"
+                                                    stroke-width="1.6" />
+    
+                                                <!-- Single lead waveform -->
+                                                <path d="M5.5 12H8L9.3 9.2L11.2 15.2L13.1 7.5L14.7 12H18.5"
+                                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+    
+                                                <!-- Single lead indicator -->
+                                                <circle cx="6" cy="7" r="0.9" fill="currentColor" />
+    
                                             </svg>
                                             <span>Other 1-Lead ECGs</span>
                                         </div>
@@ -666,60 +689,55 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Who it's for
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         Every patient at the clinic
                                     </td>
                                     <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch users</td>
-                                    <td class="text-center text-gray-500 px-4 border-r">Only patients a doctor suspects
-                                    </td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Only patients a doctor suspects</td>
                                     <td class="text-center text-gray-500 px-4">People who already know they have a
                                         condition</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         What it looks for
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         Dozens of findings across Low / Moderate / High
                                     </td>
                                     <td class="text-center text-gray-500 px-4 border-r">AFib + irregular rhythm</td>
                                     <td class="text-center text-gray-500 px-4 border-r">Depends on symptoms</td>
                                     <td class="text-center text-gray-500 px-4">4 rhythms only</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         What you get back
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         A clear risk level + the next step
                                     </td>
                                     <td class="text-center text-gray-500 px-4 border-r">A rhythm alert</td>
                                     <td class="text-center text-gray-500 px-4 border-r">A judgement call</td>
                                     <td class="text-center text-gray-500 px-4">A rhythm label</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Fits the vitals workflow
                                         <span class="text-gray-400">ⓘ</span>
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
-                                        <div class="flex items-center justify-center gap-2">
+    
+                                    <td class="bg-primary text-white text-center">
+                                        <div class="flex flex-col items-center justify-center">
                                             <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
@@ -728,19 +746,18 @@
                                             <span class="font-semibold">Yes, adds ~30–50s</span>
                                         </div>
                                     </td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
-                                    <td class="text-center text-gray-400">—</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
+                                    <td class="text-center text-gray-400">X</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Cardiologist on site
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center border-l-4 border-r-4 border-[#b7232c]">
-                                        <div class="flex items-center justify-center gap-2">
+    
+                                    <td class="bg-primary text-white text-center">
+                                        <div class="flex flex-col items-center justify-center">
                                             <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 20 20" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M4 10.5L8 14.5L16 5.5" stroke="currentColor" stroke-width="2"
@@ -749,53 +766,50 @@
                                             <span class="font-semibold">Not needed</span>
                                         </div>
                                     </td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
                                     <td class="text-center text-md font-semibold border-r">Required</td>
-                                    <td class="text-center text-gray-400">—</td>
+                                    <td class="text-center text-gray-400">X</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Time to result
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         ~10s (after a 30-sec ECG)
                                     </td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
-                                    <td class="text-center text-gray-400">—</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
+                                    <td class="text-center text-gray-400">X</td>
                                 </tr>
-
+    
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Device
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         OMRON Complete (only)
                                     </td>
                                     <td class="text-center text-gray-500 px-4 border-r">Consumer smartwatch</td>
                                     <td class="text-center text-gray-500 px-4 border-r">12-lead machine</td>
                                     <td class="text-center text-gray-500 px-4 ">Own device</td>
                                 </tr>
-
+    
                                 <tr>
                                     <td class="px-6 py-5 font-medium">
                                         Regulatory
                                     </td>
-
-                                    <td
-                                        class="bg-primary text-white text-center font-semibold px-4 border-l-4 border-r-4 border-b-4 border-[#b7232c]">
+    
+                                    <td class="bg-primary text-white text-center font-semibold px-4">
                                         CDSCO-certified, Class B SaMD
                                     </td>
                                     <td class="text-center text-gray-500 px-4 border-r">Consumer</td>
-                                    <td class="text-center text-gray-400 border-r">—</td>
+                                    <td class="text-center text-gray-400 border-r">X</td>
                                     <td class="text-center text-gray-500 px-4">Consumer</td>
                                 </tr>
-
+    
                             </tbody>
                         </table>
                     </div>
