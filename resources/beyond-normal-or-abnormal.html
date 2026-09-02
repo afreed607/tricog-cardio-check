@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond “normal” or “abnormal”: every ECG as a clear call to action | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="../index.html"><img class="h-10 w-auto" src="../assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="../index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="../solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="../resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="../support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="../checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="../index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="../solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="../support.html">FAQs</a>
+                    <a href="../checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="../index.html"><img class="h-10 w-auto object-cover" src="../assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="../index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="../checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="../index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="../solutions.html">Solutions</a>
+                    <a class="nav-link" href="../resources.html">Resources</a>
+                    <a class="nav-link" href="../support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <main>
+            <section class="flex-1 py-14 lg:py-20">
+                <div class="container px-5 lg:px-10 xl:px-20">
+            
+                    <!-- Post Intro -->
+                    <div class="block">
+                        <div class="flex items-center gap-6 mb-4" data-aos="fade-up">
+                            <span class="inline-block rounded-full py-1 px-4 border">
+                                <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase">
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                                        <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                                    </span>
+                                    clinical
+                                </h5>
+                            </span>
+                            <span class="inline-block text-sm font-semibold">Aug 17, 2026</span>
+                            <span class="inline-block text-sm font-semibold">9 min Read</span>
+                        </div>
+                        <h2 class="text-3xl xl:text-4xl font-semibold leading-9 mb-3" data-aos="fade-up">
+                            Beyond “normal” or “abnormal”: every ECG as a clear call to action.
+                        </h2>
+                    </div>
+
+                    <!-- Post Content -->
+                    <div>
+                        <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10" src="../assets/images/story-bg.png" alt="" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="flex flex-col gap-8">
+                            <p class="text" data-aos="fade-up">
+                                An ECG can save a life but only if the right person sees it at the right time, and knows exactly how urgently to act. In busy hospitals, clinics, and primary care setups, thousands of ECGs are recorded every day, and not every reading gets the same level of attention it deserves. A subtle ST-segment change buried among routine traces can be just as consequential as an obvious emergency if no one is looking for it in time.
+                            </p>
+        
+                            <p class="text" data-aos="fade-up">
+                                This is the exact problem Tricog’s TCC (Tricog Cardiac Care) risk stratification framework was built to solve. Rather than treating every ECG as either “normal” or “needs a cardiologist,” TCC sorts findings into three clinically meaningful tiers Low, Moderate, and High risk so that care teams know at a glance not just what an ECG shows, but how fast they need to move.
+                            </p>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                Why risk stratification matters more than diagnosis alone
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    A diagnosis tells you what’s happening in the heart. Risk stratification tells you what to do next.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    For a referring physician juggling dozens of patients, or a technician in a remote clinic without an on-site cardiologist, that distinction is everything. TCC’s framework gives every ECG a triage signal a shared language that helps hospitals, diagnostic centres, and referring doctors act with the same urgency a specialist would apply, even when a specialist isn’t in the room.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                The three tiers, and what they mean in practice
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    <strong>Low risk</strong> covers ECGs that are normal or reflect well-recognised benign variants a Normal Sinus Rhythm, Sinus Arrhythmia, or Benign Early Repolarisation, for example. These findings carry no evidence of structural, ischaemic, conduction, or rhythm pathology. Nothing urgent needs to happen here beyond routine follow-up, which matters just as much as flagging danger: it keeps care teams from chasing false alarms and lets them focus attention where it’s genuinely needed.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    <strong>Moderate risk</strong> is where clinical judgement earns its keep. This tier includes findings such as old infarctions, suspected ischaemia, complete bundle branch block, atrial enlargement or inter-atrial block, and ventricular hypertrophy real abnormalities that point to underlying cardiovascular disease, but not an active emergency. These cases don’t need a blue-light response; they need a plan. TCC flags them for further evaluation, investigation, or monitoring, so they don’t fall through the cracks between “fine” and “critical.”
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    <strong>High risk</strong> is the tier built for speed. New-onset or haemodynamically significant atrial fibrillation or flutter, life-threatening arrhythmias, critical conduction disorders, and acute ischaemic patterns all fall here findings associated with a real risk of haemodynamic compromise, cardiac arrest, or acute ischaemic injury. TCC’s framework is designed to surface these instantly, so escalation and intervention begin without the delay that a busy queue or an unfamiliar reader might otherwise introduce.
+                                </p>
+                            </div>
+                        </div>
+
+                        <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10" src="../assets/images/doctor-presenting-tcc.png" alt="" data-aos="fade-up" data-aos-delay="200">
+
+                        <div>
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                Where this makes the biggest difference
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    The value of this framework shows up most clearly in the moments care teams face every day: a general physician staring at an unfamiliar ECG pattern at 2 a.m., a technician in a Tier-3 town without a cardiologist on call, or a hospital trying to standardise how its emergency department triages chest pain. In each case, TCC’s Low/Moderate/High structure converts a raw trace into a decision assess now, follow up soon, or reassure and move on backed by consistent, clinically grounded criteria rather than individual judgement alone.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    That consistency is what makes TCC useful at scale. A framework that works the same way whether it’s applied in a metro hospital or a rural clinic is a framework that closes the gap between where a cardiac emergency happens and where expert cardiac care actually lives.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#021826] text-white rounded-2xl p-8 mt-10 flex flex-col gap-4 mt-10" data-aos="fade-up">
+                            <h5 class="text-sm uppercase text-gray-400 font-medium mb-2">Key Takeways</h5>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Three tiers Low, Moderate and High turn every ECG into a triage decision, not just a diagnosis.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Low risk: normal traces and well-recognised benign variants; routine follow-up only.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Moderate risk: real pathology without an active emergency flagged for evaluation, investigation or monitoring.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    High risk: life-threatening arrhythmias, critical conduction disorders and acute ischaemia surfaced instantly for escalation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                Judgement first, always
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    It’s worth being clear about what this framework is not. TCC risk stratification is a triage aid, not a replacement for the treating physician. Every category is meant to be interpreted alongside the patient’s clinical presentation, and confirmed through proper diagnostic evaluation with a 12-lead ECG. What it does is give clinicians a faster, more consistent starting point so the right cases get urgent eyes on them immediately, and the right resources aren’t spent chasing the ones that don’t need them.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    In cardiac care, the cost of ambiguity is measured in minutes. Tricog’s TCC framework exists to strip that ambiguity out of the first, most critical step: knowing how serious an ECG really is, the moment it’s recorded.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="rounded-[32px] mt-14 overflow-hidden" data-aos="fade-up">
+                        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 bg-[#021826] text-white p-8 lg:p-12">
+                            <div>
+                                <h2 class="main-heading mb-3">See it in your data.</h2>
+                                <p class="text text-white/80">Consistent Low / Moderate / High triage on every ECG your team records.</p>
+                            </div>
+                            <button class="btn btn-secondary flex items-center gap-2 lg:py-3">
+                                Request a Live Demo
+
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="w-full h-[300px] md:h-[440px] object-cover" src="../assets/images/hero-bg-2.png" alt="">
+                    </div>
+
+                    <div class="mt-20">
+                        <div class="w-full flex justify-center items-end lg:flex-row" data-aos="fade-up">
+                            <div class="w-full">
+                                <h2 class="main-heading">Continue Reading</h2>
+                            </div>
+                            <a href="./resources.html" class="w-[100px] flex items-center gap-3 font-semibold text-black">
+                                See all
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14m-6-6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
+                            <div class="group" data-aos="fade-up">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="../assets/images/holding-tcc.png" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Aug 10, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        Tricog CardioCheck in action: where mission meets reality.
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="../assets/images/doctor-presenting-tcc.png" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Aug 03, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        What is Tricog CardioCheck?
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="https://tricog.com/wp-content/uploads/2026/07/from-a-busy-opd-to-care-at-home-the-tricog-connected-pathway-768x391.webp" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Jul 22, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        From a busy OPD to care at home: the Tricog connected pathway
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from rs-footer.js -->
+        </footer>
+    </main>
+
+
+    <script src="../assets/js/script.js"></script>
+    <script src="./rs-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>

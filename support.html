@@ -19,6 +19,19 @@
         .hm-burger {
             color: #000000 !important;
         }
+
+        .modal.active {
+            pointer-events: auto;
+        }
+
+        .modal.active .modal-background {
+            transform: translateY(0);
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+            transition-delay: 0.4s;
+        }
     </style>
 </head>
 
@@ -28,309 +41,489 @@
 
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
-          <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
 
-              <!-- Logo -->
-              <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
-                  <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
-              </div>
-
-              <!-- Desktop Nav -->
-              <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
-                  <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
-                      How it works
-                  </a>
-                  <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">
-                      Solutions
-                  </a>
-                  <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
-                      Resources
-                  </a>
-                  <a class="text-accent hover:text-primary text-accent-hover transition" href="./support.html">
-                      FAQs
-                  </a>
-              </div>
-
-              <!-- CTA -->
-              <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
-                  Order Now
-                  <span class="ml-2.5">
-                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                          <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
-                              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
-                          <circle cx="18" cy="20" r="1.2" fill="currentColor" />
-                      </svg>
-                  </span>
-              </a>
-
-              <!-- Mobile / tablet menu toggle -->
-              <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
-                  aria-controls="stickyMobileMenu" aria-label="Toggle menu">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
-                          stroke-width="2" stroke-linecap="round" />
-                      <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-              </button>
-
-          </div>
-
-          <!-- Mobile / tablet menu panel -->
-          <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
-              <nav class="hm-mobile-menu-inner">
-                  <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
-                  <a class="nav-link" href="./solutions.html">Solutions</a>
-                  <a class="nav-link" href="./resources.html">Resources</a>
-                  <a class="nav-link" href="./support.html">FAQs</a>
-                  <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
-                      Order Now
-                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                          <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
-                              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
-                          <circle cx="18" cy="20" r="1.2" fill="currentColor" />
-                      </svg>
-                  </a>
-              </nav>
-          </div>
-      </header>
-
-      <!-- Static Header -->
-      <nav class="relative w-full flex justify-center py-5 xl:pt-12">
-          <div class="sec-container flex items-center justify-between px-6 lg:px-10">
-
-              <!-- Logo -->
-              <div class="flex items-center gap-3 font-semibold text-xl select-none">
-                  <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
-                          alt=""></a>
-              </div>
-
-              <!-- Desktop Nav -->
-              <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
-                  <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
-                      How it works
-                  </a>
-                  <a class="hover:text-[#EF4762] transition" href="./solutions.html">
-                      Solutions
-                  </a>
-                  <a class="hover:text-[#EF4762] transition" href="./resources.html">
-                      Resources
-                  </a>
-                  <a class="text-accent hover:text-[#EF4762] transition" href="./support.html">
-                      FAQs
-                  </a>
-              </div>
-
-              <!-- CTA -->
-              <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
-                  Order Now
-                  <span class="ml-2.5">
-                      <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                          <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
-                              stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
-                          <circle cx="18" cy="20" r="1.2" fill="currentColor" />
-                      </svg>
-                  </span>
-              </a>
-
-              <!-- Mobile / tablet menu toggle -->
-              <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
-                  aria-controls="heroMobileMenu" aria-label="Toggle menu">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
-                          stroke-width="2" stroke-linecap="round" />
-                      <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                      <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-              </button>
-
-          </div>
-
-          <!-- Mobile / tablet menu panel -->
-          <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
-              <nav class="hm-mobile-menu-inner">
-                  <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
-                  <a class="nav-link" href="./solutions.html">Solutions</a>
-                  <a class="nav-link" href="./resources.html">Resources</a>
-                  <a class="nav-link" href="./support.html">FAQs</a>
-                  <a href="./checkout.html" class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
-                      Order Now
-                      <span class="ml-2.5">
-                          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                              <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
-                                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                  stroke-linejoin="round" />
-                              <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
-                              <circle cx="18" cy="20" r="1.2" fill="currentColor" />
-                          </svg>
-                      </span>
-                  </a>
-              </nav>
-          </div>
-      </nav>
-
-      <section class="flex-1 py-20">
-        <div class="sec-container px-4 lg:px-10">
-            <h2 class="main-heading mb-3" data-aos="fade-up">How can we help?</h2>
-            <p class="text" data-aos="fade-up" data-aos-delay="100">Questions about the device, the app, or a
-                screening result - find your answer below,
-                or reach the clinical team directly.</p>
-
-            <div data-faq-root>
-                <!-- Fetching from support-accordion.js -->
-            </div>
-        </div>
-    </section>
-
-      <section class="flex-1 py-14">
-        <div class="sec-container bg-theme-blue rounded-[32px] py-14 px-4 lg:px-14">
-            <h2 class="main-heading mb-3">Still need a hand?</h2>
-            <p class="text">Pick what's closest we'll tailor the rest so you only fill in what's needed.</p>
-
-            <div class="mt-8">
-                <!-- Content -->
-
-                <!-- Featured Card -->
-                <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 mb-4 hover:opacity-90 transition-opacity">
-                    <div class="flex items-center gap-4">
-                        <span class="w-10 h-10 shrink-0 rounded-lg bg-black flex items-center justify-center">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
-                                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
-                                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
-                                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
-                                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
-                                <line x1="7" y1="12" x2="17" y2="12"></line>
-                            </svg>
-                        </span>
-                        <div>
-                            <h3 class="font-semibold text-base">Screening not completing?</h3>
-                            <p class=" text-sm mt-0.5">Run a quick check — most issues are fixed on the first reply</p>
-                        </div>
-                    </div>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/60 shrink-0">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </a>
-
-                <!-- Grid of options -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">App & setup</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Login, credentials, or no result showing</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">The device</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">OMRON Complete, electrodes, or signal quality</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Order & shipping</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Tracking, delivery, or an address change</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Returns & refund</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Send it back or check a refund</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Damaged or wrong item</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Arrived broken or not what you ordered</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Billing & payment</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Charges, invoices, GST, failed payments</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Account & data</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Access, patient data, or privacy</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Feedback / feature request</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">An idea to make TCC better</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Hospitals, networks & partnerships</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Multi-site rollouts, bulk orders, or media</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
-                    <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity">
-                        <div>
-                            <h3 class="font-semibold text-base text-gray-900">Something else</h3>
-                            <p class="text-gray-500 text-sm mt-0.5">Anything not listed above</p>
-                        </div>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 shrink-0">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </a>
-
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
                 </div>
 
-                <a href="#" class="inline-block text-md text-gray-500 mt-6">Or email the support team directly.</a>
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
             </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <section class="flex-1 py-20">
+            <div class="sec-container px-4 lg:px-10">
+                <h2 class="main-heading mb-3" data-aos="fade-up">How can we help?</h2>
+                <p class="text" data-aos="fade-up" data-aos-delay="100">Questions about the device, the app, or a
+                    screening result - find your answer below,
+                    or reach the clinical team directly.</p>
+
+                <div data-faq-root>
+                    <!-- Fetching from support-accordion.js -->
+                </div>
+            </div>
+        </section>
+
+        <section class="flex-1 py-14">
+            <div class="sec-container bg-theme-blue rounded-[32px] py-14 px-4 lg:px-14">
+                <h2 class="main-heading mb-3">Still need a hand?</h2>
+                <p class="text">Pick what's closest we'll tailor the rest so you only fill in what's needed.</p>
+
+                <div class="mt-8">
+                    <!-- Content -->
+                    <div data-topic="screening not completing"
+                        class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 mb-4 hover:opacity-90 transition-opacity cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <span class="w-10 h-10 shrink-0 rounded-lg bg-black flex items-center justify-center">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                                    <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                                    <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                                    <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                                    <line x1="7" y1="12" x2="17" y2="12"></line>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3 class="font-semibold text-base group-hover:underline underline-offset-2 transition">Screening not completing?</h3>
+                                <p class=" text-sm mt-0.5">Run a quick check — most issues are fixed on the first reply
+                                </p>
+                            </div>
+                        </div>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-white/60 shrink-0">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+
+                    <!-- Grid of options -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                        <div data-topic="app & setup"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transform">App & setup</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Login, credentials, or no result showing</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="the device"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">The device</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">OMRON Complete, electrodes, or signal quality
+                                </p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="order & shipping"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Order & shipping</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Tracking, delivery, or an address change</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="returns & refund"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Returns & refund</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Send it back or check a refund</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="damaged or wrong item"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Damaged or wrong item</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Arrived broken or not what you ordered</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="billing & payment"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Billing & payment</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Charges, invoices, GST, failed payments</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="account & data"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Account & data</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Access, patient data, or privacy</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="feedback / feature request"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Feedback / feature request</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">An idea to make TCC better</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="hospitals, networks & partnerships"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Hospitals, networks & partnerships
+                                </h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Multi-site rollouts, bulk orders, or media</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                        <div data-topic="something else"
+                            class="support-topic group flex items-center justify-between gap-4 bg-white rounded-2xl px-6 py-5 hover:opacity-90 transition-opacity cursor-pointer">
+                            <div>
+                                <h3 class="font-semibold text-base text-gray-900 group-hover:underline underline-offset-2 transition">Something else</h3>
+                                <p class="text-gray-500 text-sm mt-0.5">Anything not listed above</p>
+                            </div>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="text-gray-400 shrink-0">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+
+                    </div>
+
+                    <a href="mailto:support@tricog.com" class="inline-block text-md text-gray-500 mt-6">Or email the support team directly.</a>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="myModal"
+        class="fixed inset-0 z-[1000] h-full w-full overflow-hidden pointer-events-none">
+    
+        <!-- Background -->
+        <div
+            class="modal-background absolute inset-0 h-full w-full bg-black/60 translate-y-full transition-transform duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)]">
         </div>
-    </section>
+    
+    
+        <!-- Modal Content -->
+        <div
+            class="modal-content absolute bottom-0 left-0 h-auto max-h-[90%] w-full overflow-y-auto rounded-t-[20px] bg-[#021826] p-6 sm:p-[30px] shadow-[0_-5px_15px_rgba(0,0,0,0.2)] box-border translate-y-full transition-transform duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)]">
+    
+            <!-- Close Button -->
+            <button type="button"
+                class="close-btn absolute right-5 top-[15px] cursor-pointer text-[35px] leading-none text-white/50 transition-colors duration-300 hover:text-white"
+                aria-label="Close">
+                ×
+            </button>
+    
+    
+            <!-- Heading -->
+            <div class="mx-auto max-w-5xl">
+    
+                <h2 class="text-2xl font-semibold text-white">
+                    Contact support
+                </h2>
+    
+                <!-- Dynamic Topic -->
+                <p id="modal-topic"
+                    class="mt-2 text text-white/60">
+                    Tell us how we can help.
+                </p>
+    
+    
+                <!-- Form -->
+                <form action="#" method="POST" class="mt-8 space-y-5">
+    
+                    <!-- Hidden Topic -->
+                    <input type="hidden" id="support-topic" name="topic">
+    
+    
+                    <!-- Name + Email + Phone -->
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+    
+                        <!-- Name -->
+                        <div>
+                            <label for="footer-name"
+                                class="mb-2 block text-xs font-medium text-white/75">
+                                Name
+                            </label>
+    
+                            <input
+                                id="footer-name"
+                                name="name"
+                                type="text"
+                                placeholder="Your name"
+                                required
+                                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+                        </div>
+    
+    
+                        <!-- Email -->
+                        <div>
+                            <label for="footer-email"
+                                class="mb-2 block text-xs font-medium text-white/75">
+                                Email
+                            </label>
+    
+                            <input
+                                id="footer-email"
+                                name="email"
+                                type="email"
+                                placeholder="you@example.com"
+                                required
+                                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+                        </div>
+    
+    
+                        <!-- Phone -->
+                        <div>
+                            <label for="footer-phone"
+                                class="mb-2 block text-xs font-medium text-white/75">
+                                Phone
+                                <span class="font-normal text-white/35">(Optional)</span>
+                            </label>
+    
+                            <input
+                                id="footer-phone"
+                                name="phone"
+                                type="tel"
+                                placeholder="Your phone number"
+                                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+                        </div>
+    
+                    </div>
+    
+    
+                    <!-- Message -->
+                    <div>
+                        <label for="footer-message"
+                            class="mb-2 block text-xs font-medium text-white/75">
+                            Message
+                        </label>
+    
+                        <textarea
+                            id="footer-message"
+                            name="message"
+                            rows="4"
+                            placeholder="How can we help?"
+                            required
+                            class="w-full resize-none rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 py-3 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10"></textarea>
+                    </div>
+    
+    
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="group inline-flex h-12 w-auto items-center justify-center gap-3 rounded-xl bg-[#B7232C] px-6 sm:px-8 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#cf2933] hover:shadow-lg hover:shadow-[#B7232C]/20">
+    
+                        Send message
+    
+                        <svg
+                            class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2">
+    
+                            <path d="M5 12h14" />
+                            <path d="m13 6 6 6-6 6" />
+    
+                        </svg>
+    
+                    </button>
+    
+                </form>
+    
+            </div>
+    
+        </div>
+    </div>
 
 
         <!-- Footer -->
@@ -339,7 +532,112 @@
         </footer>
     </main>
 
-    <!-- <div id="machine-content"></div> -->
+    <script>
+        // # Support page form modal
+        const modal = document.getElementById("myModal");
+    
+        const background = modal.querySelector(".modal-background");
+        const content = modal.querySelector(".modal-content");
+        const closeBtn = modal.querySelector(".close-btn");
+    
+        // Dynamic topic elements
+        const modalTopic = document.getElementById("modal-topic");
+        const hiddenTopic = document.getElementById("support-topic");
+    
+        // All support topic cards
+        const topicCards = document.querySelectorAll(".support-topic");
+    
+    
+        // ---------------------------------------------------------
+        // Open modal
+        // ---------------------------------------------------------
+        function openModal(topic) {
+    
+            // Set topic in subtitle
+            modalTopic.textContent = `Tell us about your ${topic.toLowerCase()} issue.`;
+    
+            // Set topic in hidden form field
+            hiddenTopic.value = topic;
+    
+    
+            // Enable modal interaction
+            modal.classList.remove("pointer-events-none");
+            modal.classList.add("pointer-events-auto");
+    
+    
+            // Animate background
+            background.classList.remove("translate-y-full");
+            background.classList.add("translate-y-0");
+    
+    
+            // Animate modal content
+            content.classList.remove("translate-y-full");
+            content.classList.add("translate-y-0", "delay-[400ms]");
+        }
+    
+    
+        // ---------------------------------------------------------
+        // Close modal
+        // ---------------------------------------------------------
+        function closeModal() {
+    
+            // Disable modal interaction
+            modal.classList.remove("pointer-events-auto");
+            modal.classList.add("pointer-events-none");
+    
+    
+            // Animate background out
+            background.classList.remove("translate-y-0");
+            background.classList.add("translate-y-full");
+    
+    
+            // Animate modal content out
+            content.classList.remove("translate-y-0", "delay-[400ms]");
+            content.classList.add("translate-y-full");
+        }
+    
+    
+        // ---------------------------------------------------------
+        // Topic click
+        // ---------------------------------------------------------
+        topicCards.forEach(card => {
+    
+            card.addEventListener("click", () => {
+    
+                // Get topic from data-topic
+                const topic = card.dataset.topic;
+    
+                // Open modal + pass topic
+                openModal(topic);
+    
+            });
+    
+        });
+    
+    
+        // ---------------------------------------------------------
+        // Close button
+        // ---------------------------------------------------------
+        closeBtn.addEventListener("click", closeModal);
+    
+    
+        // ---------------------------------------------------------
+        // Click outside modal
+        // ---------------------------------------------------------
+        background.addEventListener("click", closeModal);
+    
+    
+        // ---------------------------------------------------------
+        // Escape key
+        // ---------------------------------------------------------
+        document.addEventListener("keydown", (event) => {
+    
+            if (event.key === "Escape") {
+                closeModal();
+            }
+    
+        });
+    </script>
 
     <script src="./assets/js/support-accordion.js"></script>
     <script src="./assets/js/script.js"></script>

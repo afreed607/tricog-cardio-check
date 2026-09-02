@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricog CardioCheck In Action | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="human-content" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="../index.html"><img class="h-10 w-auto" src="../assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="../index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="../solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="../resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="../support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="../checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="../index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="../solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="../support.html">FAQs</a>
+                    <a href="../checkout.html" class="btn btn-secondary flex justify-center items-center gap-2">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="sec-container flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="../index.html"><img class="h-10 w-auto object-cover" src="../assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="../index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="../support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="../checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="../index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="../solutions.html">Solutions</a>
+                    <a class="nav-link" href="../resources.html">Resources</a>
+                    <a class="nav-link" href="../support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <main>
+            <section class="flex-1 py-14 lg:py-20">
+                <div class="container px-5 lg:px-10 xl:px-20">
+            
+                    <!-- Post Intro -->
+                    <div class="block">
+                        <div class="flex items-center gap-6 mb-4" data-aos="fade-up">
+                            <span class="inline-block rounded-full py-1 px-4 border">
+                                <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase">
+                                    <span class="relative flex h-1.5 w-1.5">
+                                        <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                                        <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                                    </span>
+                                    field notes
+                                </h5>
+                            </span>
+                            <span class="inline-block text-sm font-semibold">Jun 08, 2026</span>
+                            <span class="inline-block text-sm font-semibold">5 min Read</span>
+                        </div>
+                        <h2 class="text-3xl xl:text-4xl font-semibold leading-9 mb-3" data-aos="fade-up">
+                            Tricog CardioCheck in action: where mission meets reality.
+                        </h2>
+                    </div>
+
+                    <!-- Post Content -->
+                    <div>
+                        <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10" src="../assets/images/clinical-validation-heart.jpg" alt="" data-aos="fade-up" data-aos-delay="200">
+                    
+                        <div class="flex flex-col gap-8">
+                            <p class="text" data-aos="fade-up">
+                                For years, we've spoken about our mission: early detection and timely treatment of heart disease at scale. On June 8, that mission moved from idea to impact in one of the most meaningful settings possible the Village Clinic founded by my father, Dr. Ramana Rao.
+                            </p>
+        
+                            <p class="text" data-aos="fade-up">
+                                This was our first large-scale field deployment of Tricog CardioCheck (TCC), our AI-powered single-lead ECG screening tool that classifies patients into Low, Moderate, or High cardiac risk.
+                            </p>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                A legacy of care
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    Fifty years of Sundays.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    Every Sunday for over five decades, my father has opened the doors of his Village Clinic on the outskirts of Bengaluru to hundreds of patients who may otherwise have had no access to care. His consistency, compassion, and clinical discipline have inspired generations.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    For us at Tricog, this setting was not just familiar, it was deeply personal. It allowed us to bring Tricog CardioCheck into the real world and serve those who need it most.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold" data-aos="fade-up">Our Objective</h4>
+        
+                            <ol class="flex flex-col gap-4 mt-5 list-decimal list-inside">
+                                <li class="text" data-aos="fade-up">
+                                    <strong>Screen at scale.</strong> Six OMRON Complete Devices screened patients waiting outside the clinic, while a dedicated station inside ensured no one was missed.
+                                </li>
+                                <li class="text" data-aos="fade-up">
+                                     <strong>Two volunteers per point.</strong> One guided patient posture, collected details, and explained the result. The other logged the data and coordinated next steps.
+                                </li>
+                                <li class="text" data-aos="fade-up">
+                                    <strong>Refer onward.</strong> Patients identified as Moderate or High risk were referred for a 12-lead ECG and further care.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10" src="../assets/images/assess-risk.png" alt="" data-aos="fade-up" data-aos-delay="200">
+
+                        <p class="text mt-10">
+                            Clinical decisions stayed with the treating doctors throughout. TCC's job was to sort the queue and surface who needed attention first, not to diagnose.
+                        </p>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                What we witnessed
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    Several patients expressed relief after receiving a Low-risk result and encouraged family members to get screened. Others approached us with curiosity, eager to understand how the device worked and what it could tell them.
+                                </p>
+                                <p class="text" data-aos="fade-up">
+                                    When my father and his team experienced the screening themselves, they shared thoughtful and encouraging feedback. Their appreciation of both the platform and the presence of our volunteers meant a great deal to all of us.
+                                </p>
+                            </div>
+                        </div>
+
+                        <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10" src="../assets/images/story-bg.png" alt="" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="bg-[#021826] text-white rounded-2xl p-8 mt-10 flex flex-col gap-4 mt-10" data-aos="fade-up">
+                            <h5 class="text-sm uppercase text-gray-400 font-medium mb-2">By the numbers</h5>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Over 400 patients screened in a single day.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    A complete care journey: TCC, then 12-lead ECG, then clinical consult.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Field validation of TCC's device performance, app sync, and workflow.
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="mt-1">✓</span>
+                                <p class="text text-white">
+                                    Rich feedback from patients, doctors, and stakeholders on usability and experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                The team that made it possible
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    This initiative was driven by people who showed up with ownership, care, and quiet determination. Thank you, Vamshi, Anil, Yashodhara, Praveen, Prajwal, Jeeshitha, Sarayu, Rajesh, Ashrit, Priyanka, Pratistha, Debjani, Zainul, Dr. Sudha, and Ankur. Each of you made it work: for the patients, for the clinic, and for what we are building.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                Why this matters
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    This was not a test run. It was a moment of truth. A reminder that in healthcare, scale and science must stay rooted in trust and connection. That technology only becomes meaningful when it reaches real people, in real need, and in real time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-3" data-aos="fade-up">
+                                Let's keep building
+                            </h4>
+
+                            <div class="flex flex-col gap-8">
+                                <p class="text" data-aos="fade-up">
+                                    We will continue to refine Tricog CardioCheck and strengthen every aspect of the experience. But June 8 reminded us of what matters most: that purpose, when backed by people, creates lasting change. With science. With empathy. With intent.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="rounded-[32px] mt-14 overflow-hidden" data-aos="fade-up">
+                        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-4 bg-[#021826] text-white p-8 lg:p-12">
+                            <div>
+                                <h2 class="main-heading mb-3">Bring TCC to your clinic.</h2>
+                                <p class="text text-white/80">Thirty seconds per patient, in the queue, before the consult.</p>
+                            </div>
+                            <button class="btn btn-secondary flex items-center gap-2 lg:py-3">
+                                Request a Live Demo
+
+                                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14m-6-6l6 6-6 6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="w-full h-[300px] md:h-[440px] object-cover" src="../assets/images/hero-bg-2.png" alt="">
+                    </div>
+
+                    <div class="mt-20">
+                        <div class="w-full flex justify-center items-end lg:flex-row" data-aos="fade-up">
+                            <div class="w-full">
+                                <h2 class="main-heading">Continue Reading</h2>
+                            </div>
+                            <a href="./resources.html" class="w-[100px] flex items-center gap-3 font-semibold text-black">
+                                See all
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14m-6-6l6 6-6 6" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
+                            <div class="group" data-aos="fade-up">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="../assets/images/holding-tcc.png" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Aug 10, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        Tricog CardioCheck in action: where mission meets reality.
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="../assets/images/doctor-presenting-tcc.png" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Aug 03, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        What is Tricog CardioCheck?
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="group" data-aos="fade-up" data-aos-delay="300">
+                                <div class="rounded-xl overflow-hidden">
+                                    <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" src="../assets/images/blogs-omron.png" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <span class="text-sm font-semibold text-accent">Jul 22, 2026</span>
+                                        <span class="text-sm  font-semibold text-accent">12 min Read</span>
+                                    </div>
+                                    <h2 class="min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
+                                        From a busy OPD to care at home: the Tricog connected pathway
+                                    </h2>
+                                    <p class="text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis inventore, tenetur exercitationem repellat beatae aliquam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from rs-footer.js -->
+        </footer>
+    </main>
+
+
+    <script src="../assets/js/script.js"></script>
+    <script src="./rs-footer.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>
