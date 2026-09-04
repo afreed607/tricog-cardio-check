@@ -260,7 +260,7 @@ body {
     width: 100%;
 }
 
-@media (min-width: 1600px){
+/* @media (min-width: 1600px){
     .sec-container{
         max-width: 1500px;
     }
@@ -270,7 +270,7 @@ body {
     .sec-container{
         max-width: 1700px;
     }
-}
+} */
 
 /* Minimal form tokens — blue focus ring, grey borders, red only for errors */
 input,
