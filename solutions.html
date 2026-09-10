@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Tricog CardioCheck</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .hm-burger {
+            color: #000000 !important;
+        }
+
+        .form-bg {
+            background-image: url("./assets/images/banner-bg-1.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ---- TCC team slider ---- */
+        .tcc-team-swiper {
+            overflow: hidden;
+        }
+
+        .tcc-team-swiper .swiper-slide {
+            height: auto;
+        }
+
+        .tcc-card {
+            background: #fff;
+            border: 1px solid #ECECEC;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, .04);
+            transition: box-shadow .25s ease, transform .25s ease;
+        }
+
+        .tcc-card:hover {
+            box-shadow: 0 12px 28px rgba(16, 24, 40, .10);
+            transform: translateY(-2px);
+        }
+
+        .tcc-card-media {
+            position: relative;
+            height: 100%;
+            width: auto;
+            background: #0a0a0a;
+            overflow: hidden;
+        }
+
+        .tcc-card-media iframe {
+            height: 400px;
+            width: 100%;
+        }
+
+        .tcc-card-body {
+            padding: 1rem 1.1rem 1.15rem;
+        }
+
+        @media (min-width: 1024px) {
+            .tcc-card-media iframe {
+                height: 380px;
+            }
+        }
+
+
+        @media (min-width: 1440px) {
+            .tcc-card-media iframe {
+                height: 520px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .tcc-nav-btn {
+                display: none !important;
+            }
+        }
+
+        .tcc-card-name {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: .98rem;
+        }
+
+        .tcc-card-role {
+            color: #6B7280;
+            font-size: .83rem;
+            margin-top: .1rem;
+        }
+
+        .tcc-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: .83rem;
+            margin-top: .6rem;
+        }
+
+        .tcc-card-link svg {
+            transition: transform .2s ease;
+        }
+
+        .tcc-card:hover .tcc-card-link svg {
+            transform: translateX(3px);
+        }
+
+        /* Nav arrows: laid out as flex siblings of the swiper track so they can never
+     sit on top of a card/video — they occupy their own space in the row. */
+        .tcc-slider-row {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .tcc-nav-btn {
+            flex: 0 0 auto;
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            border: 1px solid #E5E7EB;
+            background: #e6e9ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ink);
+            cursor: pointer;
+            box-shadow: 0 1px 2px rgba(16, 24, 40, .06);
+            transition: background .2s ease, color .2s ease, border-color .2s ease, opacity .2s ease;
+        }
+
+        .tcc-nav-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .tcc-nav-btn.swiper-button-disabled {
+            opacity: .35;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media (max-width: 767px) {
+            .tcc-nav-btn {
+                display: none;
+            }
+        }
+
+        .tcc-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .4rem;
+            margin-top: 2rem;
+        }
+
+        .tcc-pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background: #D9D9D9;
+            opacity: 1;
+            margin: 0 !important;
+            transition: width .2s ease, background .2s ease;
+        }
+
+        .tcc-pagination .swiper-pagination-bullet-active {
+            width: 22px;
+            background: var(--accent);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="siteMain" class="w-full h-full">
+
+        <!-- Sticky Header -->
+        <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
+            <div class="w-full flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="sticky-logo flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto" src="./assets/images/tcc-logo.webp" alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="sticky-links hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm">
+                    <a class="hover:text-primary text-accent-hover transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="text-accent hover:text-primary text-accent-hover transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition " href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-primary text-accent-hover transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="sticky-cta hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden" id="stickyMenuToggle" aria-expanded="false"
+                    aria-controls="stickyMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="stickyMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html" class="btn btn-secondary flex justify-center items-center gap-2"
+                        data-modal-target="PaymentModal">
+                        Order Now
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Static Header -->
+        <nav class="relative w-full flex justify-center py-5 xl:pt-12">
+            <div class="w-full flex items-center justify-between px-6 lg:px-10">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3 font-semibold text-xl select-none">
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8 rounded-full px-8 py-3 text-sm bg-theme-gray">
+                    <a class="hover:text-[#EF4762] transition" href="./index.html#HowItWorks">
+                        How it works
+                    </a>
+                    <a class="text-accent hover:text-[#EF4762] transition" href="./solutions.html">
+                        Solutions
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./resources.html">
+                        Resources
+                    </a>
+                    <a class="hover:text-[#EF4762] transition" href="./support.html">
+                        FAQs
+                    </a>
+                </div>
+
+                <!-- CTA -->
+                <a href="./checkout.html" class="hidden lg:inline-flex btn btn-secondary">
+                    Order Now
+                    <span class="ml-2.5">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                            <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Mobile / tablet menu toggle -->
+                <button type="button" class="hm-burger lg:hidden text-white" id="heroMenuToggle" aria-expanded="false"
+                    aria-controls="heroMobileMenu" aria-label="Toggle menu">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <line class="hm-burger-bar hm-burger-bar-top" x1="3" y1="6" x2="21" y2="6" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-mid" x1="3" y1="12" x2="21" y2="12"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <line class="hm-burger-bar hm-burger-bar-bottom" x1="3" y1="18" x2="21" y2="18"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+            </div>
+
+            <!-- Mobile / tablet menu panel -->
+            <div class="hm-mobile-menu lg:hidden" id="heroMobileMenu">
+                <nav class="hm-mobile-menu-inner">
+                    <a class="nav-link" href="./index.html#HowItWorks">How it works</a>
+                    <a class="nav-link" href="./solutions.html">Solutions</a>
+                    <a class="nav-link" href="./resources.html">Resources</a>
+                    <a class="nav-link" href="./support.html">FAQs</a>
+                    <a href="./checkout.html"
+                        class="btn btn-secondary flex items-center justify-center text-black items-center gap-2">
+                        Order Now
+                        <span class="ml-2.5">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 4H5L7.2 15.2C7.4 16.2 8.3 17 9.3 17H18.2C19.1 17 19.9 16.4 20.2 15.5L22 8H6"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="9.5" cy="20" r="1.2" fill="currentColor" />
+                                <circle cx="18" cy="20" r="1.2" fill="currentColor" />
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </nav>
+
+        <section class="flex-1 py-20">
+            <div class="w-full flex flex-col md:flex-row justify-between items-center px-4 lg:px-10">
+                <div class="w-full">
+                    <h2 class="main-heading mb-3" data-aos="fade-up">TCC, wherever care begins.</h2>
+                    <p class="text lg:w-[70%]" data-aos="fade-up" data-aos-delay="100">TCC needs no dedicated room, no
+                        separate appointment and no ECG interpretation on site. The same 30-second screening runs in a
+                        busy
+                        OPD, a rural health centre, a corporate check-up or a screening camp.</p>
+
+                    <div class="flex gap-6 mt-8" data-aos="fade-up" data-aos-delay="100">
+                        <a href="#PartnerForm" class="flex justify-center items-center gap-3 btn btn-primary">
+                            <span>Talk to us</span>
+                        </a>
+                        <a href="./checkout.html" class="btn btn-secondary">Order a device</a>
+                    </div>
+                </div>
+                <img class="w-96 lg:w-[360px] h-auto object-cover" src="./assets/images/solutions-hero.webp" alt="">
+
+            </div>
+        </section>
+
+        <section class="flex-1 py-14">
+            <div class="w-full px-5 lg:px-10">
+                <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
+                    <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                        <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                    </span>
+                    One tool, every setting
+                </h5>
+                <h2 class="main-heading mt-4" data-aos="fade-up" data-aos-delay="200">
+                    The same 30 seconds, wherever care begins.
+                </h2>
+
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 mt-14">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <img class="h-72 lg:h-80 xl:h-[400px] w-full object-cover rounded-xl mb-6"
+                            src="assets/images/medical-examination-room-in-a-hospital-2026-03-17-23-44-34-utc.jpg"
+                            alt="">
+                        <h4 class="text-2xl xl:text-3xl font-semibold mb-3">Small hospitals & clinics</h4>
+                        <p class="text">Catch silent cardiac risk during a routine visit, even with no cardiologist in
+                            the building.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <img class="h-72 lg:h-80 xl:h-[400px] w-full object-cover rounded-xl mb-6"
+                            src="assets/images/empty-hospital-bed-in-a-clean-bright-corridor-2026-03-25-02-52-53-utc.jpg"
+                            alt="">
+                        <h4 class="text-2xl xl:text-3xl font-semibold mb-3">Large hospitals</h4>
+                        <p class="text">One consistent risk check at your busiest door: OPD intake, before a specialist
+                            is ever involved.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <img class="h-72 lg:h-80 xl:h-[400px] w-full object-cover rounded-xl mb-6"
+                            src="assets/images/medical-checkup-with-blood-pressure-measurement-2026-03-24-10-15-44-utc.jpg"
+                            alt="">
+                        <h4 class="text-2xl xl:text-3xl font-semibold mb-3">Corporate & preventive checks</h4>
+                        <p class="text">The one thing a standard health check-up misses: cardiac risk in people who feel
+                            completely fine.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <img class="h-72 lg:h-80 xl:h-[400px] w-full object-cover rounded-xl mb-6"
+                            src="assets/images/patient-guided-by-nurse-in-hospital-waiting-room-2026-03-19-01-50-46-utc.jpg"
+                            alt="">
+                        <h4 class="text-2xl xl:text-3xl font-semibold mb-3">Community camps & PHCs</h4>
+                        <p class="text">A same-day, on-the-spot risk read for people who might never get screened
+                            otherwise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex-1 py-20">
+            <div class="w-full px-4 lg:px-10">
+                <h2 class="main-heading mb-3" data-aos="fade-up">Eight settings, one standard.</h2>
+                <p class="text lg:w-[70%]" data-aos="fade-up" data-aos-delay="100">A nurse or technician runs TCC
+                    during
+                    the routine vitals check. The patient holds the OMRON electrodes for 30 seconds, the AI reads
+                    the
+                    recording in the cloud, and a Low, Moderate or High risk category returns on the app the same
+                    way
+                    in every setting.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 mt-16">
+
+                    <!-- Card 01: High-volume OPD -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">01</span>
+                                <!-- Queue / Reception Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="7" r="3" />
+                                    <path d="M3 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                                    <path d="M16 11h5v9" />
+                                    <path d="M21 15h-3" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">High-volume OPD</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Screens every patient at intake without slowing the queue, so priority follows cardiac
+                                risk, not arrival order.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="assets/images/hospital-building-exterior-with-a-green-cross-sign-2026-03-24-00-28-28-utc.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 02: Corporate screening -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">02</span>
+                                <!-- Building + Heart Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="10" height="18" rx="1" />
+                                    <path d="M7 7h2M7 11h2M7 15h2" />
+                                    <path
+                                        d="M16 11.5a2.2 2.2 0 0 1 3.5-1.5 2.2 2.2 0 0 1 0 3.1L16 16.5l-3.5-3.4a2.2 2.2 0 0 1 0-3.1 2.2 2.2 0 0 1 3.5 1.5z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Corporate screening</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Adds a cardiac risk category to routine check-ups the asymptomatic group conventional
+                                screening misses.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="./assets/images/solution-2.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 03: Rural PHC -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">03</span>
+                                <!-- Location Pin + Clinic Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 21.5s-6.5-5.2-6.5-11a6.5 6.5 0 1 1 13 0c0 5.8-6.5 11-6.5 11z" />
+                                    <path d="M12 7.5v5M9.5 10h5" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Rural PHC</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                With no cardiologist on site, frontline staff get an objective basis for referral.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="./assets/images/solution-3.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 04: GP clinic -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="400">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">04</span>
+                                <!-- Stethoscope / Doctor Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4.8 2.25A.75.75 0 0 0 4 3v6a5 5 0 0 0 10 0V3a.75.75 0 0 0-1.5 0v6a3.5 3.5 0 0 1-7 0V3a.75.75 0 0 0-.75-.75z" />
+                                    <path d="M9 14v3a4 4 0 0 0 4 4h1a4 4 0 0 0 4-4v-2" />
+                                    <circle cx="18" cy="13" r="2" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">GP clinic</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Single-doctor practices with no diagnostics get a structured way to decide who to refer
+                                onward.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="./assets/images/solution-4.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 05: Health camps -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="500">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">05</span>
+                                <!-- Medical Tent Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3.5 20.5 12 3.5l8.5 17H3.5z" />
+                                    <path d="M12 3.5v17" />
+                                    <path d="M9.5 13h5" />
+                                    <path d="M12 10.5v5" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Health camps</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Portable and usable by non-specialist staff, with the risk category available
+                                immediately.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="./assets/images/solution-5.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 06: Employer health programmes -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="600">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">06</span>
+                                <!-- Workforce / Team Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Employer health
+                                programmes</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Screen a whole workforce in one drive; only Moderate and High risk go on for a 12-lead
+                                ECG.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="./assets/images/solution-6.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 07: Pharma initiatives -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="700">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">07</span>
+                                <!-- Pill / Capsule + Medical Cross Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m10.5 20.5-6-6a4.95 4.95 0 1 1 7-7l6 6a4.95 4.95 0 1 1-7 7z" />
+                                    <path d="m8.5 8.5 7 7" />
+                                    <circle cx="18" cy="18" r="3.5" fill="#ECF0F2" />
+                                    <path d="M18 16v4M16 18h4" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Pharma initiatives</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                Run screening drives at scale with one consistent, auditable risk standard across every
+                                site.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="assets/images/scientists-analyzing-medical-data-in-lab-setting-2026-03-25-04-44-04-utc.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 08: Insurance -->
+                    <div class="group relative flex flex-col justify-between p-6 bg-primary-50/60 hover:bg-white border border-primary-100/70 hover:border-primary-300 rounded-xl transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md overflow-hidden"
+                        data-aos="fade-up" data-aos-delay="800">
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-accent-500 transition-colors duration-200">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-8">
+                                <span
+                                    class="text-xs font-semibold tracking-wider text-primary-300 group-hover:text-accent-500 transition-colors">08</span>
+                                <!-- Shield + Heart Icon -->
+                                <svg class="w-8 h-8 text-primary-500 transition-transform duration-200 group-hover:scale-105"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path
+                                        d="M12 13.5a2 2 0 0 1 3.4-1.4 2 2 0 0 1 0 2.8L12 18l-3.4-3.1a2 2 0 0 1 0-2.8 2 2 0 0 1 3.4 1.4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-primary-900 mb-3 tracking-tight">Insurance</h3>
+                            <p class="text-xs sm:text-sm text-grey-700 leading-relaxed">
+                                An objective cardiac risk category at onboarding or renewal, captured in under a minute.
+                            </p>
+                            <div class="w-full h-80 rounded-lg overflow-hidden mt-6">
+                                <img class="h-full w-full object-cover  transition-transform duration-500 ease-out group-hover:scale-105"
+                                    src="assets/images/business-colleagues-meeting-and-reviewing-contract-2026-01-09-11-01-46-utc.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+        <section class="flex-1 py-14">
+            <div class="w-full px-5 lg:px-10 xl:py-16">
+                <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
+                    <span class="relative flex h-1.5 w-1.5">
+                        <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                        <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                    </span>
+                    From the team
+                </h5>
+                <h1 class="main-heading mb-3 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    Why the people building TCC believe this is different
+                </h1>
+                <p class="text" data-aos="fade-up" data-aos-delay="200">Short insights from leadership and product on
+                    the thinking behind TCC</p>
+
+
+                <!-- Slider -->
+                <div class="mt-14">
+                    <div class="tcc-slider-row">
+
+                        <button class="tcc-nav-btn tcc-team-prev" aria-label="Previous">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                        <div class="swiper tcc-team-swiper">
+                            <div class="swiper-wrapper">
+
+                                <!-- Video 1 -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media swiper-no-swiping">
+                                            <iframe src="https://www.youtube.com/embed/9MEZS-fe6Ak"
+                                                title="Dr Charit Bhograj" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Dr Charit Bhograj</div>
+                                            <div class="tcc-card-role">CEO &amp; Founder</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Video 2 -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media swiper-no-swiping">
+                                            <iframe src="https://www.youtube.com/embed/EH3W5ner4Ls"
+                                                title="Prateek Golecha" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Dr Zainul Charbiwala</div>
+                                            <div class="tcc-card-role">CTO & Co-Founder</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Video 3 -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media swiper-no-swiping">
+                                            <iframe src="https://www.youtube.com/embed/3odlPMo06jo"
+                                                title="Dr Zainul Charbiwala" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Prateek Golecha</div>
+                                            <div class="tcc-card-role">CGO</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Video 4 -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media swiper-no-swiping">
+                                            <iframe src="https://www.youtube.com/embed/Yg68zGoPvg8"
+                                                title="Prateek Golecha" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Sarayu</div>
+                                            <div class="tcc-card-role">Ex - Product Manager (TCC)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Video 5 -->
+                                <div class="swiper-slide">
+                                    <div class="tcc-card">
+                                        <div class="tcc-card-media swiper-no-swiping">
+                                            <iframe src="https://www.youtube.com/embed/0nsEl1X_TmE" title="Sarayu"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        <div class="tcc-card-body">
+                                            <div class="tcc-card-name">Dr Charit Bhograj</div>
+                                            <div class="tcc-card-role">CEO &amp; Founder</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="tcc-pagination"></div>
+                        </div>
+
+                        <button class="tcc-nav-btn tcc-team-next" aria-label="Next">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="flex-1 py-20">
+            <div class="w-full px-4 lg:px-10" data-aos="fade-up">
+                <div class="relative overflow-hidden rounded-[32px] form-bg py-20">
+
+                    <div class="absolute inset-0 blue-bg-overlay"></div>
+
+                    <div
+                        class="relative z-10 h-full flex flex-col xl:flex-row gap-10 justify-between items-start px-6 md:px-12 lg:px-16">
+
+                        <!-- Content Column -->
+                        <div class="w-full xl:w-[60%] h-full flex flex-col justify-between text-white">
+                            <div>
+                                <h2 class="text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight mb-5"
+                                    data-aos="fade-up" data-aos-delay="100">
+                                    Bring TCC to your setting.
+                                </h2>
+                                <p class="text-white/80 text-base leading-relaxed mb-10 max-w-md" data-aos="fade-up"
+                                    data-aos-delay="200">
+                                    Tell us where you want to screen and how many patients you see we'll come back
+                                    with pricing, rollout and staff training, usually within one business day.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="flex flex-col sm:flex-row sm:gap-x-16 gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="white" stroke-width="1.7"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium">Volume pricing</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="white" stroke-width="1.7"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium">Staff training included</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col sm:flex-row sm:gap-x-16 gap-3">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="white" stroke-width="1.7"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium">Pan-India shipping</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="none">
+                                            <path d="M16.667 5L7.5 14.167L3.333 10" stroke="white" stroke-width="1.7"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <span class="text-sm font-medium">Priority support</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 shrink-0" viewBox="0 0 20 20" fill="none">
+                                        <path d="M16.667 5L7.5 14.167L3.333 10" stroke="white" stroke-width="1.7"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="text-sm font-medium">CDSCO-certified SaMD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Column -->
+                        <div class="w-full xl:w-[40%] bg-[#032032] backdrop-blur-md rounded-2xl p-8 md:p-9 border border-[#042941]"
+                            id="PartnerForm">
+                            <form class="space-y-5">
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Name</label>
+                                        <input type="text" placeholder="Your name"
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Work email</label>
+                                        <input type="email" placeholder="you@company.com"
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Organisation</label>
+                                        <input type="text" placeholder="Hospital or clinic"
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Setting</label>
+                                        <input type="text" placeholder=""
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Patients screened /
+                                            month</label>
+                                        <input type="text" placeholder="e.g. 400"
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-white text-sm font-medium mb-2">Sites</label>
+                                        <input type="text" placeholder=""
+                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40" />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-white text-sm font-medium mb-2">
+                                        Anything we should know? <span
+                                            class="text-white/50 font-normal">(optional)</span>
+                                    </label>
+                                    <textarea rows="3" placeholder="Timeline, locations, current workflow..."
+                                        class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40 resize-none"></textarea>
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit"
+                                        class="bg-white text-[#053A5B] font-semibold text-sm px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors">
+                                        Talk to us
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full flex-1 bg-[#021826] tex-white rounded-t-[32px] mt-10" id="Footer">
+            <!-- Fetching from footer.js -->
+        </footer>
+    </main>
+
+    <!-- Floating Human / Machine toggle -->
+    <div class="hm-floating-toggle" id="hmFloatingToggle" role="group" aria-label="View this page as Human or Machine">
+        <button type="button" class="hm-float-tab is-active" data-hm-mode="human" aria-pressed="true">
+            <svg class="hm-float-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M2.5 12s3.8-7 9.5-7 9.5 7 9.5 7-3.8 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor"
+                    stroke-width="1.6" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            Human
+        </button>
+
+        <button type="button" class="hm-float-tab" data-hm-mode="machine" aria-pressed="false">
+            <svg class="hm-float-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <rect x="7" y="7" width="10" height="10" rx="1.6" stroke="currentColor" stroke-width="1.6" />
+                <path d="M9.5 3.5v3M14.5 3.5v3M9.5 17.5v3M14.5 17.5v3M3.5 9.5h3M3.5 14.5h3M17.5 9.5h3M17.5 14.5h3"
+                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            Machine
+        </button>
+
+        <span class="hm-float-indicator" aria-hidden="true"></span>
+    </div>
+
+    <!-- Machine view: full-page takeover showing the auto-generated semantic
+         HTML. -->
+    <div class="flex-1" id="hmMachineView" hidden>
+        <div class="container">
+
+            <div class="h-[100vh] relative">
+                <iframe class="w-full h-full overflow-hidden" src="./machine-content.html?src=solutions.md"
+                    loading="lazy"></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const tccTeamSwiper = new Swiper('.tcc-team-swiper', {
+            slidesPerView: 1.3,
+            spaceBetween: 16,
+            watchOverflow: true,
+            noSwiping: true,
+            noSwipingClass: 'swiper-no-swiping',
+            pagination: {
+                el: '.tcc-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.tcc-team-next',
+                prevEl: '.tcc-team-prev',
+            },
+            breakpoints: {
+                480: { slidesPerView: 1.6, spaceBetween: 18 },
+                640: { slidesPerView: 2.2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 24 },
+                1440: { slidesPerView: 4, spaceBetween: 34 },
+                1600: { slidesPerView: 5, spaceBetween: 24, navigation: false },
+            },
+        });
+    </script>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/footer.js"></script>
+    <script src="./assets/js/human-machine-toggle.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        (function () {
+            // Page load fade-in
+            window.addEventListener('load', function () {
+                document.documentElement.classList.add('page-loaded');
+            });
+
+            // Safety net: if the 'load' event is ever delayed or a CDN
+            // resource fails/hangs, don't leave the page invisible forever
+            // (html has opacity:0 by default until 'page-loaded' is added).
+            setTimeout(function () {
+                document.documentElement.classList.add('page-loaded');
+            }, 1500);
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            AOS.init({
+                duration: 900,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 80,
+                disable: prefersReducedMotion
+            });
+
+            // Sticky Header — this page has no hero section to observe
+            // via IntersectionObserver, so toggle purely on scroll position.
+            var stickyHeader = document.getElementById('stickyHeader');
+            var SCROLL_THRESHOLD = 150; // show sticky header past ~100-200px
+
+            if (stickyHeader) {
+                function updateStickyHeader() {
+                    stickyHeader.classList.toggle('is-visible', window.scrollY > SCROLL_THRESHOLD);
+                }
+
+                window.addEventListener('scroll', updateStickyHeader, { passive: true });
+                updateStickyHeader(); // set correct state on initial load (e.g. after a refresh mid-scroll)
+            }
+        })(); // <-- IIFE must actually be invoked, or none of the above ever runs
+    </script>
+</body>
+
+</html>

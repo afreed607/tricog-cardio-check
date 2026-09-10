@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(3);
+                opacity: 0;
+            }
+        }
+
+        .animate-ripple {
+            animation: ripple 1.8s ease-out infinite;
+        }
+
+        #text-container {
+            white-space: pre-wrap;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.875rem;
+            line-height: 1.7;
+            tab-size: 4;
+        }
+
+        #text-container::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        #text-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        #text-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.562);
+            border-radius: 8px;
+        }
+
+        #text-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="h-full flex flex-col justify-center items-center">
+        <div class="container flex flex-col items-start px-4 py-14 lg:px-10 xl:px-20">
+            <div class="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end gap-3">
+                <div class="w-full lg:w-[70%] flex flex-col items-start">
+                    <div class="flex items-center gap-3 text-sm text-accent font-semibold uppercase rounded-full border border-gray-300 py-1 px-3"
+                        data-aos="fade-up">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="absolute inset-0 rounded-full bg-[#b7232c] animate-ripple"></span>
+                            <span class="relative h-1.5 w-1.5 rounded-full bg-[#b7232c]"></span>
+                        </span>
+                        Structured for ai
+                    </div>
+                    <h2 class="text-3xl font-semibold mt-4 mb-3">
+                        Machine Readable View
+                    </h2>
+                    <p class="text-md text-gray-600">
+                        Simplified representation of the information available on this page.
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">
+                        Source: <code class="font-mono text-gray-700" id="machine-source"></code>
+                    </p>
+                </div>
+                <button id="copy-machine-content"
+                    class="bg-[#053A5B] hover:bg-[#b7232c] text-white rounded-full flex items-center gap-2 transition ease hover:-translate-y-1 py-3 px-5">
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="8.5" y="8.5" width="10" height="12" rx="1.6" stroke="currentColor"
+                            stroke-width="1.5" />
+                        <path d="M5.5 15.5v-10a1.6 1.6 0 0 1 1.6-1.6h8" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span class="hm-copy-label">Copy Machine Content</span>
+                </button>
+            </div>
+
+            <div class="w-full bg-[#021826] text-white rounded-2xl max-h-[70vh] overflow-auto mt-10 p-3 lg:p-8"
+                id="text-container">
+
+            </div>
+
+            <script>
+                (function () {
+                    "use strict";
+
+                    var DEFAULT_SOURCE = "index.md";
+
+                    // Only allow a same-directory relative path, so the
+                    // ?src= param can't be pointed at another origin.
+                    function resolveSource() {
+                        var requested = new URLSearchParams(window.location.search).get("src");
+
+                        if (!requested || !/^[A-Za-z0-9._-]+\/?[A-Za-z0-9._-]*\.(md|txt)$/.test(requested)) {
+                            return DEFAULT_SOURCE;
+                        }
+
+                        if (requested.indexOf("..") !== -1) {
+                            return DEFAULT_SOURCE;
+                        }
+
+                        return requested;
+                    }
+
+                    var source = resolveSource();
+                    var container = document.getElementById("text-container");
+                    var sourceLabel = document.getElementById("machine-source");
+                    var button = document.getElementById("copy-machine-content");
+                    var txtContent = "";
+
+                    if (sourceLabel) {
+                        sourceLabel.textContent = source;
+                    }
+
+                    fetch(source)
+                        .then(function (response) {
+                            if (!response.ok) {
+                                throw new Error("HTTP " + response.status);
+                            }
+
+                            return response.text();
+                        })
+                        .then(function (text) {
+                            txtContent = text;
+                            container.textContent = text;
+                        })
+                        .catch(function (error) {
+                            console.error("Error loading machine content:", error);
+                            container.textContent =
+                                "Machine readable content for this page could not be loaded (" + source + ").";
+                        });
+
+                    button.addEventListener("click", function () {
+                        var svg = button.querySelector("svg");
+                        var label = button.querySelector(".hm-copy-label");
+
+                        navigator.clipboard.writeText(txtContent)
+                            .then(function () {
+                                svg.style.display = "none";
+                                label.textContent = "Copied!";
+
+                                setTimeout(function () {
+                                    svg.style.display = "";
+                                    label.textContent = "Copy Machine Content";
+                                }, 2000);
+                            })
+                            .catch(function (error) {
+                                console.error("Failed to copy:", error);
+                            });
+                    });
+                })();
+            </script>
+        </div>
+    </main>
+</body>
+
+</html>
