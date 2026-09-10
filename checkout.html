@@ -18,7 +18,7 @@
 
 <body>
 
-    <main id="human-content" class="w-full h-full">
+    <main id="siteMain" class="w-full h-full">
 
         <!-- Payment Modal -->
         <div class="hidden modal-wrapper fixed inset-0 items-center justify-center bg-[rgba(0,0,0,0.5)] p-4 sm:p-6"
@@ -416,11 +416,17 @@
                             <div class="xl:max-w-md" data-aos="fade-right">
 
                                 <div class="flex items-center gap-3 text-sm text-accent uppercase mb-8">
-                                    <span class="font-semibold">what to expect</span>
+                                    <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
+                                        <span class="relative flex h-1.5 w-1.5">
+                                            <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                                            <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                                        </span>
+                                        what to expect
+                                    </h5>
                                 </div>
 
                                 <h2 class="main-heading">
-                                    Here from <br> Practitioners.
+                                    Hear from <br> Practitioners.
                                 </h2>
 
                                 <button class="mt-8 inline-flex items-center btn btn-primary">
@@ -489,17 +495,16 @@
 
                 </div>
 
-
             </section>
 
             <section class="p-2 lg:p-3 xl:p-4">
                 <div class="flex-1 bg-[#021826] rounded-[32px] py-14">
                     <div class="w-full px-4 lg:px-10">
-                        <p class="w-full max-w-[50%] text text-white mb-3" data-aos="fade-up" data-aos-delay="100">Around 50% of at-risk patients are
+                        <p class="w-full max-w-[60%] text text-xl text-white mb-3" data-aos="fade-up" data-aos-delay="100">Around 50% of at-risk patients are
                             asymptomatic
                             before a major event, and 80% of premature heart disease is preventable. The full picture —
                             CVD mortality, prevention and detection rates — is on the home page.</p>
-                        <a class="hyperlink text-accent font-semibold underline flex items-center gap-2" href="#" data-aos="fade-up" data-aos-delay="100">
+                        <a class="hyperlink text-accent font-semibold underline flex items-center gap-2" href="./index.html#GapDetection" data-aos="fade-up" data-aos-delay="100">
                             See the scale of the problem
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -507,59 +512,6 @@
                                     d="M5 12h14m-6-6l6 6-6 6" />
                             </svg>
                         </a>
-
-                        <div class="bg-[#032032] rounded-[24px] p-8 md:p-10 border border-[#042941] text-white mt-14" data-aos="fade-up" data-aos-delay="100">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-start">
-
-                                <!-- Left Section: Intended use and safety -->
-                                <div class="lg:col-span-6 lg:pr-10 lg:border-r border-[#042941]">
-                                    <h2 class="text-2xl md:text-3xl font-serif mb-8 text-white">Intended use and safety.
-                                    </h2>
-
-                                    <div class="grid grid-cols-2 gap-4">
-                                        <!-- Intended users column -->
-                                        <div>
-                                            <span class="block text-xs font-medium text-[#8CA4B4] mb-2">Intended
-                                                users</span>
-                                            <div
-                                                class="inline-flex items-center justify-center w-full bg-[#052940] border border-[#37617C]/40 rounded-full py-2.5 px-6">
-                                                <span class="font-bold text-white text-sm">HCPs</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- Output column -->
-                                        <div>
-                                            <span class="block text-xs font-medium text-[#8CA4B4] mb-2">Output</span>
-                                            <div
-                                                class="flex items-center justify-between w-full bg-[#052940] border border-[#37617C]/40 rounded-full py-2.5 px-5">
-                                                <span class="font-bold text-white text-sm">Risk</span>
-                                                <span class="text-xs text-[#8CA4B4]">only</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Right Section: Not for & Info -->
-                                <div class="lg:col-span-6 lg:pl-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    <!-- Not for -->
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-serif mb-3 text-white">Not for</h3>
-                                        <p class="text-xs text-[#B2C2CC] leading-relaxed">
-                                            under-18s, pregnancy, or patients with pacemakers or ICDs
-                                        </p>
-                                    </div>
-
-                                    <!-- Info -->
-                                    <div>
-                                        <h3 class="text-2xl md:text-3xl font-serif mb-3 text-white">Info</h3>
-                                        <p class="text-xs text-[#B2C2CC] leading-relaxed">
-                                            Informational use only, alongside a qualified healthcare professional
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -567,22 +519,21 @@
             <!-- Compare Table -->
             <section class="flex-1 py-14 pt-20">
                 <div class="w-full px-4 lg:px-10">
-                    <div class="w-full flex flex-col lg:flex-row items-end">
-                        <div class="w-full">
-                            <h5 class="text-sm text-accent font-semibold uppercase mb-2" data-aos="fade-up"
-                                data-aos-delay="100">- HOW TCC IS DIFFERENT</h5>
-                            <h2 class="main-heading mb-3 lg:m-0" data-aos="fade-up" data-aos="fade-up"
-                                data-aos-delay="200">
-                                How TCC compares.
-                            </h2>
-                        </div>
-                        <p class="w-full text" data-aos="fade-up" data-aos-delay="300">
-                            A 30-second single-lead capture, a three-level risk output in about ten seconds, and no
-                            cardiologist required on site. See the full side-by-side against consumer ECG wearables,
-                            standalone single-lead devices and manual triage.
-                        </p>
-
-                    </div>
+    
+                    <h5 class="flex items-center gap-3 text-sm text-accent font-semibold uppercase" data-aos="fade-up">
+                        <span class="relative flex h-1.5 w-1.5">
+                            <span class="absolute inset-0 rounded-full bg-accent animate-ripple"></span>
+                            <span class="relative h-1.5 w-1.5 rounded-full bg-accent"></span>
+                        </span>
+                        How TCC is different
+                    </h5>
+                    <h2 class="main-heading mt-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        Built for clinical screening, <span class="text-accent">not consumer monitoring.</span></h2>
+                    <p class="w-full lg:w-[80%] max-w-5xl text" data-aos="fade-up" data-aos-delay="300">
+                        Conventional approaches concentrate on patients with symptoms, known risk factors, or clinical
+                        suspicion. <span class="text-accent">TCC</span> enables large-scale screening during routine
+                        healthcare interactions, creating more opportunities to detect cardiac conditions earlier.
+                    </p>
                     <div class="mt-20 overflow-x-auto rounded-2xl border border-gray-200 bg-white" data-aos="fade-up"
                         data-aos-delay="400">
                         <table class="min-w-[900px] w-full border-collapse text-sm">
@@ -593,24 +544,9 @@
                                     <th
                                         class="w-[240px] bg-primary text-white text-center font-semibold px-6 py-8 border-t-4 border-[#b7232c]">
                                         <div class="flex flex-col items-center gap-2">
-                                            <svg class="w-7 h-7" viewBox="0 0 24 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-    
-                                                <!-- Heart -->
-                                                <path d="M12 16
-            C10.2 14.7 4 11.2 3 7.2
-            C2.3 4.5 4.5 2.5 7.5 2.3
-            C9.5 2.1 11.1 3 12 4.4
-            C12.9 3 14.5 2.1 16.5 2.3
-            C19.5 2.5 21.7 4.5 21 7.2
-            C20 11.2 13.8 14.7 12 16Z" stroke="#b7232c" stroke-width="1.6" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-    
-                                                <!-- Check -->
-                                                <path d="M7.2 9.2L10.1 11.5L16.8 6" stroke="#b7232c" stroke-width="1.8"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-    
-                                            </svg>
+                                            <img src="./assets/images/favicon.png" alt=""
+                                                class="w-7 h-7 object-contain" width="28" height="28" loading="lazy"
+                                                decoding="async">
                                             <span>Tricog CardioCheck</span>
                                         </div>
                                     </th>
@@ -733,7 +669,6 @@
                                 <tr class="border-b border-gray-200">
                                     <td class="px-6 py-5 font-medium">
                                         Fits the vitals workflow
-                                        <span class="text-gray-400">ⓘ</span>
                                     </td>
     
                                     <td class="bg-primary text-white text-center">
@@ -767,7 +702,7 @@
                                         </div>
                                     </td>
                                     <td class="text-center text-gray-400 border-r">X</td>
-                                    <td class="text-center text-md font-semibold border-r">Required</td>
+                                    <td class="text-center text-gray-500 px-4 border-r">Required</td>
                                     <td class="text-center text-gray-400">X</td>
                                 </tr>
     

@@ -1,6 +1,6 @@
 (function () {
-    
-    // # Header and Footer
+
+    // # Footer
     document.getElementById("Footer").innerHTML = `
     <div class="w-full flex-1 rounded-t-[32px] bg-[#021826] text-white overflow-hidden pb-10">
 
@@ -187,123 +187,194 @@
                             choose a convenient time. Our team will get in touch with you
                             to schedule a personalized demo.
                         </p>
-                        <form action="#" method="POST" class="mt-8 space-y-5" id="DemoForm">
-                        
-                            <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
-                        
-                                <div>
-                                    <label for="demo-name" class="mb-2 block text-xs font-medium text-white/75">
-                                        Name
-                                    </label>
-                        
-                                    <input
-                                        id="demo-name"
-                                        name="name"
-                                        type="text"
-                                        placeholder="Your name"
-                                        required
-                                        class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                </div>
-                                <div>
-                                    <label for="demo-phone" class="mb-2 block text-xs font-medium text-white/75">
-                                        Phone Number
-                                    </label>
-                        
-                                    <input
-                                        id="demo-phone"
-                                        name="phone"
-                                        type="tel"
-                                        placeholder="Your phone number"
-                                        required
-                                        class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                </div>
-                                <div>
-                                    <label for="demo-email" class="mb-2 block text-xs font-medium text-white/75">
-                                        Email
-                                    </label>
-                        
-                                    <input
-                                        id="demo-email"
-                                        name="email"
-                                        type="email"
-                                        placeholder="you@example.com"
-                                        required
-                                        class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                </div>
-                        
-                            </div>
-                            <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                       
+                        <form id="DemoForm" class="mt-8 space-y-5" novalidate>
 
-                            <div>
-                            <label for="demo-role" class="mb-2 block text-xs font-medium text-white/75">
-                                What best describes you?
-                            </label>
-                    
-                            <select
-                                id="demo-role"
-                                name="role"
-                                required
-                                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                <option value="" disabled selected>Select an option</option>
-                                <option value="doctor">Doctor / Healthcare Professional</option>
-                                <option value="hospital">Hospital / Healthcare Organization</option>
-                                <option value="clinic">Clinic / Diagnostic Center</option>
-                                <option value="business">Business / Organization</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                                <div>
-                                    <label for="demo-time" class="mb-2 block text-xs font-medium text-white/75">
-                                        Preferred Time to Connect
-                                    </label>
-                        
-                                    <select
-                                        id="demo-time"
-                                        name="preferred_time"
-                                        required
-                                        class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                        <option value="" disabled selected>Select a preferred time</option>
-                                        <option value="morning">Morning (9 AM – 12 PM)</option>
-                                        <option value="afternoon">Afternoon (12 PM – 3 PM)</option>
-                                        <option value="evening">Evening (3 PM – 6 PM)</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="demo-city" class="mb-2 block text-xs font-medium text-white/75">
-                                        City
-                                    </label>
-                        
-                                    <input
-                                        id="demo-city"
-                                        name="city"
-                                        type="text"
-                                        placeholder="Your city"
-                                        required
-                                        class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
-                                </div>
-                        
-                            </div>
-                            <button
-                                type="submit"
-                                class="group inline-flex h-12 max-w-[400px] items-center justify-center gap-3 rounded-xl bg-[#B7232C] px-6 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#82191F] hover:shadow-lg hover:shadow-[#B7232C]/20">
-                        
-                                Request a Demo
-                        
-                                <svg
-                                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M5 12h14" />
-                                    <path d="m13 6 6 6-6 6" />
-                                </svg>
-                        
-                            </button>
-                        
-                        </form>
-                        
+    <!-- Web3Forms -->
+    <input type="hidden" name="access_key" value="4da6eff8-a2bd-430d-ad9e-2a5ab6274b34">
+    <input type="hidden" name="from_name" value="TCC Demo Request Form">
+
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+
+        <!-- Name -->
+        <div>
+            <label for="demo-name" class="mb-2 block text-xs font-medium text-white/75">
+                Name
+            </label>
+
+            <input
+                id="demo-name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                autocomplete="name"
+                maxlength="60"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+            <p id="demo-name-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+        <!-- Phone -->
+        <div>
+            <label for="demo-phone" class="mb-2 block text-xs font-medium text-white/75">
+                Phone Number
+            </label>
+
+            <input
+                id="demo-phone"
+                name="phone"
+                type="tel"
+                inputmode="numeric"
+                autocomplete="tel"
+                placeholder="Your phone number"
+                maxlength="10"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+            <p id="demo-phone-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label for="demo-email" class="mb-2 block text-xs font-medium text-white/75">
+                Email
+            </label>
+
+            <input
+                id="demo-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                maxlength="254"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+            <p id="demo-email-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+
+        <!-- Role -->
+        <div>
+            <label for="demo-role" class="mb-2 block text-xs font-medium text-white/75">
+                What best describes you?
+            </label>
+
+            <select
+                id="demo-role"
+                name="What best describes you?"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+                <option value="" disabled selected>Select an option</option>
+                <option value="Doctor / Cardiologist">Doctor / Cardiologist</option>
+                <option value="Facility Owner / Decision Maker">Facility Owner / Decision Maker</option>
+                <option value="Healthcare Staff (Technician, nurse, etc.)">
+                    Healthcare Staff (Technician, nurse, etc.)
+                </option>
+                <option value="Healthcare Professionals">
+                    Healthcare Professionals
+                </option>
+                <option value="Other">Other</option>
+            </select>
+
+            <p id="demo-role-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+        <!-- Preferred Time -->
+        <div>
+            <label for="demo-time" class="mb-2 block text-xs font-medium text-white/75">
+                Preferred Time to Connect with you
+            </label>
+
+            <select
+                id="demo-time"
+                name="preferred_time"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+                <option value="" disabled selected>Select a preferred time</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+            </select>
+
+            <p id="demo-time-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+        <!-- City -->
+        <div>
+            <label for="demo-city" class="mb-2 block text-xs font-medium text-white/75">
+                City
+            </label>
+
+            <input
+                id="demo-city"
+                name="city"
+                type="text"
+                placeholder="Your city"
+                autocomplete="address-level2"
+                maxlength="60"
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+
+            <p id="demo-city-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
+        </div>
+
+    </div>
+
+    <!-- Submit -->
+    <button
+        id="demo-submit"
+        type="submit"
+        class="group inline-flex h-12 max-w-[400px] items-center justify-center gap-3 rounded-xl bg-[#B7232C] px-6 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#82191F] hover:shadow-lg hover:shadow-[#B7232C]/20 disabled:cursor-not-allowed disabled:opacity-60">
+
+        <span id="demo-submit-text">Request a Demo</span>
+
+        <svg
+            id="demo-submit-icon"
+            class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <path d="M5 12h14" />
+            <path d="m13 6 6 6-6 6" />
+
+        </svg>
+
+    </button>
+
+</form>
+<!-- Success Message -->
+<div
+    id="demo-success"
+    class="hidden mt-8 rounded-2xl border border-[#37617C]/40 bg-[#052940] p-8 text-center">
+
+    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#B7232C]/15">
+        <svg
+            class="h-6 w-6 text-[#B7232C]"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <path d="M20 6 9 17l-5-5" />
+
+        </svg>
+    </div>
+
+    <h3 class="text-xl font-semibold text-white">
+        Demo Request Submitted
+    </h3>
+
+    <p class="mt-2 text-sm text-white/65">
+        Thank you for making a demo request. Our team will connect shortly.
+    </p>
+
+</div>
+
                         </div>
                         
                     </div>
@@ -335,4 +406,390 @@
         </div>
     `
 
+    // Form Validation and Submission
+const form = document.getElementById("DemoForm");
+    const successMessage = document.getElementById("demo-success");
+
+    const submitButton = document.getElementById("demo-submit");
+    const submitText = document.getElementById("demo-submit-text");
+    const submitIcon = document.getElementById("demo-submit-icon");
+
+    const nameInput = document.getElementById("demo-name");
+    const phoneInput = document.getElementById("demo-phone");
+    const emailInput = document.getElementById("demo-email");
+    const roleInput = document.getElementById("demo-role");
+    const timeInput = document.getElementById("demo-time");
+    const cityInput = document.getElementById("demo-city");
+
+
+    /*
+     * -----------------------------
+     * Validation Functions
+     * -----------------------------
+     */
+
+    function showError(input, message) {
+
+        const errorElement = document.getElementById(input.id + "-error");
+
+        input.classList.remove("border-[#37617C]/40");
+        input.classList.add("border-[#B7232C]");
+
+        input.setAttribute("aria-invalid", "true");
+
+        if (errorElement) {
+            errorElement.textContent = message;
+            errorElement.classList.remove("hidden");
+        }
+
+        return false;
+    }
+
+
+    function clearError(input) {
+
+        const errorElement = document.getElementById(input.id + "-error");
+
+        input.classList.remove("border-[#B7232C]");
+        input.classList.add("border-[#37617C]/40");
+
+        input.removeAttribute("aria-invalid");
+
+        if (errorElement) {
+            errorElement.textContent = "";
+            errorElement.classList.add("hidden");
+        }
+    }
+
+
+    /*
+     * Name validation
+     *
+     * Allows:
+     * - Letters
+     * - Spaces
+     * - Apostrophes
+     * - Hyphens
+     * - Common accented characters
+     */
+    function validateName() {
+
+        const value = nameInput.value.trim();
+
+        const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+
+        if (!value) {
+            return showError(nameInput, "Please enter your name.");
+        }
+
+        if (value.length < 2) {
+            return showError(nameInput, "Name must be at least 2 characters.");
+        }
+
+        if (value.length > 60) {
+            return showError(nameInput, "Name must not exceed 60 characters.");
+        }
+
+        if (!nameRegex.test(value)) {
+            return showError(nameInput, "Please enter a valid name.");
+        }
+
+        clearError(nameInput);
+        return true;
+    }
+
+
+    /*
+     * Indian mobile number validation
+     *
+     * Exactly 10 digits
+     * Must begin with 6, 7, 8 or 9
+     */
+    function validatePhone() {
+
+        const value = phoneInput.value.trim();
+
+        const phoneRegex = /^[6-9][0-9]{9}$/;
+
+        if (!value) {
+            return showError(phoneInput, "Please enter your phone number.");
+        }
+
+        if (!phoneRegex.test(value)) {
+            return showError(
+                phoneInput,
+                "Enter a valid 10-digit Indian mobile number."
+            );
+        }
+
+        clearError(phoneInput);
+        return true;
+    }
+
+
+    /*
+     * Strict email validation
+     */
+    function validateEmail() {
+
+        const value = emailInput.value.trim();
+
+        /*
+         * Prevents:
+         * - spaces
+         * - missing username
+         * - missing @
+         * - invalid domain
+         * - domains without a proper extension
+         */
+        const emailRegex =
+            /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
+
+        if (!value) {
+            return showError(emailInput, "Please enter your email address.");
+        }
+
+        if (value.length > 254) {
+            return showError(emailInput, "Email address is too long.");
+        }
+
+        if (/\s/.test(value)) {
+            return showError(emailInput, "Email address cannot contain spaces.");
+        }
+
+        if (!emailRegex.test(value)) {
+            return showError(
+                emailInput,
+                "Please enter a valid email address."
+            );
+        }
+
+        clearError(emailInput);
+        return true;
+    }
+
+
+    /*
+     * Role validation
+     */
+    function validateRole() {
+
+        if (!roleInput.value) {
+            return showError(
+                roleInput,
+                "Please select an option."
+            );
+        }
+
+        clearError(roleInput);
+        return true;
+    }
+
+
+    /*
+     * Preferred time validation
+     */
+    function validateTime() {
+
+        if (!timeInput.value) {
+            return showError(
+                timeInput,
+                "Please select a preferred time."
+            );
+        }
+
+        clearError(timeInput);
+        return true;
+    }
+
+
+    /*
+     * City validation
+     */
+    function validateCity() {
+
+        const value = cityInput.value.trim();
+
+        const cityRegex =
+            /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ .'-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/;
+
+        if (!value) {
+            return showError(cityInput, "Please enter your city.");
+        }
+
+        if (value.length < 2) {
+            return showError(
+                cityInput,
+                "City must be at least 2 characters."
+            );
+        }
+
+        if (value.length > 60) {
+            return showError(
+                cityInput,
+                "City must not exceed 60 characters."
+            );
+        }
+
+        if (!cityRegex.test(value)) {
+            return showError(
+                cityInput,
+                "Please enter a valid city name."
+            );
+        }
+
+        clearError(cityInput);
+        return true;
+    }
+
+
+    /*
+     * -----------------------------
+     * Live validation
+     * -----------------------------
+     */
+
+    nameInput.addEventListener("input", validateName);
+
+    phoneInput.addEventListener("input", function () {
+
+        /*
+         * Keep only numbers.
+         * This prevents letters and symbols from being entered.
+         */
+        this.value = this.value.replace(/\D/g, "").slice(0, 10);
+
+        validatePhone();
+    });
+
+    emailInput.addEventListener("input", validateEmail);
+
+    roleInput.addEventListener("change", validateRole);
+
+    timeInput.addEventListener("change", validateTime);
+
+    cityInput.addEventListener("input", validateCity);
+
+
+    /*
+     * -----------------------------
+     * Form Submission
+     * -----------------------------
+     */
+
+    form.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        /*
+         * Validate every field.
+         */
+        const isNameValid = validateName();
+        const isPhoneValid = validatePhone();
+        const isEmailValid = validateEmail();
+        const isRoleValid = validateRole();
+        const isTimeValid = validateTime();
+        const isCityValid = validateCity();
+
+        const isFormValid =
+            isNameValid &&
+            isPhoneValid &&
+            isEmailValid &&
+            isRoleValid &&
+            isTimeValid &&
+            isCityValid;
+
+
+        /*
+         * Stop if validation fails.
+         */
+        if (!isFormValid) {
+
+            /*
+             * Focus the first invalid field.
+             */
+            const firstInvalid = form.querySelector(
+                '[aria-invalid="true"]'
+            );
+
+            if (firstInvalid) {
+                firstInvalid.focus();
+            }
+
+            return;
+        }
+
+
+        /*
+         * Loading state
+         */
+        submitButton.disabled = true;
+        submitText.textContent = "Submitting...";
+        submitIcon.classList.add("hidden");
+
+
+        try {
+
+            const formData = new FormData(form);
+
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+
+            const result = await response.json();
+
+
+            if (result.success) {
+
+                /*
+                 * Hide the form.
+                 */
+                form.classList.add("hidden");
+
+                /*
+                 * Show success message.
+                 */
+                successMessage.classList.remove("hidden");
+
+                /*
+                 * Scroll gently to the success message.
+                 */
+                successMessage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            } else {
+
+                throw new Error(
+                    result.message || "Form submission failed."
+                );
+            }
+
+
+        } catch (error) {
+
+            console.error("Web3Forms Error:", error);
+
+            /*
+             * Restore button.
+             */
+            submitButton.disabled = false;
+            submitText.textContent = "Request a Demo";
+            submitIcon.classList.remove("hidden");
+
+            /*
+             * Show a general submission error.
+             */
+            alert(
+                "We couldn't submit your request right now. Please try again."
+            );
+        }
+
+    });
 })();
