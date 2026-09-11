@@ -1,6 +1,6 @@
 ---
 title: "Tricog CardioCheck care settings — OPD, rural PHC, clinics, corporate, camps, pharma, insurance"
-canonical: https://tricogcardiocheck.com/solutions.html
+canonical: https://tricogcardiocheck.com/solutions
 mirrors: solutions.html
 entity: Tricog CardioCheck
 doc_type: solutions-index

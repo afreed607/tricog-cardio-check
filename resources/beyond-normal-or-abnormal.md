@@ -1,6 +1,6 @@
 ---
 title: "Beyond "normal" or "abnormal": every ECG as a clear call to action"
-canonical: https://tricogcardiocheck.com/resources/beyond-normal-or-abnormal.html
+canonical: https://tricogcardiocheck.com/resources/beyond-normal-or-abnormal
 author: Prateek Golecha
 publisher: Tricog Health
 date_published: 2026-08-17

@@ -1,6 +1,6 @@
 ---
 title: "From a Busy OPD to Care at Home: The Tricog Connected Pathway"
-canonical: https://tricogcardiocheck.com/resources/the-connected-pathway.html
+canonical: https://tricogcardiocheck.com/resources/the-connected-pathway
 author: Prateek Golecha
 publisher: Tricog Health
 date_published: 2026-07-21

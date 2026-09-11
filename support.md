@@ -1,6 +1,6 @@
 ---
 title: "Tricog CardioCheck support — contact, categories, data and privacy"
-canonical: https://tricogcardiocheck.com/support.html
+canonical: https://tricogcardiocheck.com/support
 mirrors: support.html
 doc_type: support
 last_updated: 2026-09-11

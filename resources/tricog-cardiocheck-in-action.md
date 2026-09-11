@@ -1,6 +1,6 @@
 ---
 title: "Tricog CardioCheck in action: where mission meets reality"
-canonical: https://tricogcardiocheck.com/resources/tricog-cardiocheck-in-action.html
+canonical: https://tricogcardiocheck.com/resources/tricog-cardiocheck-in-action
 author: Prateek Golecha
 publisher: Tricog Health
 date_published: 2026-06-08

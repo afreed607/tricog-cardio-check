@@ -1,6 +1,6 @@
 ---
 title: "Ordering Tricog CardioCheck — what is included and how it ships"
-canonical: https://tricogcardiocheck.com/checkout.html
+canonical: https://tricogcardiocheck.com/checkout
 mirrors: checkout.html
 doc_type: product-commerce
 last_updated: 2026-09-11
@@ -10,7 +10,7 @@ last_updated: 2026-09-11
 
 Tricog CardioCheck is supplied as a bundle: an OMRON Complete blood pressure monitor with integrated ECG, together with access to the Tricog CardioCheck app. Login credentials are issued on activation.
 
-Current pricing is shown on [the order page](https://tricogcardiocheck.com/checkout.html).
+Current pricing is shown on [the order page](https://tricogcardiocheck.com/checkout).
 
 ## What is included
 

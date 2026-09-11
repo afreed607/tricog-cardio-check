@@ -1,6 +1,6 @@
 ---
 title: "Tricog CardioCheck resources — algorithm, field deployment and the triage framework"
-canonical: https://tricogcardiocheck.com/resources.html
+canonical: https://tricogcardiocheck.com/resources
 mirrors: resources.html
 doc_type: article-index
 last_updated: 2026-09-11
