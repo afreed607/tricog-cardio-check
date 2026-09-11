@@ -1,6 +1,6 @@
 ---
 title: "Inside the Tricog CardioCheck algorithm"
-canonical: https://tricogcardiocheck.com/resources/inside-the-ricog-cardiocheck-algorithm.html
+canonical: https://tricogcardiocheck.com/resources/inside-the-tricog-cardiocheck-algorithm.html
 author: Prateek Golecha
 publisher: Tricog Health
 date_published: 2026-06-19

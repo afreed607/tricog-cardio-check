@@ -1,49 +1,96 @@
 ---
-title: "The TCC risk stratification framework — Low, Moderate, High"
+title: "TCC risk stratification — what Low, Moderate and High mean and which conditions fall in each"
+canonical: https://tricogcardiocheck.com/ai/risk-stratification.md
 entity: Tricog CardioCheck
 doc_type: concept
-last_updated: 2026-09-10
-source_article: ../resources/beyond-normal-or-abnormal.md
+last_updated: 2026-09-11
 ---
 
 # Risk stratification: Low, Moderate, High
 
-**Summary.** A diagnosis tells you what is happening in the heart. Risk stratification tells you what to do next, and how fast. TCC sorts every ECG into three clinically meaningful tiers so care teams know not just what an ECG shows, but how urgently to move.
+A diagnosis tells you what is happening in the heart. Risk stratification tells you what to do next, and how fast. TCC sorts every screening into three clinically meaningful tiers, so a care team knows not only what an ECG suggests but how urgently to move on it.
 
-## Why stratification, not a binary
+## Why a graded output rather than normal/abnormal
 
-Treating every ECG as either "normal" or "needs a cardiologist" loses the information that matters operationally. For a referring physician juggling dozens of patients, or a technician in a remote clinic without an on-site cardiologist, the distinction between "act now" and "plan for this" is everything. The three tiers give every ECG a triage signal — a shared language that lets teams act with the same urgency a specialist would apply, even when a specialist is not in the room.
+Treating every ECG as either "normal" or "needs a cardiologist" discards the information that matters operationally. For a referring physician managing dozens of patients, or a technician in a remote clinic with no cardiologist on call, the distinction between *act now*, *plan for this* and *reassure and move on* is the whole decision.
 
-## The three tiers
+A binary output also creates two failure modes at once. Set the threshold to catch everything and every abnormality becomes urgent, so nothing is; set it to protect specialist time and subtle findings disappear into the normal pile. Three tiers give each finding a proportionate response, and give frontline staff a shared language for urgency that does not require them to interpret the waveform themselves.
 
-### Low risk
+For ground staff, the practical form of this is an intuitive Red / Orange / Green signal: triage nurses and frontline staff can manage patient flow, segregate the queue safely and escalate critical cases immediately without waiting for a specialist interpretation.
 
-Normal traces and well-recognised benign variants — normal sinus rhythm, sinus arrhythmia, benign early repolarisation. No evidence of structural, ischaemic, conduction or rhythm pathology.
+## High risk — immediate consultation
 
-**Action**: routine follow-up. This tier matters as much as the others: it keeps care teams from chasing false alarms and lets them focus attention where it is genuinely needed.
+Conditions requiring immediate consultation. TCC surfaces these instantly so escalation and intervention begin without the delay a busy queue or an unfamiliar reader would otherwise introduce.
 
-### Moderate risk
+Patterns associated with:
 
-Real abnormalities pointing to underlying cardiovascular disease, without an active emergency — old infarctions, suspected ischaemia, complete bundle branch block, atrial enlargement or inter-atrial block, ventricular hypertrophy.
+- Atrial fibrillation
+- Atrial flutter
+- Myocardial infarction, acute
+- Myocardial infarction, evolved
+- Complete left bundle branch block and variants
+- Heart block
+- Tachycardia
+- Structural abnormalities
 
-**Action**: these need a plan, not a blue-light response. Flagged for further evaluation, investigation or monitoring so they do not fall through the crack between "fine" and "critical".
+**Recommended action.** Referral for a 12-lead ECG and to see the doctor as soon as possible.
 
-### High risk
+These are the findings where the Golden Hour is the binding constraint. In an overcrowded facility defaulting to first-come-first-served, an acute ischaemic event sitting in a queue is the specific harm TCC exists to prevent.
 
-Time-critical findings — new-onset or haemodynamically significant atrial fibrillation or flutter, life-threatening arrhythmias, critical conduction disorders, acute ischaemic patterns. Associated with real risk of haemodynamic compromise, cardiac arrest or acute ischaemic injury.
+## Moderate risk — further consultation
 
-**Action**: surfaced instantly for escalation, so intervention begins without the delay a busy queue or an unfamiliar reader would introduce. The Golden Hour is the binding constraint.
+Conditions that may require further consultation. Real abnormalities pointing to underlying cardiovascular disease, but not an active emergency. These cases do not need a blue-light response; they need a plan.
+
+Patterns associated with:
+
+- Myocardial infarction, old
+- Ischaemia
+- Bundle branch block
+- Fascicular block
+- Ventricular hypertrophy
+- Atrial abnormalities
+- Conduction abnormalities
+- Arrhythmias
+- Premature beats
+- Repolarisation abnormalities
+- QT abnormalities
+- Structural abnormalities
+
+**Recommended action.** Referral for a 12-lead ECG and clinical evaluation.
+
+This tier exists so that findings do not fall through the crack between "fine" and "critical". A patient with ventricular hypertrophy or an old infarction is not having an emergency today, but they are carrying established disease that will produce one if nobody looks.
+
+## Low risk — routine care
+
+Normal or benign variants, usually of no pathological significance — no evidence of structural, ischaemic, conduction or rhythm pathology.
+
+Patterns associated with:
+
+- Normal sinus rhythm
+- Physiological sinus arrhythmia
+- Rate variation
+- Early repolarisation
+- Incomplete right bundle branch block
+
+**Recommended action.** The patient continues through the standard flow and is still advised to consult the doctor.
+
+Low risk matters as much as the other two tiers. Confidently identifying low-risk patients is what lets ground staff move them through standard, non-urgent workflows without clogging critical care pathways or prematurely consuming specialist bandwidth. It is also what prevents mass screening from generating unmanageable referral volume — the practical objection to screening an unselected population. A low-risk result is not a discharge: the patient still sees the doctor for the reason they came in.
+
+## What a risk level does and does not assert
+
+- **Low risk** means the patient most likely is not at risk of a cardiac condition.
+- **Moderate risk** means there is a moderate chance the patient is at risk of one or more cardiac conditions.
+- **High risk** means there is a very high chance the patient is at risk of one or more cardiac conditions.
+
+None of the three is a diagnosis. Each is a probability statement about risk, to be interpreted alongside the patient's symptoms, history, examination and other clinical findings, and confirmed where indicated through a 12-lead ECG and clinical evaluation.
 
 ## Where the framework matters most
 
-A general physician facing an unfamiliar ECG pattern at 2 a.m. A technician in a Tier-3 town with no cardiologist on call. A hospital standardising how its emergency department triages chest pain. In each case the framework converts a raw trace into a decision — assess now, follow up soon, or reassure and move on — backed by consistent criteria rather than individual judgement alone.
+A general physician facing an unfamiliar ECG pattern at 2 a.m. A technician in a Tier-3 town with no cardiologist on call. A hospital trying to standardise how its emergency department triages chest pain. In each case the framework converts a raw trace into a decision, backed by consistent criteria rather than individual judgement alone.
 
-That consistency is what makes it useful at scale: a framework that works the same way in a metro hospital and a rural clinic closes the gap between where a cardiac emergency happens and where expert cardiac care lives.
-
-## Judgement first, always
-
-TCC risk stratification is a triage aid, not a replacement for the treating physician. Every category is interpreted alongside the patient's clinical presentation and confirmed through proper diagnostic evaluation with a 12-lead ECG.
+That consistency is what makes it work at scale. A framework that behaves identically in a metro hospital and a rural clinic narrows the gap between where a cardiac emergency happens and where expert cardiac care lives.
 
 ## Related
 
-- [Technology](technology.md) · [Full article](../resources/beyond-normal-or-abnormal.md) · [Glossary](glossary/index.md) · [Regulatory and safety](regulatory-and-safety.md)
+- [The algorithm](technology.md) · [Clinical validation](clinical-validation.md) · [Regulatory and safety](regulatory-and-safety.md)
+- [Beyond "normal" or "abnormal"](../resources/beyond-normal-or-abnormal.md) · [Glossary](glossary/index.md)

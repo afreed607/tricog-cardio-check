@@ -1,49 +1,54 @@
 ---
-title: "Tricog CardioCheck in hospitals and high-volume OPDs"
+title: "Tricog CardioCheck in large hospitals and high-volume OPDs"
+canonical: https://tricogcardiocheck.com/ai/industries/hospitals-and-opd.md
 doc_type: industry
 entity: Outpatient department
 setting: hospitals-and-opd
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
-# Hospitals and high-volume OPD
+# Large hospitals and high-volume OPD
 
-**Summary.** A crowded OPD has one queue everyone can see and another the clinical team has to work out. The visible queue runs by registration number and arrival time; the clinical queue must run by risk. TCC screens every patient at intake without slowing the visible queue, so priority can follow cardiac risk.
+For large hospitals managing high patient volume through OPD intake, who need to catch silent cardiac risk before a patient is even seen by a specialist, Tricog CardioCheck turns the existing OPD vitals check into a 30-second Low / Moderate / High risk flag. Unlike relying on symptom presentation or individual clinician judgement, it adds a consistent, systematic risk check at the hospital's very first patient touchpoint, with no added staff.
 
-## The problem
+## The problem in this setting
 
-People do not arrive with a label saying "cardiac patient". Symptoms may have several causes, and a full cardiac work-up for everyone in a busy OPD is neither practical nor affordable. Relying on how ill someone looks overlooks patients whose risk is real but not apparent.
+A crowded OPD has one queue everyone can see and another the clinical team has to work out. The visible queue runs by registration number and arrival time; the clinical queue must run by risk, even when that risk is not obvious from how a patient looks or from the complaint written in the file.
 
-## Challenges
+Patients do not arrive with a label saying "cardiac patient". Each is assessed for the complaint they walked in with, and cardiac risk is rarely that complaint. A full cardiac work-up for everyone would be neither practical nor affordable, and relying on how ill someone appears overlooks the patient whose risk is real but not apparent.
 
-- Volume: capacity is shared across many patients, and cardiology, echo and cath lab time is the scarcest of it
-- Ordering: arrival time decides who is seen first, which is uncorrelated with cardiac urgency
-- Invisible risk: the stable-presenting patient with an early silent indicator is the one most likely to be missed
-- Reporting delay: an ECG acquired but unread until the next specialist round is technically complete and clinically late
+## The constraints
 
-## How this is handled today
+- **Volume against static specialist capacity.** Patient influx grows exponentially while the availability of specialised physicians and care teams remains flat.
+- **Arrival-order triage.** Without instantaneous diagnostic clarity, overcrowded facilities default to first-come-first-served rather than verified clinical risk, delaying intervention for acute cardiac patients and raising the chance of missing the Golden Hour.
+- **Specialist bandwidth exhaustion.** With no automated stratification, physicians absorb the diagnostic load and spend their scarcest resource evaluating benign and low-risk data.
+- **Departmental blind spots.** A patient attending orthopaedics or neurology never passes through cardiology, so their cardiac risk is never assessed at all.
 
-Symptom-triggered ECG at clinician discretion, with a 12-lead machine on site and interpretation waiting on an available reader. Effective for patients who present convincingly; blind to everyone else.
+## How cardiac risk is handled today
 
-## The TCC approach
+Cardiac risk is assessed on symptoms, history and clinical judgement, and a 12-lead ECG is ordered when a clinician suspects a cardiac issue. This works for patients who present convincingly. It misses asymptomatic patients entirely, and produces inconsistency in both directions — patients who need the test sometimes do not receive it, and patients who do not need it sometimes do.
 
-TCC runs at the front-line triage table, often in the corner of the OPD where patients wait. A High result is brought to clinical attention quickly; a Moderate result prompts a 12-lead and medical review; a Low result, read alongside symptoms and vitals, may let the patient continue the usual OPD assessment. Because the model is additive only, it can move a patient up the queue but never down.
+## What TCC changes
 
-## Outcomes
+TCC screens every patient at intake during the routine vitals check, without slowing the visible queue. The cardiology OPD is the most common screening point; devices also sit in general and specialty OPDs, and in large multi-specialty hospitals at the hospital entrance, which is the only placement that reaches patients who would never visit a cardiac department.
 
-- Priority follows cardiac risk rather than arrival order
-- Advanced capacity is not consumed by low-risk patients
-- Critical cases move faster without a separate cardiac appointment
-- ~30–50 seconds added per patient at intake
+A High result is brought to clinical attention immediately. A Moderate result prompts a 12-lead ECG and medical review. A Low result, read alongside symptoms and vitals, lets the patient continue the usual OPD assessment and still see the doctor. Because the model is additive only, it can move a patient up the queue but never down.
 
-## Evidence
+In a cardiology OPD the value shifts slightly: the point is less about catching patients who would never reach a specialist and more about ordering the queue by risk rather than by arrival.
 
-AUROC 0.909 (95% CI 0.905–0.913); high-risk sensitivity 85.9%, specificity 92.2%; low-risk sensitivity 90.2% — the figure governing whether universal screening creates manageable referral volume. See [clinical validation](../clinical-validation.md).
+## What it delivers
 
-## Case studies
+- **Priority follows cardiac risk rather than arrival order**, at the hospital's first and highest-volume touchpoint.
+- **Reduced missed early-risk cases hospital-wide** — a standard-of-care argument for administration and medical superintendents.
+- **Cardiology attention and confirmatory testing directed to the patients who need it**, with no added staff.
+- **Increased throughput and shorter waits for critical intervention**, since low-risk patients move through standard flow without consuming advanced capacity.
+- **Appropriate 12-lead volume increases**, and patients found to have a condition may be treated at the same centre.
+- **A consistent standard across departments and shifts**, because the same model applies the same criteria regardless of who is on duty.
 
-[Village clinic, Bengaluru — 400+ screened in a day](../case-studies/village-clinic-bengaluru-2026.md)
+## The evidence that matters here
 
-## Related resources
+High-risk sensitivity of 85.9% (95% CI 84.6–87.0%) governs how reliably time-critical findings are captured. High-risk specificity of 92.2% (95% CI 91.6–92.9%) governs false-alarm burden, which at OPD volumes determines whether confirmatory testing capacity survives contact with universal screening. See [clinical validation](../clinical-validation.md).
 
-[Connected pathway](../connected-pathway.md) · [Risk stratification](../risk-stratification.md) · [From a Busy OPD to Care at Home](../../resources/the-connected-pathway.md)
+## Related
+
+[Deployment](../deployment.md) · [Clinical and operational value](../clinical-value.md) · [Risk stratification](../risk-stratification.md) · [From a Busy OPD to Care at Home](../../resources/the-connected-pathway.md)

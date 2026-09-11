@@ -110,6 +110,14 @@ html {
     overscroll-behavior-x: none;
 }
 
+/* In-page anchor targets sit under the sticky header (~68px), so offset the
+   scroll stop to clear it and leave some breathing room above the target. */
+#PartnerForm,
+#DemoForm,
+#HowItWorks {
+    scroll-margin-top: 6rem;
+}
+
 body {
     font-family: var(--font-sans);
     font-weight: var(--fw-regular);
@@ -496,15 +504,19 @@ body {
 }
 
 .blue-bg-overlay {
+    /* The photo behind this sits on a white studio background, so the overlay
+       lands at close to full strength. Kept in the near-neutral #021826 family
+       rather than a saturated mid-blue, so the panel reads as deep slate
+       instead of a flat blue wash, while staying dark enough for white text. */
     background:
-        radial-gradient(circle at center,
-            rgba(55, 97, 124, 0.35) 0%,
-            rgba(5, 58, 91, 0.18) 40%,
-            rgba(2, 24, 38, 0.55) 100%),
+        radial-gradient(circle at 32% 45%,
+            rgba(28, 46, 58, 0.22) 0%,
+            rgba(10, 30, 44, 0.34) 45%,
+            rgba(2, 22, 35, 0.52) 100%),
         linear-gradient(135deg,
-            rgba(5, 58, 91, 0.65) 0%,
-            rgba(4, 41, 65, 0.55) 45%,
-            rgba(2, 24, 38, 0.68) 100%);
+            rgba(7, 32, 47, 0.70) 0%,
+            rgba(4, 27, 41, 0.66) 45%,
+            rgba(2, 20, 32, 0.74) 100%);
 
     pointer-events: none;
 }

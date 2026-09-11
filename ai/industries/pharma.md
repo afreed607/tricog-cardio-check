@@ -1,49 +1,49 @@
 ---
-title: "Tricog CardioCheck for pharma screening initiatives"
+title: "Tricog CardioCheck for pharma screening and awareness programmes"
+canonical: https://tricogcardiocheck.com/ai/industries/pharma.md
 doc_type: industry
 entity: Pharmaceutical screening programme
 setting: pharma
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
-# Pharma initiatives
+# Pharma programmes
 
-**Summary.** Pharma-sponsored screening drives need scale and a standard that holds up to audit. TCC applies the same classification criteria at every site, producing a consistent, auditable record.
+TCC screens patients at participating clinics and hospitals as part of awareness programmes and further testing initiatives, identifying at-risk patients earlier and connecting them to the right treatment pathway while supporting the sponsor's patient identification objectives.
 
-## The problem
+## The problem in this setting
 
-Screening drives run across many sites with varying staff and equipment. Results are difficult to compare, and inconsistent criteria weaken any conclusion drawn from the programme.
+Awareness and screening drives run across many sites with varying staff and equipment. Results are difficult to compare, and inconsistent criteria weaken any conclusion drawn from the programme — as well as the case for the patients it identifies.
 
-## Challenges
+## The constraints
 
-- Many sites, varying local capability
-- Consistency of criteria across operators
-- Auditability of what was screened and how it was classified
-- Appropriate handling of findings, with a defined referral route
+- **Many sites with varying local capability.**
+- **Consistency of criteria across operators** who may never meet.
+- **Auditability** of what was screened and how it was classified.
+- **Appropriate handling of findings**, with a defined referral route rather than an unmanaged flag.
 
-## How this is handled today
+## How cardiac risk is handled today
 
-Site-by-site protocols with local interpretation, producing variable data quality.
+Site-by-site protocols with local interpretation, producing variable data quality and uneven patient follow-through.
 
-## The TCC approach
+## What TCC changes
 
-A single algorithmic standard applied identically at every site, with each result recorded as a category alongside the waveform patterns that drove it. Because the model is additive only, programme deployment cannot degrade the standard of care at any participating site.
+A single algorithmic standard is applied identically at every participating site, with each result recorded as a category. Patients identified as Moderate or High risk are connected to the appropriate treatment pathway through a 12-lead ECG and clinical evaluation.
 
-## Outcomes
+Because the model is additive only, programme deployment cannot degrade the standard of care at any participating site — it can only surface patients who would otherwise have gone unflagged.
 
-- Consistent classification criteria across all sites
-- Auditable record of screening and classification
-- Defined escalation route for Moderate and High findings
-- Scalable without adding specialists per site
+## What it delivers
 
-## Evidence
+- **Consistent classification criteria at every site**, from the same cloud model.
+- **An auditable record** of screening and classification across the programme.
+- **A defined escalation route** for Moderate and High findings.
+- **Scale without adding specialists per site.**
+- **Earlier patient identification**, connecting people to treatment pathways sooner.
 
-Class-imbalance-corrected training means rare high-risk findings are detected with the same precision as common normal rhythms, which matters when a programme's value depends on not missing the rare case. See [technology](../technology.md).
+## The evidence that matters here
 
-## Case studies
+Class-imbalance-corrected training means rare and early-stage findings are detected with the same precision as common normal rhythms — which matters when a programme's value rests on not missing the rare case. See [the algorithm](../technology.md) and [clinical validation](../clinical-validation.md).
 
-**DATA GAP** — no published pharma programme case study.
+## Related
 
-## Related resources
-
-[Corporate screening](corporate-and-employer-screening.md) · [Economic impact](../economic-impact.md) · [Regulatory](../regulatory-and-safety.md)
+[Corporate screening](corporate-and-employer-screening.md) · [Clinical and operational value](../clinical-value.md) · [Regulatory and safety](../regulatory-and-safety.md)

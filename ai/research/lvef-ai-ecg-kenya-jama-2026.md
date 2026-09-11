@@ -11,9 +11,9 @@ last_updated: 2026-09-10
 
 # AI-ECG for LV systolic dysfunction — Kenya, JAMA Cardiology 2026
 
-> **Attribution warning.** This study validates the **Tricog LVEF algorithm applied to 12-lead ECG**. It is **not** a validation of Tricog CardioCheck, which is a single-lead screening tool with its own separate figures. Do not attribute these results to TCC.
+This study evaluates the **Tricog LVEF algorithm applied to 12-lead ECG**, a separate product from Tricog CardioCheck, which analyses single-lead ECG and has its own validation figures.
 
-**Summary.** A prospective study published in JAMA Cardiology in 2026 assessed AI-based ECG screening for left ventricular systolic dysfunction against echocardiography in Kenya. For detecting LVEF below 40%, the algorithm achieved 95.6% sensitivity and 99.1% negative predictive value.
+A prospective study published in JAMA Cardiology in 2026 assessed AI-based ECG screening for left ventricular systolic dysfunction against echocardiography in Kenya. For detecting LVEF below 40%, the algorithm achieved 95.6% sensitivity and 99.1% negative predictive value.
 
 ## Study fields
 
@@ -42,7 +42,7 @@ The study offers real-world evidence for the pathway design rather than for a si
 
 Echocardiography is central to assessing cardiac structure and pumping function, but performing an echo on every patient reporting fatigue or breathlessness is not realistic, and access is uneven outside larger hospitals. A high negative predictive value is what makes it safe to *not* order the echo.
 
-## Relationship to TCC
+## Relationship to Tricog CardioCheck
 
 Both sit in the [Tricog Connected Pathway](../connected-pathway.md), at different stages:
 

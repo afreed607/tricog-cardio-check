@@ -1,48 +1,46 @@
 ---
-title: "Tricog CardioCheck for insurance onboarding and renewal"
+title: "Tricog CardioCheck for insurance pre-policy assessment"
+canonical: https://tricogcardiocheck.com/ai/industries/insurance.md
 doc_type: industry
 entity: Health insurance underwriting
 setting: insurance
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
 # Insurance
 
-**Summary.** Cardiac risk at onboarding and renewal is typically assessed through self-declaration and basic vitals. TCC adds an objective, consistently applied cardiac risk category.
+Health insurers integrate TCC into pre-policy medical assessment to screen new policyholders for cardiac risk. Those flagged as Moderate or High risk can be directed for a confirmatory 12-lead ECG before the policy is issued.
 
-## The problem
+## The problem in this setting
 
-Underwriting relies on declared history and simple measurements. Undetected cardiac risk is mispriced, and applicants themselves often do not know their status.
+Cardiac risk at onboarding and renewal is typically assessed through self-declaration and basic vitals. Undetected cardiac risk is mispriced — and applicants themselves frequently do not know their own status, so a truthful declaration can still be incomplete.
 
-## Challenges
+## The constraints
 
-- Self-declaration is incomplete and sometimes inaccurate
-- Medical examination capacity is limited and expensive
-- Assessment must be consistent to be defensible
-- Applicant experience must stay quick
+- **Self-declaration is incomplete** even when honest, because asymptomatic disease is unknown to the applicant.
+- **Medical examination capacity is limited and costly.**
+- **Assessment must be consistent** across applicants and assessors to be defensible.
+- **Applicant experience must stay quick**, or onboarding suffers.
 
-## How this is handled today
+## How cardiac risk is handled today
 
-Questionnaires, blood pressure and blood markers, with a full medical examination reserved for higher sums assured.
+Questionnaires, blood pressure and blood markers, with a fuller medical examination reserved for higher sums assured.
 
-## The TCC approach
+## What TCC changes
 
-A 30-second capture during the existing medical check returns an objective Low, Moderate or High category, applied identically to every applicant.
+A 30-second capture during the existing pre-policy medical check returns an objective Low, Moderate or High category, applied identically to every applicant by the same model. Moderate and High results are directed for a confirmatory 12-lead ECG before the policy is issued.
 
-## Outcomes
+## What it delivers
 
-- Objective cardiac risk categorisation at onboarding and renewal
-- Consistent criteria across applicants and assessors
-- Minimal addition to applicant time
+- **Objective cardiac risk categorisation** at onboarding and renewal.
+- **Consistent criteria** across applicants, assessors and locations.
+- **Minimal addition to applicant time** — about a minute.
+- **Confirmatory testing directed** only at applicants whose screening warrants it.
 
-## Evidence
+## The evidence that matters here
 
-See [clinical validation](../clinical-validation.md).
+See [clinical validation](../clinical-validation.md). Any underwriting use should reflect TCC's intended use: it provides risk stratification for informational use, a risk category is not a diagnosis, and output is to be considered in consultation with a qualified healthcare professional. See [regulatory and safety](../regulatory-and-safety.md).
 
-## Case studies
+## Related
 
-**DATA GAP** — no published insurance case study. Note that any underwriting use must respect TCC's intended use: it is a screening and triage tool, and a risk category is not a diagnosis.
-
-## Related resources
-
-[Regulatory and safety](../regulatory-and-safety.md) · [Economic impact](../economic-impact.md) · [Corporate screening](corporate-and-employer-screening.md)
+[Corporate screening](corporate-and-employer-screening.md) · [Regulatory and safety](../regulatory-and-safety.md) · [Risk stratification](../risk-stratification.md)

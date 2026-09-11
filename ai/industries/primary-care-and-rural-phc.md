@@ -1,49 +1,50 @@
 ---
 title: "Tricog CardioCheck in rural primary health centres"
+canonical: https://tricogcardiocheck.com/ai/industries/primary-care-and-rural-phc.md
 doc_type: industry
 entity: Primary Health Centre
 setting: primary-care-and-rural-phc
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
 # Primary care and rural PHC
 
-**Summary.** Where no cardiologist is on site, frontline staff have no objective basis for deciding who needs to travel for further evaluation. TCC provides one, with minimal infrastructure.
+Where no cardiologist is available at all, frontline staff have no objective basis for deciding who should travel for further evaluation. TCC gives them one, and asks for almost no infrastructure to do it.
 
-## The problem
+## The problem in this setting
 
-A PHC may have no cardiologist, no echocardiography and no cath lab, but it still has to decide which patients should not be lost to follow-up. Without an objective signal, referral is either over-broad or driven by how unwell a patient appears.
+A rural primary health centre may have no cardiologist, no echocardiography and no cath lab, but it still has to decide which patients must not be lost to follow-up. Without an objective signal, referral is either over-broad — sending patients on long, costly journeys unnecessarily — or driven by how unwell a patient happens to appear, which misses the asymptomatic majority.
 
-## Challenges
+## The constraints
 
-- No specialist on site and often none on call
-- Limited or no advanced cardiac testing locally
-- Referral means travel, cost and time for the patient, so it must be justified
-- Patients lost between the clinic and the facility that could have evaluated them
+- **No specialist on site, and often none on call.**
+- **Limited or no advanced cardiac testing locally.**
+- **Referral carries real cost to the patient** in travel, time and lost income, so it has to be justifiable.
+- **Patients are lost between the centre and the facility** that could have evaluated them.
+- **Limited local infrastructure**, including intermittent power and connectivity.
 
-## How this is handled today
+## How cardiac risk is handled today
 
-Clinical judgement alone, with referral triggered by overt symptoms. Where a 12-lead exists, interpretation may wait for a visiting doctor.
+Clinical judgement alone, with referral triggered by overt symptoms. Where a 12-lead machine exists, interpretation may wait for a visiting doctor, by which point the patient has gone home.
 
-## The TCC approach
+## What TCC changes
 
-TCC asks for very little infrastructure: a quick, low-cost screening step placed close to the patient at the point of first contact. An abnormal or critical result gives the clinician a clearer basis for referral to a facility that can evaluate further. The referral is created because a risk signal was identified, not because the clinic exhausted its options.
+Patients attending their local PHC are screened with TCC as part of the routine vitals check. Those identified as Moderate or High risk are referred by the attending doctor to an urban hospital for a confirmatory 12-lead ECG.
 
-## Outcomes
+The referral is created because a risk signal was identified, not because the centre exhausted its options. Because TCC is a cloud service rather than hardware, the only physical requirement on site is the OMRON Complete device, a phone and batteries — which is what makes it deployable where a conventional ECG is not.
 
-- Objective, documented basis for referral
-- Fewer patients lost to follow-up
-- Referrals arrive at the receiving facility with a digital trail already attached
-- Non-specialist staff can operate the capture
+## What it delivers
 
-## Evidence
+- **An objective, documented basis for referral** where none existed.
+- **Fewer patients lost to follow-up**, because the reason for referral is concrete.
+- **Referrals arrive with a digital trail** of what was already found.
+- **Non-specialist staff can operate the screening**, so it does not depend on a visiting clinician's schedule.
+- **Asymptomatic patients enter the pathway** who would otherwise have had no contact with cardiac care at all.
 
-Field deployment at a village clinic outside Bengaluru screened 400+ patients in a single day with non-specialist volunteers operating six devices. See [the case study](../case-studies/village-clinic-bengaluru-2026.md).
+## The evidence that matters here
 
-## Case studies
+The first large-scale field deployment screened more than 400 patients in a single day at a village clinic outside Bengaluru, operated by non-specialist volunteers with six devices and no cardiologist present. See [the case study](../case-studies/village-clinic-bengaluru.md).
 
-[Village clinic, Bengaluru](../case-studies/village-clinic-bengaluru-2026.md)
+## Related
 
-## Related resources
-
-[Connected pathway](../connected-pathway.md) · [Health camps](health-camps.md) · [TCC in action](../../resources/tricog-cardiocheck-in-action.md)
+[Health camps](health-camps.md) · [Deployment](../deployment.md) · [TCC in action](../../resources/tricog-cardiocheck-in-action.md) · [Case study](../case-studies/village-clinic-bengaluru.md)

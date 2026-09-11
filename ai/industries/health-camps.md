@@ -1,48 +1,50 @@
 ---
-title: "Tricog CardioCheck at health camps and screening drives"
+title: "Tricog CardioCheck at community screening camps"
+canonical: https://tricogcardiocheck.com/ai/industries/health-camps.md
 doc_type: industry
 entity: Health camp
 setting: health-camps
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
-# Health camps
+# Community screening programmes and camps
 
-**Summary.** A camp has no fixed infrastructure, non-specialist staff, and one day to reach as many people as possible. TCC is portable, needs no wires or gel, and returns a result immediately.
+For community screening programmes and camps run by NGOs, government health departments or CSR initiatives, who need a portable way to assess cardiac risk in populations with little or no access to screening, Tricog CardioCheck is operable by non-specialist staff and delivers an immediate Low / Moderate / High risk flag on the spot. Unlike having no cardiac screening available at all, every attendee gets a same-day, objective risk read they can act on.
 
-## The problem
+## The problem in this setting
 
-Camps reach populations with little routine contact with the health system, but rarely offer cardiac assessment because it requires equipment and expertise that cannot travel.
+Camps reach populations with little routine contact with the health system, and are often the only screening touchpoint an attendee will ever have. Cardiac assessment is rarely offered, because it has conventionally required equipment and expertise that cannot travel.
 
-## Challenges
+## The constraints
 
-- No fixed clinical infrastructure
-- Staff are often volunteers rather than specialists
-- Results must be delivered on the day; follow-up contact may not be possible
-- Throughput determines how many people the camp reaches
+- **No fixed clinical infrastructure**, and often no reliable power or connectivity.
+- **Staff are frequently volunteers** rather than clinicians.
+- **Results must be delivered on the day**; follow-up contact may be impossible.
+- **Throughput determines reach** — the number screened is the number helped.
+- **Referral has to be actionable** for someone who may live far from any facility.
 
-## How this is handled today
+## How cardiac risk is handled today
 
-Blood pressure measurement and general consultation. Cardiac assessment is usually absent.
+Blood pressure measurement and general consultation. Cardiac assessment is usually absent entirely.
 
-## The TCC approach
+## What TCC changes
 
-Devices are placed where people are already waiting. Non-specialist volunteers operate the capture — in the Bengaluru deployment, two volunteers per point, one guiding posture and explaining the result, one logging data and coordinating next steps. Moderate and High results are referred for a 12-lead ECG and clinical review on site or onward.
+Devices are placed where people already wait, rather than in a room they must be routed to. Non-specialist staff operate the capture: in the Bengaluru deployment, two volunteers per screening point, one guiding patient posture and explaining the result, the other logging data and coordinating next steps.
 
-## Outcomes
+Staff can screen hundreds of attendees in a single session. Those identified as Moderate or High risk are directed for a 12-lead ECG and further evaluation as soon as possible — on site where capability exists, or onward where it does not.
 
-- Cardiac screening added to settings that could not previously offer it
-- Results explained to the patient before they leave
-- A complete care journey — TCC, then 12-lead, then doctor — achievable in the field
+## What it delivers
 
-## Evidence
+- **Cardiac screening in settings that could not previously offer it.**
+- **Hundreds of attendees screened per session.**
+- **Results explained to the attendee before they leave**, which is what makes a same-day result act on itself.
+- **A complete care journey achievable in the field** — screening, then 12-lead, then doctor.
+- **No specialist required**, so the programme's reach is not limited by clinician availability.
 
-On 8 June 2026, six OMRON Complete devices screened 400+ patients in a single day at a village clinic outside Bengaluru, validating device performance, app sync and workflow. See [the case study](../case-studies/village-clinic-bengaluru-2026.md).
+## The evidence that matters here
 
-## Case studies
+In June 2025, six OMRON Complete devices screened more than 400 patients in a single day at a village clinic outside Bengaluru, validating device performance, app synchronisation and workflow with volunteer operators. See [the case study](../case-studies/village-clinic-bengaluru.md).
 
-[Village clinic, Bengaluru — the first large-scale field deployment](../case-studies/village-clinic-bengaluru-2026.md)
+## Related
 
-## Related resources
-
-[Primary care and rural PHC](primary-care-and-rural-phc.md) · [TCC in action](../../resources/tricog-cardiocheck-in-action.md)
+[Primary care and rural PHC](primary-care-and-rural-phc.md) · [Case study](../case-studies/village-clinic-bengaluru.md) · [TCC in action](../../resources/tricog-cardiocheck-in-action.md)
