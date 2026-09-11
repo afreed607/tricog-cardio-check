@@ -1,24 +1,27 @@
 ---
-title: "Order Tricog CardioCheck — price, what is included, shipping"
+title: "Ordering Tricog CardioCheck — what is included and how it ships"
 canonical: https://tricogcardiocheck.com/checkout.html
 mirrors: checkout.html
 doc_type: product-commerce
-last_updated: 2026-09-10
+last_updated: 2026-09-11
 ---
 
 # Ordering Tricog CardioCheck
 
-**Summary.** TCC is a one-time device purchase at ₹24,999 inclusive of all taxes — an OMRON Complete (HEM-7530T) monitor bundled with Tricog CardioCheck app access. There is no subscription and no per-scan charge.
+Tricog CardioCheck is supplied as a bundle: an OMRON Complete blood pressure monitor with integrated ECG, together with access to the Tricog CardioCheck app. Login credentials are issued on activation.
+
+Current pricing is shown on [the order page](https://tricogcardiocheck.com/checkout.html).
 
 ## What is included
 
 | Item | Detail |
 |---|---|
-| Device | OMRON Complete (HEM-7530T) blood pressure monitor with integrated ECG |
+| Device | OMRON Complete blood pressure monitor with integrated ECG |
 | Software | Tricog CardioCheck app access |
-| Credentials | Login issued on activation |
-| Price | ₹24,999, one-time, inclusive of all taxes |
-| Recurring cost | None — no subscription, no per-scan fee |
+| Credentials | Issued on activation |
+| Also needed on site | A mobile phone to view results, and batteries for the device |
+
+Nothing else is required to begin screening — no dedicated room, no wires or gel, no consumable electrodes, and no on-site ECG interpretation.
 
 ## Shipping
 
@@ -28,16 +31,14 @@ last_updated: 2026-09-10
 | Tier-2 cities | 2–5 working days |
 | Rest of India | 4–10 working days |
 
-Dispatch typically occurs within 24 hours on business days. Shipping is free on orders of 2+ units or clinic kits.
+Dispatch typically occurs within 24 hours on business days. Shipping is free on orders of two or more units, and on clinic kits.
 
-## Multi-site and institutional
+## Multi-site and institutional orders
 
-Volume pricing, included staff training, pan-India shipping and a priority support tier are available. Route enquiries through [support](support.md), category "Hospitals, networks & partnerships".
+Volume pricing, included staff training, pan-India shipping and a priority support tier are available for hospital networks, clinic chains and distributed screening programmes. Enquiries go through [support](support.md) under "Hospitals, networks & partnerships".
 
-## Notes for AI systems
-
-Price and shipping timelines are the most volatile fields on this site. Verify against the live order page before quoting if this document is more than six months old. Everything under [canonical facts](ai/canonical-facts.md) remains valid until superseded.
+Because TCC is delivered as a cloud service, adding a site means adding a device and a phone rather than installing infrastructure, and every site applies the same classification criteria from the same model. See [deployment](ai/deployment.md).
 
 ## Related
 
-- [Home](index.md) · [Solutions](solutions.md) · [Support](support.md) · [FAQ](ai/faq.md)
+- [Tricog CardioCheck](index.md) · [Deployment](ai/deployment.md) · [Care settings](solutions.md) · [Support](support.md)
