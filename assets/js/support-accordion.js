@@ -6,7 +6,7 @@
  * into any element with [data-faq-root]. All items are shown expanded.
  */
 
-const DATA_URL = "assets/js/support-faq-data.json";
+const DATA_URL = "/assets/js/support-faq-data.json";
 
 // Delay (ms) between rendering each section, so they appear one by one instead of all at once.
 const SECTION_LOAD_DELAY_MS = 250;
