@@ -12,7 +12,7 @@
 
                         <!-- Brand -->
                         <div>
-                            <a href="./" class="inline-flex">
+                            <a href="../index.html" class="inline-flex">
                                 <img src="../assets/images/tcc-logo-2.webp" alt="Tricog CardioCheck"
                                     class="h-14 sm:h-16 w-auto object-contain">
                             </a>
@@ -90,20 +90,20 @@
 
                                 <ul class="space-y-3.5 text-sm text-white/65">
                                     <li>
-                                        <a href="../solutions" class="transition-colors duration-200 hover:text-white">
+                                        <a href="../solutions.html" class="transition-colors duration-200 hover:text-white">
                                             Solutions
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="../resources"
+                                        <a href="../resources.html"
                                             class="transition-colors duration-200 hover:text-white">
                                             Resources
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="../support"
+                                        <a href="../support.html"
                                             class="transition-colors duration-200 hover:text-white">
                                             FAQs
                                         </a>
@@ -127,7 +127,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="../resources/inside-the-tricog-cardiocheck-algorithm" class="transition-colors duration-200 hover:text-white">
+                                        <a href="../resources/inside-the-tricog-cardiocheck-algorithm.html" class="transition-colors duration-200 hover:text-white">
                                             About TCC
                                         </a>
                                     </li>
