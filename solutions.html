@@ -34,7 +34,7 @@
     <meta name="twitter:image" content="https://tricogcardiocheck.com/assets/images/og-share-card.jpg">
 
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/tcc-favicon.webp">
     <link rel="manifest" href="./site.webmanifest">
 
     <script type="application/ld+json">
@@ -95,14 +95,14 @@
 
         .tcc-card-media {
             position: relative;
-            height: 100%;
-            width: auto;
-            background: #0a0a0a;
+            height: 400px;
+            width: 100%;
+            background: white;
             overflow: hidden;
         }
 
         .tcc-card-media iframe {
-            height: 400px;
+            height: 100%;
             width: 100%;
         }
 
@@ -111,14 +111,14 @@
         }
 
         @media (min-width: 1024px) {
-            .tcc-card-media iframe {
+            .tcc-card-media {
                 height: 380px;
             }
         }
 
 
         @media (min-width: 1440px) {
-            .tcc-card-media iframe {
+            .tcc-card-media {
                 height: 520px;
             }
         }
@@ -312,7 +312,8 @@
 
                 <!-- Logo -->
                 <div class="flex items-center gap-3 font-semibold text-xl select-none">
-                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp" alt=""></a>
+                    <a href="./index.html"><img class="h-10 w-auto object-cover" src="./assets/images/tcc-logo.webp"
+                            alt=""></a>
                 </div>
 
                 <!-- Desktop Nav -->
@@ -753,13 +754,37 @@
 
                                 <!-- Video 1 -->
                                 <div class="swiper-slide">
-                                    <div class="tcc-card">
-                                        <div class="tcc-card-media swiper-no-swiping">
-                                            <iframe src="https://www.youtube.com/embed/9MEZS-fe6Ak"
-                                                title="Dr Charit Bhograj" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen>
-                                            </iframe>
+                                    <div class="tcc-card group">
+                                        <div class="tcc-card-media swiper-no-swiping relative overflow-hidden">
+
+                                            <div class="tcc-video-poster absolute inset-0 z-10 cursor-pointer">
+
+                                                <img src="https://drive.google.com/thumbnail?id=10f4JWTqwx9kUlwYBdafUj3TUK-2e8qHS&sz=w1200"
+                                                    alt="Dr Charit Bhograj" class="w-full h-full object-contain">
+
+                                                <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+                                                <button type="button"
+                                                    class="tcc-play-button absolute top-72 inset-0 flex items-center justify-center"
+                                                    aria-label="Play video">
+                                                    <span
+                                                        class="absolute h-16 w-16 bg-accent rounded-full animate-ripple"></span>
+                                                    <span
+                                                        class="flex items-center justify-center w-16 h-16 rounded-full bg-[#b7232c] shadow-lg transition-transform duration-300 hover:scale-110">
+
+                                                        <svg class="w-7 h-7 ml-1 text-white" viewBox="0 0 24 24"
+                                                            fill="currentColor">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+
+                                                    </span>
+                                                </button>
+
+                                            </div>
+
+                                            <div class="tcc-video-container absolute inset-0" data-video="9MEZS-fe6Ak">
+                                            </div>
+
                                         </div>
 
                                         <div class="tcc-card-body">
@@ -772,12 +797,36 @@
                                 <!-- Video 2 -->
                                 <div class="swiper-slide">
                                     <div class="tcc-card">
-                                        <div class="tcc-card-media swiper-no-swiping">
-                                            <iframe src="https://www.youtube.com/embed/EH3W5ner4Ls"
-                                                title="Prateek Golecha" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen>
-                                            </iframe>
+                                        <div class="tcc-card-media swiper-no-swiping relative overflow-hidden">
+
+                                            <div class="tcc-video-poster absolute inset-0 z-10 cursor-pointer">
+
+                                                <img src="https://drive.google.com/thumbnail?id=1cUS7BpW_2KGKZotJ8hi8rYLLZwXh_M55&sz=w1200"
+                                                    alt="Dr Charit Bhograj" class="w-full h-full object-contain">
+
+                                                <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+                                                <button type="button"
+                                                    class="tcc-play-button absolute top-72 inset-0 flex items-center justify-center"
+                                                    aria-label="Play video">
+                                                    <span
+                                                        class="absolute h-16 w-16 bg-accent rounded-full animate-ripple"></span>
+                                                    <span
+                                                        class="flex items-center justify-center w-16 h-16 rounded-full bg-[#b7232c] shadow-lg transition-transform duration-300 hover:scale-110">
+
+                                                        <svg class="w-7 h-7 ml-1 text-white" viewBox="0 0 24 24"
+                                                            fill="currentColor">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+
+                                                    </span>
+                                                </button>
+
+                                            </div>
+
+                                            <div class="tcc-video-container absolute inset-0" data-video="EH3W5ner4Ls">
+                                            </div>
+
                                         </div>
 
                                         <div class="tcc-card-body">
@@ -790,12 +839,36 @@
                                 <!-- Video 3 -->
                                 <div class="swiper-slide">
                                     <div class="tcc-card">
-                                        <div class="tcc-card-media swiper-no-swiping">
-                                            <iframe src="https://www.youtube.com/embed/3odlPMo06jo"
-                                                title="Dr Zainul Charbiwala" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen>
-                                            </iframe>
+                                        <div class="tcc-card-media swiper-no-swiping relative overflow-hidden">
+
+                                            <div class="tcc-video-poster absolute inset-0 z-10 cursor-pointer">
+
+                                                <img src="https://drive.google.com/thumbnail?id=1ORSzWvnXnmanLEZRWPBnoOTyRcTqQse6&sz=w1200"
+                                                    alt="Dr Charit Bhograj" class="w-full h-full object-contain">
+
+                                                <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+                                                <button type="button"
+                                                    class="tcc-play-button absolute top-72 inset-0 flex items-center justify-center"
+                                                    aria-label="Play video">
+                                                    <span
+                                                        class="absolute h-16 w-16 bg-accent rounded-full animate-ripple"></span>
+                                                    <span
+                                                        class="flex items-center justify-center w-16 h-16 rounded-full bg-[#b7232c] shadow-lg transition-transform duration-300 hover:scale-110">
+
+                                                        <svg class="w-7 h-7 ml-1 text-white" viewBox="0 0 24 24"
+                                                            fill="currentColor">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+
+                                                    </span>
+                                                </button>
+
+                                            </div>
+
+                                            <div class="tcc-video-container absolute inset-0" data-video="3odlPMo06jo">
+                                            </div>
+
                                         </div>
 
                                         <div class="tcc-card-body">
@@ -808,12 +881,36 @@
                                 <!-- Video 4 -->
                                 <div class="swiper-slide">
                                     <div class="tcc-card">
-                                        <div class="tcc-card-media swiper-no-swiping">
-                                            <iframe src="https://www.youtube.com/embed/Yg68zGoPvg8"
-                                                title="Prateek Golecha" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen>
-                                            </iframe>
+                                        <div class="tcc-card-media swiper-no-swiping relative overflow-hidden">
+
+                                            <div class="tcc-video-poster absolute inset-0 z-10 cursor-pointer">
+
+                                                <img src="https://drive.google.com/thumbnail?id=1UXUF1ambSIby8lEcDhorCuYr3UonjFXx&sz=w1200"
+                                                    alt="Dr Charit Bhograj" class="w-full h-full object-contain">
+
+                                                <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+                                                <button type="button"
+                                                    class="tcc-play-button absolute top-72 inset-0 flex items-center justify-center"
+                                                    aria-label="Play video">
+                                                    <span
+                                                        class="absolute h-16 w-16 bg-accent rounded-full animate-ripple"></span>
+                                                    <span
+                                                        class="flex items-center justify-center w-16 h-16 rounded-full bg-[#b7232c] shadow-lg transition-transform duration-300 hover:scale-110">
+
+                                                        <svg class="w-7 h-7 ml-1 text-white" viewBox="0 0 24 24"
+                                                            fill="currentColor">
+                                                            <path d="M8 5v14l11-7z" />
+                                                        </svg>
+
+                                                    </span>
+                                                </button>
+
+                                            </div>
+
+                                            <div class="tcc-video-container absolute inset-0" data-video="Yg68zGoPvg8">
+                                            </div>
+
                                         </div>
 
                                         <div class="tcc-card-body">
@@ -827,11 +924,37 @@
                                 <div class="swiper-slide">
                                     <div class="tcc-card">
                                         <div class="tcc-card-media swiper-no-swiping">
-                                            <iframe src="https://www.youtube.com/embed/0nsEl1X_TmE" title="Sarayu"
-                                                frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowfullscreen>
-                                            </iframe>
+                                            <div class="tcc-card-media swiper-no-swiping relative overflow-hidden">
+
+                                                <div class="tcc-video-poster absolute inset-0 z-10 cursor-pointer">
+    
+                                                    <img src="https://drive.google.com/thumbnail?id=1gvVU1LF3PQVd2iiZuZ2Cbttu6k7SFM0V&sz=w1200"
+                                                        alt="Dr Charit Bhograj" class="w-full h-full object-contain">
+    
+                                                    <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    
+                                                    <button type="button"
+                                                        class="tcc-play-button absolute top-72 inset-0 flex items-center justify-center"
+                                                        aria-label="Play video">
+                                                        <span
+                                                            class="absolute h-16 w-16 bg-accent rounded-full animate-ripple"></span>
+                                                        <span
+                                                            class="flex items-center justify-center w-16 h-16 rounded-full bg-[#b7232c] shadow-lg transition-transform duration-300 hover:scale-110">
+    
+                                                            <svg class="w-7 h-7 ml-1 text-white" viewBox="0 0 24 24"
+                                                                fill="currentColor">
+                                                                <path d="M8 5v14l11-7z" />
+                                                            </svg>
+    
+                                                        </span>
+                                                    </button>
+    
+                                                </div>
+    
+                                                <div class="tcc-video-container absolute inset-0" data-video="0nsEl1X_TmE">
+                                                </div>
+    
+                                            </div>
                                         </div>
                                         <div class="tcc-card-body">
                                             <div class="tcc-card-name">Dr Charit Bhograj</div>
@@ -857,6 +980,50 @@
 
             </div>
         </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                document.querySelectorAll(".tcc-video-poster").forEach(function (poster) {
+
+                    const playButton = poster.querySelector(".tcc-play-button");
+                    const card = poster.closest(".tcc-card-media");
+                    const videoContainer = card.querySelector(".tcc-video-container");
+
+                    playButton.addEventListener("click", function () {
+
+                        const videoId = videoContainer.dataset.video;
+
+                        if (!videoId) {
+                            console.error("YouTube video ID is missing.");
+                            return;
+                        }
+
+                        const iframe = document.createElement("iframe");
+
+                        iframe.src =
+                            `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0`;
+
+                        iframe.title = "YouTube video";
+                        iframe.frameBorder = "0";
+
+                        iframe.allow =
+                            "autoplay; encrypted-media; picture-in-picture";
+
+                        iframe.allowFullscreen = true;
+
+                        iframe.className = "absolute inset-0 w-full h-full";
+
+                        videoContainer.appendChild(iframe);
+
+                        // Hide thumbnail and play button
+                        poster.style.display = "none";
+                    });
+
+                });
+
+            });
+        </script>
 
         <section class="flex-1 py-20">
             <div class="w-full px-4 lg:px-10" data-aos="fade-up">
@@ -932,400 +1099,363 @@
                                 ```
                                 <!-- Web3Forms -->
                                 <input type="hidden" name="access_key" value="">
-                                
+
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                
+
                                     <!-- Name -->
                                     <div>
                                         <label for="name" class="block text-white text-sm font-medium mb-2">
                                             Name
                                         </label>
-                                
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            placeholder="Your name"
+
+                                        <input type="text" id="name" name="name" placeholder="Your name"
                                             autocomplete="name"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        />
-                                
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10" />
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
+
                                     <!-- Work Email -->
                                     <div>
                                         <label for="email" class="block text-white text-sm font-medium mb-2">
                                             Work email
                                         </label>
-                                
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            placeholder="you@company.com"
+
+                                        <input type="email" id="email" name="email" placeholder="you@company.com"
                                             autocomplete="email"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        />
-                                
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10" />
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
+
                                 </div>
-                                
-                                
+
+
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                
+
                                     <!-- Organisation -->
                                     <div>
                                         <label for="organisation" class="block text-white text-sm font-medium mb-2">
                                             Organisation
                                         </label>
-                                
-                                        <input
-                                            type="text"
-                                            id="organisation"
-                                            name="organisation"
+
+                                        <input type="text" id="organisation" name="organisation"
                                             placeholder="Hospital or clinic"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        />
-                                
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10" />
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
-                                
+
+
                                     <!-- What best describes you? -->
                                     <div>
                                         <label for="setting" class="block text-white text-sm font-medium mb-2">
                                             What best describes you?
                                         </label>
-                                
-                                        <select
-                                            id="setting"
-                                            name="setting"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        >
+
+                                        <select id="setting" name="setting"
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10">
                                             <option value="" selected disabled>
                                                 Select an option
                                             </option>
-                                
+
                                             <option value="Hospitals & Health Systems">
                                                 Hospitals & Health Systems
                                             </option>
-                                
+
                                             <option value="Pharmaceutical Companies">
                                                 Pharmaceutical Companies
                                             </option>
-                                
+
                                             <option value="Technology & Digital Health Partners">
                                                 Technology & Digital Health Partners
                                             </option>
-                                
+
                                             <option value="Strategic / Co-Development Partners">
                                                 Strategic / Co-Development Partners
                                             </option>
-                                
+
                                             <option value="Investors & Financial Partners">
                                                 Investors & Financial Partners
                                             </option>
-                                
+
                                             <option value="Government & Public Sectors">
                                                 Government & Public Sectors
                                             </option>
-                                
+
                                             <option value="Academic & Research Institutions">
                                                 Academic & Research Institutions
                                             </option>
-                                
+
                                             <option value="Other">
                                                 Other
                                             </option>
                                         </select>
-                                
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
+
                                 </div>
-                                
-                                
+
+
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                
+
                                     <!-- Patients -->
                                     <div>
                                         <label for="patients" class="block text-white text-sm font-medium mb-2">
                                             Patients screened / month
                                         </label>
-                                
-                                        <input
-                                            type="text"
-                                            id="patients"
-                                            name="patients_screened_per_month"
-                                            placeholder="e.g. 400"
-                                            inputmode="numeric"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        />
-                                
+
+                                        <input type="text" id="patients" name="patients_screened_per_month"
+                                            placeholder="e.g. 400" inputmode="numeric"
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10" />
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
-                                
+
+
                                     <!-- Date and Time -->
                                     <div>
                                         <label for="dateTime" class="block text-white text-sm font-medium mb-2">
                                             Date and Time
                                         </label>
-                                
-                                        <input
-                                            type="datetime-local"
-                                            id="dateTime"
-                                            name="date_time"
-                                            class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:ring-1 focus:ring-white/40"
-                                        />
-                                
+
+                                        <input type="datetime-local" id="dateTime" name="date_time"
+                                            class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10" />
+
                                         <p class="field-error text-red-300 text-xs mt-1 hidden"></p>
                                     </div>
-                                
+
                                 </div>
-                                
-                                
+
+
                                 <!-- Optional Message -->
                                 <div>
                                     <label for="message" class="block text-white text-sm font-medium mb-2">
                                         Anything we should know?
                                         <span class="text-white/50 font-normal">(optional)</span>
                                     </label>
-                                
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        rows="3"
+
+                                    <textarea id="message" name="message" rows="3"
                                         placeholder="Timeline, locations, current workflow..."
-                                        class="w-full bg-[#052940] border border-[#37617C]/40 rounded-lg px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-1 focus:ring-white/40 resize-none"
-                                    ></textarea>
+                                        class="h-28 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10"></textarea>
                                 </div>
-                                
-                                
+
+
                                 <!-- Submit -->
                                 <div class="pt-2">
-                                
-                                    <button
-                                        type="submit"
-                                        id="talkToUsButton"
-                                        class="bg-white text-[#053A5B] font-semibold text-sm px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors"
-                                    >
+
+                                    <button type="submit" id="talkToUsButton"
+                                        class="bg-white text-[#053A5B] font-semibold text-sm px-7 py-3.5 rounded-full hover:bg-white/90 transition-colors">
                                         Talk to us
                                     </button>
-                                
+
                                 </div>
-                                
-                                
+
+
                                 <!-- Result -->
-                                <div
-                                    id="talkToUsResult"
-                                    class="hidden rounded-lg px-4 py-3 text-sm"
-                                    role="alert"
-                                ></div>
+                                <div id="talkToUsResult" class="hidden rounded-lg px-4 py-3 text-sm" role="alert"></div>
                                 ```
-                                
-                                </form>
-                                
-                                <script>
+
+                            </form>
+
+                            <script>
                                 document.addEventListener("DOMContentLoaded", function () {
-                                
+
                                     const form = document.getElementById("talkToUsForm");
                                     const button = document.getElementById("talkToUsButton");
                                     const result = document.getElementById("talkToUsResult");
-                                
+
                                     const name = document.getElementById("name");
                                     const email = document.getElementById("email");
                                     const organisation = document.getElementById("organisation");
                                     const setting = document.getElementById("setting");
                                     const patients = document.getElementById("patients");
                                     const dateTime = document.getElementById("dateTime");
-                                
-                                
+
+
                                     // Show field error
                                     function showError(field, message) {
-                                
+
                                         const error = field.parentElement.querySelector(".field-error");
-                                
+
                                         field.classList.remove("border-[#37617C]/40");
                                         field.classList.add("border-red-400");
-                                
+
                                         error.textContent = message;
                                         error.classList.remove("hidden");
                                     }
-                                
-                                
+
+
                                     // Remove field error
                                     function clearError(field) {
-                                
+
                                         const error = field.parentElement.querySelector(".field-error");
-                                
+
                                         field.classList.remove("border-red-400");
                                         field.classList.add("border-[#37617C]/40");
-                                
+
                                         error.textContent = "";
                                         error.classList.add("hidden");
                                     }
-                                
-                                
+
+
                                     // Validate email
                                     function isValidEmail(value) {
-                                
+
                                         const emailPattern =
                                             /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
-                                
+
                                         return emailPattern.test(value);
                                     }
-                                
-                                
+
+
                                     // Validate name
                                     function isValidName(value) {
-                                
+
                                         const namePattern =
                                             /^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ\s.'-]*$/;
-                                
+
                                         return namePattern.test(value);
                                     }
-                                
-                                
+
+
                                     // Clear error while typing/changing
                                     [name, email, organisation, setting, patients, dateTime].forEach(function (field) {
-                                
+
                                         field.addEventListener("input", function () {
                                             clearError(field);
                                         });
-                                
+
                                         field.addEventListener("change", function () {
                                             clearError(field);
                                         });
-                                
+
                                     });
-                                
-                                
+
+
                                     form.addEventListener("submit", async function (event) {
-                                
+
                                         event.preventDefault();
-                                
-                                
+
+
                                         // Hide previous result
                                         result.classList.add("hidden");
                                         result.textContent = "";
-                                
-                                
+
+
                                         let isValid = true;
-                                
-                                
+
+
                                         // Name
                                         if (name.value.trim() === "") {
-                                
+
                                             showError(name, "Please enter your name.");
                                             isValid = false;
-                                
+
                                         } else if (!isValidName(name.value.trim())) {
-                                
+
                                             showError(name, "Please enter a valid name.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(name);
-                                
+
                                         }
-                                
-                                
+
+
                                         // Email
                                         if (email.value.trim() === "") {
-                                
+
                                             showError(email, "Please enter your work email.");
                                             isValid = false;
-                                
+
                                         } else if (!isValidEmail(email.value.trim())) {
-                                
+
                                             showError(email, "Please enter a valid email address.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(email);
-                                
+
                                         }
-                                
-                                
+
+
                                         // Organisation
                                         if (organisation.value.trim() === "") {
-                                
+
                                             showError(organisation, "Please enter your organisation.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(organisation);
-                                
+
                                         }
-                                
-                                
+
+
                                         // What best describes you?
                                         if (setting.value === "") {
-                                
+
                                             showError(setting, "Please select an option.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(setting);
-                                
+
                                         }
-                                
-                                
+
+
                                         // Patients
                                         if (patients.value.trim() === "") {
-                                
+
                                             showError(patients, "Please enter the number of patients.");
                                             isValid = false;
-                                
+
                                         } else if (!/^\d+$/.test(patients.value.trim())) {
-                                
+
                                             showError(patients, "Please enter numbers only.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(patients);
-                                
+
                                         }
-                                
-                                
+
+
                                         // Date and Time
                                         if (dateTime.value === "") {
-                                
+
                                             showError(dateTime, "Please select a date and time.");
                                             isValid = false;
-                                
+
                                         } else {
-                                
+
                                             clearError(dateTime);
-                                
+
                                         }
-                                
-                                
+
+
                                         // Stop if validation failed
                                         if (!isValid) {
                                             return;
                                         }
-                                
-                                
+
+
                                         // Disable button
                                         button.disabled = true;
                                         button.textContent = "Submitting...";
                                         button.classList.add("opacity-70", "cursor-not-allowed");
-                                
-                                
+
+
                                         try {
-                                
+
                                             const formData = new FormData(form);
-                                
+
                                             const response = await fetch(
                                                 "https://api.web3forms.com/submit",
                                                 {
@@ -1336,60 +1466,60 @@
                                                     body: formData
                                                 }
                                             );
-                                
-                                
+
+
                                             const data = await response.json();
-                                
-                                
+
+
                                             if (response.ok && data.success) {
-                                
+
                                                 result.textContent =
                                                     "Thank you for reaching out. Our team will connect with you shortly.";
-                                
+
                                                 result.className =
                                                     "rounded-lg px-4 py-3 text-sm bg-green-50 border border-green-300 text-green-700";
-                                
+
                                                 form.reset();
-                                
+
                                             } else {
-                                
+
                                                 result.textContent =
                                                     data.message || "Something went wrong. Please try again.";
-                                
+
                                                 result.className =
                                                     "rounded-lg px-4 py-3 text-sm bg-red-50 border border-red-300 text-red-700";
-                                
+
                                             }
-                                
+
                                             result.classList.remove("hidden");
-                                
-                                
+
+
                                         } catch (error) {
-                                
+
                                             console.error("Web3Forms error:", error);
-                                
+
                                             result.textContent =
                                                 "Something went wrong. Please try again.";
-                                
+
                                             result.className =
                                                 "rounded-lg px-4 py-3 text-sm bg-red-50 border border-red-300 text-red-700";
-                                
+
                                             result.classList.remove("hidden");
-                                
-                                
+
+
                                         } finally {
-                                
+
                                             button.disabled = false;
                                             button.textContent = "Talk to us";
                                             button.classList.remove("opacity-70", "cursor-not-allowed");
-                                
+
                                         }
-                                
+
                                     });
-                                
+
                                 });
-                                </script>
-                                
+                            </script>
+
                         </div>
 
                     </div>

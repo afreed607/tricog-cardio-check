@@ -247,7 +247,7 @@
                 autocomplete="email"
                 placeholder="you@example.com"
                 maxlength="254"
-                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
+                class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none placeholder:text-white/30 transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-1 focus:ring-[#B7232C]/10">
 
             <p id="demo-email-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
         </div>
