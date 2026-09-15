@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Logs / temp
+*.log
+Thumbs.db
