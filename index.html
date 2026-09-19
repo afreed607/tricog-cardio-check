@@ -2175,6 +2175,11 @@
                     <!-- YouTube Video -->
                     <div id="youtube-video" class="absolute inset-0 w-full h-full pointer-events-none"></div>
 
+                    <!-- Poster (shown until the video is started) -->
+                    <img id="video-poster" src="./assets/images/video-poster-tcc.jpg"
+                        alt="With Tricog CardioCheck you get quick risk detection, a clear triage pathway and efficient patient flow"
+                        class="absolute inset-0 w-full h-full object-cover z-[5] pointer-events-none transition-opacity duration-700">
+
 
                     <!-- Video Overlay -->
                     <div id="video-overlay"
@@ -2318,6 +2323,9 @@
             const videoToggle =
                 document.getElementById("video-toggle");
 
+            const videoPoster =
+                document.getElementById("video-poster");
+
             const videoHeading =
                 document.getElementById("video-heading");
 
@@ -2381,6 +2389,14 @@
                     watchText.classList.add(
                         "opacity-0"
                     );
+
+
+                    // Fade out the poster
+                    videoPoster.classList.add("opacity-0");
+
+                    setTimeout(function () {
+                        videoPoster.classList.add("hidden");
+                    }, 700);
 
 
                     // Reduce overlay

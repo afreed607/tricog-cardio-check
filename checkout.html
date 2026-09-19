@@ -265,7 +265,7 @@
                                     <button type="button"
                                         class="thumb-btn shrink-0 w-16 h-16 lg:w-20 lg:h-20 rounded-md border-2 border-transparent overflow-hidden p-1 transition relative"
                                         data-type="video"
-                                        data-full="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+                                        data-full="https://www.youtube.com/embed/fiCCcuvAwg0?rel=0&amp;autoplay=1">
                                         <img src="./assets/images/tcc-1.jpeg" alt="Product video"
                                             class="w-full h-full object-contain">
                                         <span class="absolute inset-0 flex items-center justify-center bg-black/30">
@@ -282,10 +282,10 @@
                                     id="main-image-wrap">
                                     <img id="main-image" src="./assets/images/tcc-1.jpeg" alt="VCardia Complete"
                                         class="w-full h-full object-contain transition-transform duration-150 ease-out will-change-transform">
-                                    <video id="main-video" controls class="w-full h-full object-contain hidden">
-                                        <source src="" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <iframe id="main-video" class="w-full h-full hidden" src="" title="Tricog CardioCheck product video"
+                                        frameborder="0" loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -834,13 +834,12 @@
                         isVideoActive = true;
                         mainImg.style.transform = 'scale(1)';
                         mainImg.classList.add('hidden');
-                        mainVideo.querySelector('source').src = btn.dataset.full;
-                        mainVideo.load();
+                        mainVideo.src = btn.dataset.full;
                         mainVideo.classList.remove('hidden');
                         wrap.classList.remove('cursor-zoom-in');
                     } else {
                         isVideoActive = false;
-                        mainVideo.pause();
+                        mainVideo.src = '';
                         mainVideo.classList.add('hidden');
                         mainImg.classList.remove('hidden');
                         mainImg.src = btn.dataset.full;
