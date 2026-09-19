@@ -47,4 +47,4 @@ Low-risk sensitivity of 90.2% (95% CI 89.2–91.2%) is the figure that matters m
 
 ## Related
 
-[Deployment](../deployment.md) · [Risk stratification](../risk-stratification.md) · [FAQ](../faq.md) · [Beyond normal or abnormal](../../resources/beyond-normal-or-abnormal.md)
+[Deployment](../deployment.md) · [Risk stratification](../risk-stratification.md) · [FAQ](../faq.md) · [What is ECG risk stratification?](../../resources/beyond-normal-or-abnormal.md)

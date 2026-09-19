@@ -93,4 +93,4 @@ That consistency is what makes it work at scale. A framework that behaves identi
 ## Related
 
 - [The algorithm](technology.md) · [Clinical validation](clinical-validation.md) · [Regulatory and safety](regulatory-and-safety.md)
-- [Beyond "normal" or "abnormal"](../resources/beyond-normal-or-abnormal.md) · [Glossary](glossary/index.md)
+- [What is ECG risk stratification?](../resources/beyond-normal-or-abnormal.md) · [Glossary](glossary/index.md)

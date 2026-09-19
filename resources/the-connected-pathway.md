@@ -8,10 +8,12 @@ reading_time: 15 min
 doc_type: article
 topics: connected care pathway, InstaECG, LVEF, InstaEcho, KeeboHealth
 entity: Tricog CardioCheck
-last_updated: 2026-09-10
+last_updated: 2026-09-19
 ---
 
 # From a Busy OPD to Care at Home: The Tricog Connected Pathway
+
+A crowded OPD has one queue that everyone can see and another that the clinical team has to work out. The visible queue runs by registration number and arrival time, while the clinical queue must run by risk, even when that risk is not obvious from how a patient looks or from the complaint written in the file.
 
 Let us imagine three people sitting a few chairs apart – First one has come for a routine follow-up and mentions occasional discomfort only when the nurse probes. The second one reports chest heaviness but is still speaking normally and does not appear acutely ill. The third has known hypertension and diabetes and has recently become more breathless while doing ordinary household work. They have entered through the same door, but they do not necessarily have to wait in the same order or undergo the same tests.
 
@@ -19,11 +21,7 @@ The clinical team has limited time and incomplete information. It needs to decid
 
 The Tricog Connected Pathway begins at this point, before a final diagnosis even starts. It gives each patient a route based on the results at the current stage, rather than placing everyone on the same testing track of Consultation Probing Symptom-based evaluation and revisit. The pathway brings together several products and clinical services in one ecosystem it is best understood through the decisions that clinicians already make: identify risk, obtain a diagnostic ECG, assess for hidden heart failure risk, confirm the finding when necessary, and continue monitoring after treatment (though most may be disconnected). Each stage uses the level of technology and specialist support appropriate to that decision. Patients who do not need the next step can return to routine care, while those who do can move forward without avoidable delay.
 
-Tricog Connected Pathways: from early risk identification to
-
-post-discharge care
-
-Deciding who needs attention first
+## Deciding who needs attention first
 
 People do not arrive with a label saying “cardiac patient”. Their symptoms may have several causes, and a detailed cardiac work-up for everyone in a busy OPD would be neither practical nor affordable. At the same time, relying solely on how ill someone looks can overlook patients whose risk is real but not immediately apparent.
 
@@ -35,7 +33,7 @@ In a smaller clinic, the same screening result serves a different but equally us
 
 The value of TCC comes from the minimal infrastructure it asks for. A quick, low-cost screening step can be placed close to the patient, whether at an OPD triage desk, a primary care clinic, a community health programme, or another point of first contact. It helps them make a better first decision. The three patients in the waiting area may now take three different routes. The first receives a normal screening result and, if the rest of the clinical assessment is reassuring, returns to the usual OPD process. The patient with chest heaviness produces a critical signal and is brought forward for urgent medical review. The patient with hypertension, diabetes and increasing breathlessness is classified as abnormal. That patient is stable, but the result gives the team reason to investigate further rather than offering only a vague instruction to return if symptoms worsen.
 
-Moving from a risk signal to a clinical ECG report
+## Moving from a risk signal to a clinical ECG report
 
 The next investigation for the critical and abnormal pathways is a standard 12-lead ECG. At a tertiary hospital, it can usually be done on-site. In a clinic without 12-lead capability, the TCC result can support referral to a diagnostic centre or larger hospital. Clinics that already have a compatible ECG machine can also connect it to the Tricog ecosystem to obtain a diagnosis in under 6 minutes.
 
@@ -45,11 +43,11 @@ There is a straightforward reason why speed matters in ECG reporting: a 12-lead 
 
 The report also creates a very important branch in the pathway: if the ECG is normal and there is no ongoing clinical concern, the patient can return to the appropriate routine assessment. A normal ECG does not cancel symptoms or replace a doctor’s judgment, but it prevents the cardiac pathway from becoming a conveyor belt that sends everyone for advanced testing. If the ECG shows a critical finding, the treating team can activate the relevant emergency or treatment pathway, which may include an urgent cardiology review, transfer to a tertiary hub, a cath lab evaluation, or another intervention based on the diagnosis. In networked programmes, Tricog’s Cardionet platform can support
 
-Communication and coordination among the referring centre, cardiologist, ambulance team, and receiving hospital, so that the critical alert is linked to an actual transfer of care (such as Tricog’s STEMI Goa Program ). If the ECG is abnormal but not immediately critical, a further question arises: could this patient also be at risk of impaired cardiac function?
+Communication and coordination among the referring centre, cardiologist, ambulance team, and receiving hospital, so that the critical alert is linked to an actual transfer of care (such as Tricog’s STEMI Goa Program). If the ECG is abnormal but not immediately critical, a further question arises: could this patient also be at risk of impaired cardiac function?
 
 The 12-lead reports now further separate the two patients. The critical screen is confirmed as a finding requiring urgent action, allowing the treating team to move the patient into the appropriate acute-care route. The ECG from the patient with breathlessness does not show an event requiring immediate cath lab transfer, but it is not normal. The clinician has diagnostic information to guide the next decision, and the same ECG can also be examined for a risk that may otherwise remain hidden.
 
-Finding heart failure risk in the ECG that has already been taken
+## Finding heart failure risk in the ECG that has already been taken
 
 Heart failure can be difficult to identify early, particularly when symptoms are mild, non-specific or attributed to age, weight, diabetes or hypertension. Echocardiography is central to assessing the structure and pumping function of the heart, but it is not realistic to perform an echo on every patient who reports fatigue or breathlessness. Access is also uneven, especially outside larger hospitals, and so are costs and infrastructure.
 
@@ -57,11 +55,11 @@ The Tricog LVEF algorithm adds a heart failure risk assessment to the 12-lead EC
 
 The algorithm does not diagnose heart failure, and it does not replace echocardiography. It acts as a screening layer between a widely available test and a more specialised (and rather expensive) one. A low-risk result can help the care team use echo capacity more effectively, subject to the patient’s clinical picture. A high-risk result provides a reason to arrange an echo even when the ECG report alone does not fully explain the patient’s symptoms.
 
-This approach has been tested in the kind of setting for which it is intended. In a prospective study published in JAMA Cardiology in 2026 , 1,444 adults across eight healthcare facilities in Kenya underwent both ECG-based AI screening and echocardiography. For detecting left ventricular systolic dysfunction, defined in the study as LVEF below 40%, the AI-ECG algorithm achieved 95.6% sensitivity and a 99.1% negative predictive value. The study, therefore, offers real-world evidence for the pathway itself: a widely available ECG can be used to screen at scale, after which an echo can be directed to patients at higher risk, with limited additional burden on the existing workflow.
+This approach has been tested in the kind of setting for which it is intended. In a prospective study published in JAMA Cardiology in 2026, 1,444 adults across eight healthcare facilities in Kenya underwent both ECG-based AI screening and echocardiography. For detecting left ventricular systolic dysfunction, defined in the study as LVEF below 40%, the AI-ECG algorithm achieved 95.6% sensitivity and a 99.1% negative predictive value. The study, therefore, offers real-world evidence for the pathway itself: a widely available ECG can be used to screen at scale, after which an echo can be directed to patients at higher risk, with limited additional burden on the existing workflow.
 
 The LVEF risk assessment in the abnormal pathway is positive. This does not tell the patient that heart failure has been diagnosed. It indicates to the clinical team that there is sufficient concern to proceed with the test that directly examines the heart’s structure and function.
 
-Confirming the problem through echocardiography
+## Confirming the problem through echocardiography
 
 An echocardiogram depends on two capabilities that are not always available together. The images must be acquired properly and interpreted by someone with the required expertise. A hospital may have an echo machine and a trained technician, but limited capacity for specialist reporting. A smaller centre may be able to arrange the study but still rely on a visiting cardiologist, thereby extending the time between testing and treatment. InstaEcho connects these parts of the process. Echo views and measurements acquired at the care centre are digitised and uploaded for review. Tricog’s AI-assisted tools support measurements, annotations and the first layer of interpretation, while a cardiac expert reviews the study and authorises the final structured report. The report is then returned to the treating facility in the required format, typically within a few hours under the current service model.
 
@@ -71,7 +69,7 @@ For the patient, the practical gain is time. The sequence from an abnormal scree
 
 In this pathway, the echo confirms reduced left ventricular function. The patient’s symptoms, clinical examination, ECG and echo findings can now be considered together by the cardiologist. What began as a non-specific complaint has become a defined clinical problem with a treatment plan. Interesting point to note here – the pathway has not replaced any of the clinicians involved. It has helped each of them receive the information needed for the next decision while the patient is still within reach of care.
 
-Treatment is a major milestone, but it is not the end of the pathway.
+## Treatment is a major milestone, but it is not the end of the pathway.
 
 Once a diagnosis is made, patients may enter very different treatment routes. Someone with an acute coronary syndrome may require urgent transfer and cath lab care, and may further need angioplasty or coronary artery bypass. A patient with heart failure may begin or have adjustments to guideline-directed medical therapy, along with management of blood pressure, diabetes, fluid status and other risk factors. The pathway must allow the cardiologist to choose among these options rather than pushing every abnormal result into the same protocol.
 
@@ -79,7 +77,7 @@ Hospitals are generally well organised around the visible episodes of care: admi
 
 If the connected pathway ends at discharge, it ends precisely when the hospital’s view of the patient becomes weakest – And this is where the risk of relapse and readmission starts to grow.
 
-Extending cardiac care into the patient’s home with KeeboHealth
+## Extending cardiac care into the patient’s home with KeeboHealth
 
 KeeboHealth carries the pathway into the post-discharge period. Depending on the patient’s condition and the programme selected by the treating doctor/medical team, connected devices and patient-reported inputs can integrate information such as blood pressure, pulse, weight, ECG, oxygen saturation, activity, symptoms, and blood glucose. The data is available to the monitoring team, which can identify concerning changes, follow up with the patient and escalate relevant information to the treating clinician.
 
@@ -89,17 +87,16 @@ The idea is not to create endless data and readings for a cardiologist to inspec
 
 After the treatment plan has been established and the patient is discharged, the next meaningful update no longer has to wait until the follow-up visit. The measures selected by the care team (and guided by the treating doctor) can be recorded from home in the simplest way possible. If weight begins to increase over several days, blood pressure becomes persistently abnormal, symptoms change, or an ECG raises a concern for arrhythmia, the care team has a basis for follow-up. Many readings will require no intervention, which is exactly how routine monitoring should ideally work. In the absence of a reading, the patient’s phone rings with a prompt reminder to adhere to the prescribed routine. The value lies in making a relevant change visible early enough for a clinician to decide what, if anything, should be done.
 
-One pathway, adapted to two very different healthcare settings
+## One pathway, adapted to two very different healthcare settings
 
 The Tricog Connected Pathway does not expect a small clinic and a tertiary hospital to work in the same way.
-
 At a tertiary hospital, the main pressure is often volume. The hospital may already have ECG and Echo machines, cardiologists, and a cath lab, but that capacity is shared among many patients. TCC helps create order at the front of the OPD. InstaECG and InstaEcho help reduce reporting delays. The LVEF assessment provides another useful signal without requiring an additional test. Critical cases can be moved faster, while normal and lower-risk patients do not consume advanced capacity unnecessarily. KeeboHealth gives the hospital a way to maintain selected patients on an organised follow-up pathway after discharge.
 
 At a smaller clinic or healthcare centre, the first requirement is to recognise the risks with the infrastructure available locally (which is often limited). TCC supports that first decision. If a 12-lead ECG can be acquired on site, InstaECG can connect the clinic to remote interpretation; if it cannot, the screening result supports a referral. The LVEF assessment can identify which abnormal ECGs need an echo, and InstaEcho can support reporting where image acquisition is available. When advanced treatment is required, the patient can be referred to the appropriate hospital with a clearer clinical picture and a digital trail of the investigations already performed.
 
 Expanding access to cardiac care does not require every facility to have every capability, and it can easily be enabled in the neighbourhood clinic we often walk to when we feel uneasy. It requires each facility to recognise what it can do safely, connect to the next level when required, and avoid losing the patient in between.
 
-A connected pathway is more than a group of connected products.
+## A connected pathway is more than a group of connected products.
 
 Digital health programmes often begin with a device and then look for a place to use it. The Tricog Connected Pathway begins with the points at which cardiac care generally slows down – the patient is not identified early, the ECG is acquired but not interpreted in time, heart failure risk remains hidden, an echo is delayed, or follow-up becomes episodic after discharge.
 
@@ -109,7 +106,7 @@ Patients do not have to complete all five steps. In fact, a well-designed pathwa
 
 The pathway also makes better use of specialist time. Cardiologists and cardiac experts remain central, but their expertise can extend beyond the room in which they sit.
 
-The Tricog story is moving from faster reports to continuity of care.
+## The Tricog story is moving from faster reports to continuity of care.
 
 Tricog began by addressing one of the most immediate problems in cardiac care: an ECG taken at the point of need should not have to wait for an expert interpretation. That work established a model in which technology and a medical team could bring timely cardiac reporting to facilities across different levels of care.
 

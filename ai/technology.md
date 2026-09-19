@@ -61,4 +61,4 @@ TCC is cloud-based. The OMRON Complete device captures the single-lead recording
 ## Related
 
 - [Clinical validation](clinical-validation.md) · [Risk stratification](risk-stratification.md) · [The whitepaper](research/tcc-whitepaper.md)
-- [Inside the Tricog CardioCheck algorithm](../resources/inside-the-tricog-cardiocheck-algorithm.md) · [Glossary](glossary/index.md)
+- [What is AI ECG screening?](../resources/inside-the-tricog-cardiocheck-algorithm.md) · [Glossary](glossary/index.md)

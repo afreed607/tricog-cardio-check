@@ -11,7 +11,7 @@ Company: Tricog Health (Tricog Health Services Private Limited). Product site: h
 ## Version and status
 
 - **Version**: 1.0
-- **Last updated**: 2026-09-09
+- **Last updated**: 2026-09-19
 - **Canonical URL**: https://tricogcardiocheck.com/llms-full.txt
 - **Index companion**: https://tricogcardiocheck.com/llms.txt
 - **Maintained by**: Tricog Health. This file is authored by the company and is the authoritative machine-readable description of Tricog CardioCheck.
@@ -196,144 +196,196 @@ Yes. Tricog CardioCheck is CDSCO-certified as Software as a Medical Device (SaMD
 
 # Part 3 — Articles, in full
 
-## Inside the Tricog CardioCheck algorithm
+## What Is AI ECG Screening? Inside the Tricog CardioCheck Algorithm
 
 *Jun 19, 2026 · 8 min read · https://tricogcardiocheck.com/resources/inside-the-tricog-cardiocheck-algorithm*
 
-**Quick answer:** AI ECG screening uses a trained algorithm to read an ECG and return a risk category in seconds, with no specialist in the loop. Tricog CardioCheck applies it to a 30-second single-lead ECG, reading beat shape, ST-segment and T-wave change, and rhythm simultaneously, then classifying every trace as Low, Moderate or High risk.
+**Quick answer:** AI ECG screening is a way of using an AI to look at an ECG and flag patients who may need a closer look within seconds. Tricog CardioCheck takes that idea and applies it to a 30-second single-lead ECG, producing a Low, Moderate or High risk assessment.
 
 ### What is AI ECG screening?
 
-AI ECG screening is the use of a deep learning model to interpret an ECG trace at the point of capture and assign it a clinical priority. The doctor still decides. The algorithm decides who the doctor sees first.
+Put simply, AI ECG screening uses a trained AI model to analyse an ECG at the point of capture and provide a risk assessment. The doctor still makes the clinical decision. The AI helps identify which patients may need further evaluation sooner.
 
-That distinction matters more in India than almost anywhere else. A 2026 *European Heart Journal* review puts the country at roughly 5,500 cardiologists as of 2021 — about one per 30,000 people — while cardiovascular disease accounted for 29.5% of all Indian deaths in 2021, or 2.87 million people. The WHO attributes 45% of deaths in the 40–69 age group to CVD. India does not have an ECG shortage. It has a shortage of people qualified to read one quickly.
+That distinction matters in India, where access to timely cardiac evaluation can vary widely between healthcare settings. A 2026 *European Heart Journal* review puts the country at roughly 5,500 cardiologists as of 2021; about one per 30,000 people; while cardiovascular disease accounted for 29.5% of all Indian deaths in 2021, or 2.87 million people. The WHO attributes 45% of deaths in the 40–69 age group to CVD. The challenge is not simply capturing an ECG. It is getting the right clinical attention to the right ECG at the right time.
 
-### Why do most single-lead ECG algorithms only detect rhythm?
+### Why is single-lead ECG usually associated with rhythm monitoring?
 
-Most single-lead algorithms detect rhythm because they were designed as rhythm monitors, not screening tools. They report heart rate, R-R interval variability and sometimes atrial fibrillation, and stop there. The result is a category-wide assumption that single-lead ECG is a consumer rhythm gadget, useful for palpitations and nothing else.
+Many single-lead ECG devices are designed primarily for rhythm monitoring, such as identifying irregular rhythms. But a single-lead ECG contains waveform information beyond heart rate alone. That makes them useful for questions about rhythm, but cardiac screening can involve a broader set of ECG features. The result is a category-wide assumption that single-lead ECG is a consumer rhythm gadget, useful for palpitations and nothing else.
 
-Tricog CardioCheck (TCC) is built on the opposite premise: a clean 30-second single-lead trace also carries structural and ischaemic information, provided the model reads it at more than one resolution.
+Tricog CardioCheck takes a different approach, using a 30-second single-lead ECG to generate a broader cardiac risk assessment rather than focusing only on rhythm.
 
-### How does the algorithm read one ECG at three scales?
+### How does an AI ECG algorithm analyse a single-lead ECG?
 
-TCC reads every trace at three temporal resolutions at once and fuses the three feature sets before it classifies anything. The design mirrors how a cardiologist works a strip: sweep for rhythm, interrogate individual beats, then judge the whole.
+TCC analyses characteristics of the ECG waveform and uses them to assign the trace to a Low, Moderate or High risk category. The idea is simple: don't look at just one part of the ECG. Look at the waveform as a whole and use the available signal to support risk assessment.
 
-**Fine scale — beat-level morphology.** QRS complex morphology, P-wave presence and shape, localised conduction anomalies. This is where the earliest silent indicators appear, in patients whose vitals look unremarkable.
+#### What can a single-lead ECG show?
 
-**Medium scale — ischaemic markers.** ST-segment deviation and T-wave abnormality: the band between a subtle waveform shift and overt disease, and the band a rhythm-only algorithm is structurally blind to.
+A single-lead ECG captures electrical activity from the heart over time. That waveform can contain information about rhythm and other ECG characteristics, although a single lead cannot replace a diagnostic 12-lead ECG.
 
-**Coarse scale — rhythm and trend.** Rhythm consistency and long-range trend across the full 30 seconds, catching irregularity that no single beat-level window would reveal.
+This is where AI ECG screening becomes interesting. An AI model can analyse patterns in the captured waveform consistently and provide an initial risk assessment for the clinical team.
 
-Because the three scales run in parallel rather than in sequence, a finding that is ambiguous at one resolution can be resolved by context from another. A borderline ST change is read against the rhythm it sits inside, not in isolation.
+### Why does the way an AI ECG algorithm analyses the waveform matter?
 
-### Why is a multi-scale model more accurate than a single-scale one?
+An ECG waveform contains information at different levels, from individual waveform features to patterns across the recording. How an AI model processes those signals can therefore affect what it is able to identify. The challenge is separating meaningful ECG patterns from noise, movement and other sources of signal variation.
 
-A single-resolution model forces a trade-off that cannot be won. Tune it for fine waveform detail and it over-reads motion artefact, flooding the clinic with false alarms. Tune it for rhythm and it misses ST-segment and T-wave change, which is where much of ischaemia declares itself. Most products land in the middle and are mediocre at both.
+That is the entire architectural argument, and it is what allows a single lead to function as a screening instrument instead of a rhythm alert.
 
-Reading all three horizons simultaneously removes the trade-off rather than splitting it. That is the entire architectural argument, and it is what allows a single lead to function as a screening instrument instead of a rhythm alert.
+### What does Tricog CardioCheck detect at each risk level?
 
-### What it detects at each risk level
+TCC provides one of three risk categories, Low, Moderate or High, to help guide the next step in the clinical workflow.
 
-High risk — time-critical findings including myocardial infarction and atrial fibrillation, where the Golden Hour is the binding constraint.
+**High risk** — Findings that may require prompt clinical evaluation, including conditions such as atrial fibrillation or myocardial infarction.
 
-Moderate risk — ventricular hypertrophy and ischaemia. Not immediately life-threatening, but requiring focused evaluation in days, not weeks.
+**Moderate risk** — ECG findings that may warrant further evaluation, such as signs associated with ischaemia or ventricular hypertrophy.
 
-Low risk — normal sinus rhythm and benign variants, allowing stable patients to be routed out of critical pathways.
+**Low risk** — The ECG does not show findings that trigger the higher-risk pathway. A Low-risk result does not rule out cardiac disease, so clinical judgement still matters.
 
-The low-risk category is the one buyers underrate. Screening tools get judged on what they catch, but in a clinic running forty patients through one physician, a confident clearance is worth as much as a flag.
+Low-risk results matter too. In a busy clinic, screening is not only about finding patients who need attention. It is also about helping the clinical team organise the next step for everyone being screened.
 
-### How accurate is it?
+### How accurate is AI ECG screening on a single lead?
 
-These are the figures Tricog reports on held-out benchmark data.
+Here are the performance figures reported by Tricog from its validation data.
 
-AUROC 0.909 [95% CI 0.905–0.913] overall discrimination.
+### Reported performance
 
-85.9% sensitivity [84.6–87.0] at 92.2% specificity [91.6–92.9] for high-risk detection.
+- **Overall discrimination:** AUROC 0.909 (95% CI 0.905–0.913)
+- **High-risk detection:** 85.9% sensitivity (84.6–87.0) at 92.2% specificity (91.6–92.9)
+- **Low-risk classification:** 90.2% sensitivity (89.2–91.2)
+- **Training data:** millions of ECGs, with class imbalance corrected explicitly
 
-90.2% sensitivity [89.2–91.2] for low-risk classification.
+Class imbalance is a common challenge when training medical AI models because some findings occur much less frequently than others. How that imbalance is handled can affect model performance.
 
-Trained on millions of ECGs, with class imbalance corrected explicitly.
+### Can an AI ECG algorithm override a cardiologist?
 
-That last line carries real weight. Life-threatening findings are rare in any real dataset, so a naively trained model becomes excellent at recognising normal and quietly unreliable at recognising emergencies. Correcting class imbalance during training is also what keeps performance stable across demographic groups, because rare cases stop being treated as noise.
+No. TCC is intended to support clinical triage, not replace the clinician's decision. Its risk assessment is one input into deciding whether a patient may need further evaluation.
 
-### Can it override a cardiologist?
+The commercial consequence is worth saying plainly. Everything above the floor is upside — which is a rare risk profile for clinical AI.
 
-No. TCC is additive by design: it can escalate a patient's priority and can never downgrade it or override a clinical decision.
+### Where does AI ECG screening fit into a clinic’s workflow?
 
-The commercial consequence is worth saying plainly. Because the model only pushes patients up the queue, deploying it cannot make triage worse than current practice. The floor is no change. Everything above the floor is upside — which is a rare risk profile for clinical AI.
+It can sit near the front of the patient journey, alongside routine vital checks. The ECG can be captured alongside routine vitals, with the TCC risk assessment available in about ten seconds after the recording. The aim is to provide an initial risk assessment at the point of care, without requiring every ECG to wait for specialist interpretation before the next clinical step is considered.
 
-### Where it fits in the workflow
+That is the role of TCC: an AI-powered cardiac risk screening layer that can fit into the workflow where the patient is already being assessed.
 
-At the front of it. The ECG is captured alongside vitals, the risk category appears in about ten seconds, and the queue reorders before the first patient is called in. No upload-and-wait, no specialist backlog, and no cardiologist time spent confirming normal sinus rhythm.
+### Frequently asked questions
 
-That is what TCC actually sells: not an ECG reader, but a triage layer that runs where the patient already is.
+#### Is a single-lead ECG accurate enough for cardiac risk screening?
 
-### FAQ
+A single-lead ECG can be used as part of a screening and triage pathway, but it does not replace diagnostic evaluation or a 12-lead ECG when one is clinically required. Tricog CardioCheck reports AUROC 0.909 and 85.9% sensitivity for high-risk findings on a 30-second single-lead trace. It is not a substitute for a 12-lead ECG or a diagnosis.
 
-**Is a single-lead ECG accurate enough for cardiac risk screening?**
-For screening and triage, yes, provided the algorithm reads more than rhythm. TCC reports AUROC 0.909 and 85.9% sensitivity for high-risk findings on a 30-second single-lead trace. It is not a substitute for a 12-lead ECG or a diagnosis.
+#### How long does an AI ECG screening result take?
 
-**How long does an AI ECG screening result take?**
-About ten seconds after a 30-second capture, delivered at the point of care rather than after a specialist read.
+TCC provides its risk assessment in about ten seconds after the 30-second ECG recording, allowing the result to be available at the point of care.
 
-**Can AI ECG screening clear a patient as low risk?**
-It classifies low-risk traces with 90.2% sensitivity, which is what makes it safe for routing stable patients out of critical pathways. A clinician can escalate a low-risk result at any time; the model cannot de-escalate anyone.
+#### Can AI ECG screening clear a patient as low risk?
+
+TCC reports 90.2% sensitivity for low-risk classification in its reported validation data. A Low-risk result should not be interpreted as ruling out cardiac disease, and clinical assessment remains important. A clinician can escalate a low-risk result at any time; the model cannot de-escalate anyone.
+
+#### What AI ECG screening can — and cannot — tell you
+
+AI ECG screening is designed to support clinical triage. It is not the same thing as making a diagnosis.
+
+A Low, Moderate or High result provides a risk assessment based on the ECG. The clinician still considers symptoms, medical history, examination and other clinical information when deciding what happens next.
+
+When further evaluation is needed, a 12-lead ECG or other clinical assessment may be appropriate.
+
+The interesting thing about AI ECG screening isn’t that a machine can read an ECG.
+
+It’s what happens when that capability becomes available early in the patient journey.
+
+A 30-second single-lead ECG can become an additional screening step. The AI provides a risk assessment. The clinical team decides what happens next.
+
+That is where Tricog CardioCheck fits: bringing AI-powered cardiac risk screening closer to the point of care.
 
 ---
 
-## Tricog CardioCheck in action: where mission meets reality
+## Where Mission Meets Reality: 400 Cardiac Screenings in a Single Day at a Village Clinic
 
 *Jun 8, 2026 · 5 min read · https://tricogcardiocheck.com/resources/tricog-cardiocheck-in-action*
 
-For years, we've spoken about our mission: early detection and timely treatment of heart disease at scale. On June 8, that mission moved from idea to impact in one of the most meaningful settings possible the Village Clinic founded by my father, Dr. Ramana Rao.
+On 8 June 2025, Tricog ran its first large-scale field deployment of Tricog CardioCheck at a village clinic outside Bengaluru. Over 400 patients were screened in one day using AI-powered single-lead ECG, with moderate and high-risk patients referred straight to a 12-lead ECG and a doctor.
 
-This was our first large-scale field deployment of Tricog CardioCheck (TCC), our AI-powered single-lead ECG screening tool that classifies patients into Low, Moderate, or High cardiac risk.
+### What happened at the Village Clinic on 8 June 2025?
 
-### A legacy of care
+For years, Tricog has spoken about a single mission: early detection and timely treatment of heart disease at scale. On 8 June 2025, that mission moved from idea to impact in one of the most meaningful settings possible; the Village Clinic founded by Dr. Ramana Rao on the outskirts of Bengaluru.
 
-Fifty years of Sundays.
+Every Sunday for more than five decades, Dr. Ramana Rao has opened the doors of the Village Clinic to hundreds of patients who may otherwise have had no access to care. His consistency, compassion and clinical discipline have inspired generations of physicians. For the team at Tricog, this setting was not just familiar. It was personal.
 
-Every Sunday for over five decades, my father has opened the doors of his Village Clinic on the outskirts of Bengaluru to hundreds of patients who may otherwise have had no access to care. His consistency, compassion, and clinical discipline have inspired generations.
+It allowed Tricog to take Tricog CardioCheck (TCC) into the real world and serve the people who need it most.
 
-For us at Tricog, this setting was not just familiar, it was deeply personal. It allowed us to bring Tricog CardioCheck into the real world and serve those who need it most.
+### Why does India need cardiac screening outside hospitals?
 
-### Our Objective
+The case for community screening is not a marketing argument. It is an arithmetic one.
 
-Screen at scale. Six OMRON Complete Devices screened patients waiting outside the clinic, while a dedicated station inside ensured no one was missed.
+- Cardiovascular disease accounted for **28.1% of all deaths in India in 2016**, up from 15.2% in 1990, according to the Global Burden of Disease analysis published in *The Lancet Global Health*.
+- WHO India reports that cardiovascular conditions are responsible for **nearly half of all deaths among Indians aged 40 to 69** — the working years, not old age.
+- India had roughly **5,500 cardiologists nationwide as of 2021**, per a 2026 *European Heart Journal* review, for a population above 1.4 billion.
+- The Ministry of Health and Family Welfare’s Rural Health Statistics 2022-23 recorded **21,964 specialist posts required at rural Community Health Centres against just 4,413 in position** — a shortfall of close to 80%.
 
-Two volunteers per point. One guided patient posture, collected details, and explained the result. The other logged the data and coordinated next steps.
+Diagnosis, not treatment, is the bottleneck. A person in a village with early, silent cardiac risk has no realistic first step. They do not see a cardiologist because there isn’t one nearby, and they do not get an ECG because nobody is looking. Screening has to travel to them.
 
-Refer onward. Patients identified as Moderate or High risk were referred for a 12-lead ECG and further care.
+### How does AI-powered single-lead ECG screening work?
 
-Clinical decisions stayed with the treating doctors throughout. TCC's job was to sort the queue and surface who needed attention first, not to diagnose.
+A conventional 12-lead ECG needs a machine, a technician and a doctor to interpret the trace. AI-powered screening compresses that chain. A patient places their fingers on a handheld device, a single-lead ECG is captured in about 30 seconds, and an algorithm returns a risk classification.
 
-### What we witnessed
+TCC works this way. ECG data captured on an OMRON Complete blood pressure monitor with integrated ECG is transmitted to the cloud, analysed by Tricog’s algorithms, and returned through a clinician-facing app as a three-level risk assessment — Low, Moderate or High — in approximately 10 seconds.
 
-Several patients expressed relief after receiving a Low-risk result and encouraged family members to get screened. Others approached us with curiosity, eager to understand how the device worked and what it could tell them.
+The important design choice is what the tool does *not* do. It does not diagnose. It sorts a queue, so that scarce specialist attention lands on the people most likely to need it.
 
-When my father and his team experienced the screening themselves, they shared thoughtful and encouraging feedback. Their appreciation of both the platform and the presence of our volunteers meant a great deal to all of us.
+That framing is supported by the evidence base. In a 2025 *npj Digital Medicine* analysis of the VITAL-AF randomised trial, an AI model applied to handheld single-lead ECGs from 15,694 primary care patients aged 65 and over predicted two-year incident atrial fibrillation with an AUROC of 0.695 — statistically comparable to the established CHARGE-AF clinical risk score at 0.679. Modest standalone discrimination; meaningful value as a filter.
 
-### By the numbers
+### How do you run a cardiac screening camp for 400 patients?
 
-Over 400 patients screened in a single day.
+The operating model on 8 June was deliberately simple.
 
-A complete care journey: TCC, then 12-lead ECG, then clinical consult.
+- **Six devices, two locations.** Six OMRON Complete devices screened patients waiting outside the clinic, with a dedicated station inside so nobody in the queue was missed.
+- **Two volunteers per screening point.** One guided patient posture, collected details and explained the result. The other logged the data and coordinated next steps. Splitting the human role from the data role kept throughput up without rushing patients.
+- **A defined referral path.** Patients identified as Moderate or High risk were referred for a 12-lead ECG and further care. Clinical decisions remained with the treating doctors throughout.
 
-Field validation of TCC's device performance, app sync, and workflow.
+#### What did the deployment reveal?
 
-Rich feedback from patients, doctors, and stakeholders on usability and experience.
+Three things, none of them algorithmic.
+
+Low-risk results changed behaviour. Several patients expressed relief after receiving a Low-risk result, and went on to encourage family members to get screened.
+
+Curiosity was an asset. Others approached the stations eager to understand how the device worked and what it could tell them, and explaining it built trust faster than any messaging could.
+
+The operational layer mattered most. Device performance, app sync and queue workflow were what determined whether 400 screenings happened or 150 did. When Dr. Ramana Rao and his team experienced the screening themselves, their feedback on both the platform and the presence of Tricog’s volunteers meant a great deal to everyone involved.
 
 ### The team that made it possible
 
-This initiative was driven by people who showed up with ownership, care, and quiet determination. Thank you, Vamshi, Anil, Yashodhara, Praveen, Prajwal, Jeeshitha, Sarayu, Rajesh, Ashrit, Priyanka, Pratistha, Debjani, Zainul, Dr. Sudha, and Ankur. Each of you made it work: for the patients, for the clinic, and for what we are building.
+This initiative was driven by people who showed up with ownership, care and quiet determination: Vamshi, Anil, Yashodhara, Praveen, Prajwal, Jeeshitha, Sarayu, Rajesh, Ashrit, Priyanka, Pratistha, Debjani, Zainul, Dr. Sudha and Ankur.
+
+Each of them made it work — for the patients, for the clinic, and for what Tricog is building.
+
+### By the numbers
+
+- Over 400 patients screened in a single day
+- A complete care journey from TCC to 12-lead ECG to clinical consult
+- Field validation of TCC’s device performance, app sync and end-to-end workflow
+- Rich feedback from patients, doctors and stakeholders on usability and experience
 
 ### Why this matters
 
-This was not a test run. It was a moment of truth. A reminder that in healthcare, scale and science must stay rooted in trust and connection. That technology only becomes meaningful when it reaches real people, in real need, and in real time.
+This was not a test run. It was a moment of truth, and a reminder that in healthcare, scale and science must stay rooted in trust and connection. Technology only becomes meaningful when it reaches real people, in real need, in real time.
 
-### Let's keep building
+Tricog will continue to refine Tricog CardioCheck and strengthen every aspect of the experience. But 8 June was a reminder of what matters most: purpose, when backed by people, creates lasting change.
 
-We will continue to refine Tricog CardioCheck and strengthen every aspect of the experience. But June 8 reminded us of what matters most: that purpose, when backed by people, creates lasting change. With science. With empathy. With intent.
+Let’s keep building. With science. With empathy. With intent.
+
+### Frequently asked questions
+
+#### Is AI-powered ECG screening a replacement for a cardiologist?
+
+No. It sorts patients by risk level and prioritises referrals. Diagnosis and treatment decisions remain with the treating physician.
+
+#### How long does one screening take?
+
+Roughly 30 seconds to capture the ECG, with a cloud-analysed risk result returned in about 10 seconds on TCC. Most of the real-world time goes to registration and explaining results.
+
+#### Can non-specialists run the screening?
+
+Yes. Trained health workers or volunteers can capture readings and communicate results, which is what makes community-scale screening possible where specialists are unavailable.
 
 ---
 
@@ -341,17 +393,15 @@ We will continue to refine Tricog CardioCheck and strengthen every aspect of the
 
 *Jul 21, 2026 · 15 min read · https://tricogcardiocheck.com/resources/the-connected-pathway*
 
+A crowded OPD has one queue that everyone can see and another that the clinical team has to work out. The visible queue runs by registration number and arrival time, while the clinical queue must run by risk, even when that risk is not obvious from how a patient looks or from the complaint written in the file.
+
 Let us imagine three people sitting a few chairs apart – First one has come for a routine follow-up and mentions occasional discomfort only when the nurse probes. The second one reports chest heaviness but is still speaking normally and does not appear acutely ill. The third has known hypertension and diabetes and has recently become more breathless while doing ordinary household work. They have entered through the same door, but they do not necessarily have to wait in the same order or undergo the same tests.
 
 The clinical team has limited time and incomplete information. It needs to decide who can continue through the normal OPD process, who needs a fuller cardiac evaluation, and who may require immediate attention. In a large tertiary hospital, this decision determines how quickly emergency and cardiology resources reach the right people. In a smaller clinic, it determines whether a patient can be managed locally or should be referred to a tertiary hospital or a cardiologist for further investigation.
 
 The Tricog Connected Pathway begins at this point, before a final diagnosis even starts. It gives each patient a route based on the results at the current stage, rather than placing everyone on the same testing track of Consultation Probing Symptom-based evaluation and revisit. The pathway brings together several products and clinical services in one ecosystem it is best understood through the decisions that clinicians already make: identify risk, obtain a diagnostic ECG, assess for hidden heart failure risk, confirm the finding when necessary, and continue monitoring after treatment (though most may be disconnected). Each stage uses the level of technology and specialist support appropriate to that decision. Patients who do not need the next step can return to routine care, while those who do can move forward without avoidable delay.
 
-Tricog Connected Pathways: from early risk identification to
-
-post-discharge care
-
-Deciding who needs attention first
+### Deciding who needs attention first
 
 People do not arrive with a label saying “cardiac patient”. Their symptoms may have several causes, and a detailed cardiac work-up for everyone in a busy OPD would be neither practical nor affordable. At the same time, relying solely on how ill someone looks can overlook patients whose risk is real but not immediately apparent.
 
@@ -363,7 +413,7 @@ In a smaller clinic, the same screening result serves a different but equally us
 
 The value of TCC comes from the minimal infrastructure it asks for. A quick, low-cost screening step can be placed close to the patient, whether at an OPD triage desk, a primary care clinic, a community health programme, or another point of first contact. It helps them make a better first decision. The three patients in the waiting area may now take three different routes. The first receives a normal screening result and, if the rest of the clinical assessment is reassuring, returns to the usual OPD process. The patient with chest heaviness produces a critical signal and is brought forward for urgent medical review. The patient with hypertension, diabetes and increasing breathlessness is classified as abnormal. That patient is stable, but the result gives the team reason to investigate further rather than offering only a vague instruction to return if symptoms worsen.
 
-Moving from a risk signal to a clinical ECG report
+### Moving from a risk signal to a clinical ECG report
 
 The next investigation for the critical and abnormal pathways is a standard 12-lead ECG. At a tertiary hospital, it can usually be done on-site. In a clinic without 12-lead capability, the TCC result can support referral to a diagnostic centre or larger hospital. Clinics that already have a compatible ECG machine can also connect it to the Tricog ecosystem to obtain a diagnosis in under 6 minutes.
 
@@ -373,11 +423,11 @@ There is a straightforward reason why speed matters in ECG reporting: a 12-lead 
 
 The report also creates a very important branch in the pathway: if the ECG is normal and there is no ongoing clinical concern, the patient can return to the appropriate routine assessment. A normal ECG does not cancel symptoms or replace a doctor’s judgment, but it prevents the cardiac pathway from becoming a conveyor belt that sends everyone for advanced testing. If the ECG shows a critical finding, the treating team can activate the relevant emergency or treatment pathway, which may include an urgent cardiology review, transfer to a tertiary hub, a cath lab evaluation, or another intervention based on the diagnosis. In networked programmes, Tricog’s Cardionet platform can support
 
-Communication and coordination among the referring centre, cardiologist, ambulance team, and receiving hospital, so that the critical alert is linked to an actual transfer of care (such as Tricog’s STEMI Goa Program ). If the ECG is abnormal but not immediately critical, a further question arises: could this patient also be at risk of impaired cardiac function?
+Communication and coordination among the referring centre, cardiologist, ambulance team, and receiving hospital, so that the critical alert is linked to an actual transfer of care (such as Tricog’s STEMI Goa Program). If the ECG is abnormal but not immediately critical, a further question arises: could this patient also be at risk of impaired cardiac function?
 
 The 12-lead reports now further separate the two patients. The critical screen is confirmed as a finding requiring urgent action, allowing the treating team to move the patient into the appropriate acute-care route. The ECG from the patient with breathlessness does not show an event requiring immediate cath lab transfer, but it is not normal. The clinician has diagnostic information to guide the next decision, and the same ECG can also be examined for a risk that may otherwise remain hidden.
 
-Finding heart failure risk in the ECG that has already been taken
+### Finding heart failure risk in the ECG that has already been taken
 
 Heart failure can be difficult to identify early, particularly when symptoms are mild, non-specific or attributed to age, weight, diabetes or hypertension. Echocardiography is central to assessing the structure and pumping function of the heart, but it is not realistic to perform an echo on every patient who reports fatigue or breathlessness. Access is also uneven, especially outside larger hospitals, and so are costs and infrastructure.
 
@@ -385,11 +435,11 @@ The Tricog LVEF algorithm adds a heart failure risk assessment to the 12-lead EC
 
 The algorithm does not diagnose heart failure, and it does not replace echocardiography. It acts as a screening layer between a widely available test and a more specialised (and rather expensive) one. A low-risk result can help the care team use echo capacity more effectively, subject to the patient’s clinical picture. A high-risk result provides a reason to arrange an echo even when the ECG report alone does not fully explain the patient’s symptoms.
 
-This approach has been tested in the kind of setting for which it is intended. In a prospective study published in JAMA Cardiology in 2026 , 1,444 adults across eight healthcare facilities in Kenya underwent both ECG-based AI screening and echocardiography. For detecting left ventricular systolic dysfunction, defined in the study as LVEF below 40%, the AI-ECG algorithm achieved 95.6% sensitivity and a 99.1% negative predictive value. The study, therefore, offers real-world evidence for the pathway itself: a widely available ECG can be used to screen at scale, after which an echo can be directed to patients at higher risk, with limited additional burden on the existing workflow.
+This approach has been tested in the kind of setting for which it is intended. In a prospective study published in JAMA Cardiology in 2026, 1,444 adults across eight healthcare facilities in Kenya underwent both ECG-based AI screening and echocardiography. For detecting left ventricular systolic dysfunction, defined in the study as LVEF below 40%, the AI-ECG algorithm achieved 95.6% sensitivity and a 99.1% negative predictive value. The study, therefore, offers real-world evidence for the pathway itself: a widely available ECG can be used to screen at scale, after which an echo can be directed to patients at higher risk, with limited additional burden on the existing workflow.
 
 The LVEF risk assessment in the abnormal pathway is positive. This does not tell the patient that heart failure has been diagnosed. It indicates to the clinical team that there is sufficient concern to proceed with the test that directly examines the heart’s structure and function.
 
-Confirming the problem through echocardiography
+### Confirming the problem through echocardiography
 
 An echocardiogram depends on two capabilities that are not always available together. The images must be acquired properly and interpreted by someone with the required expertise. A hospital may have an echo machine and a trained technician, but limited capacity for specialist reporting. A smaller centre may be able to arrange the study but still rely on a visiting cardiologist, thereby extending the time between testing and treatment. InstaEcho connects these parts of the process. Echo views and measurements acquired at the care centre are digitised and uploaded for review. Tricog’s AI-assisted tools support measurements, annotations and the first layer of interpretation, while a cardiac expert reviews the study and authorises the final structured report. The report is then returned to the treating facility in the required format, typically within a few hours under the current service model.
 
@@ -399,7 +449,7 @@ For the patient, the practical gain is time. The sequence from an abnormal scree
 
 In this pathway, the echo confirms reduced left ventricular function. The patient’s symptoms, clinical examination, ECG and echo findings can now be considered together by the cardiologist. What began as a non-specific complaint has become a defined clinical problem with a treatment plan. Interesting point to note here – the pathway has not replaced any of the clinicians involved. It has helped each of them receive the information needed for the next decision while the patient is still within reach of care.
 
-Treatment is a major milestone, but it is not the end of the pathway.
+### Treatment is a major milestone, but it is not the end of the pathway.
 
 Once a diagnosis is made, patients may enter very different treatment routes. Someone with an acute coronary syndrome may require urgent transfer and cath lab care, and may further need angioplasty or coronary artery bypass. A patient with heart failure may begin or have adjustments to guideline-directed medical therapy, along with management of blood pressure, diabetes, fluid status and other risk factors. The pathway must allow the cardiologist to choose among these options rather than pushing every abnormal result into the same protocol.
 
@@ -407,7 +457,7 @@ Hospitals are generally well organised around the visible episodes of care: admi
 
 If the connected pathway ends at discharge, it ends precisely when the hospital’s view of the patient becomes weakest – And this is where the risk of relapse and readmission starts to grow.
 
-Extending cardiac care into the patient’s home with KeeboHealth
+### Extending cardiac care into the patient’s home with KeeboHealth
 
 KeeboHealth carries the pathway into the post-discharge period. Depending on the patient’s condition and the programme selected by the treating doctor/medical team, connected devices and patient-reported inputs can integrate information such as blood pressure, pulse, weight, ECG, oxygen saturation, activity, symptoms, and blood glucose. The data is available to the monitoring team, which can identify concerning changes, follow up with the patient and escalate relevant information to the treating clinician.
 
@@ -417,17 +467,16 @@ The idea is not to create endless data and readings for a cardiologist to inspec
 
 After the treatment plan has been established and the patient is discharged, the next meaningful update no longer has to wait until the follow-up visit. The measures selected by the care team (and guided by the treating doctor) can be recorded from home in the simplest way possible. If weight begins to increase over several days, blood pressure becomes persistently abnormal, symptoms change, or an ECG raises a concern for arrhythmia, the care team has a basis for follow-up. Many readings will require no intervention, which is exactly how routine monitoring should ideally work. In the absence of a reading, the patient’s phone rings with a prompt reminder to adhere to the prescribed routine. The value lies in making a relevant change visible early enough for a clinician to decide what, if anything, should be done.
 
-One pathway, adapted to two very different healthcare settings
+### One pathway, adapted to two very different healthcare settings
 
 The Tricog Connected Pathway does not expect a small clinic and a tertiary hospital to work in the same way.
-
 At a tertiary hospital, the main pressure is often volume. The hospital may already have ECG and Echo machines, cardiologists, and a cath lab, but that capacity is shared among many patients. TCC helps create order at the front of the OPD. InstaECG and InstaEcho help reduce reporting delays. The LVEF assessment provides another useful signal without requiring an additional test. Critical cases can be moved faster, while normal and lower-risk patients do not consume advanced capacity unnecessarily. KeeboHealth gives the hospital a way to maintain selected patients on an organised follow-up pathway after discharge.
 
 At a smaller clinic or healthcare centre, the first requirement is to recognise the risks with the infrastructure available locally (which is often limited). TCC supports that first decision. If a 12-lead ECG can be acquired on site, InstaECG can connect the clinic to remote interpretation; if it cannot, the screening result supports a referral. The LVEF assessment can identify which abnormal ECGs need an echo, and InstaEcho can support reporting where image acquisition is available. When advanced treatment is required, the patient can be referred to the appropriate hospital with a clearer clinical picture and a digital trail of the investigations already performed.
 
 Expanding access to cardiac care does not require every facility to have every capability, and it can easily be enabled in the neighbourhood clinic we often walk to when we feel uneasy. It requires each facility to recognise what it can do safely, connect to the next level when required, and avoid losing the patient in between.
 
-A connected pathway is more than a group of connected products.
+### A connected pathway is more than a group of connected products.
 
 Digital health programmes often begin with a device and then look for a place to use it. The Tricog Connected Pathway begins with the points at which cardiac care generally slows down – the patient is not identified early, the ECG is acquired but not interpreted in time, heart failure risk remains hidden, an echo is delayed, or follow-up becomes episodic after discharge.
 
@@ -437,7 +486,7 @@ Patients do not have to complete all five steps. In fact, a well-designed pathwa
 
 The pathway also makes better use of specialist time. Cardiologists and cardiac experts remain central, but their expertise can extend beyond the room in which they sit.
 
-The Tricog story is moving from faster reports to continuity of care.
+### The Tricog story is moving from faster reports to continuity of care.
 
 Tricog began by addressing one of the most immediate problems in cardiac care: an ECG taken at the point of need should not have to wait for an expert interpretation. That work established a model in which technology and a medical team could bring timely cardiac reporting to facilities across different levels of care.
 
@@ -449,49 +498,134 @@ From our early days till now, one thing has not changed – that is the practica
 
 ---
 
-## Beyond "normal" or "abnormal": every ECG as a clear call to action
+## What Is ECG Risk Stratification? How AI Can Help Sort ECGs by Risk
 
 *Aug 17, 2026 · 9 min read · https://tricogcardiocheck.com/resources/beyond-normal-or-abnormal*
 
-An ECG can save a life but only if the right person sees it at the right time, and knows exactly how urgently to act. In busy hospitals, clinics, and primary care setups, thousands of ECGs are recorded every day, and not every reading gets the same level of attention it deserves. A subtle ST-segment change buried among routine traces can be just as consequential as an obvious emergency if no one is looking for it in time.
+An ECG can tell you a lot about the heart. But there is another question that matters just as much: **how urgently does this ECG need attention?**
 
-This is the exact problem Tricog’s Tricog CardioCheck (TCC) risk stratification framework was built to solve. Rather than treating every ECG as either “normal” or “needs a cardiologist,” TCC sorts findings into three clinically meaningful tiers Low, Moderate, and High risk so that care teams know at a glance not just what an ECG shows, but how fast they need to move.
+That is where ECG risk stratification comes in.
 
-Why risk stratification matters more than diagnosis alone
+Tricog CardioCheck (TCC) uses a single-lead ECG to classify cardiovascular risk into **Low, Moderate or High**, helping healthcare teams decide which patients can continue through routine care and which may need further evaluation.
 
-A diagnosis tells you what’s happening in the heart. Risk stratification tells you what to do next.
+### What is ECG risk stratification?
 
-For a referring physician juggling dozens of patients, or a technician in a remote clinic without an on-site cardiologist, that distinction is everything. TCC’s framework gives every ECG a triage signal a shared language that helps hospitals, diagnostic centres, and referring doctors act with the same urgency a specialist would apply, even when a specialist isn’t in the room.
+An ECG diagnosis tells you **what was detected**.
 
-The three tiers, and what they mean in practice
+Risk stratification asks a different question:
 
-Low risk covers ECGs that are normal or reflect well-recognised benign variants a Normal Sinus Rhythm, Sinus Arrhythmia, or Benign Early Repolarisation, for example. These findings carry no evidence of structural, ischaemic, conduction, or rhythm pathology. Nothing urgent needs to happen here beyond routine follow-up, which matters just as much as flagging danger: it keeps care teams from chasing false alarms and lets them focus attention where it’s genuinely needed.
+**“How urgently does this finding need attention?”**
 
-Moderate risk is where clinical judgement earns its keep. This tier includes findings such as old infarctions, suspected ischaemia, complete bundle branch block, atrial enlargement or inter-atrial block, and ventricular hypertrophy real abnormalities that point to underlying cardiovascular disease, but not an active emergency. These cases don’t need a blue-light response; they need a plan. TCC flags them for further evaluation, investigation, or monitoring, so they don’t fall through the cracks between “fine” and “critical.”
+That distinction matters.
 
-High risk is the tier built for speed. New-onset or haemodynamically significant atrial fibrillation or flutter, life-threatening arrhythmias, critical conduction disorders, and acute ischaemic patterns all fall here findings associated with a real risk of haemodynamic compromise, cardiac arrest, or acute ischaemic injury. TCC’s framework is designed to surface these instantly, so escalation and intervention begin without the delay that a busy queue or an unfamiliar reader might otherwise introduce.
+In a busy healthcare setting, getting the ECG is only part of the process.
 
-Where this makes the biggest difference
+Someone still needs to interpret it, decide whether the finding matters and determine what happens next.
 
-The value of this framework shows up most clearly in the moments care teams face every day: a general physician staring at an unfamiliar ECG pattern at 2 a.m., a technician in a Tier-3 town without a cardiologist on call, or a hospital trying to standardise how its emergency department triages chest pain. In each case, TCC’s Low/Moderate/High structure converts a raw trace into a decision assess now, follow up soon, or reassure and move on backed by consistent, clinically grounded criteria rather than individual judgement alone.
+That becomes harder when one clinician is looking at dozens of ECGs, or when a cardiologist is not immediately available.
 
-That consistency is what makes TCC useful at scale. A framework that works the same way whether it’s applied in a metro hospital or a rural clinic is a framework that closes the gap between where a cardiac emergency happens and where expert cardiac care actually lives.
+The 2021 AHA/ACC chest pain guideline recommends that an ECG be obtained and interpreted within 10 minutes for patients presenting with acute chest pain. The point is simple: **when cardiac risk may be time-sensitive, an ECG needs to lead to action quickly.**
 
-### Key takeaways
+Calling an ECG “abnormal” does not tell you what to do next.
 
-Three tiers Low, Moderate and High turn every ECG into a triage decision, not just a diagnosis.
+An ECG can show an old, stable finding. It can also show a pattern that needs urgent attention.
 
-Low risk: normal traces and well-recognised benign variants; routine follow-up only.
+Both may be labelled “abnormal”.
 
-Moderate risk: real pathology without an active emergency flagged for evaluation, investigation or monitoring.
+The urgency is very different. The challenge is not simply finding an abnormal ECG. It is deciding which abnormal ECG needs attention first.
 
-High risk: life-threatening arrhythmias, critical conduction disorders and acute ischaemia surfaced instantly for escalation.
+### How accurate is ECG interpretation without a cardiologist?
 
-Judgement first, always
+ECG interpretation is a specialised skill, and accuracy can vary depending on the reader's training and experience.
 
-It’s worth being clear about what this framework is not. TCC risk stratification is a triage aid, not a replacement for the treating physician. Every category is meant to be interpreted alongside the patient’s clinical presentation, and confirmed through proper diagnostic evaluation with a 12-lead ECG. What it does is give clinicians a faster, more consistent starting point so the right cases get urgent eyes on them immediately, and the right resources aren’t spent chasing the ones that don’t need them.
+A 2020 systematic review published in *JAMA Internal Medicine* looked at 78 studies involving more than 10,000 participants. ECG interpretation accuracy varied across different levels of medical training, from medical students to cardiologists and cardiology fellows.
 
-In cardiac care, the cost of ambiguity is measured in minutes. Tricog’s TCC framework exists to strip that ambiguity out of the first, most critical step: knowing how serious an ECG really is, the moment it’s recorded.
+The review reported pooled accuracy of 42.0% for medical students, 55.8% for residents, 68.5% for practising non-cardiologist physicians and 74.9% for cardiologists and cardiology fellows.
+
+The important point is not that non-cardiologists cannot read ECGs. It is that **ECG interpretation is difficult, and performance varies considerably across readers and clinical settings.**
+
+There is an important caveat: accuracy varied widely between the studies, from 4% to 95%. So these numbers should not be treated as a single measure of how accurately every clinician reads an ECG in everyday practice.
+
+And this does not mean clinicians are careless. It’s that ECG interpretation is genuinely hard, that skill is unevenly distributed, and that a patient’s next step shouldn’t depend on which reader happens to be on shift. That is where a consistent ECG triage system can help.
+
+### What do the three TCC risk tiers actually mean?
+
+TCC groups ECG results into three risk levels: Low, Moderate and High. The idea is simple: the result should help the care team understand what needs attention next.
+
+#### What counts as a low-risk ECG?
+
+A Low-risk ECG may include a normal ECG or recognised benign patterns such as Normal Sinus Rhythm, Sinus Arrhythmia or Benign Early Repolarisation.
+
+In these cases, there may be no ECG finding that requires urgent escalation. The patient can continue through the appropriate routine care pathway based on their clinical situation.
+
+Low risk does not mean “ignore it.” It means there is no indication from the ECG alone for urgent escalation. Clearing the benign cases confidently is what frees attention for the ones that need it. A triage system that only flags danger, without also giving permission to stand down, still leaves clinicians reviewing everything.
+
+#### What counts as a moderate-risk ECG?
+
+Moderate risk is where things get interesting. Depending on the classification criteria, examples may include previous infarction patterns, suspected ischaemia, bundle branch block, atrial enlargement or ventricular hypertrophy.
+
+These findings may need further evaluation, investigation or monitoring. The key is making sure the patient does not disappear into the “we’ll look at it later” pile. This tier exists precisely because these cases are the ones that get lost. They are not alarming enough to interrupt a busy shift, and not clean enough to discharge and forget. TCC flags them so they land in a follow-up queue instead of a gap.
+
+#### What counts as a high-risk ECG?
+
+High risk is built for speed.
+
+New-onset or haemodynamically significant atrial fibrillation and flutter, life-threatening arrhythmias, critical conduction disorders, and acute ischaemic patterns; findings carrying real risk of haemodynamic compromise, cardiac arrest or acute ischaemic injury.
+
+Atrial fibrillation is a good example of why detection alone is not enough. AF is associated with a substantially higher risk of stroke, which means identifying it needs to be connected to appropriate clinical evaluation and management. Finding a risk signal is only useful if someone knows what to do with it. High-risk classification is what turns a finding into an escalation.
+
+### Why is ECG risk stratification useful in clinics and smaller hospitals?
+
+A cardiologist cannot be everywhere.
+
+That is particularly relevant in primary care clinics, diagnostic centres, community screening programs and smaller hospitals where an ECG may be available even when specialist cardiac expertise is not immediately on site.
+
+The question then becomes: how can a care team identify which ECGs need more attention?
+
+The tertiary cardiac centre is not where most cardiac events happen. They happen in district hospitals, standalone diagnostic centres, health camps and Tier-3 clinics, where the ECG machine is present and the cardiologist is not. In those settings, “abnormal” can leave the next step unclear.
+
+A risk category can make the starting point clearer: Low — routine care. Moderate — investigate. High — escalate.
+
+For healthcare networks, a standardised approach can also make ECG triage more consistent across different locations and teams. That is what makes ECG risk stratification useful at scale, rather than just useful once.
+
+### How should a care team use the risk tier in practice?
+
+Think of the risk tier as the start of the workflow, not the final diagnosis.
+
+- **Low risk:** continue with the appropriate routine care pathway.
+- **Moderate risk:** review the finding and determine whether further evaluation, investigation or monitoring is needed.
+- **High risk:** prompt immediate clinical review and escalation according to the patient’s presentation and local protocol.
+
+### ECG risk stratification: the key points
+
+- ECG risk stratification is about urgency, not just abnormality.
+- Low risk generally supports routine care when considered alongside the patient's clinical presentation.
+- Moderate risk identifies findings that may need further evaluation or monitoring.
+- High risk identifies findings that may require urgent clinical attention.
+- AI-powered ECG analysis can provide an additional layer of support for teams interpreting ECGs.
+- The risk tier supports clinical decision-making; it does not replace the treating clinician.
+
+### Does risk stratification replace the treating physician?
+
+No. ECG risk stratification is a clinical support tool, not a replacement for the treating physician.
+
+TCC is designed to support triage and risk assessment from a single-lead ECG. The result should be considered alongside the patient's symptoms, history, examination and other clinical information. A risk category is not the same thing as a final diagnosis. Patients who require further assessment should be evaluated through the appropriate clinical pathway, including confirmatory testing where indicated.
+
+What risk stratification can provide is a clearer starting point. Instead of asking only, “Is this ECG abnormal?”, the care team can also ask, “What level of attention does this result require?”
+
+### FAQ
+
+#### Is ECG risk stratification the same as an ECG diagnosis?
+
+No. ECG diagnosis identifies or describes an ECG finding. ECG risk stratification groups the result according to its level of clinical concern or urgency. They serve different purposes.
+
+#### Can a moderate-risk ECG still be serious?
+
+Yes. Moderate risk does not mean that an ECG finding is unimportant. It generally indicates that further clinical evaluation or follow-up may be appropriate rather than immediate emergency escalation.
+
+#### Who is ECG risk stratification most useful for?
+
+ECG risk stratification can be useful for healthcare teams in primary care, clinics, diagnostic centres, community screening programs and hospitals where ECGs are performed as part of routine care. It can be particularly useful where access to specialist ECG interpretation is limited or delayed.
 
 ---
 
