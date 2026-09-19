@@ -2190,13 +2190,6 @@
                             class="absolute inset-0 bg-black/35 transition-opacity duration-700"></div>
 
 
-                        <!-- Heading -->
-                        <h2 id="video-heading"
-                            class="relative z-10 main-heading text-white mb-8 max-w-3xl transition-all duration-500">
-                            A single screening, capture to referral
-                        </h2>
-
-
                         <!-- ONE Play / Pause Button -->
                         <button id="video-toggle" type="button" aria-label="Play video"
                             class="relative z-10 flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 rounded-full bg-white/95 backdrop-blur-sm shadow-xl transition-all duration-300 hover:scale-110 hover:bg-white">
@@ -2326,9 +2319,6 @@
             const videoPoster =
                 document.getElementById("video-poster");
 
-            const videoHeading =
-                document.getElementById("video-heading");
-
             const watchText =
                 document.getElementById("watch-text");
 
@@ -2376,13 +2366,6 @@
 
                     // Play video
                     youtubePlayer.playVideo();
-
-
-                    // Hide heading
-                    videoHeading.classList.add(
-                        "opacity-0",
-                        "translate-y-4"
-                    );
 
 
                     // Hide "Watch how it works"
