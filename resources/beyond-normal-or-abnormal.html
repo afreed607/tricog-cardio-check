@@ -35,7 +35,7 @@
     <meta name="twitter:image" content="https://tricogcardiocheck.com/assets/images/og-share-card.jpg">
 
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/tcc-favicon.webp">
     <link rel="manifest" href="../site.webmanifest">
 
     <script type="application/ld+json">
@@ -56,7 +56,7 @@
 
 <body>
 
-    <main id="human-content" class="w-full h-full">
+    <main id="siteMain" class="w-full h-full">
 
         <!-- Sticky Header -->
         <header id="stickyHeader" class="fixed top-0 left-0 right-0 flex justify-center">
@@ -139,7 +139,8 @@
 
                 <!-- Logo -->
                 <div class="flex items-center gap-3 font-semibold text-xl select-none">
-                    <a href="../index.html"><img class="h-10 w-auto object-cover" src="../assets/images/tcc-logo.webp" alt=""></a>
+                    <a href="../index.html"><img class="h-10 w-auto object-cover" src="../assets/images/tcc-logo.webp"
+                            alt=""></a>
                 </div>
 
                 <!-- Desktop Nav -->
@@ -238,7 +239,7 @@
                 <!-- Post Content -->
                 <div>
                     <img class="w-full h-[300px] md:h-[440px] lg:h-[540px] xl:h-[680px] min-[1440px]:h-[740px] rounded-xl object-cover my-10"
-                        src="../assets/images/waiting-room.jpg"
+                        src="../assets/images/beyond-normal-or-abnormal.webp"
                         alt="An ECG being recorded at a community screening station" data-aos="fade-up"
                         data-aos-delay="200">
                     <div class="flex flex-col gap-8">
@@ -539,7 +540,8 @@
                             <p class="text text-white/80">Consistent Low / Moderate / High triage on every ECG your team
                                 records.</p>
                         </div>
-                        <a href="../solutions.html#PartnerForm" class="btn btn-secondary flex items-center gap-2 lg:py-3">
+                        <a href="../solutions.html#PartnerForm"
+                            class="btn btn-secondary flex items-center gap-2 lg:py-3">
                             Request a Live Demo
 
                             <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -592,7 +594,7 @@
                             <a href="./inside-the-tricog-cardiocheck-algorithm.html"
                                 class="block rounded-xl overflow-hidden border">
                                 <img class="h-[300px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                                    src="../assets/images/ai-ecg-algorithm-heart.jpg" alt="">
+                                    src="../assets/images/inside-the-tricog-cardiocheck-algorithm.webp" alt="">
                             </a>
                             <div class="p-4">
                                 <div class="flex items-center gap-3 mb-3">
@@ -601,11 +603,11 @@
                                 </div>
                                 <a href="./inside-the-tricog-cardiocheck-algorithm.html"
                                     class="block min-h-[60px] text-2xl font-semibold hover:underline underline-offset-2 transition cursor-pointer mb-3">
-                                    Inside the Tricog CardioCheck algorithm.
+                                    What Is AI ECG Screening? Inside the Tricog CardioCheck Algorithm
                                 </a>
                                 <p class="text-[15px] text-gray-800">
-                                    A crowded OPD has one queue that everyone can see and another that the clinical team
-                                    has to work out ...
+                                    Quick answer: AI ECG screening uses a trained algorithm to read an ECG and return a
+                                    risk category in seconds ...
                                 </p>
                             </div>
                         </div>
@@ -642,9 +644,47 @@
         </footer>
     </main>
 
+    <!-- Floating Human / Machine toggle -->
+    <div class="hm-floating-toggle" id="hmFloatingToggle" role="group" aria-label="View this page as Human or Machine">
+        <button type="button" class="hm-float-tab is-active" data-hm-mode="human" aria-pressed="true">
+            <svg class="hm-float-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M2.5 12s3.8-7 9.5-7 9.5 7 9.5 7-3.8 7-9.5 7-9.5-7-9.5-7Z" stroke="currentColor"
+                    stroke-width="1.6" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            Human
+        </button>
+
+        <button type="button" class="hm-float-tab" data-hm-mode="machine" aria-pressed="false">
+            <svg class="hm-float-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <rect x="7" y="7" width="10" height="10" rx="1.6" stroke="currentColor" stroke-width="1.6" />
+                <path d="M9.5 3.5v3M14.5 3.5v3M9.5 17.5v3M14.5 17.5v3M3.5 9.5h3M3.5 14.5h3M17.5 9.5h3M17.5 14.5h3"
+                    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            Machine
+        </button>
+
+        <span class="hm-float-indicator" aria-hidden="true"></span>
+    </div>
+
+    <!-- Machine view: full-page takeover showing the auto-generated semantic
+HTML. -->
+    <div class="flex-1" id="hmMachineView" hidden>
+        <div class="container">
+
+            <div class="h-[100vh] relative">
+                <iframe class="w-full h-full overflow-hidden"
+                    src="../machine-content.html?src=./resources/beyond-normal-or-abnormal.md" loading="lazy"></iframe>
+            </div>
+
+        </div>
+    </div>
 
     <script src="../assets/js/script.js"></script>
     <script src="./rs-footer.js"></script>
+    <script src="../assets/js/human-machine-toggle.js"></script>
 
     <!-- AOS (Animate On Scroll) -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

@@ -32,7 +32,7 @@
     <meta name="twitter:image" content="https://tricogcardiocheck.com/assets/images/og-share-card.jpg">
 
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/tcc-favicon.webp">
     <link rel="manifest" href="./site.webmanifest">
 
     <script type="application/ld+json">
@@ -143,41 +143,52 @@
             <script>
                 (function () {
                     "use strict";
-
+            
                     var DEFAULT_SOURCE = "index.md";
-
-                    // Only allow a same-directory relative path, so the
-                    // ?src= param can't be pointed at another origin.
+            
+                    // Allow relative .md/.txt files in nested folders,
+                    // while preventing ../ path traversal.
                     function resolveSource() {
                         var requested = new URLSearchParams(window.location.search).get("src");
-
-                        if (!requested || !/^[A-Za-z0-9._-]+\/?[A-Za-z0-9._-]*\.(md|txt)$/.test(requested)) {
+            
+                        if (!requested) {
                             return DEFAULT_SOURCE;
                         }
-
+            
+                        // Normalize ./ at the beginning
+                        requested = requested.replace(/^\.\/+/, "");
+            
+                        // Reject path traversal
                         if (requested.indexOf("..") !== -1) {
                             return DEFAULT_SOURCE;
                         }
-
+            
+                        // Allow nested folders and only .md/.txt files
+                        if (!/^(?:[A-Za-z0-9._-]+\/)*[A-Za-z0-9._-]+\.(md|txt)$/.test(requested)) {
+                            return DEFAULT_SOURCE;
+                        }
+            
                         return requested;
                     }
-
+            
                     var source = resolveSource();
                     var container = document.getElementById("text-container");
                     var sourceLabel = document.getElementById("machine-source");
                     var button = document.getElementById("copy-machine-content");
                     var txtContent = "";
-
+            
                     if (sourceLabel) {
                         sourceLabel.textContent = source;
                     }
-
+            
+                    console.log("Machine content source:", source);
+            
                     fetch(source)
                         .then(function (response) {
                             if (!response.ok) {
                                 throw new Error("HTTP " + response.status);
                             }
-
+            
                             return response.text();
                         })
                         .then(function (text) {
@@ -186,19 +197,22 @@
                         })
                         .catch(function (error) {
                             console.error("Error loading machine content:", error);
+            
                             container.textContent =
-                                "Machine readable content for this page could not be loaded (" + source + ").";
+                                "Machine readable content for this page could not be loaded (" +
+                                source +
+                                ").";
                         });
-
+            
                     button.addEventListener("click", function () {
                         var svg = button.querySelector("svg");
                         var label = button.querySelector(".hm-copy-label");
-
+            
                         navigator.clipboard.writeText(txtContent)
                             .then(function () {
                                 svg.style.display = "none";
                                 label.textContent = "Copied!";
-
+            
                                 setTimeout(function () {
                                     svg.style.display = "";
                                     label.textContent = "Copy Machine Content";

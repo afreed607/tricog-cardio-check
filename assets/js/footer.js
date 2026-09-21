@@ -268,16 +268,16 @@
                 name="What best describes you?"
                 class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
 
-                <option value="" disabled selected>Select an option</option>
-                <option value="Doctor / Cardiologist">Doctor / Cardiologist</option>
-                <option value="Facility Owner / Decision Maker">Facility Owner / Decision Maker</option>
-                <option value="Healthcare Staff (Technician, nurse, etc.)">
+                <option class="bg-[#052940] text-white" value="" disabled selected>Select an option</option>
+                <option class="bg-[#052940] text-white" value="Doctor / Cardiologist">Doctor / Cardiologist</option>
+                <option class="bg-[#052940] text-white" value="Facility Owner / Decision Maker">Facility Owner / Decision Maker</option>
+                <option class="bg-[#052940] text-white" value="Healthcare Staff (Technician, nurse, etc.)">
                     Healthcare Staff (Technician, nurse, etc.)
                 </option>
-                <option value="Healthcare Professionals">
+                <option class="bg-[#052940] text-white" value="Healthcare Professionals">
                     Healthcare Professionals
                 </option>
-                <option value="Other">Other</option>
+                <option class="bg-[#052940] text-white" value="Other">Other</option>
             </select>
 
             <p id="demo-role-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
@@ -294,10 +294,10 @@
                 name="preferred_time"
                 class="h-12 w-full rounded-xl bg-[#052940] border border-[#37617C]/40 px-4 text-sm text-white outline-none transition-all duration-200 focus:border-[#B7232C] focus:bg-white/[0.07] focus:ring-2 focus:ring-[#B7232C]/10">
 
-                <option value="" disabled selected>Select a preferred time</option>
-                <option value="Morning">Morning</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Evening">Evening</option>
+                <option class="bg-[#052940] text-white" value="" disabled selected>Select a preferred time</option>
+                <option class="bg-[#052940] text-white" value="Morning">Morning</option>
+                <option class="bg-[#052940] text-white" value="Afternoon">Afternoon</option>
+                <option class="bg-[#052940] text-white" value="Evening">Evening</option>
             </select>
 
             <p id="demo-time-error" class="mt-1.5 hidden text-xs text-[#ff6b73]" role="alert"></p>
